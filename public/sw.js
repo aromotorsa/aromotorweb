@@ -1,13 +1,11 @@
 // En tu archivo sw.js
-const CACHE_NAME = 'catalogo-vendedor-cache-v3'; // <-- IMPORTANTE: Nueva versión
+const CACHE_NAME = 'catalogo-vendedor-cache-v4'; // <-- IMPORTANTE: ¡Nueva versión!
 const urlsToCache = [
-    // LISTA MÁS LIMPIA Y SEGURA:
     '/',
     'index.html',
     'manifest.json',
     'Resultado_Final.json',
     'logos/AROMOTOR.png'
-    // Hemos quitado los enlaces externos (CDN)
 ];
 
 self.addEventListener('install', event => {
@@ -67,6 +65,13 @@ self.addEventListener('activate', event => {
 });
 
 self.addEventListener('fetch', event => {
+    // ---- NUEVO Y CRUCIAL: EL GUARDIA INTELIGENTE ----
+    // Si la petición no es HTTP o HTTPS, la ignoramos y no hacemos nada.
+    if (!event.request.url.startsWith('http')) {
+        return; 
+    }
+    // -------------------------------------------------
+
     event.respondWith(
         caches.match(event.request)
             .then(cachedResponse => {
@@ -74,17 +79,13 @@ self.addEventListener('fetch', event => {
                     return cachedResponse;
                 }
                 
-                // Si no está en caché, lo busca en la red Y lo guarda para la próxima vez
                 return fetch(event.request).then(
                     networkResponse => {
-                        // Verificamos que sea una respuesta válida antes de guardarla
                         if(!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic' && networkResponse.type !== 'cors') {
                             return networkResponse;
                         }
 
-                        // Clonamos la respuesta porque es un "stream" y solo se puede consumir una vez
                         const responseToCache = networkResponse.clone();
-
                         caches.open(CACHE_NAME)
                             .then(cache => {
                                 cache.put(event.request, responseToCache);
