@@ -1,99 +1,100 @@
-// En tu archivo sw.js
-const CACHE_NAME = 'catalogo-vendedor-cache-v4'; // <-- IMPORTANTE: ¡Nueva versión!
+const CACHE_NAME = 'aromotor-pro-cache-v2'; // Incrementamos la versión para forzar la actualización
 const urlsToCache = [
     '/',
     'index.html',
-    'manifest.json',
     'Resultado_Final.json',
-    'logos/AROMOTOR.png'
+    'logos/AROMOTOR.png',
+    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css'
 ];
 
+// Evento de instalación: Se dispara cuando el Service Worker se instala.
+// Aquí guardamos los archivos principales de la aplicación (el "App Shell").
 self.addEventListener('install', event => {
-    console.log(`[SW] Evento: Instalando ${CACHE_NAME}...`);
+    console.log('[SW] Instalando...');
     event.waitUntil(
         caches.open(CACHE_NAME)
             .then(cache => {
-                console.log('[SW] Cache abierto. Guardando archivos base...');
-                return cache.addAll(urlsToCache)
-                    .then(() => {
-                        console.log('[SW] Archivos base guardados. Buscando imágenes de productos...');
-                        return fetch('Resultado_Final.json');
-                    })
-                    .then(response => {
-                         if (!response.ok) {
-                            throw new Error(`[SW] Falló el fetch de Resultado_Final.json: ${response.statusText}`);
-                         }
-                         return response.json();
-                    })
-                    .then(products => {
-                        const imageUrls = products.map(product => {
-                            const ref = product['Referencia Interna'];
-                            return ref ? `images/${ref}.webp` : null;
-                        }).filter(url => url !== null);
-                        
-                        console.log(`[SW] Encontradas ${imageUrls.length} imágenes para guardar.`);
-                        return cache.addAll(imageUrls);
-                    })
-                    .then(() => {
-                        console.log('[SW] ¡Todas las imágenes fueron guardadas en caché exitosamente!');
-                    });
+                console.log('[SW] Cache abierto, guardando App Shell y datos.');
+                return cache.addAll(urlsToCache);
             })
-            .catch(err => {
-                console.error('[SW] La instalación falló:', err);
-            })
+            .catch(err => console.error('[SW] Falló el cacheo del App Shell', err))
     );
 });
 
+// Evento activate: Se dispara cuando el SW se activa.
+// Aquí limpiamos cachés antiguos para mantener todo ordenado.
 self.addEventListener('activate', event => {
-    console.log(`[SW] Evento: Activando ${CACHE_NAME}...`);
-    const cacheWhitelist = [CACHE_NAME];
+    console.log('[SW] Activado.');
     event.waitUntil(
         caches.keys().then(cacheNames => {
             return Promise.all(
                 cacheNames.map(cacheName => {
-                    if (cacheWhitelist.indexOf(cacheName) === -1) {
-                        console.log(`[SW] Borrando caché antiguo: ${cacheName}`);
+                    if (cacheName !== CACHE_NAME) {
+                        console.log('[SW] Limpiando caché antiguo:', cacheName);
                         return caches.delete(cacheName);
                     }
                 })
             );
-        }).then(() => {
-            console.log('[SW] Reclamo de clientes activado. El SW tiene el control.');
-            return self.clients.claim();
         })
     );
 });
 
+// Evento fetch: Se dispara cada vez que la página solicita un recurso.
+// Estrategia: "Cache first, falling back to network".
 self.addEventListener('fetch', event => {
-    // ---- NUEVO Y CRUCIAL: EL GUARDIA INTELIGENTE ----
-    // Si la petición no es HTTP o HTTPS, la ignoramos y no hacemos nada.
-    if (!event.request.url.startsWith('http')) {
-        return; 
+    // Solo intervenimos en peticiones GET
+    if (event.request.method !== 'GET') {
+        return;
     }
-    // -------------------------------------------------
 
     event.respondWith(
         caches.match(event.request)
             .then(cachedResponse => {
+                // Si la respuesta está en el caché, la devolvemos desde ahí (¡súper rápido!)
                 if (cachedResponse) {
+                    // console.log('[SW] Recurso encontrado en caché:', event.request.url);
                     return cachedResponse;
                 }
-                
+
+                // Si no está en el caché, la pedimos a la red
+                // console.log('[SW] Recurso no encontrado en caché, buscando en red:', event.request.url);
                 return fetch(event.request).then(
                     networkResponse => {
-                        if(!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic' && networkResponse.type !== 'cors') {
+                        // Antes de devolverla a la página, la guardamos en el caché para la próxima vez.
+                        return caches.open(CACHE_NAME).then(cache => {
+                            // Clonamos la respuesta porque es un "stream" y solo se puede consumir una vez.
+                            cache.put(event.request, networkResponse.clone());
                             return networkResponse;
-                        }
-
-                        const responseToCache = networkResponse.clone();
-                        caches.open(CACHE_NAME)
-                            .then(cache => {
-                                cache.put(event.request, responseToCache);
-                            });
-
-                        return networkResponse;
+                        });
                     }
-                );
+                ).catch(() => {
+                    // Si la red falla y no está en caché, no podemos hacer mucho más.
+                    // Podríamos devolver una imagen o recurso placeholder aquí si quisiéramos.
+                });
             })
     );
+});
+
+
+// Evento message: Escucha los mensajes de la página principal.
+// Usado para el botón "Descargar Catálogo".
+self.addEventListener('message', event => {
+    if (event.data.type === 'CACHE_IMAGES') {
+        console.log('[SW] Recibida orden de cachear imágenes.');
+        event.waitUntil(
+            caches.open(CACHE_NAME)
+                .then(cache => {
+                    console.log(`[SW] Cacheando ${event.data.urls.length} imágenes.`);
+                    return cache.addAll(event.data.urls);
+                })
+                .then(() => {
+                    console.log('[SW] Todas las imágenes han sido cacheadas.');
+                    // Avisamos a la página que hemos terminado
+                    event.source.postMessage({ type: 'CACHE_COMPLETE' });
+                })
+                .catch(err => {
+                    console.error('[SW] Error al cachear imágenes:', err);
+                })
+        );
+    }
 });

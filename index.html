@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#EF4444"/>
-    <!-- NUEVO: Librerías para generar PDF -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <style>
@@ -29,7 +28,11 @@
             <div class="flex items-center min-w-0">
                 <img src="logos/AROMOTOR.png" alt="Logo Empresa" class="h-10 mr-3 flex-shrink-0">
             </div>
-            <div class="flex items-center gap-2 sm:gap-4">
+            <div class="flex items-center gap-2 sm:gap-4 flex-wrap justify-center">
+                <button id="download-catalog-button" class="bg-purple-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-purple-700 transition-colors flex items-center gap-2" title="Descargar catálogo para uso offline">
+                    <i class="fas fa-cloud-download-alt"></i>
+                    <span class="hidden sm:inline">Offline</span>
+                </button>
                 <button id="download-pdf-button" class="bg-red-700 text-white font-bold py-2 px-4 rounded-lg hover:bg-red-800 transition-colors flex items-center gap-2" title="Descargar como catálogo visual (PDF)">
                     <i class="fas fa-file-pdf"></i>
                     <span class="hidden sm:inline">PDF</span>
@@ -38,22 +41,20 @@
                     <i class="fas fa-save"></i>
                     <span class="hidden sm:inline">Pedidos</span>
                 </button>
-                <div id="install-button-container" class="hidden">
-                    <button id="install-button" class="bg-red-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-red-700 transition-colors">
-                        Instalar App
-                    </button>
-                </div>
             </div>
         </header>
         
         <div class="bg-white rounded-lg shadow-md p-4 mb-6">
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <input type="search" id="search-box" placeholder="Buscar por nombre, referencia..." class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition sm:col-span-3">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <input type="search" id="search-box" placeholder="Buscar por nombre, referencia..." class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition sm:col-span-2 lg:col-span-4">
                 <select id="category-filter" class="w-full p-2 border border-gray-300 rounded-lg bg-white focus:ring-2 focus:ring-red-500 focus:border-transparent transition">
                     <option value="">Todas las Categorías</option>
                 </select>
                 <select id="subcategory-filter" class="w-full p-2 border border-gray-300 rounded-lg bg-white focus:ring-2 focus:ring-red-500 focus:border-transparent transition">
                     <option value="">Todas las Subcategorías</option>
+                </select>
+                <select id="brand-filter" class="w-full p-2 border border-gray-300 rounded-lg bg-white focus:ring-2 focus:ring-red-500 focus:border-transparent transition">
+                    <option value="">Todas las Marcas</option>
                 </select>
             </div>
              <div class="flex justify-between items-center mt-4">
@@ -77,9 +78,13 @@
        </div>
     </div>
 
-    <div id="copy-notification" class="notification fixed bottom-5 left-5 bg-gray-800 text-white py-2 px-4 rounded-lg shadow-lg opacity-0 transform translate-y-2">¡Info copiada!</div>
-    <div id="cart-notification" class="notification fixed bottom-5 left-5 bg-green-600 text-white py-2 px-4 rounded-lg shadow-lg opacity-0 transform translate-y-2">¡Producto añadido!</div>
-    <div id="saved-notification" class="notification fixed bottom-5 left-5 bg-blue-600 text-white py-2 px-4 rounded-lg shadow-lg opacity-0 transform translate-y-2">¡Pedido guardado!</div>
+    <!-- Notificaciones -->
+    <div id="copy-notification" class="notification fixed bottom-5 left-5 bg-gray-800 text-white py-2 px-4 rounded-lg shadow-lg opacity-0 transform translate-y-2 z-50">¡Info copiada!</div>
+    <div id="cart-notification" class="notification fixed bottom-5 left-5 bg-green-600 text-white py-2 px-4 rounded-lg shadow-lg opacity-0 transform translate-y-2 z-50">¡Producto añadido!</div>
+    <div id="saved-notification" class="notification fixed bottom-5 left-5 bg-blue-600 text-white py-2 px-4 rounded-lg shadow-lg opacity-0 transform translate-y-2 z-50">¡Pedido guardado!</div>
+    <div id="offline-notification" class="hidden fixed top-0 left-0 right-0 bg-yellow-500 text-black text-center p-2 font-bold z-50">Modo Offline: Estás trabajando sin conexión.</div>
+    <div id="sync-notification" class="hidden fixed top-0 left-0 right-0 bg-blue-500 text-white text-center p-2 font-bold z-50 cursor-pointer">¡Conexión recuperada! Tienes pedidos guardados. Haz clic para verlos.</div>
+
 
     <button id="cart-button" class="fixed bottom-5 right-5 bg-red-600 text-white w-16 h-16 rounded-full shadow-lg flex items-center justify-center text-2xl z-20">
         <i class="fas fa-shopping-cart"></i>
@@ -111,9 +116,11 @@
 
     <script type="module">
         document.addEventListener('DOMContentLoaded', () => {
+            // Selectores DOM
             const searchBox = document.getElementById('search-box');
             const categoryFilter = document.getElementById('category-filter');
             const subcategoryFilter = document.getElementById('subcategory-filter');
+            const brandFilter = document.getElementById('brand-filter'); // NUEVO
             const clearFiltersBtn = document.getElementById('clear-filters');
             const productGrid = document.getElementById('product-grid');
             const resultsCount = document.getElementById('results-count');
@@ -134,12 +141,19 @@
             const closeSavedOrdersModalButton = document.getElementById('close-saved-orders-modal-button');
             const savedOrdersContainer = document.getElementById('saved-orders-container');
             const viewToggle = document.getElementById('view-toggle');
+            const downloadCatalogButton = document.getElementById('download-catalog-button'); // NUEVO
+            const offlineNotification = document.getElementById('offline-notification'); // NUEVO
+            const syncNotification = document.getElementById('sync-notification'); // NUEVO
 
+            // Estado de la aplicación
             let allProducts = [];
             let cart = [];
             let currentView = 'grid'; 
             let savedCarts = JSON.parse(localStorage.getItem('savedCarts')) || [];
+            let longPressTimer;
+            const LONG_PRESS_DURATION = 500; // 500ms para un toque largo
 
+            // Carga inicial de productos
             async function loadProducts() {
                 try {
                     const response = await fetch('Resultado_Final.json');
@@ -149,7 +163,7 @@
                     renderProducts();
                 } catch (error) {
                     console.error("Error al cargar productos:", error);
-                    productGrid.innerHTML = `<p class="col-span-full text-center text-red-600 font-bold">Error: No se pudo cargar el catálogo.</p>`;
+                    productGrid.innerHTML = `<p class="col-span-full text-center text-red-600 font-bold">Error: No se pudo cargar el catálogo. Intenta usar el modo offline si lo descargaste.</p>`;
                 } finally {
                     loadingSpinner.style.display = 'none';
                 }
@@ -157,14 +171,23 @@
 
             function populateFilters() {
                 const categories = [...new Set(allProducts.map(p => p.Categoría))].sort();
+                const brands = [...new Set(allProducts.map(p => p.Marca).filter(Boolean))].sort(); // NUEVO
+
                 categoryFilter.innerHTML = '<option value="">Todas las Categorías</option>';
                 categories.forEach(cat => {
                     const option = document.createElement('option');
                     option.value = cat; option.textContent = cat;
                     categoryFilter.appendChild(option);
                 });
+                
+                brandFilter.innerHTML = '<option value="">Todas las Marcas</option>'; // NUEVO
+                brands.forEach(brand => { // NUEVO
+                    const option = document.createElement('option');
+                    option.value = brand; option.textContent = brand;
+                    brandFilter.appendChild(option);
+                });
             }
-
+            
             function updateSubcategories() {
                 const selectedCategory = categoryFilter.value;
                 subcategoryFilter.innerHTML = '<option value="">Todas las Subcategorías</option>';
@@ -183,11 +206,13 @@
                 const searchTerm = searchBox.value.toLowerCase();
                 const selectedCategory = categoryFilter.value;
                 const selectedSubcategory = subcategoryFilter.value;
+                const selectedBrand = brandFilter.value; // NUEVO
 
                 const filteredProducts = allProducts.filter(p => 
                     (searchTerm === '' || p.Nombre?.toLowerCase().includes(searchTerm) || p['Referencia Interna']?.toLowerCase().includes(searchTerm) || p.Marca?.toLowerCase().includes(searchTerm)) &&
                     (selectedCategory === '' || p.Categoría === selectedCategory) &&
-                    (selectedSubcategory === '' || p.Subcategoría === selectedSubcategory)
+                    (selectedSubcategory === '' || p.Subcategoría === selectedSubcategory) &&
+                    (selectedBrand === '' || p.Marca === selectedBrand) // NUEVO
                 );
 
                 productGrid.innerHTML = '';
@@ -213,7 +238,7 @@
                 if (currentView === 'grid') {
                     card.className = 'bg-white rounded-lg shadow-md overflow-hidden flex flex-col transition-transform transform hover:-translate-y-1';
                     cardHTML = `
-                        <div class="h-40 bg-gray-200 flex items-center justify-center"><img src="${imagePath}" alt="${product.Nombre}" class="w-full h-full object-cover" loading="lazy" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';"></div>
+                        <div class="aspect-square bg-gray-200 flex items-center justify-center"><img src="${imagePath}" alt="${product.Nombre}" class="w-full h-full object-cover" loading="lazy" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';"></div>
                         <div class="p-3 flex-grow flex flex-col text-sm">
                             <h3 class="font-bold text-gray-800 flex-grow">${product.Nombre || 'Sin Nombre'}</h3><p class="text-xs text-gray-500 mt-1">${ref || ''}</p>
                             <p class="text-xs text-white bg-red-600 px-2 py-1 rounded-full self-start mt-2">${product.Categoría || ''}</p>
@@ -224,7 +249,7 @@
                             <button class="copy-button w-3/4 bg-gray-200 text-gray-700 text-xs py-2 hover:bg-red-600 hover:text-white transition-colors" data-info="Producto: ${product.Nombre || ''}\nRef: ${ref || ''}\nPrecio: ${price}"><i class="fas fa-copy mr-1"></i> Copiar</button>
                             <button class="add-to-cart-button w-1/4 bg-red-600 text-white text-lg hover:bg-red-700 transition-colors" data-ref="${ref}"><i class="fas fa-plus"></i></button>
                         </div>`;
-                } else {
+                } else { // Vista de lista
                     card.className = 'bg-white rounded-lg shadow-md overflow-hidden flex items-center p-3 gap-4 w-full';
                     cardHTML = `
                         <img src="${imagePath}" alt="${product.Nombre}" class="w-20 h-20 object-cover bg-gray-200 rounded-md" loading="lazy" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';">
@@ -243,31 +268,95 @@
             }
 
             function updateProductCard(ref) {
-                const card = document.querySelector(`[data-ref="${ref}"]`);
-                if (card) {
+                const cards = document.querySelectorAll(`[data-ref="${ref}"]`);
+                if (cards.length > 0) {
                     const product = allProducts.find(p => p['Referencia Interna'] === ref);
-                    if (product) card.replaceWith(createProductCard(product));
+                    if (product) {
+                        cards.forEach(card => card.replaceWith(createProductCard(product)));
+                    }
                 }
             }
-
-            function addToCart(ref, buttonElement) {
+            
+            function addToCart(ref, buttonElement, quantity = 1) { // MODIFICADO
+                if (quantity <= 0) return;
                 const existingProduct = cart.find(item => item.ref === ref);
-                if (existingProduct) existingProduct.quantity++;
-                else {
+                if (existingProduct) {
+                    existingProduct.quantity += quantity;
+                } else {
                     const product = allProducts.find(p => p['Referencia Interna'] === ref);
-                    if (product) cart.push({ ref: ref, quantity: 1, product: product });
+                    if (product) cart.push({ ref: ref, quantity: quantity, product: product });
                 }
                 updateCart();
                 updateProductCard(ref);
-                showNotification('cart-notification');
-                if (buttonElement) {
-                    const icon = buttonElement.querySelector('i');
-                    buttonElement.classList.add('bg-green-500'); icon.classList.replace('fa-plus', 'fa-check');
-                    setTimeout(() => {
-                        buttonElement.classList.remove('bg-green-500'); icon.classList.replace('fa-check', 'fa-plus');
-                    }, 1000);
+
+                if (quantity === 1) { // Solo notificaciones para clics simples
+                    showNotification('cart-notification');
+                    if (buttonElement) {
+                        const icon = buttonElement.querySelector('i');
+                        buttonElement.classList.add('bg-green-500'); icon.classList.replace('fa-plus', 'fa-check');
+                        setTimeout(() => {
+                            buttonElement.classList.remove('bg-green-500'); icon.classList.replace('fa-check', 'fa-plus');
+                        }, 1000);
+                    }
                 }
             }
+            
+            // Lógica de añadir rápido con toque largo
+            function handleAddToCartPress(button) {
+                longPressTimer = setTimeout(() => {
+                    const ref = button.dataset.ref;
+                    const quantityStr = prompt(`¿Cuántas unidades de ${ref} quieres añadir?`, 1);
+                    const quantity = parseInt(quantityStr, 10);
+                    if (!isNaN(quantity) && quantity > 0) {
+                        addToCart(ref, button, quantity);
+                        showNotification('cart-notification');
+                    }
+                }, LONG_PRESS_DURATION);
+            }
+
+            function handleAddToCartRelease() {
+                clearTimeout(longPressTimer);
+            }
+
+            // Delegación de eventos para la grilla de productos
+            productGrid.addEventListener('click', e => {
+                const copyBtn = e.target.closest('.copy-button');
+                if (copyBtn) {
+                    navigator.clipboard.writeText(copyBtn.dataset.info).then(() => showNotification('copy-notification'));
+                    return;
+                }
+                const cartBtn = e.target.closest('.add-to-cart-button');
+                if (cartBtn) {
+                    addToCart(cartBtn.dataset.ref, cartBtn, 1);
+                }
+            });
+
+            productGrid.addEventListener('mousedown', e => {
+                const cartBtn = e.target.closest('.add-to-cart-button');
+                if (cartBtn) handleAddToCartPress(cartBtn);
+            });
+            
+            productGrid.addEventListener('mouseup', e => {
+                 const cartBtn = e.target.closest('.add-to-cart-button');
+                if (cartBtn) handleAddToCartRelease();
+            });
+
+            productGrid.addEventListener('mouseleave', e => {
+                const cartBtn = e.target.closest('.add-to-cart-button');
+                if (cartBtn) handleAddToCartRelease();
+            }, true);
+            
+            productGrid.addEventListener('touchstart', e => {
+                 const cartBtn = e.target.closest('.add-to-cart-button');
+                if (cartBtn) handleAddToCartPress(cartBtn);
+            });
+
+            productGrid.addEventListener('touchend', e => {
+                 const cartBtn = e.target.closest('.add-to-cart-button');
+                if (cartBtn) handleAddToCartRelease();
+            });
+
+            // Resto de funciones (carrito, pedidos guardados, etc.)
             
             function changeQuantity(ref, change) {
                 const itemInCart = cart.find(item => item.ref === ref);
@@ -276,7 +365,7 @@
                     if (itemInCart.quantity <= 0) cart = cart.filter(item => item.ref !== ref);
                 }
                 updateCart();
-                updateProductCard(ref);
+                renderProducts(); // Actualiza toda la grilla para reflejar cambios de cantidad
             }
             
             function updateCart() {
@@ -297,6 +386,10 @@
             }
             
             function shareOnWhatsApp() {
+                if (!navigator.onLine) {
+                    alert("Necesitas conexión a internet para compartir por WhatsApp. El pedido se ha guardado localmente.");
+                    return;
+                }
                 if (cart.length === 0) return;
                 let message = clientNameInput.value ? `*Pedido para: ${clientNameInput.value}*\n\n` : `*¡Hola! Te comparto este pedido:*\n\n`;
                 let total = 0;
@@ -313,7 +406,14 @@
             function saveCurrentCart() {
                 const clientName = clientNameInput.value.trim();
                 if (cart.length === 0 || !clientName) { alert("Por favor, ingresa un nombre de cliente y añade productos para guardar."); return; }
-                savedCarts.push({ id: Date.now(), clientName: clientName, items: JSON.parse(JSON.stringify(cart)), total: cart.reduce((sum, item) => sum + ((parseFloat(item.product.Precio) || 0) * item.quantity), 0) });
+                const newOrder = { 
+                    id: Date.now(), 
+                    clientName: clientName, 
+                    items: JSON.parse(JSON.stringify(cart)), 
+                    total: cart.reduce((sum, item) => sum + ((parseFloat(item.product.Precio) || 0) * item.quantity), 0),
+                    synced: navigator.onLine // NUEVO: rastrea si se guardó con conexión
+                };
+                savedCarts.push(newOrder);
                 localStorage.setItem('savedCarts', JSON.stringify(savedCarts));
                 clientNameInput.value = ''; cartModalOverlay.classList.remove('flex'); showNotification('saved-notification');
             }
@@ -322,7 +422,14 @@
                 if (savedCarts.length === 0) { savedOrdersContainer.innerHTML = '<p class="text-gray-500">No hay pedidos guardados.</p>'; return; }
                 savedOrdersContainer.innerHTML = savedCarts.map(saved => `
                     <div class="flex items-center justify-between border-b py-3 gap-2">
-                        <div class="flex-grow min-w-0"><p class="font-bold truncate">${saved.clientName}</p><p class="text-sm text-gray-500">${saved.items.length} tipo(s) de producto</p><p class="text-sm font-semibold text-red-600">$${saved.total.toFixed(2)}</p></div>
+                        <div class="flex-grow min-w-0">
+                           <div class="flex items-center gap-2">
+                             ${!saved.synced ? '<i class="fas fa-exclamation-triangle text-yellow-500" title="Guardado sin conexión"></i>' : ''}
+                             <p class="font-bold truncate">${saved.clientName}</p>
+                           </div>
+                           <p class="text-sm text-gray-500">${saved.items.length} tipo(s) de producto</p>
+                           <p class="text-sm font-semibold text-red-600">$${saved.total.toFixed(2)}</p>
+                        </div>
                         <div class="flex gap-2"><button class="load-cart-button bg-green-500 text-white py-1 px-3 rounded hover:bg-green-600" data-id="${saved.id}">Cargar</button><button class="delete-cart-button bg-red-600 text-white py-1 px-3 rounded hover:bg-red-700" data-id="${saved.id}">Borrar</button></div>
                     </div>`).join('');
             }
@@ -352,14 +459,56 @@
                 setTimeout(() => { n.classList.remove('opacity-100', 'translate-y-0'); n.classList.add('opacity-0', 'translate-y-2'); }, 2000);
             }
 
+            // --- Lógica de Sincronización y Offline ---
+            function updateOnlineStatus() {
+                if (navigator.onLine) {
+                    offlineNotification.classList.add('hidden');
+                    const unsyncedCarts = savedCarts.some(cart => !cart.synced);
+                    if (unsyncedCarts) {
+                        syncNotification.classList.remove('hidden');
+                    }
+                } else {
+                    offlineNotification.classList.remove('hidden');
+                    syncNotification.classList.add('hidden');
+                }
+            }
+
+            downloadCatalogButton.addEventListener('click', () => {
+                if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {
+                    alert('El Service Worker no está activo. No se puede descargar el catálogo.');
+                    return;
+                }
+                if(allProducts.length === 0) {
+                    alert('Espera a que los productos carguen primero.');
+                    return;
+                }
+                const originalText = downloadCatalogButton.innerHTML;
+                downloadCatalogButton.innerHTML = `<i class="fas fa-spinner fa-spin"></i> <span class="hidden sm:inline">Descargando...</span>`;
+                downloadCatalogButton.disabled = true;
+
+                const imageUrls = allProducts.map(p => `images/${p['Referencia Interna']}.webp`);
+                navigator.serviceWorker.controller.postMessage({
+                    type: 'CACHE_IMAGES',
+                    urls: imageUrls
+                });
+                
+                // Escuchar la respuesta del SW
+                navigator.serviceWorker.addEventListener('message', event => {
+                    if (event.data.type === 'CACHE_COMPLETE') {
+                        alert('¡Catálogo descargado! La aplicación ahora está lista para funcionar offline.');
+                        downloadCatalogButton.innerHTML = originalText;
+                        downloadCatalogButton.disabled = false;
+                    }
+                }, { once: true });
+            });
+
+
+            // Event Listeners
             searchBox.addEventListener('input', renderProducts);
             categoryFilter.addEventListener('change', updateSubcategories);
             subcategoryFilter.addEventListener('change', renderProducts);
-            clearFiltersBtn.addEventListener('click', () => { searchBox.value = ''; categoryFilter.value = ''; updateSubcategories(); });
-            productGrid.addEventListener('click', e => {
-                const copyBtn = e.target.closest('.copy-button'); if (copyBtn) navigator.clipboard.writeText(copyBtn.dataset.info).then(() => showNotification('copy-notification'));
-                const cartBtn = e.target.closest('.add-to-cart-button'); if (cartBtn) addToCart(cartBtn.dataset.ref, cartBtn);
-            });
+            brandFilter.addEventListener('change', renderProducts); // NUEVO
+            clearFiltersBtn.addEventListener('click', () => { searchBox.value = ''; categoryFilter.value = ''; brandFilter.value = ''; updateSubcategories(); });
             cartButton.addEventListener('click', () => cartModalOverlay.classList.add('flex'));
             closeCartModalButton.addEventListener('click', () => cartModalOverlay.classList.remove('flex'));
             clearCartButton.addEventListener('click', () => { cart = []; updateCart(); renderProducts(); });
@@ -382,108 +531,26 @@
                 }
             });
 
-            if ('serviceWorker' in navigator) window.addEventListener('load', () => { navigator.serviceWorker.register('/sw.js').then(reg => console.log('SW registrado.')).catch(err => console.error('Error SW', err)); });
+            window.addEventListener('online', updateOnlineStatus);
+            window.addEventListener('offline', updateOnlineStatus);
+            syncNotification.addEventListener('click', () => {
+                renderSavedCarts();
+                savedOrdersModalOverlay.classList.add('flex');
+                syncNotification.classList.add('hidden');
+            });
 
-            // --- Lógica para el PDF ---
-            const downloadPdfButton = document.getElementById('download-pdf-button');
-            function loadImageAsBase64(url) {
-                return new Promise((resolve, reject) => {
-                    const img = new Image();
-                    img.crossOrigin = 'Anonymous';
-                    img.onload = () => {
-                        const canvas = document.createElement('canvas');
-                        canvas.width = img.width;
-                        canvas.height = img.height;
-                        const ctx = canvas.getContext('2d');
-                        ctx.drawImage(img, 0, 0);
-                        resolve(canvas.toDataURL('image/webp'));
-                    };
-                    img.onerror = () => {
-                        // Resuelve con una imagen placeholder en base64 si falla la carga
-                        resolve('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mN8/x8AAuMB8DtXNJsAAAAASUVORK5CYII=');
-                    };
-                    img.src = url;
+            // Inicialización del Service Worker
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => { 
+                    navigator.serviceWorker.register('./sw.js')
+                        .then(reg => console.log('SW registrado con éxito.'))
+                        .catch(err => console.error('Error en el registro del SW', err));
                 });
             }
 
-            async function generateDirectPDF() {
-                console.log("Iniciando generación de PDF directo...");
-                const originalButtonText = downloadPdfButton.innerHTML;
-                downloadPdfButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span class="hidden sm:inline">PDF...</span>';
-                downloadPdfButton.disabled = true;
-
-                try {
-                    const { jsPDF } = window.jspdf;
-                    const pdf = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
-                    
-                    const pageWidth = pdf.internal.pageSize.getWidth();
-                    const margin = 10;
-                    const columnCount = 3;
-                    const columnWidth = (pageWidth - (margin * 2)) / columnCount;
-                    const cardHeight = 75;
-                    const cardPadding = 4;
-                    let x = margin;
-                    let y = margin + 20; // Dejar espacio para el título
-
-                    // Título
-                    pdf.setFontSize(22).text('Catálogo de Productos', pageWidth / 2, 15, { align: 'center' });
-                    pdf.setFontSize(10).text(new Date().toLocaleDateString(), pageWidth / 2, 22, { align: 'center' });
-
-                    for (let i = 0; i < allProducts.length; i++) {
-                        const product = allProducts[i];
-                        
-                        // Comprobar si necesitamos una nueva página
-                        if (y + cardHeight > pdf.internal.pageSize.getHeight() - margin) {
-                            pdf.addPage();
-                            y = margin + 10; // Reset Y para la nueva página
-                            x = margin;
-                            
-                            // Opcional: repetir título en nuevas páginas
-                            pdf.setFontSize(10).text(`Catálogo de Productos - Pág. ${pdf.internal.pages.length-1}`, pageWidth / 2, 8, { align: 'center' });
-                        }
-
-                        const ref = product['Referencia Interna'];
-                        const price = product.Precio ? '$' + parseFloat(product.Precio).toFixed(2) : 'N/A';
-                        const imageUrl = `images/${ref}.webp`;
-
-                        const imageBase64 = await loadImageAsBase64(imageUrl);
-                        
-                        // Contenedor de la tarjeta (opcional, para visualización)
-                        // pdf.setDrawColor(230, 230, 230).rect(x, y, columnWidth, cardHeight);
-
-                        // Imagen
-                        pdf.addImage(imageBase64, 'WEBP', x + cardPadding, y + cardPadding, columnWidth - (cardPadding * 2), 40);
-
-                        // Textos
-                        pdf.setFontSize(8).setTextColor(0, 0, 0);
-                        pdf.text(product.Nombre || 'Sin Nombre', x + columnWidth / 2, y + 50, { align: 'center', maxWidth: columnWidth - (cardPadding * 2) });
-                        
-                        pdf.setFontSize(7).setTextColor(100, 100, 100);
-                        pdf.text(`Ref: ${ref || ''}`, x + columnWidth / 2, y + 60, { align: 'center' });
-
-                        pdf.setFontSize(10).setFont('helvetica', 'bold').setTextColor(185, 28, 28);
-                        pdf.text(price, x + columnWidth / 2, y + 68, { align: 'center' });
-                        
-                        // Mover a la siguiente columna
-                        x += columnWidth;
-                        if ((i + 1) % columnCount === 0) {
-                            x = margin;
-                            y += cardHeight + 5;
-                        }
-                    }
-                    
-                    pdf.save('catalogo-directo-AROMOTOR.pdf');
-                } catch (error) {
-                    console.error("Error generando el PDF directo:", error);
-                    alert("Hubo un error al generar el PDF.");
-                } finally {
-                    downloadPdfButton.innerHTML = originalButtonText;
-                    downloadPdfButton.disabled = false;
-                }
-            }
-
-
+            // Carga inicial y estado de conexión
             loadProducts();
+            updateOnlineStatus();
         });
     </script>
 </body>
