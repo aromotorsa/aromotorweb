@@ -1,4 +1,4 @@
-const CACHE_NAME = 'aromotor-pro-cache-v2'; // Incrementamos la versión para forzar la actualización
+const CACHE_NAME = 'aromotor-pro-cache-v2';
 const urlsToCache = [
     '/',
     'index.html',
@@ -7,8 +7,6 @@ const urlsToCache = [
     'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css'
 ];
 
-// Evento de instalación: Se dispara cuando el Service Worker se instala.
-// Aquí guardamos los archivos principales de la aplicación (el "App Shell").
 self.addEventListener('install', event => {
     console.log('[SW] Instalando...');
     event.waitUntil(
@@ -21,8 +19,6 @@ self.addEventListener('install', event => {
     );
 });
 
-// Evento activate: Se dispara cuando el SW se activa.
-// Aquí limpiamos cachés antiguos para mantener todo ordenado.
 self.addEventListener('activate', event => {
     console.log('[SW] Activado.');
     event.waitUntil(
@@ -39,10 +35,7 @@ self.addEventListener('activate', event => {
     );
 });
 
-// Evento fetch: Se dispara cada vez que la página solicita un recurso.
-// Estrategia: "Cache first, falling back to network".
 self.addEventListener('fetch', event => {
-    // Solo intervenimos en peticiones GET
     if (event.request.method !== 'GET') {
         return;
     }
@@ -50,34 +43,31 @@ self.addEventListener('fetch', event => {
     event.respondWith(
         caches.match(event.request)
             .then(cachedResponse => {
-                // Si la respuesta está en el caché, la devolvemos desde ahí (¡súper rápido!)
                 if (cachedResponse) {
-                    // console.log('[SW] Recurso encontrado en caché:', event.request.url);
                     return cachedResponse;
                 }
 
-                // Si no está en el caché, la pedimos a la red
-                // console.log('[SW] Recurso no encontrado en caché, buscando en red:', event.request.url);
                 return fetch(event.request).then(
                     networkResponse => {
-                        // Antes de devolverla a la página, la guardamos en el caché para la próxima vez.
-                        return caches.open(CACHE_NAME).then(cache => {
-                            // Clonamos la respuesta porque es un "stream" y solo se puede consumir una vez.
-                            cache.put(event.request, networkResponse.clone());
-                            return networkResponse;
-                        });
+                        // --- INICIO DE LA CORRECCIÓN ---
+                        // Solo intentamos guardar en caché si es una petición web estándar (http o https)
+                        if (event.request.url.startsWith('http')) {
+                            return caches.open(CACHE_NAME).then(cache => {
+                                cache.put(event.request, networkResponse.clone());
+                                return networkResponse;
+                            });
+                        }
+                        // Si no es una petición web, simplemente la devolvemos sin cachearla.
+                        return networkResponse;
+                        // --- FIN DE LA CORRECCIÓN ---
                     }
                 ).catch(() => {
-                    // Si la red falla y no está en caché, no podemos hacer mucho más.
-                    // Podríamos devolver una imagen o recurso placeholder aquí si quisiéramos.
+                    // Manejo de error si la red falla
                 });
             })
     );
 });
 
-
-// Evento message: Escucha los mensajes de la página principal.
-// Usado para el botón "Descargar Catálogo".
 self.addEventListener('message', event => {
     if (event.data.type === 'CACHE_IMAGES') {
         console.log('[SW] Recibida orden de cachear imágenes.');
@@ -89,7 +79,6 @@ self.addEventListener('message', event => {
                 })
                 .then(() => {
                     console.log('[SW] Todas las imágenes han sido cacheadas.');
-                    // Avisamos a la página que hemos terminado
                     event.source.postMessage({ type: 'CACHE_COMPLETE' });
                 })
                 .catch(err => {
@@ -98,3 +87,4 @@ self.addEventListener('message', event => {
         );
     }
 });
+
