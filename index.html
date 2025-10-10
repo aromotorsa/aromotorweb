@@ -371,16 +371,32 @@
                 cartTotal.textContent = `$${cart.reduce((sum, item) => sum + ((parseFloat(item.product.Precio) || 0) * item.quantity), 0).toFixed(2)}`;
             }
 
+            // --- INICIO DE LA CORRECCIÓN DEL CARRITO ---
             function renderCart() {
                 if (cart.length === 0) {
-                    cartItemsContainer.innerHTML = '<p class="text-gray-500">Tu carrito está vacío.</p>'; return;
+                    cartItemsContainer.innerHTML = '<p class="text-gray-500">Tu carrito está vacío.</p>';
+                    return;
                 }
-                cartItemsContainer.innerHTML = cart.map(item => `
-                    <div class="flex items-center justify-between border-b py-2 gap-2">
-                        <div class="flex-grow min-w-0"><p class="font-bold truncate">${item.product.Nombre}</p><p class="text-sm text-gray-500">${item.product['Referencia Interna']}</p><p class="text-sm font-semibold text-red-600">$${(parseFloat(item.product.Precio) || 0).toFixed(2)}</p></div>
-                        <div class="flex items-center gap-2 flex-shrink-0"><button class="change-quantity-button bg-gray-200 w-7 h-7 rounded" data-ref="${item.ref}" data-change="-1">-</button><span>${item.quantity}</span><button class="change-quantity-button bg-gray-200 w-7 h-7 rounded" data-ref="${item.ref}" data-change="1">+</button></div>
-                    </div>`).join('');
+                cartItemsContainer.innerHTML = cart.map(item => {
+                    const imagePath = `images/${item.ref}.webp`;
+                    const price = parseFloat(item.product.Precio) || 0;
+                    return `
+                        <div class="flex items-center justify-between border-b py-3 gap-3">
+                            <img src="${imagePath}" alt="${item.product.Nombre}" class="w-16 h-16 object-cover rounded-md bg-gray-200 flex-shrink-0" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';">
+                            <div class="flex-grow min-w-0">
+                                <p class="font-bold truncate text-sm sm:text-base">${item.product.Nombre}</p>
+                                <p class="text-xs text-gray-500">${item.ref}</p>
+                                <p class="text-sm font-semibold text-red-600">$${price.toFixed(2)}</p>
+                            </div>
+                            <div class="flex items-center gap-1 sm:gap-2 flex-shrink-0">
+                                <button class="change-quantity-button bg-gray-200 w-7 h-7 sm:w-8 sm:h-8 rounded-full font-bold flex items-center justify-center" data-ref="${item.ref}" data-change="-1">-</button>
+                                <span class="font-bold w-6 text-center text-sm sm:text-base">${item.quantity}</span>
+                                <button class="change-quantity-button bg-gray-200 w-7 h-7 sm:w-8 sm:h-8 rounded-full font-bold flex items-center justify-center" data-ref="${item.ref}" data-change="1">+</button>
+                            </div>
+                        </div>`;
+                }).join('');
             }
+            // --- FIN DE LA CORRECCIÓN DEL CARRITO ---
             
             function shareOnWhatsApp() {
                 if (!navigator.onLine) {
@@ -497,7 +513,6 @@
                 }, { once: true });
             });
 
-            // --- INICIO DE LA CORRECCIÓN PARA MÓVILES ---
             function handleSyncNotificationClick() {
                 renderSavedCarts();
                 savedOrdersModalOverlay.classList.add('flex');
@@ -506,7 +521,6 @@
             
             syncNotification.addEventListener('click', handleSyncNotificationClick);
             syncNotification.addEventListener('touchend', handleSyncNotificationClick);
-            // --- FIN DE LA CORRECCIÓN ---
 
             searchBox.addEventListener('input', renderProducts);
             categoryFilter.addEventListener('change', updateSubcategories);
