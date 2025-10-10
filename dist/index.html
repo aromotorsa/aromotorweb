@@ -376,14 +376,14 @@
                     cartItemsContainer.innerHTML = '<p class="text-gray-500">Tu carrito está vacío.</p>';
                     return;
                 }
+                
+                // AJUSTE: Asegúrate de que esta línea completa sea la que tienes
                 cartItemsContainer.innerHTML = cart.map(item => {
                     const imagePath = `images/${item.ref}.webp`;
                     const price = parseFloat(item.product.Precio) || 0;
                     return `
                         <div class="flex items-center justify-between border-b py-3 gap-3">
-                            
                             <img src="${imagePath}" alt="${item.product.Nombre}" class="w-16 h-16 object-cover rounded-md bg-gray-200 flex-shrink-0" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';">
-                            
                             <div class="flex-grow min-w-0">
                                 <p class="font-bold truncate text-sm sm:text-base">${item.product.Nombre}</p>
                                 <p class="text-xs text-gray-500 truncate">${item.ref}</p>
@@ -395,7 +395,7 @@
                                 <button class="change-quantity-button bg-gray-200 w-7 h-7 sm:w-8 sm:h-8 rounded-full font-bold flex items-center justify-center" data-ref="${item.ref}" data-change="1">+</button>
                             </div>
                         </div>`;
-                }).join('');
+                }).join(''); // <-- Esto une los productos sin añadir nada extra.
             }
                 
             function shareOnWhatsApp() {
