@@ -1,23 +1,43 @@
-const CACHE_NAME = 'catalogo-vendedor-cache-v1';
-// Lista de archivos esenciales para que la app funcione offline.
-    const urlsToCache = [
-        '/',
-        'index.html',
-        'manifest.json',
-        'Resultado_Final.json',
-        'logos/AROMOTOR.png',
-        'https://cdn.tailwindcss.com',
-        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css'
-    ];
+// En tu archivo sw.js
 
-// Evento de Instalación: Se dispara cuando el Service Worker se instala.
+const CACHE_NAME = 'catalogo-vendedor-cache-v2'; // <-- NUEVO: Cambiamos la versión para forzar la actualización
+const urlsToCache = [
+    '/',
+    'index.html',
+    'manifest.json',
+    'Resultado_Final.json',
+    'logos/AROMOTOR.png',
+    'https://cdn.tailwindcss.com',
+    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css'
+];
+
 self.addEventListener('install', event => {
-    console.log('Service Worker: Instalando...');
+    console.log('Service Worker: Instalando v2...');
     event.waitUntil(
         caches.open(CACHE_NAME)
             .then(cache => {
                 console.log('Service Worker: Cache abierto, guardando archivos esenciales.');
-                return cache.addAll(urlsToCache);
+                // Primero guardamos los archivos base
+                return cache.addAll(urlsToCache)
+                    .then(() => {
+                        console.log('Service Worker: Archivos base guardados. Ahora buscando imágenes de productos...');
+                        // Ahora, vamos por las imágenes de los productos
+                        return fetch('Resultado_Final.json')
+                            .then(response => response.json())
+                            .then(products => {
+                                const imageUrls = products.map(product => {
+                                    const ref = product['Referencia Interna'];
+                                    // Aseguramos que solo añadimos URLs válidas
+                                    if (ref) {
+                                        return `images/${ref}.webp`;
+                                    }
+                                    return null;
+                                }).filter(url => url !== null); // Filtramos cualquier producto sin referencia
+
+                                console.log(`Service Worker: Encontradas ${imageUrls.length} imágenes para guardar en caché.`);
+                                return cache.addAll(imageUrls);
+                            });
+                    });
             })
             .catch(err => {
                 console.error('Service Worker: Falló el cacheo inicial', err);
@@ -25,41 +45,25 @@ self.addEventListener('install', event => {
     );
 });
 
-// Evento de Fetch: Se dispara cada vez que la página pide un recurso (CSS, JS, imagen, etc.).
+// El evento 'fetch' puede quedarse igual, pero lo optimizamos un poco
 self.addEventListener('fetch', event => {
     event.respondWith(
-        // 1. Busca el recurso en el caché.
         caches.match(event.request)
-            .then(response => {
-                if (response) {
-                    // Si está en caché, lo devuelve directamente. Es rápido y funciona offline.
-                    // console.log(`Service Worker: Sirviendo desde caché: ${event.request.url}`);
-                    return response;
+            .then(cachedResponse => {
+                // Si está en caché, lo devuelve
+                if (cachedResponse) {
+                    return cachedResponse;
                 }
-                
-                // 2. Si no está en caché, lo busca en la red.
-                // console.log(`Service Worker: Buscando en la red: ${event.request.url}`);
-                return fetch(event.request)
-                    .then(networkResponse => {
-                        // 3. Y si lo encuentra, lo guarda en caché para la próxima vez.
-                        return caches.open(CACHE_NAME)
-                            .then(cache => {
-                                cache.put(event.request, networkResponse.clone());
-                                return networkResponse;
-                            });
-                    });
-            })
-            .catch(error => {
-                // Si todo falla (ej. sin conexión y sin caché), puedes mostrar una página de fallback.
-                console.error('Service Worker: Error en fetch', error);
-                // Opcional: caches.match('/offline.html');
+                // Si no, va a la red
+                return fetch(event.request);
             })
     );
 });
 
-// Evento de Activación: Se usa para limpiar cachés antiguos si actualizas el CACHE_NAME.
+
+// Evento de Activación: Limpia los cachés antiguos
 self.addEventListener('activate', event => {
-    console.log('Service Worker: Activando...');
+    console.log('Service Worker: Activando v2...');
     const cacheWhitelist = [CACHE_NAME];
     event.waitUntil(
         caches.keys().then(cacheNames => {
