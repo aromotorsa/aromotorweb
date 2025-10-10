@@ -381,7 +381,9 @@
                     const price = parseFloat(item.product.Precio) || 0;
                     return `
                         <div class="flex items-center justify-between border-b py-3 gap-3">
+                            
                             <img src="${imagePath}" alt="${item.product.Nombre}" class="w-16 h-16 object-cover rounded-md bg-gray-200 flex-shrink-0" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';">
+                            
                             <div class="flex-grow min-w-0">
                                 <p class="font-bold truncate text-sm sm:text-base">${item.product.Nombre}</p>
                                 <p class="text-xs text-gray-500 truncate">${item.ref}</p>
@@ -395,7 +397,7 @@
                         </div>`;
                 }).join('');
             }
-            
+                
             function shareOnWhatsApp() {
                 if (!navigator.onLine) {
                     alert("Necesitas conexión a internet para compartir por WhatsApp. El pedido se ha guardado localmente.");
