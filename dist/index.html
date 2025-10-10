@@ -14,10 +14,8 @@
         ::-webkit-scrollbar-thumb:hover { background: #555; }
         #loading-spinner { border-top-color: #EF4444; }
         
-        /* MEJORA: Estilo para la notificación de "copiado" */
-        #copy-notification {
-            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-        }
+        #copy-notification, #cart-notification { transition: all 0.3s ease-in-out; }
+        #cart-modal-overlay.hidden { display: none; }
     </style>
 </head>
 <body class="antialiased font-sans">
@@ -25,9 +23,9 @@
     <div id="app" class="container mx-auto p-4">
 
         <header class="bg-white rounded-lg shadow-md p-4 mb-6 flex flex-col sm:flex-row justify-between items-center">
-            <div class="flex items-center mb-4 sm:mb-0">
-                <img src="/assets/AROMOTOR-CBi6FAKk.png" alt="Logo Empresa" class="h-10 mr-4">
-                <h1 class="text-2xl font-bold text-gray-800">Catálogo de Productos</h1>
+            <div class="flex items-center mb-4 sm:mb-0 min-w-0">
+                <img src="logos/AROMOTOR.png" alt="Logo Empresa" class="h-10 mr-3 flex-shrink-0">
+                <h1 class="text-xl sm:text-2xl font-bold text-gray-800 truncate">Catálogo de Productos</h1>
             </div>
              <div id="install-button-container" class="hidden">
                 <button id="install-button" class="bg-red-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-red-700 transition-colors">
@@ -59,18 +57,41 @@
         
        <div id="no-results" class="hidden text-center py-10">
             <p class="text-xl text-gray-500">No se encontraron productos que coincidan con tu búsqueda.</p>
+       </div>
+    </div>
+
+    <div id="copy-notification" class="fixed bottom-5 left-5 bg-gray-800 text-white py-2 px-4 rounded-lg shadow-lg opacity-0 transform translate-y-2">¡Info copiada!</div>
+    <div id="cart-notification" class="fixed bottom-5 left-5 bg-green-600 text-white py-2 px-4 rounded-lg shadow-lg opacity-0 transform translate-y-2">¡Producto añadido!</div>
+
+    <button id="cart-button" class="fixed bottom-5 right-5 bg-red-600 text-white w-16 h-16 rounded-full shadow-lg flex items-center justify-center text-2xl z-20">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count" class="absolute -top-1 -right-1 bg-red-700 text-white text-xs font-bold rounded-full h-6 w-6 flex items-center justify-center border-2 border-white">0</span>
+    </button>
+    
+    <div id="cart-modal-overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-30 flex items-center justify-center p-4">
+        <div id="cart-modal" class="bg-white rounded-lg shadow-xl w-full max-w-lg max-h-full flex flex-col">
+            <header class="p-4 border-b flex justify-between items-center">
+                <h2 class="text-xl font-bold">Carrito de Pedido</h2>
+                <button id="close-modal-button" class="text-2xl text-gray-500 hover:text-gray-800">&times;</button>
+            </header>
+            <main id="cart-items-container" class="p-4 overflow-y-auto flex-grow">
+                </main>
+            <footer class="p-4 border-t bg-gray-50">
+                <div class="flex justify-between items-center mb-4">
+                    <span class="font-bold text-lg">Total:</span>
+                    <span id="cart-total" class="font-bold text-lg text-red-700">$0.00</span>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-2">
+                     <button id="clear-cart-button" class="w-full bg-gray-300 text-gray-700 font-bold py-2 px-4 rounded-lg hover:bg-gray-400 transition">Vaciar Carrito</button>
+                    <button id="share-whatsapp-button" class="w-full bg-green-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-600 transition flex items-center justify-center gap-2">
+                        <i class="fab fa-whatsapp"></i> Compartir Pedido
+                    </button>
+                </div>
+            </footer>
         </div>
     </div>
 
-    <div id="copy-notification" class="fixed bottom-5 right-5 bg-gray-800 text-white py-2 px-4 rounded-lg shadow-lg opacity-0 transform translate-y-2">
-        ¡Información copiada!
-    </div>
-
-
-    <script>
-        // --- Service Worker (Magia Offline) ---
-        // (Tu código del Service Worker es excelente, lo dejo intacto)
-        
+    <script type="module">
         // --- Lógica del Catálogo ---
         document.addEventListener('DOMContentLoaded', () => {
             const searchBox = document.getElementById('search-box');
@@ -81,22 +102,131 @@
             const resultsCount = document.getElementById('results-count');
             const noResults = document.getElementById('no-results');
             const loadingSpinner = document.getElementById('loading-spinner');
+            
+            // --- NUEVA FUNCIÓN: Selectores para el Carrito ---
+            const cartButton = document.getElementById('cart-button');
+            const cartCount = document.getElementById('cart-count');
+            const cartModalOverlay = document.getElementById('cart-modal-overlay');
+            const closeModalButton = document.getElementById('close-modal-button');
+            const cartItemsContainer = document.getElementById('cart-items-container');
+            const cartTotal = document.getElementById('cart-total');
+            const shareWhatsappButton = document.getElementById('share-whatsapp-button');
+            const clearCartButton = document.getElementById('clear-cart-button');
 
             let allProducts = [];
+            let cart = []; 
+
+            // --- NUEVA FUNCIÓN: Lógica del Carrito ---
+            function findProductById(ref) {
+                return allProducts.find(p => p['Referencia Interna'] === ref);
+            }
+
+            function addToCart(ref) {
+                const existingProduct = cart.find(item => item.ref === ref);
+                if (existingProduct) {
+                    existingProduct.quantity++;
+                } else {
+                    const product = findProductById(ref);
+                    if (product) {
+                        cart.push({ ref: ref, quantity: 1, product: product });
+                    }
+                }
+                updateCart();
+                showCartNotification();
+            }
+            
+            function updateCart() {
+                renderCart();
+                updateCartCount();
+                updateCartTotal();
+            }
+
+            function updateCartCount() {
+                const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+                cartCount.textContent = totalItems;
+            }
+            
+            function updateCartTotal() {
+                const total = cart.reduce((sum, item) => {
+                    const price = parseFloat(item.product.Precio) || 0;
+                    return sum + (price * item.quantity);
+                }, 0);
+                cartTotal.textContent = `$${total.toFixed(2)}`;
+            }
+
+            function renderCart() {
+                if (cart.length === 0) {
+                    cartItemsContainer.innerHTML = '<p class="text-gray-500">Tu carrito está vacío.</p>';
+                    return;
+                }
+                cartItemsContainer.innerHTML = cart.map(item => `
+                    <div class="flex items-center justify-between border-b py-2 gap-2">
+                        <div class="flex-grow min-w-0">
+                            <p class="font-bold truncate">${item.product.Nombre}</p>
+                            <p class="text-sm text-gray-500">${item.product['Referencia Interna']}</p>
+                            <p class="text-sm font-semibold text-red-600">$${(parseFloat(item.product.Precio) || 0).toFixed(2)}</p>
+                        </div>
+                        <div class="flex items-center gap-2 flex-shrink-0">
+                            <button class="change-quantity-button bg-gray-200 w-6 h-6 rounded" data-ref="${item.ref}" data-change="-1">-</button>
+                            <span>${item.quantity}</span>
+                            <button class="change-quantity-button bg-gray-200 w-6 h-6 rounded" data-ref="${item.ref}" data-change="1">+</button>
+                        </div>
+                    </div>
+                `).join('');
+            }
+            
+            function changeQuantity(ref, change) {
+                const itemInCart = cart.find(item => item.ref === ref);
+                if (itemInCart) {
+                    itemInCart.quantity += change;
+                    if (itemInCart.quantity <= 0) {
+                        cart = cart.filter(item => item.ref !== ref);
+                    }
+                }
+                updateCart();
+            }
+            
+            function shareOnWhatsApp() {
+                if (cart.length === 0) return;
+                let message = '*¡Hola! Te comparto este pedido:*\n\n';
+                let total = 0;
+                cart.forEach(item => {
+                    const price = parseFloat(item.product.Precio) || 0;
+                    const subtotal = price * item.quantity;
+                    total += subtotal;
+                    message += `*${item.product.Nombre}*\n`;
+                    message += `Ref: ${item.ref}\n`;
+                    message += `${item.quantity} x $${price.toFixed(2)} = *$${subtotal.toFixed(2)}*\n\n`;
+                });
+                message += `--------------------\n`;
+                message += `*TOTAL DEL PEDIDO: $${total.toFixed(2)}*`;
+                const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, '_blank');
+            }
+
+            function showCartNotification() {
+                const notification = document.getElementById('cart-notification');
+                notification.classList.remove('opacity-0', 'translate-y-2');
+                notification.classList.add('opacity-100', 'translate-y-0');
+                setTimeout(() => {
+                     notification.classList.add('opacity-0', 'translate-y-2');
+                     notification.classList.remove('opacity-100', 'translate-y-0');
+                }, 1500);
+            }
+
             
             async function loadProducts() {
                 try {
-                    const response = await fetch(`Resultado_Final.json?v=${new Date().getTime()}`);
+                    const response = await fetch(`/Resultado_Final.json?v=${new Date().getTime()}`);
                     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                     allProducts = await response.json();
                     
                     populateFilters();
                     renderProducts();
-                    prepareCacheList(allProducts);
 
                 } catch (error) {
                     console.error("No se pudo cargar el archivo de productos (Resultado_Final.json):", error);
-                    productGrid.innerHTML = `<p class="col-span-full text-center text-red-600 font-bold">Error: No se pudo cargar el catálogo. Asegúrate de que el archivo 'Resultado_Final.json' esté en la misma carpeta.</p>`;
+                    productGrid.innerHTML = `<p class="col-span-full text-center text-red-600 font-bold">Error: No se pudo cargar el catálogo.</p>`;
                 } finally {
                     loadingSpinner.style.display = 'none';
                 }
@@ -122,19 +252,14 @@
             }
             
             function getImagePath(ref) {
-                return ref ? `images/${ref}.webp` : 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNjAwIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCI+PHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSI2MDAiIGZpbGw9IiNlYWVhZWEiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9InNlcmlmIiBmb250LXNpemU9IjQwIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYmJiIj5JbWFnZW4gbm8gZGlzcG9uaWJsZTwvdGV4dD48L3N2Zz4=';
+                return ref ? `images/${ref}.webp` : 'data:image/svg+xml;base64,...';
             }
 
-            // MEJORA: Función para obtener el color del indicador de stock
             function getStockIndicator(stock) {
                 const stockNum = parseInt(stock, 10) || 0;
-                if (stockNum > 10) {
-                    return '<span class="w-3 h-3 bg-green-500 rounded-full inline-block mr-1"></span>';
-                } else if (stockNum > 0) {
-                    return '<span class="w-3 h-3 bg-yellow-500 rounded-full inline-block mr-1"></span>';
-                } else {
-                    return '<span class="w-3 h-3 bg-red-500 rounded-full inline-block mr-1"></span>';
-                }
+                if (stockNum > 10) return '<span class="w-3 h-3 bg-green-500 rounded-full inline-block mr-1"></span>';
+                if (stockNum > 0) return '<span class="w-3 h-3 bg-yellow-500 rounded-full inline-block mr-1"></span>';
+                return '<span class="w-3 h-3 bg-red-500 rounded-full inline-block mr-1"></span>';
             }
 
             function renderProducts() {
@@ -148,39 +273,31 @@
                         product['Referencia Interna']?.toLowerCase().includes(searchTerm) ||
                         product.Categoría?.toLowerCase().includes(searchTerm) ||
                         product.Marca?.toLowerCase().includes(searchTerm);
-
                     const matchesCategory = selectedCategory === '' || product.Categoría === selectedCategory;
                     const matchesSubcategory = selectedSubcategory === '' || product.Subcategoría === selectedSubcategory;
-
                     return matchesSearch && matchesCategory && matchesSubcategory;
                 });
 
                 productGrid.innerHTML = '';
-                
-                if (filteredProducts.length === 0) {
-                    noResults.classList.remove('hidden');
-                } else {
-                    noResults.classList.add('hidden');
-                }
-
+                noResults.classList.toggle('hidden', filteredProducts.length > 0);
                 resultsCount.textContent = `${filteredProducts.length} producto(s) encontrado(s)`;
 
                 filteredProducts.forEach(product => {
-                    const imagePath = getImagePath(product['Referencia Interna']);
                     const card = document.createElement('div');
                     card.className = 'bg-white rounded-lg shadow-md overflow-hidden flex flex-col transition-transform transform hover:-translate-y-1';
-                    
-                    // MEJORA: Se añade el botón de copiar y el indicador visual de stock
                     const price = product.Precio ? '$' + parseFloat(product.Precio).toFixed(2) : 'N/A';
+                    const ref = product['Referencia Interna'];
                     const stock = product.Stock || 0;
-
+                    const imagePath = getImagePath(ref);
+                    
+                    // MODIFICACIÓN: Añadido el botón de añadir al carrito
                     card.innerHTML = `
                         <div class="h-40 bg-gray-200 flex items-center justify-center">
-                            <img src="${imagePath}" alt="${product.Nombre}" class="w-full h-full object-cover" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNjAwIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCI+PHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSI2MDAiIGZpbGw9IiNlYWVhZWEiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9InNlcmlmIiBmb250LXNpemU9IjQwIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYmJiIj5JbWFnZW4gbm8gZGlzcG9uaWJsZTwvdGV4dD48L3N2Zz4=';">
+                            <img src="${imagePath}" alt="${product.Nombre}" class="w-full h-full object-cover" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;...';">
                         </div>
                         <div class="p-3 flex-grow flex flex-col text-sm">
                             <h3 class="font-bold text-gray-800 flex-grow">${product.Nombre || 'Sin Nombre'}</h3>
-                            <p class="text-xs text-gray-500 mt-1">${product['Referencia Interna'] || ''}</p>
+                            <p class="text-xs text-gray-500 mt-1">${ref || ''}</p>
                             <p class="text-xs text-white bg-red-600 px-2 py-1 rounded-full self-start mt-2">${product.Categoría || 'Sin Categoría'}</p>
                             <div class="mt-3 pt-3 border-t border-gray-200 flex justify-between items-center">
                                 <div class="flex items-center">
@@ -190,10 +307,15 @@
                                 <p class="font-bold text-md text-red-700">${price}</p>
                             </div>
                         </div>
-                        <button class="copy-button w-full bg-gray-200 text-gray-700 text-xs py-2 hover:bg-red-600 hover:text-white transition-colors" 
-                                data-info="Producto: ${product.Nombre || ''}\nRef: ${product['Referencia Interna'] || ''}\nPrecio: ${price}">
-                            <i class="fas fa-copy mr-1"></i> Copiar Info
-                        </button>
+                        <div class="flex">
+                            <button class="copy-button w-3/4 bg-gray-200 text-gray-700 text-xs py-2 hover:bg-red-600 hover:text-white transition-colors" 
+                                    data-info="Producto: ${product.Nombre || ''}\nRef: ${ref || ''}\nPrecio: ${price}">
+                                <i class="fas fa-copy mr-1"></i> Copiar
+                            </button>
+                            <button class="add-to-cart-button w-1/4 bg-red-600 text-white text-lg hover:bg-red-700 transition-colors" data-ref="${ref}">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
                     `;
                     productGrid.appendChild(card);
                 });
@@ -206,132 +328,74 @@
                 renderProducts();
             }
 
-            // MEJORA: Función para copiar al portapapeles y mostrar notificación
             function copyToClipboard(text) {
                 navigator.clipboard.writeText(text).then(() => {
                     const notification = document.getElementById('copy-notification');
                     notification.classList.remove('opacity-0', 'translate-y-2');
                     notification.classList.add('opacity-100', 'translate-y-0');
                     setTimeout(() => {
-                         notification.classList.add('opacity-0', 'translate-y-2');
-                         notification.classList.remove('opacity-100', 'translate-y-0');
+                        notification.classList.add('opacity-0', 'translate-y-2');
+                        notification.classList.remove('opacity-100', 'translate-y-0');
                     }, 2000);
-                }).catch(err => {
-                    console.error('Error al copiar: ', err);
-                });
+                }).catch(err => console.error('Error al copiar: ', err));
             }
-
-            // MEJORA: Delegación de eventos para los botones de copiar
-            productGrid.addEventListener('click', function(event) {
-                const button = event.target.closest('.copy-button');
-                if (button) {
-                    const info = button.dataset.info;
-                    copyToClipboard(info);
-                }
-            });
-
-            // ... (Tu función prepareCacheList es correcta)
-             function prepareCacheList(products) {
-                 if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
-                     const imageUrls = products
-                         .map(p => p['Referencia Interna'])
-                         .filter(ref => ref)
-                         .map(ref => `images/${ref}.webp`);
-                     
-                     const filesToCache = [
-                         './',
-                         'index.html',
-                         `Resultado_Final.json?v=${new Date().getTime()}`,
-                         'logos/AROMOTOR.png',
-                         ...imageUrls
-                     ];
-                     
-                     navigator.serviceWorker.controller.postMessage({
-                         type: 'CACHE_FILES',
-                         files: filesToCache
-                     });
-                 }
-             }
-
+            
+            // --- Event Listeners ---
             searchBox.addEventListener('input', renderProducts);
             categoryFilter.addEventListener('change', renderProducts);
             subcategoryFilter.addEventListener('change', renderProducts);
             clearFiltersBtn.addEventListener('click', clearAllFilters);
             
+            // MODIFICACIÓN: Listener de eventos unificado para los botones de la tarjeta
+            productGrid.addEventListener('click', function(event) {
+                const copyButton = event.target.closest('.copy-button');
+                if (copyButton) {
+                    copyToClipboard(copyButton.dataset.info);
+                }
+                const cartButton = event.target.closest('.add-to-cart-button');
+                if (cartButton) {
+                    addToCart(cartButton.dataset.ref);
+                }
+            });
+            
+            // NUEVO: Listeners para el modal y carrito
+            cartButton.addEventListener('click', () => {
+                cartModalOverlay.classList.remove('hidden');
+                renderCart();
+            });
+
+            closeModalButton.addEventListener('click', () => cartModalOverlay.classList.add('hidden'));
+            cartModalOverlay.addEventListener('click', (event) => {
+                if(event.target === cartModalOverlay) cartModalOverlay.classList.add('hidden');
+            });
+
+            clearCartButton.addEventListener('click', () => {
+                cart = [];
+                updateCart();
+            });
+            
+            shareWhatsappButton.addEventListener('click', shareOnWhatsApp);
+            
+            cartItemsContainer.addEventListener('click', (event) => {
+                const button = event.target.closest('.change-quantity-button');
+                if(button) {
+                    const ref = button.dataset.ref;
+                    const change = parseInt(button.dataset.change, 10);
+                    changeQuantity(ref, change);
+                }
+            });
+            
             loadProducts();
-        });
-    </script>
-    
-    <script>
-    const swCode = `
-        const CACHE_NAME = 'catalogo-cache-v2';
-        self.addEventListener('install', event => {
-            console.log('SW: Instalando...');
-            event.waitUntil(
-                caches.open(CACHE_NAME).then(cache => {
-                    console.log('SW: Cache abierto');
-                    return cache.addAll(['./', 'index.html', 'logos/AROMOTOR.png']);
-                })
-            );
-            self.skipWaiting();
-        });
-        self.addEventListener('message', event => {
-            if (event.data.type === 'CACHE_FILES') {
-                event.waitUntil(
-                    caches.open(CACHE_NAME).then(cache => {
-                        return cache.addAll([...new Set(event.data.files)].map(url => new Request(url, {cache: 'reload'})))
-                                .catch(err => console.warn("SW: Algunas imágenes no se pudieron cachear.", err));
-                    })
-                );
+            
+
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/sw.js')
+                        .then(reg => console.log('Service worker real registrado.', reg))
+                        .catch(err => console.error('Error registrando service worker real', err));
+                });
             }
         });
-        self.addEventListener('activate', event => {
-            console.log('SW: Activado.');
-            event.waitUntil(
-                caches.keys().then(cacheNames => {
-                    return Promise.all(
-                        cacheNames.map(cache => {
-                            if (cache !== CACHE_NAME) {
-                                console.log('SW: Borrando caché antiguo:', cache);
-                                return caches.delete(cache);
-                            }
-                        })
-                    );
-                })
-            );
-            return self.clients.claim();
-        });
-        self.addEventListener('fetch', event => {
-           const requestUrl = new URL(event.request.url);
-           if (requestUrl.pathname.endsWith('.json')) {
-                event.respondWith(
-                    fetch(event.request).then(networkResponse => {
-                        return caches.open(CACHE_NAME).then(cache => {
-                            cache.put(event.request, networkResponse.clone());
-                            return networkResponse;
-                        });
-                    }).catch(() => {
-                        return caches.match(event.request);
-                    })
-                );
-                return;
-           }
-           event.respondWith(
-                caches.match(event.request).then(response => {
-                    return response || fetch(event.request);
-                })
-           );
-        });
-    `;
-    const swBlob = new Blob([swCode], { type: 'application/javascript' });
-    const swUrl = URL.createObjectURL(swBlob);
-
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js')
-            .then(reg => console.log('Service worker real registrado.', reg))
-            .catch(err => console.error('Error registrando service worker real', err));
-    }
-
     </script>
 </body>
 </html>
