@@ -1,4 +1,4 @@
-const CACHE_NAME = 'aromotor-pro-cache-v2';
+const CACHE_NAME = 'aromotor-pro-cache-v3'; // Aumentamos la versión para forzar la actualización
 const urlsToCache = [
     '/',
     'index.html',
@@ -25,6 +25,7 @@ self.addEventListener('activate', event => {
         caches.keys().then(cacheNames => {
             return Promise.all(
                 cacheNames.map(cacheName => {
+                    // Borramos cachés antiguos
                     if (cacheName !== CACHE_NAME) {
                         console.log('[SW] Limpiando caché antiguo:', cacheName);
                         return caches.delete(cacheName);
@@ -65,27 +66,38 @@ self.addEventListener('fetch', event => {
 });
 
 
-async function cacheUrlsOneByOne(cacheName, urls) {
+// --- INICIO DE LA CORRECCIÓN ULTRARRÁPIDA ---
+async function cacheUrlsInParallel(cacheName, urls) {
     const cache = await caches.open(cacheName);
-    let failures = 0;
-    for (const url of urls) {
-        try {
-            // Creamos una nueva Request para asegurarnos de que no use el caché existente
-            const request = new Request(url, { cache: 'reload' });
-            await cache.add(request);
-        } catch (error) {
-            failures++;
-            console.warn(`[SW] No se pudo cachear la URL: ${url}`);
-        }
-    }
+    
+    // Convertimos cada URL en una promesa de cacheo.
+    // Cada promesa intentará cachear su URL. Si falla, no romperá las demás.
+    const promises = urls.map(url => {
+        return (async () => {
+            try {
+                const request = new Request(url, { cache: 'reload' });
+                await cache.add(request);
+                return { status: 'fulfilled' };
+            } catch (error) {
+                console.warn(`[SW] No se pudo cachear la URL: ${url}`);
+                return { status: 'rejected' };
+            }
+        })();
+    });
+
+    // Esperamos a que TODAS las promesas terminen (éxito o fracaso).
+    const results = await Promise.all(promises);
+    
+    // Contamos cuántas fallaron.
+    const failures = results.filter(result => result.status === 'rejected').length;
     return failures;
 }
 
 self.addEventListener('message', event => {
     if (event.data.type === 'CACHE_IMAGES') {
-        console.log('[SW] Recibida orden de cachear imágenes de forma robusta.');
+        console.log('[SW] Recibida orden de cachear imágenes en PARALELO.');
         event.waitUntil(
-            cacheUrlsOneByOne(CACHE_NAME, event.data.urls)
+            cacheUrlsInParallel(CACHE_NAME, event.data.urls)
                 .then((failures) => {
                     console.log(`[SW] Proceso de cacheo completado. Fallaron ${failures} imágenes.`);
                     event.source.postMessage({ type: 'CACHE_COMPLETE' });
@@ -93,5 +105,5 @@ self.addEventListener('message', event => {
         );
     }
 });
-
+// --- FIN DE LA CORRECCIÓN ULTRARRÁPIDA ---
 
