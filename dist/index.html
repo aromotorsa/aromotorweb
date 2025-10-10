@@ -28,11 +28,13 @@
         <header class="bg-white rounded-lg shadow-md p-4 mb-6 flex flex-col sm:flex-row justify-between items-center gap-4">
             <div class="flex items-center min-w-0">
                 <img src="logos/AROMOTOR.png" alt="Logo Empresa" class="h-10 mr-3 flex-shrink-0">
-                <h1 class="text-xl sm:text-2xl font-bold text-gray-800 truncate">Catálogo de Productos</h1>
             </div>
             <div class="flex items-center gap-2 sm:gap-4">
-                <!-- NUEVO: Botón para descargar PDF -->
-                <button id="download-pdf-button" class="bg-gray-700 text-white font-bold py-2 px-4 rounded-lg hover:bg-gray-800 transition-colors flex items-center gap-2">
+                <button id="download-list-button" class="bg-green-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-700 transition-colors flex items-center gap-2" title="Descargar como listado (CSV/Excel)">
+                    <i class="fas fa-file-csv"></i>
+                    <span class="hidden sm:inline">Lista</span>
+                </button>
+                <button id="download-pdf-button" class="bg-red-700 text-white font-bold py-2 px-4 rounded-lg hover:bg-red-800 transition-colors flex items-center gap-2" title="Descargar como catálogo visual (PDF)">
                     <i class="fas fa-file-pdf"></i>
                     <span class="hidden sm:inline">PDF</span>
                 </button>
@@ -388,54 +390,102 @@
 
             // --- Lógica para el PDF ---
             const downloadPdfButton = document.getElementById('download-pdf-button');
-            async function generateCatalogPDF() {
-                console.log("Iniciando generación de PDF...");
+            function loadImageAsBase64(url) {
+                return new Promise((resolve, reject) => {
+                    const img = new Image();
+                    img.crossOrigin = 'Anonymous';
+                    img.onload = () => {
+                        const canvas = document.createElement('canvas');
+                        canvas.width = img.width;
+                        canvas.height = img.height;
+                        const ctx = canvas.getContext('2d');
+                        ctx.drawImage(img, 0, 0);
+                        resolve(canvas.toDataURL('image/webp'));
+                    };
+                    img.onerror = () => {
+                        // Resuelve con una imagen placeholder en base64 si falla la carga
+                        resolve('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mN8/x8AAuMB8DtXNJsAAAAASUVORK5CYII=');
+                    };
+                    img.src = url;
+                });
+            }
+
+            async function generateDirectPDF() {
+                console.log("Iniciando generación de PDF directo...");
                 const originalButtonText = downloadPdfButton.innerHTML;
-                downloadPdfButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span class="hidden sm:inline">Generando...</span>';
+                downloadPdfButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span class="hidden sm:inline">PDF...</span>';
                 downloadPdfButton.disabled = true;
 
-                const pdfContainer = document.createElement('div');
-                pdfContainer.style.position = 'absolute'; pdfContainer.style.left = '-9999px'; pdfContainer.style.width = '210mm';
-                pdfContainer.style.padding = '10mm'; pdfContainer.style.backgroundColor = 'white';
-                pdfContainer.innerHTML = `<h1 style="font-size: 24px; font-weight: bold; text-align: center; margin-bottom: 10mm;">Catálogo de Productos - ${new Date().toLocaleDateString()}</h1>`;
-                const productGridForPdf = document.createElement('div');
-                productGridForPdf.style.display = 'grid'; productGridForPdf.style.gridTemplateColumns = 'repeat(3, 1fr)'; productGridForPdf.style.gap = '8mm';
-
-                allProducts.forEach(product => {
-                    const ref = product['Referencia Interna'];
-                    const price = product.Precio ? '$' + parseFloat(product.Precio).toFixed(2) : 'N/A';
-                    const imagePath = `images/${ref}.webp`;
-                    productGridForPdf.innerHTML += `<div style="border: 1px solid #eee; padding: 4mm; text-align: center; font-family: sans-serif; font-size: 10px; page-break-inside: avoid;"><img src="${imagePath}" style="width: 100%; height: 40mm; object-fit: cover; margin-bottom: 4mm;" crossorigin="anonymous"><h3 style="font-weight: bold; margin: 0 0 2mm 0; height: 12mm; overflow: hidden;">${product.Nombre || 'Sin Nombre'}</h3><p style="color: #666; margin: 0 0 2mm 0;">Ref: ${ref || ''}</p><p style="font-weight: bold; color: #b91c1c; font-size: 14px; margin: 0;">${price}</p></div>`;
-                });
-
-                pdfContainer.appendChild(productGridForPdf); document.body.appendChild(pdfContainer);
                 try {
-                    const canvas = await html2canvas(pdfContainer, { scale: 2, useCORS: true, logging: false });
-                    console.log("Foto tomada. Creando el PDF...");
                     const { jsPDF } = window.jspdf;
-                    const imgData = canvas.toDataURL('image/png');
                     const pdf = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
-                    const pdfWidth = pdf.internal.pageSize.getWidth(), pdfHeight = pdf.internal.pageSize.getHeight();
-                    const ratio = canvas.width / pdfWidth;
-                    const totalPages = Math.ceil((canvas.height / ratio) / pdfHeight);
-                    let yPos = 0;
-                    for (let i = 1; i <= totalPages; i++) {
-                        const pageCanvas = document.createElement('canvas'); pageCanvas.width = canvas.width; pageCanvas.height = pdfHeight * ratio;
-                        pageCanvas.getContext('2d').drawImage(canvas, 0, yPos, canvas.width, pdfHeight * ratio, 0, 0, canvas.width, pdfHeight * ratio);
-                        pdf.addImage(pageCanvas.toDataURL('image/png'), 'PNG', 0, 0, pdfWidth, pdfHeight);
-                        yPos += pdfHeight * ratio;
-                        if (i < totalPages) pdf.addPage();
+                    
+                    const pageWidth = pdf.internal.pageSize.getWidth();
+                    const margin = 10;
+                    const columnCount = 3;
+                    const columnWidth = (pageWidth - (margin * 2)) / columnCount;
+                    const cardHeight = 75;
+                    const cardPadding = 4;
+                    let x = margin;
+                    let y = margin + 20; // Dejar espacio para el título
+
+                    // Título
+                    pdf.setFontSize(22).text('Catálogo de Productos', pageWidth / 2, 15, { align: 'center' });
+                    pdf.setFontSize(10).text(new Date().toLocaleDateString(), pageWidth / 2, 22, { align: 'center' });
+
+                    for (let i = 0; i < allProducts.length; i++) {
+                        const product = allProducts[i];
+                        
+                        // Comprobar si necesitamos una nueva página
+                        if (y + cardHeight > pdf.internal.pageSize.getHeight() - margin) {
+                            pdf.addPage();
+                            y = margin + 10; // Reset Y para la nueva página
+                            x = margin;
+                            
+                            // Opcional: repetir título en nuevas páginas
+                            pdf.setFontSize(10).text(`Catálogo de Productos - Pág. ${pdf.internal.pages.length-1}`, pageWidth / 2, 8, { align: 'center' });
+                        }
+
+                        const ref = product['Referencia Interna'];
+                        const price = product.Precio ? '$' + parseFloat(product.Precio).toFixed(2) : 'N/A';
+                        const imageUrl = `images/${ref}.webp`;
+
+                        const imageBase64 = await loadImageAsBase64(imageUrl);
+                        
+                        // Contenedor de la tarjeta (opcional, para visualización)
+                        // pdf.setDrawColor(230, 230, 230).rect(x, y, columnWidth, cardHeight);
+
+                        // Imagen
+                        pdf.addImage(imageBase64, 'WEBP', x + cardPadding, y + cardPadding, columnWidth - (cardPadding * 2), 40);
+
+                        // Textos
+                        pdf.setFontSize(8).setTextColor(0, 0, 0);
+                        pdf.text(product.Nombre || 'Sin Nombre', x + columnWidth / 2, y + 50, { align: 'center', maxWidth: columnWidth - (cardPadding * 2) });
+                        
+                        pdf.setFontSize(7).setTextColor(100, 100, 100);
+                        pdf.text(`Ref: ${ref || ''}`, x + columnWidth / 2, y + 60, { align: 'center' });
+
+                        pdf.setFontSize(10).setFont('helvetica', 'bold').setTextColor(185, 28, 28);
+                        pdf.text(price, x + columnWidth / 2, y + 68, { align: 'center' });
+                        
+                        // Mover a la siguiente columna
+                        x += columnWidth;
+                        if ((i + 1) % columnCount === 0) {
+                            x = margin;
+                            y += cardHeight + 5;
+                        }
                     }
-                    pdf.save('catalogo-productos-AROMOTOR.pdf');
+                    
+                    pdf.save('catalogo-directo-AROMOTOR.pdf');
                 } catch (error) {
-                    console.error("Error al generar el PDF:", error);
-                    alert("Hubo un error al generar el PDF. Revisa la consola.");
+                    console.error("Error generando el PDF directo:", error);
+                    alert("Hubo un error al generar el PDF.");
                 } finally {
-                    document.body.removeChild(pdfContainer);
-                    downloadPdfButton.innerHTML = originalButtonText; downloadPdfButton.disabled = false;
+                    downloadPdfButton.innerHTML = originalButtonText;
+                    downloadPdfButton.disabled = false;
                 }
             }
-            downloadPdfButton.addEventListener('click', generateCatalogPDF);
+
 
             loadProducts();
         });
