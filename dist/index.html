@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#EF4444"/>
+    <!-- NUEVO: Librerías para generar PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <style>
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #f1f1f1; }
@@ -14,10 +17,9 @@
         ::-webkit-scrollbar-thumb:hover { background: #555; }
         #loading-spinner { border-top-color: #EF4444; }
         .notification { transition: all 0.3s ease-in-out; }
-        .modal-overlay { display: none; } /* Modificado para un mejor control */
+        .modal-overlay { display: none; }
         .modal-overlay.flex { display: flex; }
     </style>
-  <script type="module" crossorigin src="/assets/index-BXUJsOAi.js"></script>
 </head>
 <body class="antialiased font-sans">
 
@@ -28,7 +30,12 @@
                 <img src="logos/AROMOTOR.png" alt="Logo Empresa" class="h-10 mr-3 flex-shrink-0">
                 <h1 class="text-xl sm:text-2xl font-bold text-gray-800 truncate">Catálogo de Productos</h1>
             </div>
-            <div class="flex items-center gap-4">
+            <div class="flex items-center gap-2 sm:gap-4">
+                <!-- NUEVO: Botón para descargar PDF -->
+                <button id="download-pdf-button" class="bg-gray-700 text-white font-bold py-2 px-4 rounded-lg hover:bg-gray-800 transition-colors flex items-center gap-2">
+                    <i class="fas fa-file-pdf"></i>
+                    <span class="hidden sm:inline">PDF</span>
+                </button>
                 <button id="saved-orders-button" class="bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2">
                     <i class="fas fa-save"></i>
                     <span class="hidden sm:inline">Pedidos</span>
@@ -65,8 +72,7 @@
 
         <div id="loading-spinner" class="animate-spin rounded-full h-16 w-16 border-4 border-gray-300 mx-auto mt-20"></div>
         
-        <div id="product-grid" class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6">
-        </div>
+        <div id="product-grid" class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6"></div>
         
        <div id="no-results" class="hidden text-center py-10">
             <p class="text-xl text-gray-500">No se encontraron productos.</p>
@@ -84,25 +90,15 @@
     
     <div id="cart-modal-overlay" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 z-30 items-center justify-center p-4">
         <div id="cart-modal" class="bg-white rounded-lg shadow-xl w-full max-w-lg max-h-full flex flex-col">
-            <header class="p-4 border-b flex justify-between items-center">
-                <h2 class="text-xl font-bold">Carrito de Pedido</h2>
-                <button id="close-cart-modal-button" class="text-2xl text-gray-500 hover:text-gray-800">&times;</button>
-            </header>
+            <header class="p-4 border-b flex justify-between items-center"><h2 class="text-xl font-bold">Carrito de Pedido</h2><button id="close-cart-modal-button" class="text-2xl text-gray-500 hover:text-gray-800">&times;</button></header>
             <main id="cart-items-container" class="p-4 overflow-y-auto flex-grow"></main>
             <footer class="p-4 border-t bg-gray-50">
-                <div class="flex justify-between items-center mb-4">
-                    <span class="font-bold text-lg">Total:</span>
-                    <span id="cart-total" class="font-bold text-lg text-red-700">$0.00</span>
-                </div>
+                <div class="flex justify-between items-center mb-4"><span class="font-bold text-lg">Total:</span><span id="cart-total" class="font-bold text-lg text-red-700">$0.00</span></div>
                 <input type="text" id="client-name-input" placeholder="Nombre del Cliente (para guardar)" class="w-full p-2 border rounded-lg mb-3">
                 <div class="flex flex-col sm:flex-row gap-2">
                     <button id="clear-cart-button" class="w-full bg-gray-300 text-gray-700 font-bold py-2 px-4 rounded-lg hover:bg-gray-400 transition">Vaciar</button>
-                    <button id="save-cart-button" class="w-full bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition flex items-center justify-center gap-2">
-                        <i class="fas fa-save"></i> Guardar
-                    </button>
-                    <button id="share-whatsapp-button" class="w-full bg-green-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-600 transition flex items-center justify-center gap-2">
-                        <i class="fab fa-whatsapp"></i> Compartir
-                    </button>
+                    <button id="save-cart-button" class="w-full bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition flex items-center justify-center gap-2"><i class="fas fa-save"></i> Guardar</button>
+                    <button id="share-whatsapp-button" class="w-full bg-green-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-600 transition flex items-center justify-center gap-2"><i class="fab fa-whatsapp"></i> Compartir</button>
                 </div>
             </footer>
         </div>
@@ -110,14 +106,339 @@
     
     <div id="saved-orders-modal-overlay" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 z-40 items-center justify-center p-4">
         <div class="bg-white rounded-lg shadow-xl w-full max-w-lg max-h-full flex flex-col">
-            <header class="p-4 border-b flex justify-between items-center">
-                <h2 class="text-xl font-bold">Pedidos Guardados</h2>
-                <button id="close-saved-orders-modal-button" class="text-2xl text-gray-500 hover:text-gray-800">&times;</button>
-            </header>
-            <main id="saved-orders-container" class="p-4 overflow-y-auto flex-grow">
-                </main>
+            <header class="p-4 border-b flex justify-between items-center"><h2 class="text-xl font-bold">Pedidos Guardados</h2><button id="close-saved-orders-modal-button" class="text-2xl text-gray-500 hover:text-gray-800">&times;</button></header>
+            <main id="saved-orders-container" class="p-4 overflow-y-auto flex-grow"></main>
         </div>
     </div>
-
+
+    <script type="module">
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchBox = document.getElementById('search-box');
+            const categoryFilter = document.getElementById('category-filter');
+            const subcategoryFilter = document.getElementById('subcategory-filter');
+            const clearFiltersBtn = document.getElementById('clear-filters');
+            const productGrid = document.getElementById('product-grid');
+            const resultsCount = document.getElementById('results-count');
+            const noResults = document.getElementById('no-results');
+            const loadingSpinner = document.getElementById('loading-spinner');
+            const cartButton = document.getElementById('cart-button');
+            const cartCount = document.getElementById('cart-count');
+            const cartModalOverlay = document.getElementById('cart-modal-overlay');
+            const closeCartModalButton = document.getElementById('close-cart-modal-button');
+            const cartItemsContainer = document.getElementById('cart-items-container');
+            const cartTotal = document.getElementById('cart-total');
+            const shareWhatsappButton = document.getElementById('share-whatsapp-button');
+            const clearCartButton = document.getElementById('clear-cart-button');
+            const clientNameInput = document.getElementById('client-name-input');
+            const saveCartButton = document.getElementById('save-cart-button');
+            const savedOrdersButton = document.getElementById('saved-orders-button');
+            const savedOrdersModalOverlay = document.getElementById('saved-orders-modal-overlay');
+            const closeSavedOrdersModalButton = document.getElementById('close-saved-orders-modal-button');
+            const savedOrdersContainer = document.getElementById('saved-orders-container');
+            const viewToggle = document.getElementById('view-toggle');
+
+            let allProducts = [];
+            let cart = [];
+            let currentView = 'grid'; 
+            let savedCarts = JSON.parse(localStorage.getItem('savedCarts')) || [];
+
+            async function loadProducts() {
+                try {
+                    const response = await fetch('Resultado_Final.json');
+                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                    allProducts = await response.json();
+                    populateFilters();
+                    renderProducts();
+                } catch (error) {
+                    console.error("Error al cargar productos:", error);
+                    productGrid.innerHTML = `<p class="col-span-full text-center text-red-600 font-bold">Error: No se pudo cargar el catálogo.</p>`;
+                } finally {
+                    loadingSpinner.style.display = 'none';
+                }
+            }
+
+            function populateFilters() {
+                const categories = [...new Set(allProducts.map(p => p.Categoría))].sort();
+                categoryFilter.innerHTML = '<option value="">Todas las Categorías</option>';
+                categories.forEach(cat => {
+                    const option = document.createElement('option');
+                    option.value = cat; option.textContent = cat;
+                    categoryFilter.appendChild(option);
+                });
+            }
+
+            function updateSubcategories() {
+                const selectedCategory = categoryFilter.value;
+                subcategoryFilter.innerHTML = '<option value="">Todas las Subcategorías</option>';
+                if (selectedCategory) {
+                    const relevantSubcategories = [...new Set(allProducts.filter(p => p.Categoría === selectedCategory && p.Subcategoría).map(p => p.Subcategoría))].sort();
+                    relevantSubcategories.forEach(sub => {
+                        const option = document.createElement('option');
+                        option.value = sub; option.textContent = sub;
+                        subcategoryFilter.appendChild(option);
+                    });
+                }
+                renderProducts();
+            }
+
+            function renderProducts() {
+                const searchTerm = searchBox.value.toLowerCase();
+                const selectedCategory = categoryFilter.value;
+                const selectedSubcategory = subcategoryFilter.value;
+
+                const filteredProducts = allProducts.filter(p => 
+                    (searchTerm === '' || p.Nombre?.toLowerCase().includes(searchTerm) || p['Referencia Interna']?.toLowerCase().includes(searchTerm) || p.Marca?.toLowerCase().includes(searchTerm)) &&
+                    (selectedCategory === '' || p.Categoría === selectedCategory) &&
+                    (selectedSubcategory === '' || p.Subcategoría === selectedSubcategory)
+                );
+
+                productGrid.innerHTML = '';
+                productGrid.className = currentView === 'grid' 
+                    ? 'grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6' 
+                    : 'flex flex-col gap-3';
+                noResults.classList.toggle('hidden', filteredProducts.length > 0);
+                resultsCount.textContent = `${filteredProducts.length} producto(s)`;
+                filteredProducts.forEach(p => productGrid.appendChild(createProductCard(p)));
+            }
+            
+            function createProductCard(product) {
+                const card = document.createElement('div');
+                const ref = product['Referencia Interna'];
+                const price = product.Precio ? '$' + parseFloat(product.Precio).toFixed(2) : 'N/A';
+                const stock = product.Stock || 0;
+                const imagePath = `images/${ref}.webp`;
+                const itemInCart = cart.find(item => item.ref === ref);
+                const quantityInCart = itemInCart ? itemInCart.quantity : 0;
+                const stockIndicator = stock > 10 ? '<span class="w-3 h-3 bg-green-500 rounded-full"></span>' : stock > 0 ? '<span class="w-3 h-3 bg-yellow-500 rounded-full"></span>' : '<span class="w-3 h-3 bg-red-500 rounded-full"></span>';
+                
+                let cardHTML = '';
+                if (currentView === 'grid') {
+                    card.className = 'bg-white rounded-lg shadow-md overflow-hidden flex flex-col transition-transform transform hover:-translate-y-1';
+                    cardHTML = `
+                        <div class="h-40 bg-gray-200 flex items-center justify-center"><img src="${imagePath}" alt="${product.Nombre}" class="w-full h-full object-cover" loading="lazy" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';"></div>
+                        <div class="p-3 flex-grow flex flex-col text-sm">
+                            <h3 class="font-bold text-gray-800 flex-grow">${product.Nombre || 'Sin Nombre'}</h3><p class="text-xs text-gray-500 mt-1">${ref || ''}</p>
+                            <p class="text-xs text-white bg-red-600 px-2 py-1 rounded-full self-start mt-2">${product.Categoría || ''}</p>
+                            <div class="mt-3 pt-3 border-t flex justify-between items-center"><div class="flex items-center gap-1">${stockIndicator} <p class="font-bold">${stock}</p></div><p class="font-bold text-md text-red-700">${price}</p></div>
+                        </div>
+                        <div class="flex relative">
+                            ${quantityInCart > 0 ? `<span class="absolute top-[-10px] right-[-5px] bg-blue-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">${quantityInCart}</span>` : ''}
+                            <button class="copy-button w-3/4 bg-gray-200 text-gray-700 text-xs py-2 hover:bg-red-600 hover:text-white transition-colors" data-info="Producto: ${product.Nombre || ''}\nRef: ${ref || ''}\nPrecio: ${price}"><i class="fas fa-copy mr-1"></i> Copiar</button>
+                            <button class="add-to-cart-button w-1/4 bg-red-600 text-white text-lg hover:bg-red-700 transition-colors" data-ref="${ref}"><i class="fas fa-plus"></i></button>
+                        </div>`;
+                } else {
+                    card.className = 'bg-white rounded-lg shadow-md overflow-hidden flex items-center p-3 gap-4 w-full';
+                    cardHTML = `
+                        <img src="${imagePath}" alt="${product.Nombre}" class="w-20 h-20 object-cover bg-gray-200 rounded-md" loading="lazy" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';">
+                        <div class="flex-grow"><h3 class="font-bold text-gray-800">${product.Nombre || 'Sin Nombre'}</h3><p class="text-sm text-gray-500">${ref || ''}</p><div class="flex items-center gap-4 mt-1"><p class="text-sm text-white bg-red-600 px-2 py-1 rounded-full">${product.Categoría || ''}</p><div class="flex items-center gap-1">${stockIndicator} <p class="font-bold">${stock}</p></div></div></div>
+                        <div class="flex flex-col items-end gap-2"><p class="font-bold text-lg text-red-700">${price}</p>
+                            <div class="flex relative">
+                                ${quantityInCart > 0 ? `<span class="absolute top-[-10px] right-[-5px] bg-blue-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">${quantityInCart}</span>` : ''}
+                                <button class="copy-button p-2 bg-gray-200 text-gray-700 rounded-l-md hover:bg-red-600 hover:text-white transition-colors" data-info="Producto: ${product.Nombre || ''}\nRef: ${ref || ''}\nPrecio: ${price}"><i class="fas fa-copy"></i></button>
+                                <button class="add-to-cart-button p-2 bg-red-600 text-white rounded-r-md hover:bg-red-700 transition-colors" data-ref="${ref}"><i class="fas fa-plus"></i></button>
+                            </div>
+                        </div>`;
+                }
+                card.innerHTML = cardHTML;
+                card.dataset.ref = ref;
+                return card;
+            }
+
+            function updateProductCard(ref) {
+                const card = document.querySelector(`[data-ref="${ref}"]`);
+                if (card) {
+                    const product = allProducts.find(p => p['Referencia Interna'] === ref);
+                    if (product) card.replaceWith(createProductCard(product));
+                }
+            }
+
+            function addToCart(ref, buttonElement) {
+                const existingProduct = cart.find(item => item.ref === ref);
+                if (existingProduct) existingProduct.quantity++;
+                else {
+                    const product = allProducts.find(p => p['Referencia Interna'] === ref);
+                    if (product) cart.push({ ref: ref, quantity: 1, product: product });
+                }
+                updateCart();
+                updateProductCard(ref);
+                showNotification('cart-notification');
+                if (buttonElement) {
+                    const icon = buttonElement.querySelector('i');
+                    buttonElement.classList.add('bg-green-500'); icon.classList.replace('fa-plus', 'fa-check');
+                    setTimeout(() => {
+                        buttonElement.classList.remove('bg-green-500'); icon.classList.replace('fa-check', 'fa-plus');
+                    }, 1000);
+                }
+            }
+            
+            function changeQuantity(ref, change) {
+                const itemInCart = cart.find(item => item.ref === ref);
+                if (itemInCart) {
+                    itemInCart.quantity += change;
+                    if (itemInCart.quantity <= 0) cart = cart.filter(item => item.ref !== ref);
+                }
+                updateCart();
+                updateProductCard(ref);
+            }
+            
+            function updateCart() {
+                renderCart();
+                cartCount.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+                cartTotal.textContent = `$${cart.reduce((sum, item) => sum + ((parseFloat(item.product.Precio) || 0) * item.quantity), 0).toFixed(2)}`;
+            }
+
+            function renderCart() {
+                if (cart.length === 0) {
+                    cartItemsContainer.innerHTML = '<p class="text-gray-500">Tu carrito está vacío.</p>'; return;
+                }
+                cartItemsContainer.innerHTML = cart.map(item => `
+                    <div class="flex items-center justify-between border-b py-2 gap-2">
+                        <div class="flex-grow min-w-0"><p class="font-bold truncate">${item.product.Nombre}</p><p class="text-sm text-gray-500">${item.product['Referencia Interna']}</p><p class="text-sm font-semibold text-red-600">$${(parseFloat(item.product.Precio) || 0).toFixed(2)}</p></div>
+                        <div class="flex items-center gap-2 flex-shrink-0"><button class="change-quantity-button bg-gray-200 w-7 h-7 rounded" data-ref="${item.ref}" data-change="-1">-</button><span>${item.quantity}</span><button class="change-quantity-button bg-gray-200 w-7 h-7 rounded" data-ref="${item.ref}" data-change="1">+</button></div>
+                    </div>`).join('');
+            }
+            
+            function shareOnWhatsApp() {
+                if (cart.length === 0) return;
+                let message = clientNameInput.value ? `*Pedido para: ${clientNameInput.value}*\n\n` : `*¡Hola! Te comparto este pedido:*\n\n`;
+                let total = 0;
+                cart.forEach(item => {
+                    const price = parseFloat(item.product.Precio) || 0;
+                    const subtotal = price * item.quantity;
+                    total += subtotal;
+                    message += `*${item.product.Nombre}*\nRef: ${item.ref}\n${item.quantity} x $${price.toFixed(2)} = *$${subtotal.toFixed(2)}*\n\n`;
+                });
+                message += `*TOTAL DEL PEDIDO: $${total.toFixed(2)}*`;
+                window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`, '_blank');
+            }
+
+            function saveCurrentCart() {
+                const clientName = clientNameInput.value.trim();
+                if (cart.length === 0 || !clientName) { alert("Por favor, ingresa un nombre de cliente y añade productos para guardar."); return; }
+                savedCarts.push({ id: Date.now(), clientName: clientName, items: JSON.parse(JSON.stringify(cart)), total: cart.reduce((sum, item) => sum + ((parseFloat(item.product.Precio) || 0) * item.quantity), 0) });
+                localStorage.setItem('savedCarts', JSON.stringify(savedCarts));
+                clientNameInput.value = ''; cartModalOverlay.classList.remove('flex'); showNotification('saved-notification');
+            }
+
+            function renderSavedCarts() {
+                if (savedCarts.length === 0) { savedOrdersContainer.innerHTML = '<p class="text-gray-500">No hay pedidos guardados.</p>'; return; }
+                savedOrdersContainer.innerHTML = savedCarts.map(saved => `
+                    <div class="flex items-center justify-between border-b py-3 gap-2">
+                        <div class="flex-grow min-w-0"><p class="font-bold truncate">${saved.clientName}</p><p class="text-sm text-gray-500">${saved.items.length} tipo(s) de producto</p><p class="text-sm font-semibold text-red-600">$${saved.total.toFixed(2)}</p></div>
+                        <div class="flex gap-2"><button class="load-cart-button bg-green-500 text-white py-1 px-3 rounded hover:bg-green-600" data-id="${saved.id}">Cargar</button><button class="delete-cart-button bg-red-600 text-white py-1 px-3 rounded hover:bg-red-700" data-id="${saved.id}">Borrar</button></div>
+                    </div>`).join('');
+            }
+            
+            function loadSavedCart(id) {
+                const saved = savedCarts.find(s => s.id == id);
+                if (saved) {
+                    cart = JSON.parse(JSON.stringify(saved.items));
+                    clientNameInput.value = saved.clientName;
+                    updateCart(); renderProducts();
+                    savedOrdersModalOverlay.classList.remove('flex');
+                    cartModalOverlay.classList.add('flex');
+                }
+            }
+
+            function deleteSavedCart(id) {
+                if (confirm("¿Estás seguro de que quieres borrar este pedido guardado?")) {
+                    savedCarts = savedCarts.filter(s => s.id != id);
+                    localStorage.setItem('savedCarts', JSON.stringify(savedCarts));
+                    renderSavedCarts();
+                }
+            }
+
+            function showNotification(id) {
+                const n = document.getElementById(id);
+                n.classList.add('opacity-100', 'translate-y-0'); n.classList.remove('opacity-0', 'translate-y-2');
+                setTimeout(() => { n.classList.remove('opacity-100', 'translate-y-0'); n.classList.add('opacity-0', 'translate-y-2'); }, 2000);
+            }
+
+            searchBox.addEventListener('input', renderProducts);
+            categoryFilter.addEventListener('change', updateSubcategories);
+            subcategoryFilter.addEventListener('change', renderProducts);
+            clearFiltersBtn.addEventListener('click', () => { searchBox.value = ''; categoryFilter.value = ''; updateSubcategories(); });
+            productGrid.addEventListener('click', e => {
+                const copyBtn = e.target.closest('.copy-button'); if (copyBtn) navigator.clipboard.writeText(copyBtn.dataset.info).then(() => showNotification('copy-notification'));
+                const cartBtn = e.target.closest('.add-to-cart-button'); if (cartBtn) addToCart(cartBtn.dataset.ref, cartBtn);
+            });
+            cartButton.addEventListener('click', () => cartModalOverlay.classList.add('flex'));
+            closeCartModalButton.addEventListener('click', () => cartModalOverlay.classList.remove('flex'));
+            clearCartButton.addEventListener('click', () => { cart = []; updateCart(); renderProducts(); });
+            shareWhatsappButton.addEventListener('click', shareOnWhatsApp);
+            cartItemsContainer.addEventListener('click', e => { const btn = e.target.closest('.change-quantity-button'); if(btn) changeQuantity(btn.dataset.ref, parseInt(btn.dataset.change, 10)); });
+            saveCartButton.addEventListener('click', saveCurrentCart);
+            savedOrdersButton.addEventListener('click', () => { renderSavedCarts(); savedOrdersModalOverlay.classList.add('flex'); });
+            closeSavedOrdersModalButton.addEventListener('click', () => savedOrdersModalOverlay.classList.remove('flex'));
+            savedOrdersContainer.addEventListener('click', e => {
+                if (e.target.closest('.load-cart-button')) loadSavedCart(e.target.closest('.load-cart-button').dataset.id);
+                if (e.target.closest('.delete-cart-button')) deleteSavedCart(e.target.closest('.delete-cart-button').dataset.id);
+            });
+            viewToggle.addEventListener('click', e => {
+                const btn = e.target.closest('.view-btn');
+                if (btn && !btn.classList.contains('text-red-600')) {
+                    currentView = btn.dataset.view;
+                    document.querySelectorAll('.view-btn').forEach(b => { b.classList.remove('text-red-600'); b.classList.add('text-gray-400'); });
+                    btn.classList.add('text-red-600'); btn.classList.remove('text-gray-400');
+                    renderProducts();
+                }
+            });
+
+            if ('serviceWorker' in navigator) window.addEventListener('load', () => { navigator.serviceWorker.register('/sw.js').then(reg => console.log('SW registrado.')).catch(err => console.error('Error SW', err)); });
+
+            // --- Lógica para el PDF ---
+            const downloadPdfButton = document.getElementById('download-pdf-button');
+            async function generateCatalogPDF() {
+                console.log("Iniciando generación de PDF...");
+                const originalButtonText = downloadPdfButton.innerHTML;
+                downloadPdfButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span class="hidden sm:inline">Generando...</span>';
+                downloadPdfButton.disabled = true;
+
+                const pdfContainer = document.createElement('div');
+                pdfContainer.style.position = 'absolute'; pdfContainer.style.left = '-9999px'; pdfContainer.style.width = '210mm';
+                pdfContainer.style.padding = '10mm'; pdfContainer.style.backgroundColor = 'white';
+                pdfContainer.innerHTML = `<h1 style="font-size: 24px; font-weight: bold; text-align: center; margin-bottom: 10mm;">Catálogo de Productos - ${new Date().toLocaleDateString()}</h1>`;
+                const productGridForPdf = document.createElement('div');
+                productGridForPdf.style.display = 'grid'; productGridForPdf.style.gridTemplateColumns = 'repeat(3, 1fr)'; productGridForPdf.style.gap = '8mm';
+
+                allProducts.forEach(product => {
+                    const ref = product['Referencia Interna'];
+                    const price = product.Precio ? '$' + parseFloat(product.Precio).toFixed(2) : 'N/A';
+                    const imagePath = `images/${ref}.webp`;
+                    productGridForPdf.innerHTML += `<div style="border: 1px solid #eee; padding: 4mm; text-align: center; font-family: sans-serif; font-size: 10px; page-break-inside: avoid;"><img src="${imagePath}" style="width: 100%; height: 40mm; object-fit: cover; margin-bottom: 4mm;" crossorigin="anonymous"><h3 style="font-weight: bold; margin: 0 0 2mm 0; height: 12mm; overflow: hidden;">${product.Nombre || 'Sin Nombre'}</h3><p style="color: #666; margin: 0 0 2mm 0;">Ref: ${ref || ''}</p><p style="font-weight: bold; color: #b91c1c; font-size: 14px; margin: 0;">${price}</p></div>`;
+                });
+
+                pdfContainer.appendChild(productGridForPdf); document.body.appendChild(pdfContainer);
+                try {
+                    const canvas = await html2canvas(pdfContainer, { scale: 2, useCORS: true, logging: false });
+                    console.log("Foto tomada. Creando el PDF...");
+                    const { jsPDF } = window.jspdf;
+                    const imgData = canvas.toDataURL('image/png');
+                    const pdf = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
+                    const pdfWidth = pdf.internal.pageSize.getWidth(), pdfHeight = pdf.internal.pageSize.getHeight();
+                    const ratio = canvas.width / pdfWidth;
+                    const totalPages = Math.ceil((canvas.height / ratio) / pdfHeight);
+                    let yPos = 0;
+                    for (let i = 1; i <= totalPages; i++) {
+                        const pageCanvas = document.createElement('canvas'); pageCanvas.width = canvas.width; pageCanvas.height = pdfHeight * ratio;
+                        pageCanvas.getContext('2d').drawImage(canvas, 0, yPos, canvas.width, pdfHeight * ratio, 0, 0, canvas.width, pdfHeight * ratio);
+                        pdf.addImage(pageCanvas.toDataURL('image/png'), 'PNG', 0, 0, pdfWidth, pdfHeight);
+                        yPos += pdfHeight * ratio;
+                        if (i < totalPages) pdf.addPage();
+                    }
+                    pdf.save('catalogo-productos-AROMOTOR.pdf');
+                } catch (error) {
+                    console.error("Error al generar el PDF:", error);
+                    alert("Hubo un error al generar el PDF. Revisa la consola.");
+                } finally {
+                    document.body.removeChild(pdfContainer);
+                    downloadPdfButton.innerHTML = originalButtonText; downloadPdfButton.disabled = false;
+                }
+            }
+            downloadPdfButton.addEventListener('click', generateCatalogPDF);
+
+            loadProducts();
+        });
+    </script>
 </body>
 </html>
