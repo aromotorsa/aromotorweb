@@ -371,7 +371,6 @@
                 cartTotal.textContent = `$${cart.reduce((sum, item) => sum + ((parseFloat(item.product.Precio) || 0) * item.quantity), 0).toFixed(2)}`;
             }
 
-            // --- INICIO DE LA CORRECCIÓN DEL CARRITO ---
             function renderCart() {
                 if (cart.length === 0) {
                     cartItemsContainer.innerHTML = '<p class="text-gray-500">Tu carrito está vacío.</p>';
@@ -385,7 +384,7 @@
                             <img src="${imagePath}" alt="${item.product.Nombre}" class="w-16 h-16 object-cover rounded-md bg-gray-200 flex-shrink-0" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';">
                             <div class="flex-grow min-w-0">
                                 <p class="font-bold truncate text-sm sm:text-base">${item.product.Nombre}</p>
-                                <p class="text-xs text-gray-500">${item.ref}</p>
+                                <p class="text-xs text-gray-500 truncate">${item.ref}</p>
                                 <p class="text-sm font-semibold text-red-600">$${price.toFixed(2)}</p>
                             </div>
                             <div class="flex items-center gap-1 sm:gap-2 flex-shrink-0">
@@ -396,7 +395,6 @@
                         </div>`;
                 }).join('');
             }
-            // --- FIN DE LA CORRECCIÓN DEL CARRITO ---
             
             function shareOnWhatsApp() {
                 if (!navigator.onLine) {
