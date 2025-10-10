@@ -120,7 +120,7 @@
             const searchBox = document.getElementById('search-box');
             const categoryFilter = document.getElementById('category-filter');
             const subcategoryFilter = document.getElementById('subcategory-filter');
-            const brandFilter = document.getElementById('brand-filter'); // NUEVO
+            const brandFilter = document.getElementById('brand-filter');
             const clearFiltersBtn = document.getElementById('clear-filters');
             const productGrid = document.getElementById('product-grid');
             const resultsCount = document.getElementById('results-count');
@@ -141,9 +141,9 @@
             const closeSavedOrdersModalButton = document.getElementById('close-saved-orders-modal-button');
             const savedOrdersContainer = document.getElementById('saved-orders-container');
             const viewToggle = document.getElementById('view-toggle');
-            const downloadCatalogButton = document.getElementById('download-catalog-button'); // NUEVO
-            const offlineNotification = document.getElementById('offline-notification'); // NUEVO
-            const syncNotification = document.getElementById('sync-notification'); // NUEVO
+            const downloadCatalogButton = document.getElementById('download-catalog-button');
+            const offlineNotification = document.getElementById('offline-notification');
+            const syncNotification = document.getElementById('sync-notification');
 
             // Estado de la aplicación
             let allProducts = [];
@@ -171,7 +171,7 @@
 
             function populateFilters() {
                 const categories = [...new Set(allProducts.map(p => p.Categoría))].sort();
-                const brands = [...new Set(allProducts.map(p => p.Marca).filter(Boolean))].sort(); // NUEVO
+                const brands = [...new Set(allProducts.map(p => p.Marca).filter(Boolean))].sort();
 
                 categoryFilter.innerHTML = '<option value="">Todas las Categorías</option>';
                 categories.forEach(cat => {
@@ -180,8 +180,8 @@
                     categoryFilter.appendChild(option);
                 });
                 
-                brandFilter.innerHTML = '<option value="">Todas las Marcas</option>'; // NUEVO
-                brands.forEach(brand => { // NUEVO
+                brandFilter.innerHTML = '<option value="">Todas las Marcas</option>';
+                brands.forEach(brand => {
                     const option = document.createElement('option');
                     option.value = brand; option.textContent = brand;
                     brandFilter.appendChild(option);
@@ -206,13 +206,13 @@
                 const searchTerm = searchBox.value.toLowerCase();
                 const selectedCategory = categoryFilter.value;
                 const selectedSubcategory = subcategoryFilter.value;
-                const selectedBrand = brandFilter.value; // NUEVO
+                const selectedBrand = brandFilter.value;
 
                 const filteredProducts = allProducts.filter(p => 
                     (searchTerm === '' || p.Nombre?.toLowerCase().includes(searchTerm) || p['Referencia Interna']?.toLowerCase().includes(searchTerm) || p.Marca?.toLowerCase().includes(searchTerm)) &&
                     (selectedCategory === '' || p.Categoría === selectedCategory) &&
                     (selectedSubcategory === '' || p.Subcategoría === selectedSubcategory) &&
-                    (selectedBrand === '' || p.Marca === selectedBrand) // NUEVO
+                    (selectedBrand === '' || p.Marca === selectedBrand)
                 );
 
                 productGrid.innerHTML = '';
@@ -277,7 +277,7 @@
                 }
             }
             
-            function addToCart(ref, buttonElement, quantity = 1) { // MODIFICADO
+            function addToCart(ref, buttonElement, quantity = 1) {
                 if (quantity <= 0) return;
                 const existingProduct = cart.find(item => item.ref === ref);
                 if (existingProduct) {
@@ -289,7 +289,7 @@
                 updateCart();
                 updateProductCard(ref);
 
-                if (quantity === 1) { // Solo notificaciones para clics simples
+                if (quantity === 1) {
                     showNotification('cart-notification');
                     if (buttonElement) {
                         const icon = buttonElement.querySelector('i');
@@ -301,11 +301,11 @@
                 }
             }
             
-            // Lógica de añadir rápido con toque largo
             function handleAddToCartPress(button) {
                 longPressTimer = setTimeout(() => {
                     const ref = button.dataset.ref;
-                    const quantityStr = prompt(`¿Cuántas unidades de ${ref} quieres añadir?`, 1);
+                    const productName = allProducts.find(p => p['Referencia Interna'] === ref)?.Nombre || ref;
+                    const quantityStr = prompt(`¿Cuántas unidades de "${productName}" quieres añadir?`, 1);
                     const quantity = parseInt(quantityStr, 10);
                     if (!isNaN(quantity) && quantity > 0) {
                         addToCart(ref, button, quantity);
@@ -318,7 +318,6 @@
                 clearTimeout(longPressTimer);
             }
 
-            // Delegación de eventos para la grilla de productos
             productGrid.addEventListener('click', e => {
                 const copyBtn = e.target.closest('.copy-button');
                 if (copyBtn) {
@@ -356,8 +355,6 @@
                 if (cartBtn) handleAddToCartRelease();
             });
 
-            // Resto de funciones (carrito, pedidos guardados, etc.)
-            
             function changeQuantity(ref, change) {
                 const itemInCart = cart.find(item => item.ref === ref);
                 if (itemInCart) {
@@ -365,7 +362,7 @@
                     if (itemInCart.quantity <= 0) cart = cart.filter(item => item.ref !== ref);
                 }
                 updateCart();
-                renderProducts(); // Actualiza toda la grilla para reflejar cambios de cantidad
+                renderProducts();
             }
             
             function updateCart() {
@@ -411,7 +408,7 @@
                     clientName: clientName, 
                     items: JSON.parse(JSON.stringify(cart)), 
                     total: cart.reduce((sum, item) => sum + ((parseFloat(item.product.Precio) || 0) * item.quantity), 0),
-                    synced: navigator.onLine // NUEVO: rastrea si se guardó con conexión
+                    synced: navigator.onLine
                 };
                 savedCarts.push(newOrder);
                 localStorage.setItem('savedCarts', JSON.stringify(savedCarts));
@@ -459,7 +456,6 @@
                 setTimeout(() => { n.classList.remove('opacity-100', 'translate-y-0'); n.classList.add('opacity-0', 'translate-y-2'); }, 2000);
             }
 
-            // --- Lógica de Sincronización y Offline ---
             function updateOnlineStatus() {
                 if (navigator.onLine) {
                     offlineNotification.classList.add('hidden');
@@ -475,7 +471,7 @@
 
             downloadCatalogButton.addEventListener('click', () => {
                 if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {
-                    alert('El Service Worker no está activo. No se puede descargar el catálogo.');
+                    alert('El Service Worker no está activo. Por favor, refresca la página e inténtalo de nuevo.');
                     return;
                 }
                 if(allProducts.length === 0) {
@@ -492,7 +488,6 @@
                     urls: imageUrls
                 });
                 
-                // Escuchar la respuesta del SW
                 navigator.serviceWorker.addEventListener('message', event => {
                     if (event.data.type === 'CACHE_COMPLETE') {
                         alert('¡Catálogo descargado! La aplicación ahora está lista para funcionar offline.');
@@ -502,12 +497,21 @@
                 }, { once: true });
             });
 
+            // --- INICIO DE LA CORRECCIÓN PARA MÓVILES ---
+            function handleSyncNotificationClick() {
+                renderSavedCarts();
+                savedOrdersModalOverlay.classList.add('flex');
+                syncNotification.classList.add('hidden');
+            }
+            
+            syncNotification.addEventListener('click', handleSyncNotificationClick);
+            syncNotification.addEventListener('touchend', handleSyncNotificationClick);
+            // --- FIN DE LA CORRECCIÓN ---
 
-            // Event Listeners
             searchBox.addEventListener('input', renderProducts);
             categoryFilter.addEventListener('change', updateSubcategories);
             subcategoryFilter.addEventListener('change', renderProducts);
-            brandFilter.addEventListener('change', renderProducts); // NUEVO
+            brandFilter.addEventListener('change', renderProducts);
             clearFiltersBtn.addEventListener('click', () => { searchBox.value = ''; categoryFilter.value = ''; brandFilter.value = ''; updateSubcategories(); });
             cartButton.addEventListener('click', () => cartModalOverlay.classList.add('flex'));
             closeCartModalButton.addEventListener('click', () => cartModalOverlay.classList.remove('flex'));
@@ -533,13 +537,7 @@
 
             window.addEventListener('online', updateOnlineStatus);
             window.addEventListener('offline', updateOnlineStatus);
-            syncNotification.addEventListener('click', () => {
-                renderSavedCarts();
-                savedOrdersModalOverlay.classList.add('flex');
-                syncNotification.classList.add('hidden');
-            });
-
-            // Inicialización del Service Worker
+            
             if ('serviceWorker' in navigator) {
                 window.addEventListener('load', () => { 
                     navigator.serviceWorker.register('./sw.js')
@@ -548,10 +546,10 @@
                 });
             }
 
-            // Carga inicial y estado de conexión
             loadProducts();
             updateOnlineStatus();
         });
     </script>
 </body>
 </html>
+
