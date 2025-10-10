@@ -49,17 +49,13 @@ self.addEventListener('fetch', event => {
 
                 return fetch(event.request).then(
                     networkResponse => {
-                        // --- INICIO DE LA CORRECCIÓN ---
-                        // Solo intentamos guardar en caché si es una petición web estándar (http o https)
                         if (event.request.url.startsWith('http')) {
                             return caches.open(CACHE_NAME).then(cache => {
                                 cache.put(event.request, networkResponse.clone());
                                 return networkResponse;
                             });
                         }
-                        // Si no es una petición web, simplemente la devolvemos sin cachearla.
                         return networkResponse;
-                        // --- FIN DE LA CORRECCIÓN ---
                     }
                 ).catch(() => {
                     // Manejo de error si la red falla
@@ -68,21 +64,31 @@ self.addEventListener('fetch', event => {
     );
 });
 
+
+async function cacheUrlsOneByOne(cacheName, urls) {
+    const cache = await caches.open(cacheName);
+    let failures = 0;
+    for (const url of urls) {
+        try {
+            // Creamos una nueva Request para asegurarnos de que no use el caché existente
+            const request = new Request(url, { cache: 'reload' });
+            await cache.add(request);
+        } catch (error) {
+            failures++;
+            console.warn(`[SW] No se pudo cachear la URL: ${url}`);
+        }
+    }
+    return failures;
+}
+
 self.addEventListener('message', event => {
     if (event.data.type === 'CACHE_IMAGES') {
-        console.log('[SW] Recibida orden de cachear imágenes.');
+        console.log('[SW] Recibida orden de cachear imágenes de forma robusta.');
         event.waitUntil(
-            caches.open(CACHE_NAME)
-                .then(cache => {
-                    console.log(`[SW] Cacheando ${event.data.urls.length} imágenes.`);
-                    return cache.addAll(event.data.urls);
-                })
-                .then(() => {
-                    console.log('[SW] Todas las imágenes han sido cacheadas.');
+            cacheUrlsOneByOne(CACHE_NAME, event.data.urls)
+                .then((failures) => {
+                    console.log(`[SW] Proceso de cacheo completado. Fallaron ${failures} imágenes.`);
                     event.source.postMessage({ type: 'CACHE_COMPLETE' });
-                })
-                .catch(err => {
-                    console.error('[SW] Error al cachear imágenes:', err);
                 })
         );
     }
