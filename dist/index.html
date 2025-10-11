@@ -113,7 +113,12 @@
             <main id="saved-orders-container" class="p-4 overflow-y-auto flex-grow"></main>
         </div>
     </div>
-
+    </div> </div> <div id="image-zoom-modal-overlay" class="modal-overlay fixed inset-0 bg-black bg-opacity-75 z-50 items-center justify-center p-4 cursor-zoom-out">
+        <div class="relative max-w-4xl max-h-[90vh]">
+            <img id="zoomed-image" src="" alt="Vista ampliada del producto" class="block max-w-full max-h-full rounded-lg shadow-2xl">
+            <button id="close-zoom-modal-button" class="absolute -top-4 -right-4 bg-white text-black w-10 h-10 rounded-full text-2xl font-bold flex items-center justify-center shadow-lg hover:bg-red-600 hover:text-white transition">&times;</button>
+        </div>
+    </div>
     <script type="module">
         document.addEventListener('DOMContentLoaded', () => {
             // Selectores DOM
@@ -144,6 +149,10 @@
             const downloadCatalogButton = document.getElementById('download-catalog-button');
             const offlineNotification = document.getElementById('offline-notification');
             const syncNotification = document.getElementById('sync-notification');
+            const imageZoomModalOverlay = document.getElementById('image-zoom-modal-overlay');
+            const closeZoomModalButton = document.getElementById('close-zoom-modal-button');
+            const zoomedImage = document.getElementById('zoomed-image');
+        
 
             // Estado de la aplicación
             let allProducts = [];
@@ -238,7 +247,9 @@
                 if (currentView === 'grid') {
                     card.className = 'bg-white rounded-lg shadow-md overflow-hidden flex flex-col transition-transform transform hover:-translate-y-1';
                     cardHTML = `
-                        <div class="aspect-square bg-gray-200 flex items-center justify-center"><img src="${imagePath}" alt="${product.Nombre}" class="w-full h-full object-cover" loading="lazy" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';"></div>
+                        <div class="aspect-square bg-gray-200 flex items-center justify-center overflow-hidden">
+                            <img src="${imagePath}" alt="${product.Nombre}" class="w-full h-full object-cover zoomable-image cursor-zoom-in" loading="lazy" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';">
+                        </div>
                         <div class="p-3 flex-grow flex flex-col text-sm">
                             <h3 class="font-bold text-gray-800 flex-grow">${product.Nombre || 'Sin Nombre'}</h3><p class="text-xs text-gray-500 mt-1">${ref || ''}</p>
                             <p class="text-xs text-white bg-red-600 px-2 py-1 rounded-full self-start mt-2">${product.Categoría || ''}</p>
@@ -252,7 +263,7 @@
                 } else { // Vista de lista
                     card.className = 'bg-white rounded-lg shadow-md overflow-hidden flex items-center p-3 gap-4 w-full';
                     cardHTML = `
-                        <img src="${imagePath}" alt="${product.Nombre}" class="w-20 h-20 object-cover bg-gray-200 rounded-md" loading="lazy" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';">
+                        <img src="${imagePath}" alt="${product.Nombre}" class="w-20 h-20 object-cover bg-gray-200 rounded-md zoomable-image cursor-zoom-in" loading="lazy" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';">
                         <div class="flex-grow"><h3 class="font-bold text-gray-800">${product.Nombre || 'Sin Nombre'}</h3><p class="text-sm text-gray-500">${ref || ''}</p><div class="flex items-center gap-4 mt-1"><p class="text-sm text-white bg-red-600 px-2 py-1 rounded-full">${product.Categoría || ''}</p><div class="flex items-center gap-1">${stockIndicator} <p class="font-bold">${stock}</p></div></div></div>
                         <div class="flex flex-col items-end gap-2"><p class="font-bold text-lg text-red-700">${price}</p>
                             <div class="flex relative">
@@ -327,6 +338,11 @@
                 const cartBtn = e.target.closest('.add-to-cart-button');
                 if (cartBtn) {
                     addToCart(cartBtn.dataset.ref, cartBtn, 1);
+                }
+                const zoomTrigger = e.target.closest('.zoomable-image');
+                if (zoomTrigger) {
+                    zoomedImage.src = zoomTrigger.src;
+                    imageZoomModalOverlay.classList.add('flex');
                 }
             });
 
@@ -558,8 +574,21 @@
                         .then(reg => console.log('SW registrado con éxito.'))
                         .catch(err => console.error('Error en el registro del SW', err));
                 });
-            }
 
+            }
+            const closeZoomModal = () => {
+                imageZoomModalOverlay.classList.remove('flex');
+                zoomedImage.src = ""; // Limpiamos la imagen para liberar memoria
+            };
+
+            closeZoomModalButton.addEventListener('click', closeZoomModal);
+
+            imageZoomModalOverlay.addEventListener('click', (e) => {
+                // Cierra el modal solo si se hace clic en el fondo (el overlay)
+                if (e.target === imageZoomModalOverlay) {
+                    closeZoomModal();
+                }
+            });
             loadProducts();
             updateOnlineStatus();
         });
