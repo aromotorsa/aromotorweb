@@ -91,21 +91,42 @@
         <span id="cart-count" class="absolute -top-1 -right-1 bg-red-700 text-white text-xs font-bold rounded-full h-6 w-6 flex items-center justify-center border-2 border-white">0</span>
     </button>
     
-    <div id="cart-modal-overlay" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 z-30 items-center justify-center p-4">
-        <div id="cart-modal" class="bg-white rounded-lg shadow-xl w-full max-w-lg max-h-full flex flex-col">
-            <header class="p-4 border-b flex justify-between items-center"><h2 class="text-xl font-bold">Carrito de Pedido</h2><button id="close-cart-modal-button" class="text-2xl text-gray-500 hover:text-gray-800">&times;</button></header>
-            <main id="cart-items-container" class="p-4 overflow-y-auto flex-grow"></main>
-            <footer class="p-4 border-t bg-gray-50">
-                <div class="flex justify-between items-center mb-4"><span class="font-bold text-lg">Total:</span><span id="cart-total" class="font-bold text-lg text-red-700">$0.00</span></div>
-                <input type="text" id="client-name-input" placeholder="Nombre del Cliente (para guardar)" class="w-full p-2 border rounded-lg mb-3">
-                <div class="flex flex-col sm:flex-row gap-2">
-                    <button id="clear-cart-button" class="w-full bg-gray-300 text-gray-700 font-bold py-2 px-4 rounded-lg hover:bg-gray-400 transition">Vaciar</button>
-                    <button id="save-cart-button" class="w-full bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition flex items-center justify-center gap-2"><i class="fas fa-save"></i> Guardar</button>
-                    <button id="share-whatsapp-button" class="w-full bg-green-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-600 transition flex items-center justify-center gap-2"><i class="fab fa-whatsapp"></i> Compartir</button>
+    <div id="cart-modal-overlay" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 z-30 items-center justify-center p-2 sm:p-4">
+        <div id="quotation-content" class="bg-white rounded-lg shadow-xl w-full max-w-2xl max-h-[95vh] flex flex-col">
+            
+            <header class="p-4 border-b flex justify-between items-center">
+                <div>
+                    <h2 class="text-xl sm:text-2xl font-bold text-gray-800">Cotización de Pedido</h2>
+                    <p id="quotation-date" class="text-sm text-gray-500"></p>
+                </div>
+                <button id="close-cart-modal-button" class="text-3xl text-gray-400 hover:text-red-600 transition-transform transform hover:rotate-90">&times;</button>
+            </header>
+            
+            <div class="p-4 border-b">
+                <label for="client-name-input" class="block text-sm font-medium text-gray-700 mb-1">Cliente:</label>
+                <input type="text" id="client-name-input" placeholder="Nombre del Cliente" class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 transition">
+            </div>
+
+            <main class="p-4 overflow-y-auto flex-grow bg-gray-50">
+                <div id="cart-items-container" class="space-y-3">
+                    </div>
+            </main>
+            
+            <footer class="p-4 border-t bg-white">
+                <div class="flex justify-end items-center mb-4">
+                    <span class="text-gray-600 font-medium mr-4">Total:</span>
+                    <span id="cart-total" class="font-bold text-2xl text-red-700">$0.00</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+                    <button id="clear-cart-button" class="w-full bg-gray-300 text-gray-700 font-bold py-2 px-4 rounded-lg hover:bg-gray-400 transition lg:col-span-1">Vaciar</button>
+                    <button id="save-cart-button" class="w-full bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition flex items-center justify-center gap-2 lg:col-span-1"><i class="fas fa-save"></i> Guardar</button>
+                    <button id="share-whatsapp-button" class="w-full bg-green-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-600 transition flex items-center justify-center gap-2 lg:col-span-1"><i class="fab fa-whatsapp"></i> Compartir</button>
+                    <button id="export-pdf-button" class="w-full bg-red-700 text-white font-bold py-2 px-4 rounded-lg hover:bg-red-800 transition flex items-center justify-center gap-2 lg:col-span-1"><i class="fas fa-file-pdf"></i> PDF</button>
                 </div>
             </footer>
         </div>
     </div>
+
     
     <div id="saved-orders-modal-overlay" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 z-40 items-center justify-center p-4">
         <div class="bg-white rounded-lg shadow-xl w-full max-w-lg max-h-full flex flex-col">
@@ -388,32 +409,107 @@
             }
 
             function renderCart() {
+                // Ponemos la fecha actual en el encabezado
+                document.getElementById('quotation-date').textContent = new Date().toLocaleDateString('es-EC', { year: 'numeric', month: 'long', day: 'numeric' });
+
                 if (cart.length === 0) {
-                    cartItemsContainer.innerHTML = '<p class="text-gray-500">Tu carrito está vacío.</p>';
+                    cartItemsContainer.innerHTML = '<p class="text-gray-500 text-center py-8">Tu cotización está vacía.</p>';
                     return;
                 }
                 
-                // AJUSTE: Asegúrate de que esta línea completa sea la que tienes
                 cartItemsContainer.innerHTML = cart.map(item => {
                     const imagePath = `images/${item.ref}.webp`;
                     const price = parseFloat(item.product.Precio) || 0;
+                    const subtotal = price * item.quantity;
+
                     return `
-                        <div class="flex items-center justify-between border-b py-3 gap-3">
-                            <img src="${imagePath}" alt="${item.product.Nombre}" class="w-16 h-16 object-cover rounded-md bg-gray-200 flex-shrink-0" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';">
-                            <div class="flex-grow min-w-0">
-                                <p class="font-bold truncate text-sm sm:text-base">${item.product.Nombre}</p>
-                                <p class="text-xs text-gray-500 truncate">${item.ref}</p>
-                                <p class="text-sm font-semibold text-red-600">$${price.toFixed(2)}</p>
-                            </div>
-                            <div class="flex items-center gap-1 sm:gap-2 flex-shrink-0">
-                                <button class="change-quantity-button bg-gray-200 w-7 h-7 sm:w-8 sm:h-8 rounded-full font-bold flex items-center justify-center" data-ref="${item.ref}" data-change="-1">-</button>
-                                <span class="font-bold w-6 text-center text-sm sm:text-base">${item.quantity}</span>
-                                <button class="change-quantity-button bg-gray-200 w-7 h-7 sm:w-8 sm:h-8 rounded-full font-bold flex items-center justify-center" data-ref="${item.ref}" data-change="1">+</button>
-                            </div>
-                        </div>`;
-                }).join(''); // <-- Esto une los productos sin añadir nada extra.
+                    <div class="flex items-center bg-white p-2 rounded-lg shadow-sm border gap-3">
+                        <div class="flex-shrink-0">
+                            <img src="${imagePath}" alt="${item.product.Nombre}" 
+                                class="w-16 h-16 sm:w-20 sm:h-20 object-cover rounded-md bg-gray-200 cursor-zoom-in zoomable-image" 
+                                onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';">
+                        </div>
+                        
+                        <div class="flex-grow min-w-0">
+                            <p class="font-bold truncate text-sm sm:text-base text-gray-800">${item.product.Nombre}</p>
+                            <p class="text-xs text-gray-500">Ref: ${item.ref}</p>
+                            <p class="sm:hidden text-sm font-semibold text-red-600 mt-1">$${price.toFixed(2)}</p> </div>
+                        
+                        <div class="flex items-center gap-1 sm:gap-2 flex-shrink-0">
+                            <button class="change-quantity-button bg-gray-200 w-7 h-7 sm:w-8 sm:h-8 rounded-full font-bold flex items-center justify-center hover:bg-gray-300 transition" data-ref="${item.ref}" data-change="-1">-</button>
+                            <span class="font-bold w-6 text-center text-sm sm:text-base">${item.quantity}</span>
+                            <button class="change-quantity-button bg-gray-200 w-7 h-7 sm:w-8 sm:h-8 rounded-full font-bold flex items-center justify-center hover:bg-gray-300 transition" data-ref="${item.ref}" data-change="1">+</button>
+                        </div>
+
+                        <div class="hidden sm:flex flex-col items-end w-28 text-sm">
+                            <p class="text-gray-600">$${price.toFixed(2)}</p>
+                            <p class="font-bold text-base text-gray-900">$${subtotal.toFixed(2)}</p>
+                        </div>
+                    </div>`;
+                }).join('');
             }
+            async function exportCartAsPDF() {
+                const { jsPDF } = window.jspdf;
+                const content = document.getElementById('quotation-content');
+                const clientName = document.getElementById('client-name-input').value || 'Cliente General';
+                const cartButtonOriginalHTML = cartButton.innerHTML;
+
+                // 1. Mostrar estado de carga
+                const pdfButton = document.getElementById('export-pdf-button');
+                const originalPdfButtonHTML = pdfButton.innerHTML;
+                pdfButton.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Creando...`;
+                pdfButton.disabled = true;
+                cartButton.innerHTML = `<i class="fas fa-spinner fa-spin"></i>`;
                 
+                // Usamos una pequeña espera para que el DOM se actualice con el spinner
+                await new Promise(resolve => setTimeout(resolve, 50));
+
+                try {
+                    // 2. Usar html2canvas para capturar el contenido del modal
+                    const canvas = await html2canvas(content, {
+                        scale: 2, // Aumenta la resolución para mejor calidad
+                        useCORS: true, // Para imágenes externas si las hubiera
+                        onclone: (document) => {
+                            // Ocultamos los botones en la copia que se va a imprimir
+                        const clonedFooter = document.querySelector('footer');
+                        if(clonedFooter) clonedFooter.style.display = 'none';
+                        }
+                    });
+
+                    const imgData = canvas.toDataURL('image/png');
+
+                    // 3. Crear el PDF
+                    const pdf = new jsPDF({
+                        orientation: 'p', // p = portrait (vertical)
+                        unit: 'mm',
+                        format: 'a4'
+                    });
+
+                    const pdfWidth = pdf.internal.pageSize.getWidth();
+                    const pdfHeight = pdf.internal.pageSize.getHeight();
+                    const canvasWidth = canvas.width;
+                    const canvasHeight = canvas.height;
+                    const ratio = canvasWidth / canvasHeight;
+                    const imgWidth = pdfWidth - 20; // Ancho de imagen con márgenes de 10mm
+                    const imgHeight = imgWidth / ratio;
+                    
+                    let position = 10; // Posición Y inicial con margen
+                    
+                    pdf.addImage(imgData, 'PNG', 10, position, imgWidth, imgHeight);
+
+                    // 4. Guardar el archivo
+                    pdf.save(`Cotizacion-${clientName.replace(/ /g, '_')}.pdf`);
+
+                } catch (error) {
+                    console.error("Error al generar el PDF:", error);
+                    alert("Hubo un problema al generar el PDF. Por favor, inténtalo de nuevo.");
+                } finally {
+                    // 5. Restaurar botones
+                    pdfButton.innerHTML = originalPdfButtonHTML;
+                    pdfButton.disabled = false;
+                    cartButton.innerHTML = cartButtonOriginalHTML;
+                }
+            }
             function shareOnWhatsApp() {
                 if (!navigator.onLine) {
                     alert("Necesitas conexión a internet para compartir por WhatsApp. El pedido se ha guardado localmente.");
@@ -547,7 +643,20 @@
             closeCartModalButton.addEventListener('click', () => cartModalOverlay.classList.remove('flex'));
             clearCartButton.addEventListener('click', () => { cart = []; updateCart(); renderProducts(); });
             shareWhatsappButton.addEventListener('click', shareOnWhatsApp);
-            cartItemsContainer.addEventListener('click', e => { const btn = e.target.closest('.change-quantity-button'); if(btn) changeQuantity(btn.dataset.ref, parseInt(btn.dataset.change, 10)); });
+            cartItemsContainer.addEventListener('click', e => {
+                const zoomTrigger = e.target.closest('.zoomable-image');
+                if (zoomTrigger) {
+                    zoomedImage.src = zoomTrigger.src;
+                    imageZoomModalOverlay.classList.add('flex');
+                }
+
+                // Para que no interfiera con los botones de cantidad,
+                // delegamos también ese evento aquí de forma más robusta.
+                const quantityBtn = e.target.closest('.change-quantity-button');
+                if(quantityBtn) {
+                    changeQuantity(quantityBtn.dataset.ref, parseInt(quantityBtn.dataset.change, 10));
+                }
+            });
             saveCartButton.addEventListener('click', saveCurrentCart);
             savedOrdersButton.addEventListener('click', () => { renderSavedCarts(); savedOrdersModalOverlay.classList.add('flex'); });
             closeSavedOrdersModalButton.addEventListener('click', () => savedOrdersModalOverlay.classList.remove('flex'));
@@ -567,7 +676,8 @@
 
             window.addEventListener('online', updateOnlineStatus);
             window.addEventListener('offline', updateOnlineStatus);
-            
+            document.getElementById('export-pdf-button').addEventListener('click', exportCartAsPDF);
+  
             if ('serviceWorker' in navigator) {
                 window.addEventListener('load', () => { 
                     navigator.serviceWorker.register('./sw.js')
