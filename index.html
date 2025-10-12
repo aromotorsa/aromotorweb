@@ -396,7 +396,7 @@
                     if (itemInCart.quantity <= 0) cart = cart.filter(item => item.ref !== ref);
                 }
                 updateCart();
-                renderProducts();
+                updateProductCard(ref); 
             }
             
             function updateCart() {
