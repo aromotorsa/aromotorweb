@@ -16,8 +16,9 @@
         .notification { transition: all 0.3s ease-in-out; }
         .modal-overlay { display: none; }
         .modal-overlay.flex { display: flex; }
-        #quotation-content {
-            overflow: hidden;
+        
+        #quotation-content main {
+            overflow-y: auto;
         }
     </style>
 </head>
@@ -75,7 +76,6 @@
        </div>
     </div>
 
-    <!-- Notificaciones -->
     <div id="copy-notification" class="notification fixed bottom-5 left-5 bg-gray-800 text-white py-2 px-4 rounded-lg shadow-lg opacity-0 transform translate-y-2 z-50">¡Info copiada!</div>
     <div id="cart-notification" class="notification fixed bottom-5 left-5 bg-green-600 text-white py-2 px-4 rounded-lg shadow-lg opacity-0 transform translate-y-2 z-50">¡Producto añadido!</div>
     <div id="saved-notification" class="notification fixed bottom-5 left-5 bg-blue-600 text-white py-2 px-4 rounded-lg shadow-lg opacity-0 transform translate-y-2 z-50">¡Pedido guardado!</div>
@@ -88,10 +88,10 @@
         <span id="cart-count" class="absolute -top-1 -right-1 bg-red-700 text-white text-xs font-bold rounded-full h-6 w-6 flex items-center justify-center border-2 border-white">0</span>
     </button>
     
-    <div id="cart-modal-overlay" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 z-30 items-center justify-center p-2 sm:p-4 overflow-hidden">
-        <div id="quotation-content" class="bg-white rounded-lg shadow-xl w-full max-w-2xl max-h-[90vh] flex flex-col overflow-hidden">
+    <div id="cart-modal-overlay" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 z-30 items-center justify-center p-2 sm:p-4">
+        <div id="quotation-content" class="bg-white rounded-lg shadow-xl w-full max-w-2xl max-h-[90vh] flex flex-col">
             
-            <header class="p-4 border-b flex justify-between items-center">
+            <header class="p-4 border-b flex justify-between items-center flex-shrink-0">
                 <div>
                     <h2 class="text-xl sm:text-2xl font-bold text-gray-800">Cotización de Pedido</h2>
                     <p id="quotation-date" class="text-sm text-gray-500"></p>
@@ -99,25 +99,25 @@
                 <button id="close-cart-modal-button" class="text-3xl text-gray-400 hover:text-red-600 transition-transform transform hover:rotate-90">&times;</button>
             </header>
             
-            <div class="p-4 border-b">
+            <div class="p-4 border-b flex-shrink-0">
                 <label for="client-name-input" class="block text-sm font-medium text-gray-700 mb-1">Cliente:</label>
                 <input type="text" id="client-name-input" placeholder="Nombre del Cliente" class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 transition">
             </div>
 
-            <main class="p-4 overflow-y-auto flex-grow bg-gray-50">
-                <div id="cart-items-container" class="space-y-3">
+            <main class="flex-grow bg-gray-50 p-4">
+                <div id="cart-items-container" class="space-y-4">
                     </div>
             </main>
             
-            <footer class="p-4 border-t bg-white">
+            <footer class="p-4 border-t bg-white flex-shrink-0">
                 <div class="flex justify-end items-center mb-4">
                     <span class="text-gray-600 font-medium mr-4">Total:</span>
                     <span id="cart-total" class="font-bold text-2xl text-red-700">$0.00</span>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
-                    <button id="clear-cart-button" class="w-full bg-gray-300 text-gray-700 font-bold py-2 px-4 rounded-lg hover:bg-gray-400 transition lg:col-span-1">Vaciar</button>
-                    <button id="save-cart-button" class="w-full bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition flex items-center justify-center gap-2 lg:col-span-1"><i class="fas fa-save"></i> Guardar</button>
-                    <button id="share-whatsapp-button" class="w-full bg-green-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-600 transition flex items-center justify-center gap-2 lg:col-span-1"><i class="fab fa-whatsapp"></i> Compartir</button>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                    <button id="clear-cart-button" class="w-full bg-gray-300 text-gray-700 font-bold py-2 px-4 rounded-lg hover:bg-gray-400 transition">Vaciar</button>
+                    <button id="save-cart-button" class="w-full bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition flex items-center justify-center gap-2"><i class="fas fa-save"></i> Guardar</button>
+                    <button id="share-whatsapp-button" class="w-full bg-green-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-600 transition flex items-center justify-center gap-2"><i class="fab fa-whatsapp"></i> Compartir</button>
                 </div>
             </footer>
         </div>
@@ -129,12 +129,15 @@
             <header class="p-4 border-b flex justify-between items-center"><h2 class="text-xl font-bold">Pedidos Guardados</h2><button id="close-saved-orders-modal-button" class="text-2xl text-gray-500 hover:text-gray-800">&times;</button></header>
             <main id="saved-orders-container" class="p-4 overflow-y-auto flex-grow"></main>
         </div>
-    </div> </div> <div id="image-zoom-modal-overlay" class="modal-overlay fixed inset-0 bg-black bg-opacity-75 z-50 items-center justify-center p-4 cursor-zoom-out">
+    </div> 
+    
+    <div id="image-zoom-modal-overlay" class="modal-overlay fixed inset-0 bg-black bg-opacity-75 z-50 items-center justify-center p-4 cursor-zoom-out">
         <div class="relative max-w-4xl max-h-[90vh]">
             <img id="zoomed-image" src="" alt="Vista ampliada del producto" class="block max-w-full max-h-full rounded-lg shadow-2xl">
             <button id="close-zoom-modal-button" class="absolute -top-4 -right-4 bg-white text-black w-10 h-10 rounded-full text-2xl font-bold flex items-center justify-center shadow-lg hover:bg-red-600 hover:text-white transition">&times;</button>
         </div>
     </div>
+    
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Selectores DOM
@@ -168,15 +171,14 @@
             const imageZoomModalOverlay = document.getElementById('image-zoom-modal-overlay');
             const closeZoomModalButton = document.getElementById('close-zoom-modal-button');
             const zoomedImage = document.getElementById('zoomed-image');
-        
-
+    
             // Estado de la aplicación
             let allProducts = [];
             let cart = [];
             let currentView = 'grid'; 
             let savedCarts = JSON.parse(localStorage.getItem('savedCarts')) || [];
             let longPressTimer;
-            const LONG_PRESS_DURATION = 200;
+            const LONG_PRESS_DURATION = 500; 
 
             // Carga inicial de productos
             async function loadProducts() {
@@ -276,10 +278,10 @@
                             <button class="copy-button w-3/4 bg-gray-200 text-gray-700 text-xs py-2 hover:bg-red-600 hover:text-white transition-colors" data-info="Producto: ${product.Nombre || ''}\nRef: ${ref || ''}\nPrecio: ${price}"><i class="fas fa-copy mr-1"></i> Copiar</button>
                             <button class="add-to-cart-button w-1/4 bg-red-600 text-white text-lg hover:bg-red-700 transition-colors" data-ref="${ref}"><i class="fas fa-plus"></i></button>
                         </div>`;
-                } else { // Vista de lista
+                } else { 
                     card.className = 'bg-white rounded-lg shadow-md overflow-hidden flex items-center p-3 gap-4 w-full';
                     cardHTML = `
-                        <img src="${imagePath}" alt="${product.Nombre}" class="w-20 h-20 object-cover bg-gray-200 rounded-md zoomable-image cursor-zoom-in" loading="lazy" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';">
+                        <img src="${imagePath}" alt="${product.Nombre}" class="w-20 h-20 object-cover bg-gray-200 rounded-md zoomable-image cursor-zoom-in flex-shrink-0" loading="lazy" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';">
                         <div class="flex-grow"><h3 class="font-bold text-gray-800">${product.Nombre || 'Sin Nombre'}</h3><p class="text-sm text-gray-500">${ref || ''}</p><div class="flex items-center gap-4 mt-1"><p class="text-sm text-white bg-red-600 px-2 py-1 rounded-full">${product.Categoría || ''}</p><div class="flex items-center gap-1">${stockIndicator} <p class="font-bold">${stock}</p></div></div></div>
                         <div class="flex flex-col items-end gap-2"><p class="font-bold text-lg text-red-700">${price}</p>
                             <div class="flex relative">
@@ -404,23 +406,17 @@
             }
 
             function renderCart() {
-                // Fecha actual en el encabezado
                 document.getElementById('quotation-date').textContent = new Date().toLocaleDateString('es-EC', { 
-                    year: 'numeric', 
-                    month: 'long', 
-                    day: 'numeric' 
+                    year: 'numeric', month: 'long', day: 'numeric' 
                 });
 
                 if (cart.length === 0) {
                     cartItemsContainer.innerHTML = `
                         <div class="text-center py-16">
-                            <div class="mb-4">
-                                <i class="fas fa-shopping-cart text-gray-300 text-6xl"></i>
-                            </div>
+                            <i class="fas fa-shopping-cart text-gray-300 text-6xl mb-4"></i>
                             <p class="text-gray-500 text-lg font-medium">Tu cotización está vacía</p>
                             <p class="text-gray-400 text-sm mt-2">Añade productos para comenzar</p>
-                        </div>
-                    `;
+                        </div>`;
                     return;
                 }
                 
@@ -430,75 +426,35 @@
                     const subtotal = price * item.quantity;
 
                     return `
-                    <div class="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200 hover:border-red-300">
-                        <div class="flex items-center p-4 gap-4">
-                            
-                            <!-- Imagen del producto con efecto hover -->
-                            <div class="flex-shrink-0 w-20 h-20 sm:w-24 sm:h-24 relative overflow-hidden rounded-lg bg-gradient-to-br from-gray-100 to-gray-200">
-                                <img 
-                                    src="${imagePath}" 
-                                    alt="${item.product.Nombre}" 
-                                    class="w-full h-full object-cover cursor-zoom-in zoomable-image transform group-hover:scale-110 transition-transform duration-300" 
-                                    onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';"
-                                >
-                                <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity"></div>
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-3 flex items-start gap-4">
+                        <img 
+                            src="${imagePath}" 
+                            alt="${item.product.Nombre}" 
+                            class="w-20 h-20 sm:w-24 sm:h-24 object-cover rounded-md bg-gray-100 flex-shrink-0 zoomable-image cursor-zoom-in" 
+                            onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';"
+                        >
+                        
+                        <div class="flex-grow flex flex-col justify-between h-full">
+                            <div>
+                                <h3 class="font-bold text-gray-800 leading-tight">${item.product.Nombre}</h3>
+                                <p class="text-xs text-gray-500 mt-1">Ref: ${item.ref}</p>
+                                <p class="sm:hidden text-sm font-semibold text-red-600 mt-1">$${price.toFixed(2)} c/u</p>
                             </div>
                             
-                            <!-- Información del producto -->
-                            <div class="flex-grow min-w-0">
-                                <h3 class="font-bold text-base sm:text-lg text-gray-800 truncate group-hover:text-red-600 transition-colors">
-                                    ${item.product.Nombre}
-                                </h3>
-                                <div class="flex items-center gap-2 mt-1">
-                                    <span class="text-xs bg-red-100 text-red-700 px-2 py-1 rounded-full font-medium">
-                                        ${item.ref}
-                                    </span>
-                                    <span class="text-sm text-gray-600 sm:hidden">
-                                        $${price.toFixed(2)} c/u
-                                    </span>
-                                </div>
-                            </div>
-                            
-                            <!-- Controles de cantidad con diseño circular -->
-                            <div class="flex items-center gap-3 flex-shrink-0">
-                                <button 
-                                    class="change-quantity-button bg-red-100 hover:bg-red-600 text-red-600 hover:text-white w-9 h-9 rounded-full font-bold flex items-center justify-center transition-all transform hover:scale-110 active:scale-95 shadow-sm" 
-                                    data-ref="${item.ref}" 
-                                    data-change="-1"
-                                >
-                                    <i class="fas fa-minus text-sm"></i>
+                            <div class="flex items-center gap-2 mt-2">
+                                <button class="change-quantity-button bg-gray-200 hover:bg-red-600 text-gray-700 hover:text-white w-7 h-7 rounded-full font-bold flex items-center justify-center transition-all" data-ref="${item.ref}" data-change="-1">
+                                    <i class="fas fa-minus text-xs"></i>
                                 </button>
-                                
-                                <span class="font-bold text-lg w-8 text-center text-gray-800">
-                                    ${item.quantity}
-                                </span>
-                                
-                                <button 
-                                    class="change-quantity-button bg-green-100 hover:bg-green-600 text-green-600 hover:text-white w-9 h-9 rounded-full font-bold flex items-center justify-center transition-all transform hover:scale-110 active:scale-95 shadow-sm" 
-                                    data-ref="${item.ref}" 
-                                    data-change="1"
-                                >
-                                    <i class="fas fa-plus text-sm"></i>
+                                <span class="font-bold text-md w-8 text-center">${item.quantity}</span>
+                                <button class="change-quantity-button bg-gray-200 hover:bg-green-600 text-gray-700 hover:text-white w-7 h-7 rounded-full font-bold flex items-center justify-center transition-all" data-ref="${item.ref}" data-change="1">
+                                    <i class="fas fa-plus text-xs"></i>
                                 </button>
-                            </div>
-
-                            <!-- Precios (visible en pantallas grandes) -->
-                            <div class="hidden sm:flex flex-col items-end w-28 gap-1">
-                                <p class="text-sm text-gray-500">
-                                    $${price.toFixed(2)} c/u
-                                </p>
-                                <p class="font-bold text-lg text-gray-900 bg-gray-50 px-3 py-1 rounded-lg">
-                                    $${subtotal.toFixed(2)}
-                                </p>
                             </div>
                         </div>
-                        
-                        <!-- Subtotal mobile (visible en pantallas pequeñas) -->
-                        <div class="sm:hidden bg-gradient-to-r from-gray-50 to-white px-4 py-2 border-t border-gray-100">
-                            <div class="flex justify-between items-center">
-                                <span class="text-sm text-gray-600">Subtotal:</span>
-                                <span class="font-bold text-lg text-red-700">$${subtotal.toFixed(2)}</span>
-                            </div>
+
+                        <div class="flex flex-col items-end justify-between h-full text-right flex-shrink-0">
+                            <p class="hidden sm:block text-sm text-gray-500">$${price.toFixed(2)} c/u</p>
+                            <p class="font-bold text-lg text-gray-800 mt-auto">$${subtotal.toFixed(2)}</p>
                         </div>
                     </div>
                     `;
@@ -506,47 +462,32 @@
             }
 
             function shareOnWhatsApp() {
-                        if (cart.length === 0) {
-                            alert("No hay productos en el carrito para compartir.");
-                            return;
-                        }
-                        
-                        // --- ✨ CREACIÓN DEL MENSAJE PROFESIONAL ✨ ---
-                        const clientName = clientNameInput.value.trim();
-                        const fecha = new Date().toLocaleDateString('es-EC');
-                        let total = 0;
+                if (cart.length === 0) {
+                    alert("No hay productos en el carrito para compartir.");
+                    return;
+                }
+                
+                const clientName = clientNameInput.value.trim();
+                const fecha = new Date().toLocaleDateString('es-EC');
+                let message = `📋 *COTIZACIÓN - AROMOTOR* 📋\n\n`;
+                if (clientName) message += `*Cliente:* ${clientName}\n`;
+                message += `*Fecha:* ${fecha}\n--------------------------------------\n\n*Detalle del Pedido:*\n\n`;
+                
+                cart.forEach(item => {
+                    const price = parseFloat(item.product.Precio) || 0;
+                    const subtotal = price * item.quantity;
+                    message += `📦 *${item.product.Nombre}*\n`;
+                    message += `   • *Ref:* ${item.ref}\n`;
+                    message += `   • *Cant:* ${item.quantity}\n`;
+                    message += `   • *Precio:* $${price.toFixed(2)}\n`;
+                    message += `   • *Subtotal:* *$${subtotal.toFixed(2)}*\n\n`;
+                });
+                
+                message += `--------------------------------------\nTOTAL DEL PEDIDO: *${cartTotal.textContent}*\n\n_Gracias por su preferencia._`;
+                const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, '_blank');
+            }
 
-                        // Encabezado del mensaje
-                        let message = `📋 *COTIZACIÓN - AROMOTOR* 📋\n\n`;
-                        if (clientName) {
-                            message += `*Cliente:* ${clientName}\n`;
-                        }
-                        message += `*Fecha:* ${fecha}\n`;
-                        message += `--------------------------------------\n\n`;
-
-                        // Lista de productos
-                        message += `*Detalle del Pedido:*\n\n`;
-                        cart.forEach(item => {
-                            const price = parseFloat(item.product.Precio) || 0;
-                            const subtotal = price * item.quantity;
-                            total += subtotal;
-
-                            message += `📦 *${item.product.Nombre}*\n`;
-                            message += `   • *Ref:* ${item.ref}\n`;
-                            message += `   • *Cant:* ${item.quantity}\n`;
-                            message += `   • *Precio:* $${price.toFixed(2)}\n`;
-                            message += `   • *Subtotal:* *$${subtotal.toFixed(2)}*\n\n`;
-                        });
-                        
-                        // Pie del mensaje con el total
-                        message += `--------------------------------------\n`;
-                        message += `TOTAL DEL PEDIDO: *${cartTotal.textContent}*\n\n`;
-                        message += `_Gracias por su preferencia._`;
-
-                        // Codificamos el mensaje para la URL y lo abrimos
-                        const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
-                        window.open(whatsappUrl, '_blank');
-                    }
             function saveCurrentCart() {
                 const clientName = clientNameInput.value.trim();
                 if (cart.length === 0 || !clientName) { alert("Por favor, ingresa un nombre de cliente y añade productos para guardar."); return; }
@@ -630,10 +571,7 @@
                 downloadCatalogButton.disabled = true;
 
                 const imageUrls = allProducts.map(p => `images/${p['Referencia Interna']}.webp`);
-                navigator.serviceWorker.controller.postMessage({
-                    type: 'CACHE_IMAGES',
-                    urls: imageUrls
-                });
+                navigator.serviceWorker.controller.postMessage({ type: 'CACHE_IMAGES', urls: imageUrls });
                 
                 navigator.serviceWorker.addEventListener('message', event => {
                     if (event.data.type === 'CACHE_COMPLETE') {
@@ -651,7 +589,6 @@
             }
             
             syncNotification.addEventListener('click', handleSyncNotificationClick);
-            syncNotification.addEventListener('touchend', handleSyncNotificationClick);
 
             searchBox.addEventListener('input', renderProducts);
             categoryFilter.addEventListener('change', updateSubcategories);
@@ -668,9 +605,6 @@
                     zoomedImage.src = zoomTrigger.src;
                     imageZoomModalOverlay.classList.add('flex');
                 }
-
-                // Para que no interfiera con los botones de cantidad,
-                // delegamos también ese evento aquí de forma más robusta.
                 const quantityBtn = e.target.closest('.change-quantity-button');
                 if(quantityBtn) {
                     changeQuantity(quantityBtn.dataset.ref, parseInt(quantityBtn.dataset.change, 10));
@@ -695,32 +629,26 @@
 
             window.addEventListener('online', updateOnlineStatus);
             window.addEventListener('offline', updateOnlineStatus);
-  
+ 
             if ('serviceWorker' in navigator) {
                 window.addEventListener('load', () => { 
                     navigator.serviceWorker.register('./sw.js')
                         .then(reg => console.log('SW registrado con éxito.'))
                         .catch(err => console.error('Error en el registro del SW', err));
                 });
-
             }
             const closeZoomModal = () => {
                 imageZoomModalOverlay.classList.remove('flex');
-                zoomedImage.src = ""; // Limpiamos la imagen para liberar memoria
+                zoomedImage.src = ""; 
             };
-
             closeZoomModalButton.addEventListener('click', closeZoomModal);
-
             imageZoomModalOverlay.addEventListener('click', (e) => {
-                // Cierra el modal solo si se hace clic en el fondo (el overlay)
-                if (e.target === imageZoomModalOverlay) {
-                    closeZoomModal();
-                }
+                if (e.target === imageZoomModalOverlay) closeZoomModal();
             });
+
             loadProducts();
             updateOnlineStatus();
         });
     </script>
 </body>
 </html>
-
