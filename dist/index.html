@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#EF4444"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf-autotable.min.js" defer></script>
     <style>
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #f1f1f1; }
@@ -150,7 +151,7 @@
             <button id="close-zoom-modal-button" class="absolute -top-4 -right-4 bg-white text-black w-10 h-10 rounded-full text-2xl font-bold flex items-center justify-center shadow-lg hover:bg-red-600 hover:text-white transition">&times;</button>
         </div>
     </div>
-    <script type="module">
+    <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Selectores DOM
             const searchBox = document.getElementById('search-box');
@@ -461,85 +462,147 @@
                 }).join('');
             }
             async function exportCartAsPDF() {
-                const { jsPDF } = window.jspdf;
-                const content = document.getElementById('quotation-content');
-                const clientName = document.getElementById('client-name-input').value || 'Cliente General';
-                const cartButtonOriginalHTML = cartButton.innerHTML;
-
-                // 1. Mostrar estado de carga
-                const pdfButton = document.getElementById('export-pdf-button');
-                const originalPdfButtonHTML = pdfButton.innerHTML;
-                pdfButton.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Creando...`;
-                pdfButton.disabled = true;
-                cartButton.innerHTML = `<i class="fas fa-spinner fa-spin"></i>`;
-                
-                // Usamos una pequeña espera para que el DOM se actualice con el spinner
-                await new Promise(resolve => setTimeout(resolve, 50));
-
-                try {
-                    // 2. Usar html2canvas para capturar el contenido del modal
-                    const canvas = await html2canvas(content, {
-                        scale: 2, // Aumenta la resolución para mejor calidad
-                        useCORS: true, // Para imágenes externas si las hubiera
-                        onclone: (document) => {
-                            // Ocultamos los botones en la copia que se va a imprimir
-                        const clonedFooter = document.querySelector('footer');
-                        if(clonedFooter) clonedFooter.style.display = 'none';
+                        // --- Misión 1: Verificamos que nuestros ayudantes estén listos ---
+                        if (typeof window.jspdf === 'undefined' || typeof window.jspdf.jsPDF === 'undefined') {
+                            alert('Error Crítico: La librería principal jsPDF no se pudo cargar. Revisa tu conexión a internet o el bloqueador de anuncios.');
+                            return;
                         }
-                    });
+                        if (typeof jspdf.autoTable !== 'function') {
+                            alert('Error Crítico: El plugin de tablas (autoTable) no se pudo cargar. Es el mismo problema de antes, pero ahora estamos seguros de que no carga.');
+                            return;
+                        }
 
-                    const imgData = canvas.toDataURL('image/png');
+                        if (cart.length === 0) {
+                            alert("El carrito está vacío. Añade productos para generar la cotización.");
+                            return;
+                        }
 
-                    // 3. Crear el PDF
-                    const pdf = new jsPDF({
-                        orientation: 'p', // p = portrait (vertical)
-                        unit: 'mm',
-                        format: 'a4'
-                    });
+                        const pdfButton = document.getElementById('export-pdf-button');
+                        const originalPdfButtonHTML = pdfButton.innerHTML;
+                        pdfButton.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Creando...`;
+                        pdfButton.disabled = true;
 
-                    const pdfWidth = pdf.internal.pageSize.getWidth();
-                    const pdfHeight = pdf.internal.pageSize.getHeight();
-                    const canvasWidth = canvas.width;
-                    const canvasHeight = canvas.height;
-                    const ratio = canvasWidth / canvasHeight;
-                    const imgWidth = pdfWidth - 20; // Ancho de imagen con márgenes de 10mm
-                    const imgHeight = imgWidth / ratio;
-                    
-                    let position = 10; // Posición Y inicial con margen
-                    
-                    pdf.addImage(imgData, 'PNG', 10, position, imgWidth, imgHeight);
+                        try {
+                            const doc = new window.jspdf.jsPDF({
+                                orientation: 'p',
+                                unit: 'mm',
+                                format: 'a4'
+                            });
 
-                    // 4. Guardar el archivo
-                    pdf.save(`Cotizacion-${clientName.replace(/ /g, '_')}.pdf`);
+                            const clientName = document.getElementById('client-name-input').value || 'Cliente General';
+                            const date = new Date().toLocaleDateString('es-EC', { year: 'numeric', month: 'long', day: 'numeric' });
+                            const totalText = cartTotal.textContent;
 
-                } catch (error) {
-                    console.error("Error al generar el PDF:", error);
-                    alert("Hubo un problema al generar el PDF. Por favor, inténtalo de nuevo.");
-                } finally {
-                    // 5. Restaurar botones
-                    pdfButton.innerHTML = originalPdfButtonHTML;
-                    pdfButton.disabled = false;
-                    cartButton.innerHTML = cartButtonOriginalHTML;
-                }
-            }
+                            const logo = await new Promise(resolve => {
+                                const img = new Image();
+                                img.src = 'logos/AROMOTOR.png';
+                                img.onload = () => resolve(img);
+                                img.onerror = () => resolve(null);
+                            });
+                            if (logo) {
+                                doc.addImage(logo, 'PNG', 15, 10, 40, 10);
+                            }
+
+                            doc.setFontSize(18);
+                            doc.setFont('helvetica', 'bold');
+                            doc.text('Cotización de Pedido', doc.internal.pageSize.getWidth() / 2, 25, { align: 'center' });
+
+                            doc.setFontSize(11);
+                            doc.setFont('helvetica', 'normal');
+                            doc.text(`Cliente: ${clientName}`, 15, 40);
+                            doc.text(`Fecha: ${date}`, doc.internal.pageSize.getWidth() - 15, 40, { align: 'right' });
+
+                            const head = [['#', 'Producto', 'Ref.', 'Cant.', 'P. Unit.', 'Subtotal']];
+                            const body = cart.map((item, index) => {
+                                const price = parseFloat(item.product.Precio) || 0;
+                                const subtotal = price * item.quantity;
+                                return [
+                                    index + 1, item.product.Nombre, item.ref, item.quantity,
+                                    `$${price.toFixed(2)}`, `$${subtotal.toFixed(2)}`
+                                ];
+                            });
+
+                            // --- ✨ EL CAMBIO MÁGICO Y DEFINITIVO ESTÁ AQUÍ ✨ ---
+                            // Llamamos directamente a la función autoTable y le pasamos el documento.
+                            jspdf.autoTable(doc, {
+                                head: head,
+                                body: body,
+                                startY: 50,
+                                theme: 'grid',
+                                headStyles: { fillColor: [239, 68, 68] },
+                                styles: { cellPadding: 2, fontSize: 9, valign: 'middle' },
+                                columnStyles: {
+                                    0: { cellWidth: 10 }, 1: { cellWidth: 'auto' },
+                                    4: { halign: 'right' }, 5: { halign: 'right' }
+                                }
+                            });
+                            
+                            let finalY = doc.lastAutoTable.finalY || 60;
+                            doc.setFontSize(14);
+                            doc.setFont('helvetica', 'bold');
+                            doc.text('Total:', doc.internal.pageSize.getWidth() - 55, finalY + 15, { align: 'left' });
+                            doc.text(totalText, doc.internal.pageSize.getWidth() - 15, finalY + 15, { align: 'right' });
+
+                            const pageCount = doc.internal.getNumberOfPages();
+                            for (let i = 1; i <= pageCount; i++) {
+                                doc.setPage(i);
+                                doc.setFontSize(9);
+                                doc.setTextColor(150);
+                                doc.text(`Página ${i} de ${pageCount}`, doc.internal.pageSize.getWidth() / 2, doc.internal.pageSize.getHeight() - 10, { align: 'center' });
+                            }
+
+                            doc.save(`Cotizacion-${clientName.replace(/\s+/g, '_')}-${Date.now()}.pdf`);
+
+                        } catch (error) {
+                            console.error("Error al generar el PDF:", error);
+                            alert("Hubo un problema inesperado al generar el PDF.");
+                        } finally {
+                            pdfButton.innerHTML = originalPdfButtonHTML;
+                            pdfButton.disabled = false;
+                        }
+                    }
             function shareOnWhatsApp() {
-                if (!navigator.onLine) {
-                    alert("Necesitas conexión a internet para compartir por WhatsApp. El pedido se ha guardado localmente.");
-                    return;
-                }
-                if (cart.length === 0) return;
-                let message = clientNameInput.value ? `*Pedido para: ${clientNameInput.value}*\n\n` : `*¡Hola! Te comparto este pedido:*\n\n`;
-                let total = 0;
-                cart.forEach(item => {
-                    const price = parseFloat(item.product.Precio) || 0;
-                    const subtotal = price * item.quantity;
-                    total += subtotal;
-                    message += `*${item.product.Nombre}*\nRef: ${item.ref}\n${item.quantity} x $${price.toFixed(2)} = *$${subtotal.toFixed(2)}*\n\n`;
-                });
-                message += `*TOTAL DEL PEDIDO: $${total.toFixed(2)}*`;
-                window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`, '_blank');
-            }
+                        if (cart.length === 0) {
+                            alert("No hay productos en el carrito para compartir.");
+                            return;
+                        }
+                        
+                        // --- ✨ CREACIÓN DEL MENSAJE PROFESIONAL ✨ ---
+                        const clientName = clientNameInput.value.trim();
+                        const fecha = new Date().toLocaleDateString('es-EC');
+                        let total = 0;
 
+                        // Encabezado del mensaje
+                        let message = `📋 *COTIZACIÓN - AROMOTOR* 📋\n\n`;
+                        if (clientName) {
+                            message += `*Cliente:* ${clientName}\n`;
+                        }
+                        message += `*Fecha:* ${fecha}\n`;
+                        message += `--------------------------------------\n\n`;
+
+                        // Lista de productos
+                        message += `*Detalle del Pedido:*\n\n`;
+                        cart.forEach(item => {
+                            const price = parseFloat(item.product.Precio) || 0;
+                            const subtotal = price * item.quantity;
+                            total += subtotal;
+
+                            message += `📦 *${item.product.Nombre}*\n`;
+                            message += `   • *Ref:* ${item.ref}\n`;
+                            message += `   • *Cant:* ${item.quantity}\n`;
+                            message += `   • *Precio:* $${price.toFixed(2)}\n`;
+                            message += `   • *Subtotal:* *$${subtotal.toFixed(2)}*\n\n`;
+                        });
+                        
+                        // Pie del mensaje con el total
+                        message += `--------------------------------------\n`;
+                        message += `TOTAL DEL PEDIDO: *${cartTotal.textContent}*\n\n`;
+                        message += `_Gracias por su preferencia._`;
+
+                        // Codificamos el mensaje para la URL y lo abrimos
+                        const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
+                        window.open(whatsappUrl, '_blank');
+                    }
             function saveCurrentCart() {
                 const clientName = clientNameInput.value.trim();
                 if (cart.length === 0 || !clientName) { alert("Por favor, ingresa un nombre de cliente y añade productos para guardar."); return; }

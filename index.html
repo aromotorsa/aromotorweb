@@ -462,25 +462,33 @@
                 }).join('');
             }
             async function exportCartAsPDF() {
+                        // --- Misión 1: Verificamos que nuestros ayudantes estén listos ---
+                        if (typeof window.jspdf === 'undefined' || typeof window.jspdf.jsPDF === 'undefined') {
+                            alert('Error Crítico: La librería principal jsPDF no se pudo cargar. Revisa tu conexión a internet o el bloqueador de anuncios.');
+                            return;
+                        }
+                        if (typeof jspdf.autoTable !== 'function') {
+                            alert('Error Crítico: El plugin de tablas (autoTable) no se pudo cargar. Es el mismo problema de antes, pero ahora estamos seguros de que no carga.');
+                            return;
+                        }
+
                         if (cart.length === 0) {
                             alert("El carrito está vacío. Añade productos para generar la cotización.");
                             return;
                         }
 
-                        // Usamos la referencia directa a la librería global para crear el documento
-                        const doc = new window.jspdf.jsPDF({
-                            orientation: 'p',
-                            unit: 'mm',
-                            format: 'a4'
-                        });
-
                         const pdfButton = document.getElementById('export-pdf-button');
                         const originalPdfButtonHTML = pdfButton.innerHTML;
-
                         pdfButton.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Creando...`;
                         pdfButton.disabled = true;
 
                         try {
+                            const doc = new window.jspdf.jsPDF({
+                                orientation: 'p',
+                                unit: 'mm',
+                                format: 'a4'
+                            });
+
                             const clientName = document.getElementById('client-name-input').value || 'Cliente General';
                             const date = new Date().toLocaleDateString('es-EC', { year: 'numeric', month: 'long', day: 'numeric' });
                             const totalText = cartTotal.textContent;
@@ -498,6 +506,7 @@
                             doc.setFontSize(18);
                             doc.setFont('helvetica', 'bold');
                             doc.text('Cotización de Pedido', doc.internal.pageSize.getWidth() / 2, 25, { align: 'center' });
+
                             doc.setFontSize(11);
                             doc.setFont('helvetica', 'normal');
                             doc.text(`Cliente: ${clientName}`, 15, 40);
@@ -508,16 +517,14 @@
                                 const price = parseFloat(item.product.Precio) || 0;
                                 const subtotal = price * item.quantity;
                                 return [
-                                    index + 1,
-                                    item.product.Nombre,
-                                    item.ref,
-                                    item.quantity,
-                                    `$${price.toFixed(2)}`,
-                                    `$${subtotal.toFixed(2)}`
+                                    index + 1, item.product.Nombre, item.ref, item.quantity,
+                                    `$${price.toFixed(2)}`, `$${subtotal.toFixed(2)}`
                                 ];
                             });
 
-                            doc.autoTable({
+                            // --- ✨ EL CAMBIO MÁGICO Y DEFINITIVO ESTÁ AQUÍ ✨ ---
+                            // Llamamos directamente a la función autoTable y le pasamos el documento.
+                            jspdf.autoTable(doc, {
                                 head: head,
                                 body: body,
                                 startY: 50,
@@ -525,10 +532,8 @@
                                 headStyles: { fillColor: [239, 68, 68] },
                                 styles: { cellPadding: 2, fontSize: 9, valign: 'middle' },
                                 columnStyles: {
-                                    0: { cellWidth: 10 },
-                                    1: { cellWidth: 'auto' },
-                                    4: { halign: 'right' },
-                                    5: { halign: 'right' }
+                                    0: { cellWidth: 10 }, 1: { cellWidth: 'auto' },
+                                    4: { halign: 'right' }, 5: { halign: 'right' }
                                 }
                             });
                             
@@ -550,7 +555,7 @@
 
                         } catch (error) {
                             console.error("Error al generar el PDF:", error);
-                            alert("Hubo un problema al generar el PDF. Por favor, inténtalo de nuevo.");
+                            alert("Hubo un problema inesperado al generar el PDF.");
                         } finally {
                             pdfButton.innerHTML = originalPdfButtonHTML;
                             pdfButton.disabled = false;
