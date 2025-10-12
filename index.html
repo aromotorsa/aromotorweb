@@ -462,60 +462,54 @@
                 }).join('');
             }
             async function exportCartAsPDF() {
-                        // Si el carrito está vacío, no hacemos nada.
                         if (cart.length === 0) {
                             alert("El carrito está vacío. Añade productos para generar la cotización.");
                             return;
                         }
 
-                        const { jsPDF } = window.jspdf;
+                        // Usamos la referencia directa a la librería global para crear el documento
+                        const doc = new window.jspdf.jsPDF({
+                            orientation: 'p',
+                            unit: 'mm',
+                            format: 'a4'
+                        });
+
                         const pdfButton = document.getElementById('export-pdf-button');
                         const originalPdfButtonHTML = pdfButton.innerHTML;
 
-                        // 1. Mostramos que estamos trabajando en ello
                         pdfButton.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Creando...`;
                         pdfButton.disabled = true;
 
                         try {
-                            const doc = new jsPDF({
-                                orientation: 'p',
-                                unit: 'mm',
-                                format: 'a4'
-                            });
-
                             const clientName = document.getElementById('client-name-input').value || 'Cliente General';
                             const date = new Date().toLocaleDateString('es-EC', { year: 'numeric', month: 'long', day: 'numeric' });
                             const totalText = cartTotal.textContent;
 
-                            // --- ✨ ENCABEZADO PROFESIONAL ✨ ---
-                            // Usamos una promesa para asegurarnos de que el logo cargue antes de añadirlo
                             const logo = await new Promise(resolve => {
                                 const img = new Image();
                                 img.src = 'logos/AROMOTOR.png';
                                 img.onload = () => resolve(img);
-                                img.onerror = () => resolve(null); // Si no carga, continuamos sin logo
+                                img.onerror = () => resolve(null);
                             });
                             if (logo) {
-                                doc.addImage(logo, 'PNG', 15, 10, 40, 10); // Logo a la izquierda (X, Y, Ancho, Alto)
+                                doc.addImage(logo, 'PNG', 15, 10, 40, 10);
                             }
 
                             doc.setFontSize(18);
                             doc.setFont('helvetica', 'bold');
                             doc.text('Cotización de Pedido', doc.internal.pageSize.getWidth() / 2, 25, { align: 'center' });
-
                             doc.setFontSize(11);
                             doc.setFont('helvetica', 'normal');
                             doc.text(`Cliente: ${clientName}`, 15, 40);
                             doc.text(`Fecha: ${date}`, doc.internal.pageSize.getWidth() - 15, 40, { align: 'right' });
 
-                            // --- ✨ TABLA DE PRODUCTOS (LA MAGIA DE AUTOTABLE) ✨ ---
                             const head = [['#', 'Producto', 'Ref.', 'Cant.', 'P. Unit.', 'Subtotal']];
                             const body = cart.map((item, index) => {
                                 const price = parseFloat(item.product.Precio) || 0;
                                 const subtotal = price * item.quantity;
                                 return [
                                     index + 1,
-                                    item.product.Nombre, // El texto largo se ajustará automáticamente
+                                    item.product.Nombre,
                                     item.ref,
                                     item.quantity,
                                     `$${price.toFixed(2)}`,
@@ -526,55 +520,38 @@
                             doc.autoTable({
                                 head: head,
                                 body: body,
-                                startY: 50, // Dónde empieza la tabla
-                                theme: 'grid', // Estilos: 'striped', 'grid', 'plain'
-                                headStyles: {
-                                    fillColor: [239, 68, 68] // Un rojo que combine con tu marca (RGB)
-                                },
-                                styles: {
-                                    cellPadding: 2,
-                                    fontSize: 9,
-                                    valign: 'middle'
-                                },
+                                startY: 50,
+                                theme: 'grid',
+                                headStyles: { fillColor: [239, 68, 68] },
+                                styles: { cellPadding: 2, fontSize: 9, valign: 'middle' },
                                 columnStyles: {
-                                    0: { cellWidth: 10 }, // Columna '#'
-                                    1: { cellWidth: 'auto' }, // Columna 'Producto'
-                                    4: { halign: 'right' }, // Alinear precios a la derecha
-                                    5: { halign: 'right' }  // Alinear subtotales a la derecha
+                                    0: { cellWidth: 10 },
+                                    1: { cellWidth: 'auto' },
+                                    4: { halign: 'right' },
+                                    5: { halign: 'right' }
                                 }
                             });
                             
-                            // --- ✨ TOTAL AL FINAL DEL DOCUMENTO ✨ ---
-                            let finalY = doc.lastAutoTable.finalY || 60; // Posición después de la tabla
+                            let finalY = doc.lastAutoTable.finalY || 60;
                             doc.setFontSize(14);
                             doc.setFont('helvetica', 'bold');
                             doc.text('Total:', doc.internal.pageSize.getWidth() - 55, finalY + 15, { align: 'left' });
                             doc.text(totalText, doc.internal.pageSize.getWidth() - 15, finalY + 15, { align: 'right' });
 
-
-                            // --- ✨ PIE DE PÁGINA CON NÚMERO ✨ ---
                             const pageCount = doc.internal.getNumberOfPages();
                             for (let i = 1; i <= pageCount; i++) {
                                 doc.setPage(i);
                                 doc.setFontSize(9);
                                 doc.setTextColor(150);
-                                doc.text(
-                                    `Página ${i} de ${pageCount}`,
-                                    doc.internal.pageSize.getWidth() / 2,
-                                    doc.internal.pageSize.getHeight() - 10,
-                                    { align: 'center' }
-                                );
+                                doc.text(`Página ${i} de ${pageCount}`, doc.internal.pageSize.getWidth() / 2, doc.internal.pageSize.getHeight() - 10, { align: 'center' });
                             }
 
-
-                            // --- 4. Guardar el archivo ---
                             doc.save(`Cotizacion-${clientName.replace(/\s+/g, '_')}-${Date.now()}.pdf`);
 
                         } catch (error) {
                             console.error("Error al generar el PDF:", error);
                             alert("Hubo un problema al generar el PDF. Por favor, inténtalo de nuevo.");
                         } finally {
-                            // 5. Restauramos el botón a su estado original
                             pdfButton.innerHTML = originalPdfButtonHTML;
                             pdfButton.disabled = false;
                         }
