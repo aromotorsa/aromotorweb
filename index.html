@@ -295,16 +295,6 @@
                 card.dataset.ref = ref;
                 return card;
             }
-
-            function updateProductCard(ref) {
-                const cards = document.querySelectorAll(`[data-ref="${ref}"]`);
-                if (cards.length > 0) {
-                    const product = allProducts.find(p => p['Referencia Interna'] === ref);
-                    if (product) {
-                        cards.forEach(card => card.replaceWith(createProductCard(product)));
-                    }
-                }
-            }
             
             function addToCart(ref, buttonElement, quantity = 1) {
                 if (quantity <= 0) return;
@@ -316,7 +306,10 @@
                     if (product) cart.push({ ref: ref, quantity: quantity, product: product });
                 }
                 updateCart();
-                updateProductCard(ref);
+                const card = document.querySelector(`[data-ref="${ref}"]`);
+                if(card) {
+                    card.replaceWith(createProductCard(allProducts.find(p => p['Referencia Interna'] === ref)));
+                }
 
                 if (quantity === 1) {
                     showNotification('cart-notification');
@@ -347,48 +340,6 @@
                 clearTimeout(longPressTimer);
             }
 
-            productGrid.addEventListener('click', e => {
-                const copyBtn = e.target.closest('.copy-button');
-                if (copyBtn) {
-                    navigator.clipboard.writeText(copyBtn.dataset.info).then(() => showNotification('copy-notification'));
-                    return;
-                }
-                const cartBtn = e.target.closest('.add-to-cart-button');
-                if (cartBtn) {
-                    addToCart(cartBtn.dataset.ref, cartBtn, 1);
-                }
-                const zoomTrigger = e.target.closest('.zoomable-image');
-                if (zoomTrigger) {
-                    zoomedImage.src = zoomTrigger.src;
-                    imageZoomModalOverlay.classList.add('flex');
-                }
-            });
-
-            productGrid.addEventListener('mousedown', e => {
-                const cartBtn = e.target.closest('.add-to-cart-button');
-                if (cartBtn) handleAddToCartPress(cartBtn);
-            });
-            
-            productGrid.addEventListener('mouseup', e => {
-                 const cartBtn = e.target.closest('.add-to-cart-button');
-                if (cartBtn) handleAddToCartRelease();
-            });
-
-            productGrid.addEventListener('mouseleave', e => {
-                const cartBtn = e.target.closest('.add-to-cart-button');
-                if (cartBtn) handleAddToCartRelease();
-            }, true);
-            
-            productGrid.addEventListener('touchstart', e => {
-                 const cartBtn = e.target.closest('.add-to-cart-button');
-                if (cartBtn) handleAddToCartPress(cartBtn);
-            });
-
-            productGrid.addEventListener('touchend', e => {
-                 const cartBtn = e.target.closest('.add-to-cart-button');
-                if (cartBtn) handleAddToCartRelease();
-            });
-
             function changeQuantity(ref, change) {
                 const itemInCart = cart.find(item => item.ref === ref);
                 if (itemInCart) {
@@ -396,7 +347,6 @@
                     if (itemInCart.quantity <= 0) cart = cart.filter(item => item.ref !== ref);
                 }
                 updateCart();
-                updateProductCard(ref); 
             }
             
             function updateCart() {
@@ -427,38 +377,31 @@
 
                     return `
                     <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-3 flex items-start gap-4">
-                        <img 
-                            src="${imagePath}" 
-                            alt="${item.product.Nombre}" 
-                            class="w-20 h-20 sm:w-24 sm:h-24 object-cover rounded-md bg-gray-100 flex-shrink-0 zoomable-image cursor-zoom-in" 
-                            onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';"
-                        >
-                        
+                        <img src="${imagePath}" alt="${item.product.Nombre}" class="w-20 h-20 sm:w-24 sm:h-24 object-cover rounded-md bg-gray-100 flex-shrink-0 zoomable-image cursor-zoom-in" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';">
                         <div class="flex-grow flex flex-col justify-between h-full">
                             <div>
                                 <h3 class="font-bold text-gray-800 leading-tight">${item.product.Nombre}</h3>
                                 <p class="text-xs text-gray-500 mt-1">Ref: ${item.ref}</p>
                                 <p class="sm:hidden text-sm font-semibold text-red-600 mt-1">$${price.toFixed(2)} c/u</p>
                             </div>
-                            
                             <div class="flex items-center gap-2 mt-2">
-                                <button class="change-quantity-button bg-gray-200 hover:bg-red-600 text-gray-700 hover:text-white w-7 h-7 rounded-full font-bold flex items-center justify-center transition-all" data-ref="${item.ref}" data-change="-1">
-                                    <i class="fas fa-minus text-xs"></i>
-                                </button>
+                                <button class="change-quantity-button bg-gray-200 hover:bg-red-600 text-gray-700 hover:text-white w-7 h-7 rounded-full font-bold flex items-center justify-center transition-all" data-ref="${item.ref}" data-change="-1"><i class="fas fa-minus text-xs"></i></button>
                                 <span class="font-bold text-md w-8 text-center">${item.quantity}</span>
-                                <button class="change-quantity-button bg-gray-200 hover:bg-green-600 text-gray-700 hover:text-white w-7 h-7 rounded-full font-bold flex items-center justify-center transition-all" data-ref="${item.ref}" data-change="1">
-                                    <i class="fas fa-plus text-xs"></i>
-                                </button>
+                                <button class="change-quantity-button bg-gray-200 hover:bg-green-600 text-gray-700 hover:text-white w-7 h-7 rounded-full font-bold flex items-center justify-center transition-all" data-ref="${item.ref}" data-change="1"><i class="fas fa-plus text-xs"></i></button>
                             </div>
                         </div>
-
                         <div class="flex flex-col items-end justify-between h-full text-right flex-shrink-0">
                             <p class="hidden sm:block text-sm text-gray-500">$${price.toFixed(2)} c/u</p>
                             <p class="font-bold text-lg text-gray-800 mt-auto">$${subtotal.toFixed(2)}</p>
                         </div>
-                    </div>
-                    `;
+                    </div>`;
                 }).join('');
+            }
+            
+            // ===== ✨ NUEVAS FUNCIONES Y LÓGICA MEJORADA ✨ =====
+            function closeCartModal() {
+                cartModalOverlay.classList.remove('flex');
+                renderProducts(); // ¡Actualizamos la página principal SOLO al cerrar!
             }
 
             function shareOnWhatsApp() {
@@ -466,23 +409,16 @@
                     alert("No hay productos en el carrito para compartir.");
                     return;
                 }
-                
                 const clientName = clientNameInput.value.trim();
                 const fecha = new Date().toLocaleDateString('es-EC');
                 let message = `📋 *COTIZACIÓN - AROMOTOR* 📋\n\n`;
                 if (clientName) message += `*Cliente:* ${clientName}\n`;
                 message += `*Fecha:* ${fecha}\n--------------------------------------\n\n*Detalle del Pedido:*\n\n`;
-                
                 cart.forEach(item => {
                     const price = parseFloat(item.product.Precio) || 0;
                     const subtotal = price * item.quantity;
-                    message += `📦 *${item.product.Nombre}*\n`;
-                    message += `   • *Ref:* ${item.ref}\n`;
-                    message += `   • *Cant:* ${item.quantity}\n`;
-                    message += `   • *Precio:* $${price.toFixed(2)}\n`;
-                    message += `   • *Subtotal:* *$${subtotal.toFixed(2)}*\n\n`;
+                    message += `📦 *${item.product.Nombre}*\n   • *Ref:* ${item.ref}\n   • *Cant:* ${item.quantity}\n   • *Precio:* $${price.toFixed(2)}\n   • *Subtotal:* *$${subtotal.toFixed(2)}*\n\n`;
                 });
-                
                 message += `--------------------------------------\nTOTAL DEL PEDIDO: *${cartTotal.textContent}*\n\n_Gracias por su preferencia._`;
                 const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
                 window.open(whatsappUrl, '_blank');
@@ -500,7 +436,9 @@
                 };
                 savedCarts.push(newOrder);
                 localStorage.setItem('savedCarts', JSON.stringify(savedCarts));
-                clientNameInput.value = ''; cartModalOverlay.classList.remove('flex'); showNotification('saved-notification');
+                clientNameInput.value = ''; 
+                closeCartModal();
+                showNotification('saved-notification');
             }
 
             function renderSavedCarts() {
@@ -524,7 +462,7 @@
                 if (saved) {
                     cart = JSON.parse(JSON.stringify(saved.items));
                     clientNameInput.value = saved.clientName;
-                    updateCart(); renderProducts();
+                    updateCart(); 
                     savedOrdersModalOverlay.classList.remove('flex');
                     cartModalOverlay.classList.add('flex');
                 }
@@ -544,61 +482,21 @@
                 setTimeout(() => { n.classList.remove('opacity-100', 'translate-y-0'); n.classList.add('opacity-0', 'translate-y-2'); }, 2000);
             }
 
-            function updateOnlineStatus() {
-                if (navigator.onLine) {
-                    offlineNotification.classList.add('hidden');
-                    const unsyncedCarts = savedCarts.some(cart => !cart.synced);
-                    if (unsyncedCarts) {
-                        syncNotification.classList.remove('hidden');
-                    }
-                } else {
-                    offlineNotification.classList.remove('hidden');
-                    syncNotification.classList.add('hidden');
-                }
-            }
+            // ===== EVENT LISTENERS (ACTUALIZADOS) =====
 
-            downloadCatalogButton.addEventListener('click', () => {
-                if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {
-                    alert('El Service Worker no está activo. Por favor, refresca la página e inténtalo de nuevo.');
-                    return;
+            cartButton.addEventListener('click', () => cartModalOverlay.classList.add('flex'));
+            closeCartModalButton.addEventListener('click', closeCartModal);
+            cartModalOverlay.addEventListener('click', (e) => {
+                if (e.target === cartModalOverlay) {
+                    closeCartModal();
                 }
-                if(allProducts.length === 0) {
-                    alert('Espera a que los productos carguen primero.');
-                    return;
-                }
-                const originalText = downloadCatalogButton.innerHTML;
-                downloadCatalogButton.innerHTML = `<i class="fas fa-spinner fa-spin"></i> <span class="hidden sm:inline">Descargando...</span>`;
-                downloadCatalogButton.disabled = true;
-
-                const imageUrls = allProducts.map(p => `images/${p['Referencia Interna']}.webp`);
-                navigator.serviceWorker.controller.postMessage({ type: 'CACHE_IMAGES', urls: imageUrls });
-                
-                navigator.serviceWorker.addEventListener('message', event => {
-                    if (event.data.type === 'CACHE_COMPLETE') {
-                        alert('¡Catálogo descargado! La aplicación ahora está lista para funcionar offline.');
-                        downloadCatalogButton.innerHTML = originalText;
-                        downloadCatalogButton.disabled = false;
-                    }
-                }, { once: true });
             });
 
-            function handleSyncNotificationClick() {
-                renderSavedCarts();
-                savedOrdersModalOverlay.classList.add('flex');
-                syncNotification.classList.add('hidden');
-            }
+            clearCartButton.addEventListener('click', () => { 
+                cart = []; 
+                updateCart(); 
+            });
             
-            syncNotification.addEventListener('click', handleSyncNotificationClick);
-
-            searchBox.addEventListener('input', renderProducts);
-            categoryFilter.addEventListener('change', updateSubcategories);
-            subcategoryFilter.addEventListener('change', renderProducts);
-            brandFilter.addEventListener('change', renderProducts);
-            clearFiltersBtn.addEventListener('click', () => { searchBox.value = ''; categoryFilter.value = ''; brandFilter.value = ''; updateSubcategories(); });
-            cartButton.addEventListener('click', () => cartModalOverlay.classList.add('flex'));
-            closeCartModalButton.addEventListener('click', () => cartModalOverlay.classList.remove('flex'));
-            clearCartButton.addEventListener('click', () => { cart = []; updateCart(); renderProducts(); });
-            shareWhatsappButton.addEventListener('click', shareOnWhatsApp);
             cartItemsContainer.addEventListener('click', e => {
                 const zoomTrigger = e.target.closest('.zoomable-image');
                 if (zoomTrigger) {
@@ -610,6 +508,35 @@
                     changeQuantity(quantityBtn.dataset.ref, parseInt(quantityBtn.dataset.change, 10));
                 }
             });
+
+            // --- Event Listeners que no cambian ---
+            productGrid.addEventListener('click', e => {
+                const copyBtn = e.target.closest('.copy-button');
+                if (copyBtn) {
+                    navigator.clipboard.writeText(copyBtn.dataset.info).then(() => showNotification('copy-notification'));
+                    return;
+                }
+                const cartBtn = e.target.closest('.add-to-cart-button');
+                if (cartBtn) {
+                    addToCart(cartBtn.dataset.ref, cartBtn, 1);
+                }
+                const zoomTrigger = e.target.closest('.zoomable-image');
+                if (zoomTrigger) {
+                    zoomedImage.src = zoomTrigger.src;
+                    imageZoomModalOverlay.classList.add('flex');
+                }
+            });
+            productGrid.addEventListener('mousedown', e => { const cartBtn = e.target.closest('.add-to-cart-button'); if (cartBtn) handleAddToCartPress(cartBtn); });
+            productGrid.addEventListener('mouseup', e => { const cartBtn = e.target.closest('.add-to-cart-button'); if (cartBtn) handleAddToCartRelease(); });
+            productGrid.addEventListener('mouseleave', e => { const cartBtn = e.target.closest('.add-to-cart-button'); if (cartBtn) handleAddToCartRelease(); }, true);
+            productGrid.addEventListener('touchstart', e => { const cartBtn = e.target.closest('.add-to-cart-button'); if (cartBtn) handleAddToCartPress(cartBtn); });
+            productGrid.addEventListener('touchend', e => { const cartBtn = e.target.closest('.add-to-cart-button'); if (cartBtn) handleAddToCartRelease(); });
+            searchBox.addEventListener('input', renderProducts);
+            categoryFilter.addEventListener('change', updateSubcategories);
+            subcategoryFilter.addEventListener('change', renderProducts);
+            brandFilter.addEventListener('change', renderProducts);
+            clearFiltersBtn.addEventListener('click', () => { searchBox.value = ''; categoryFilter.value = ''; brandFilter.value = ''; updateSubcategories(); });
+            shareWhatsappButton.addEventListener('click', shareOnWhatsApp);
             saveCartButton.addEventListener('click', saveCurrentCart);
             savedOrdersButton.addEventListener('click', () => { renderSavedCarts(); savedOrdersModalOverlay.classList.add('flex'); });
             closeSavedOrdersModalButton.addEventListener('click', () => savedOrdersModalOverlay.classList.remove('flex'));
@@ -626,28 +553,11 @@
                     renderProducts();
                 }
             });
-
-            window.addEventListener('online', updateOnlineStatus);
-            window.addEventListener('offline', updateOnlineStatus);
- 
-            if ('serviceWorker' in navigator) {
-                window.addEventListener('load', () => { 
-                    navigator.serviceWorker.register('./sw.js')
-                        .then(reg => console.log('SW registrado con éxito.'))
-                        .catch(err => console.error('Error en el registro del SW', err));
-                });
-            }
-            const closeZoomModal = () => {
-                imageZoomModalOverlay.classList.remove('flex');
-                zoomedImage.src = ""; 
-            };
+            const closeZoomModal = () => { imageZoomModalOverlay.classList.remove('flex'); zoomedImage.src = ""; };
             closeZoomModalButton.addEventListener('click', closeZoomModal);
-            imageZoomModalOverlay.addEventListener('click', (e) => {
-                if (e.target === imageZoomModalOverlay) closeZoomModal();
-            });
+            imageZoomModalOverlay.addEventListener('click', (e) => { if (e.target === imageZoomModalOverlay) closeZoomModal(); });
 
             loadProducts();
-            updateOnlineStatus();
         });
     </script>
 </body>
