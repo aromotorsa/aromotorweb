@@ -16,13 +16,6 @@
         .notification { transition: all 0.3s ease-in-out; }
         .modal-overlay { display: none; }
         .modal-overlay.flex { display: flex; }
-        #cart-items-container img {
-            max-width: 100%;
-            height: auto;
-            object-fit: cover;
-        }
-        
-        /* Mejorar el scroll del modal */
         #quotation-content {
             overflow: hidden;
         }
@@ -183,7 +176,7 @@
             let currentView = 'grid'; 
             let savedCarts = JSON.parse(localStorage.getItem('savedCarts')) || [];
             let longPressTimer;
-            const LONG_PRESS_DURATION = 500; // 500ms para un toque largo
+            const LONG_PRESS_DURATION = 200;
 
             // Carga inicial de productos
             async function loadProducts() {
