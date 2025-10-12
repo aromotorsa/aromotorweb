@@ -7,10 +7,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#EF4444"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
-
-    <script src="jspdf.umd.min.js" defer></script>
-    <script src="jspdf-autotable.min.js" defer></script>
     <style>
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #f1f1f1; }
@@ -140,7 +136,6 @@
             <header class="p-4 border-b flex justify-between items-center"><h2 class="text-xl font-bold">Pedidos Guardados</h2><button id="close-saved-orders-modal-button" class="text-2xl text-gray-500 hover:text-gray-800">&times;</button></header>
             <main id="saved-orders-container" class="p-4 overflow-y-auto flex-grow"></main>
         </div>
-    </div>
     </div> </div> <div id="image-zoom-modal-overlay" class="modal-overlay fixed inset-0 bg-black bg-opacity-75 z-50 items-center justify-center p-4 cursor-zoom-out">
         <div class="relative max-w-4xl max-h-[90vh]">
             <img id="zoomed-image" src="" alt="Vista ampliada del producto" class="block max-w-full max-h-full rounded-lg shadow-2xl">
@@ -516,66 +511,7 @@
                     `;
                 }).join('');
             }
-            async function exportCartAsPDF() {
-                        // Verificamos que las librerías necesarias estén cargadas
-                        if (typeof html2canvas === 'undefined' || typeof window.jspdf === 'undefined') {
-                            alert("Las librerías para crear el PDF no se pudieron cargar. Revisa tu conexión.");
-                            return;
-                        }
 
-                        const { jsPDF } = window.jspdf;
-                        const content = document.getElementById('quotation-content');
-                        const clientName = document.getElementById('client-name-input').value || 'Cliente General';
-                        const pdfButton = document.getElementById('export-pdf-button');
-                        const originalPdfButtonHTML = pdfButton.innerHTML;
-
-                        // 1. Mostrar estado de carga
-                        pdfButton.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Creando...`;
-                        pdfButton.disabled = true;
-
-                        try {
-                            // Para evitar que la "foto" se corte, hacemos que el modal pueda crecer temporalmente
-                            content.style.overflow = 'visible';
-                            content.style.maxHeight = 'none';
-
-                            const canvas = await html2canvas(content, {
-                                scale: 2, // Mejora la resolución
-                                useCORS: true,
-                                onclone: (document) => {
-                                    // Ocultamos los botones en la copia que se va a imprimir
-                                    const footer = document.querySelector("#quotation-content footer");
-                                    if (footer) footer.style.display = 'none';
-                                    const closeButton = document.querySelector("#quotation-content #close-cart-modal-button");
-                                    if (closeButton) closeButton.style.display = 'none';
-                                }
-                            });
-
-                            // Restauramos el estilo del modal
-                            content.style.overflow = 'hidden';
-                            content.style.maxHeight = '90vh';
-
-                            const imgData = canvas.toDataURL('image/png');
-                            const pdf = new jsPDF({ orientation: 'p', unit: 'mm', format: 'a4' });
-                            
-                            const pdfWidth = pdf.internal.pageSize.getWidth();
-                            const imgWidth = canvas.width;
-                            const imgHeight = canvas.height;
-                            const ratio = imgWidth / imgHeight;
-                            const pdfImageWidth = pdfWidth - 20; // Con márgenes
-                            const pdfImageHeight = pdfImageWidth / ratio;
-                            
-                            pdf.addImage(imgData, 'PNG', 10, 10, pdfImageWidth, pdfImageHeight);
-                            pdf.save(`Cotizacion-${clientName.replace(/\s+/g, '_')}.pdf`);
-
-                        } catch (error) {
-                            console.error("Error al generar el PDF con html2canvas:", error);
-                            alert("Hubo un problema al generar el PDF. Por favor, inténtalo de nuevo.");
-                        } finally {
-                            // Restaurar botón
-                            pdfButton.innerHTML = originalPdfButtonHTML;
-                            pdfButton.disabled = false;
-                        }
-                    }
             function shareOnWhatsApp() {
                         if (cart.length === 0) {
                             alert("No hay productos en el carrito para compartir.");
