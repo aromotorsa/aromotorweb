@@ -8,8 +8,8 @@
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#EF4444"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf-autotable.min.js" defer></script>
+    <script src="libs/jspdf.umd.min.js" defer></script>
+    <script src="libs/jspdf-autotable.min.js" defer></script>
     <style>
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #f1f1f1; }
@@ -43,10 +43,6 @@
                 <button id="download-catalog-button" class="bg-purple-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-purple-700 transition-colors flex items-center gap-2" title="Descargar catálogo para uso offline">
                     <i class="fas fa-cloud-download-alt"></i>
                     <span class="hidden sm:inline">Offline</span>
-                </button>
-                <button id="download-pdf-button" class="bg-red-700 text-white font-bold py-2 px-4 rounded-lg hover:bg-red-800 transition-colors flex items-center gap-2" title="Descargar como catálogo visual (PDF)">
-                    <i class="fas fa-file-pdf"></i>
-                    <span class="hidden sm:inline">PDF</span>
                 </button>
                 <button id="saved-orders-button" class="bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2">
                     <i class="fas fa-save"></i>
@@ -420,11 +416,23 @@
             }
 
             function renderCart() {
-                // Ponemos la fecha actual en el encabezado
-                document.getElementById('quotation-date').textContent = new Date().toLocaleDateString('es-EC', { year: 'numeric', month: 'long', day: 'numeric' });
+                // Fecha actual en el encabezado
+                document.getElementById('quotation-date').textContent = new Date().toLocaleDateString('es-EC', { 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric' 
+                });
 
                 if (cart.length === 0) {
-                    cartItemsContainer.innerHTML = '<p class="text-gray-500 text-center py-8">Tu cotización está vacía.</p>';
+                    cartItemsContainer.innerHTML = `
+                        <div class="text-center py-16">
+                            <div class="mb-4">
+                                <i class="fas fa-shopping-cart text-gray-300 text-6xl"></i>
+                            </div>
+                            <p class="text-gray-500 text-lg font-medium">Tu cotización está vacía</p>
+                            <p class="text-gray-400 text-sm mt-2">Añade productos para comenzar</p>
+                        </div>
+                    `;
                     return;
                 }
                 
@@ -434,133 +442,213 @@
                     const subtotal = price * item.quantity;
 
                     return `
-                    <div class="flex items-center bg-white p-3 rounded-lg shadow-sm border gap-3 mb-3">
-                        <div class="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20">
-                            <img src="${imagePath}" alt="${item.product.Nombre}" 
-                                class="w-full h-full object-cover rounded-md bg-gray-200 cursor-zoom-in zoomable-image" 
-                                onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';"
-                                style="max-width: 100%; height: auto;">
-                        </div>
-                        
-                        <div class="flex-grow min-w-0">
-                            <p class="font-bold text-sm sm:text-base text-gray-800 truncate">${item.product.Nombre}</p>
-                            <p class="text-xs text-gray-500">Ref: ${item.ref}</p>
-                            <p class="sm:hidden text-sm font-semibold text-red-600 mt-1">$${price.toFixed(2)}</p>
-                        </div>
-                        
-                        <div class="flex items-center gap-2 flex-shrink-0">
-                            <button class="change-quantity-button bg-gray-200 w-7 h-7 sm:w-8 sm:h-8 rounded-full font-bold flex items-center justify-center hover:bg-gray-300 transition" data-ref="${item.ref}" data-change="-1">-</button>
-                            <span class="font-bold w-6 text-center text-sm sm:text-base">${item.quantity}</span>
-                            <button class="change-quantity-button bg-gray-200 w-7 h-7 sm:w-8 sm:h-8 rounded-full font-bold flex items-center justify-center hover:bg-gray-300 transition" data-ref="${item.ref}" data-change="1">+</button>
-                        </div>
+                    <div class="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200 hover:border-red-300">
+                        <div class="flex items-center p-4 gap-4">
+                            
+                            <!-- Imagen del producto con efecto hover -->
+                            <div class="flex-shrink-0 w-20 h-20 sm:w-24 sm:h-24 relative overflow-hidden rounded-lg bg-gradient-to-br from-gray-100 to-gray-200">
+                                <img 
+                                    src="${imagePath}" 
+                                    alt="${item.product.Nombre}" 
+                                    class="w-full h-full object-cover cursor-zoom-in zoomable-image transform group-hover:scale-110 transition-transform duration-300" 
+                                    onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';"
+                                >
+                                <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity"></div>
+                            </div>
+                            
+                            <!-- Información del producto -->
+                            <div class="flex-grow min-w-0">
+                                <h3 class="font-bold text-base sm:text-lg text-gray-800 truncate group-hover:text-red-600 transition-colors">
+                                    ${item.product.Nombre}
+                                </h3>
+                                <div class="flex items-center gap-2 mt-1">
+                                    <span class="text-xs bg-red-100 text-red-700 px-2 py-1 rounded-full font-medium">
+                                        ${item.ref}
+                                    </span>
+                                    <span class="text-sm text-gray-600 sm:hidden">
+                                        $${price.toFixed(2)} c/u
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <!-- Controles de cantidad con diseño circular -->
+                            <div class="flex items-center gap-3 flex-shrink-0">
+                                <button 
+                                    class="change-quantity-button bg-red-100 hover:bg-red-600 text-red-600 hover:text-white w-9 h-9 rounded-full font-bold flex items-center justify-center transition-all transform hover:scale-110 active:scale-95 shadow-sm" 
+                                    data-ref="${item.ref}" 
+                                    data-change="-1"
+                                >
+                                    <i class="fas fa-minus text-sm"></i>
+                                </button>
+                                
+                                <span class="font-bold text-lg w-8 text-center text-gray-800">
+                                    ${item.quantity}
+                                </span>
+                                
+                                <button 
+                                    class="change-quantity-button bg-green-100 hover:bg-green-600 text-green-600 hover:text-white w-9 h-9 rounded-full font-bold flex items-center justify-center transition-all transform hover:scale-110 active:scale-95 shadow-sm" 
+                                    data-ref="${item.ref}" 
+                                    data-change="1"
+                                >
+                                    <i class="fas fa-plus text-sm"></i>
+                                </button>
+                            </div>
 
-                        <div class="hidden sm:flex flex-col items-end w-20 text-sm flex-shrink-0">
-                            <p class="text-gray-600">$${price.toFixed(2)}</p>
-                            <p class="font-bold text-base text-gray-900">$${subtotal.toFixed(2)}</p>
+                            <!-- Precios (visible en pantallas grandes) -->
+                            <div class="hidden sm:flex flex-col items-end w-28 gap-1">
+                                <p class="text-sm text-gray-500">
+                                    $${price.toFixed(2)} c/u
+                                </p>
+                                <p class="font-bold text-lg text-gray-900 bg-gray-50 px-3 py-1 rounded-lg">
+                                    $${subtotal.toFixed(2)}
+                                </p>
+                            </div>
                         </div>
-                    </div>`;
+                        
+                        <!-- Subtotal mobile (visible en pantallas pequeñas) -->
+                        <div class="sm:hidden bg-gradient-to-r from-gray-50 to-white px-4 py-2 border-t border-gray-100">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">Subtotal:</span>
+                                <span class="font-bold text-lg text-red-700">$${subtotal.toFixed(2)}</span>
+                            </div>
+                        </div>
+                    </div>
+                    `;
                 }).join('');
             }
             async function exportCartAsPDF() {
-                        // --- Misión 1: Verificamos que nuestros ayudantes estén listos ---
-                        if (typeof window.jspdf === 'undefined' || typeof window.jspdf.jsPDF === 'undefined') {
-                            alert('Error Crítico: La librería principal jsPDF no se pudo cargar. Revisa tu conexión a internet o el bloqueador de anuncios.');
-                            return;
-                        }
-                        if (typeof jspdf.autoTable !== 'function') {
-                            alert('Error Crítico: El plugin de tablas (autoTable) no se pudo cargar. Es el mismo problema de antes, pero ahora estamos seguros de que no carga.');
-                            return;
-                        }
+                // Verificar que las librerías estén cargadas
+                if (typeof window.jspdf === 'undefined' || typeof window.jspdf.jsPDF === 'undefined') {
+                    alert('Error: La librería jsPDF no se pudo cargar. Revisa tu conexión.');
+                    return;
+                }
+                
+                // Verificar que autoTable esté disponible
+                if (typeof window.jspdf.autoTable === 'undefined') {
+                    alert('Error: El plugin autoTable no se cargó. Revisa tu conexión o bloqueador de anuncios.');
+                    return;
+                }
 
-                        if (cart.length === 0) {
-                            alert("El carrito está vacío. Añade productos para generar la cotización.");
-                            return;
-                        }
+                if (cart.length === 0) {
+                    alert("El carrito está vacío. Añade productos para generar la cotización.");
+                    return;
+                }
 
-                        const pdfButton = document.getElementById('export-pdf-button');
-                        const originalPdfButtonHTML = pdfButton.innerHTML;
-                        pdfButton.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Creando...`;
-                        pdfButton.disabled = true;
+                const pdfButton = document.getElementById('export-pdf-button');
+                const originalPdfButtonHTML = pdfButton.innerHTML;
+                pdfButton.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Creando...`;
+                pdfButton.disabled = true;
 
-                        try {
-                            const doc = new window.jspdf.jsPDF({
-                                orientation: 'p',
-                                unit: 'mm',
-                                format: 'a4'
-                            });
+                try {
+                    // Crear documento PDF
+                    const { jsPDF } = window.jspdf;
+                    const doc = new jsPDF({
+                        orientation: 'p',
+                        unit: 'mm',
+                        format: 'a4'
+                    });
 
-                            const clientName = document.getElementById('client-name-input').value || 'Cliente General';
-                            const date = new Date().toLocaleDateString('es-EC', { year: 'numeric', month: 'long', day: 'numeric' });
-                            const totalText = cartTotal.textContent;
+                    const clientName = document.getElementById('client-name-input').value || 'Cliente General';
+                    const date = new Date().toLocaleDateString('es-EC', { year: 'numeric', month: 'long', day: 'numeric' });
+                    const totalText = cartTotal.textContent;
 
-                            const logo = await new Promise(resolve => {
-                                const img = new Image();
-                                img.src = 'logos/AROMOTOR.png';
-                                img.onload = () => resolve(img);
-                                img.onerror = () => resolve(null);
-                            });
-                            if (logo) {
-                                doc.addImage(logo, 'PNG', 15, 10, 40, 10);
-                            }
-
-                            doc.setFontSize(18);
-                            doc.setFont('helvetica', 'bold');
-                            doc.text('Cotización de Pedido', doc.internal.pageSize.getWidth() / 2, 25, { align: 'center' });
-
-                            doc.setFontSize(11);
-                            doc.setFont('helvetica', 'normal');
-                            doc.text(`Cliente: ${clientName}`, 15, 40);
-                            doc.text(`Fecha: ${date}`, doc.internal.pageSize.getWidth() - 15, 40, { align: 'right' });
-
-                            const head = [['#', 'Producto', 'Ref.', 'Cant.', 'P. Unit.', 'Subtotal']];
-                            const body = cart.map((item, index) => {
-                                const price = parseFloat(item.product.Precio) || 0;
-                                const subtotal = price * item.quantity;
-                                return [
-                                    index + 1, item.product.Nombre, item.ref, item.quantity,
-                                    `$${price.toFixed(2)}`, `$${subtotal.toFixed(2)}`
-                                ];
-                            });
-
-                            // --- ✨ EL CAMBIO MÁGICO Y DEFINITIVO ESTÁ AQUÍ ✨ ---
-                            // Llamamos directamente a la función autoTable y le pasamos el documento.
-                            jspdf.autoTable(doc, {
-                                head: head,
-                                body: body,
-                                startY: 50,
-                                theme: 'grid',
-                                headStyles: { fillColor: [239, 68, 68] },
-                                styles: { cellPadding: 2, fontSize: 9, valign: 'middle' },
-                                columnStyles: {
-                                    0: { cellWidth: 10 }, 1: { cellWidth: 'auto' },
-                                    4: { halign: 'right' }, 5: { halign: 'right' }
-                                }
-                            });
-                            
-                            let finalY = doc.lastAutoTable.finalY || 60;
-                            doc.setFontSize(14);
-                            doc.setFont('helvetica', 'bold');
-                            doc.text('Total:', doc.internal.pageSize.getWidth() - 55, finalY + 15, { align: 'left' });
-                            doc.text(totalText, doc.internal.pageSize.getWidth() - 15, finalY + 15, { align: 'right' });
-
-                            const pageCount = doc.internal.getNumberOfPages();
-                            for (let i = 1; i <= pageCount; i++) {
-                                doc.setPage(i);
-                                doc.setFontSize(9);
-                                doc.setTextColor(150);
-                                doc.text(`Página ${i} de ${pageCount}`, doc.internal.pageSize.getWidth() / 2, doc.internal.pageSize.getHeight() - 10, { align: 'center' });
-                            }
-
-                            doc.save(`Cotizacion-${clientName.replace(/\s+/g, '_')}-${Date.now()}.pdf`);
-
-                        } catch (error) {
-                            console.error("Error al generar el PDF:", error);
-                            alert("Hubo un problema inesperado al generar el PDF.");
-                        } finally {
-                            pdfButton.innerHTML = originalPdfButtonHTML;
-                            pdfButton.disabled = false;
-                        }
+                    // Cargar logo
+                    const logo = await new Promise(resolve => {
+                        const img = new Image();
+                        img.src = 'logos/AROMOTOR.png';
+                        img.onload = () => resolve(img);
+                        img.onerror = () => resolve(null);
+                    });
+                    if (logo) {
+                        doc.addImage(logo, 'PNG', 15, 10, 40, 10);
                     }
+
+                    // Título
+                    doc.setFontSize(18);
+                    doc.setFont('helvetica', 'bold');
+                    doc.text('Cotización de Pedido', doc.internal.pageSize.getWidth() / 2, 25, { align: 'center' });
+
+                    // Información del cliente
+                    doc.setFontSize(11);
+                    doc.setFont('helvetica', 'normal');
+                    doc.text(`Cliente: ${clientName}`, 15, 40);
+                    doc.text(`Fecha: ${date}`, doc.internal.pageSize.getWidth() - 15, 40, { align: 'right' });
+
+                    // Preparar datos de la tabla
+                    const tableData = cart.map((item, index) => {
+                        const price = parseFloat(item.product.Precio) || 0;
+                        const subtotal = price * item.quantity;
+                        return [
+                            index + 1,
+                            item.product.Nombre,
+                            item.ref,
+                            item.quantity,
+                            `$${price.toFixed(2)}`,
+                            `$${subtotal.toFixed(2)}`
+                        ];
+                    });
+
+                    // ✨ CORRECCIÓN CRÍTICA: Usar doc.autoTable directamente
+                    doc.autoTable({
+                        head: [['#', 'Producto', 'Ref.', 'Cant.', 'P. Unit.', 'Subtotal']],
+                        body: tableData,
+                        startY: 50,
+                        theme: 'grid',
+                        headStyles: { 
+                            fillColor: [239, 68, 68],
+                            textColor: [255, 255, 255],
+                            fontStyle: 'bold'
+                        },
+                        styles: { 
+                            cellPadding: 3, 
+                            fontSize: 9, 
+                            valign: 'middle',
+                            halign: 'left'
+                        },
+                        columnStyles: {
+                            0: { cellWidth: 10, halign: 'center' },
+                            1: { cellWidth: 'auto' },
+                            2: { cellWidth: 30 },
+                            3: { cellWidth: 15, halign: 'center' },
+                            4: { cellWidth: 25, halign: 'right' },
+                            5: { cellWidth: 25, halign: 'right', fontStyle: 'bold' }
+                        }
+                    });
+
+                    // Total
+                    const finalY = doc.lastAutoTable.finalY || 60;
+                    doc.setFontSize(14);
+                    doc.setFont('helvetica', 'bold');
+                    doc.text('TOTAL:', doc.internal.pageSize.getWidth() - 60, finalY + 15);
+                    doc.setTextColor(239, 68, 68);
+                    doc.text(totalText, doc.internal.pageSize.getWidth() - 15, finalY + 15, { align: 'right' });
+
+                    // Pie de página
+                    const pageCount = doc.internal.getNumberOfPages();
+                    doc.setTextColor(0, 0, 0);
+                    for (let i = 1; i <= pageCount; i++) {
+                        doc.setPage(i);
+                        doc.setFontSize(9);
+                        doc.setTextColor(150);
+                        doc.text(
+                            `Página ${i} de ${pageCount}`, 
+                            doc.internal.pageSize.getWidth() / 2, 
+                            doc.internal.pageSize.getHeight() - 10, 
+                            { align: 'center' }
+                        );
+                    }
+
+                    // Guardar PDF
+                    doc.save(`Cotizacion-${clientName.replace(/\s+/g, '_')}-${Date.now()}.pdf`);
+
+                } catch (error) {
+                    console.error("Error al generar el PDF:", error);
+                    alert(`Error al generar el PDF: ${error.message}`);
+                } finally {
+                    pdfButton.innerHTML = originalPdfButtonHTML;
+                    pdfButton.disabled = false;
+                }
+            }
             function shareOnWhatsApp() {
                         if (cart.length === 0) {
                             alert("No hay productos en el carrito para compartir.");
