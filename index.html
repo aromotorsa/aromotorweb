@@ -18,6 +18,16 @@
         .notification { transition: all 0.3s ease-in-out; }
         .modal-overlay { display: none; }
         .modal-overlay.flex { display: flex; }
+        #cart-items-container img {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        
+        /* Mejorar el scroll del modal */
+        #quotation-content {
+            overflow: hidden;
+        }
     </style>
 </head>
 <body class="antialiased font-sans">
@@ -423,25 +433,27 @@
                     const subtotal = price * item.quantity;
 
                     return `
-                    <div class="flex items-center bg-white p-2 rounded-lg shadow-sm border gap-3">
-                        <div class="flex-shrink-0">
+                    <div class="flex items-center bg-white p-3 rounded-lg shadow-sm border gap-3 mb-3">
+                        <div class="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20">
                             <img src="${imagePath}" alt="${item.product.Nombre}" 
-                                class="w-16 h-16 sm:w-20 sm:h-20 object-cover rounded-md bg-gray-200 cursor-zoom-in zoomable-image" 
-                                onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';">
+                                class="w-full h-full object-cover rounded-md bg-gray-200 cursor-zoom-in zoomable-image" 
+                                onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';"
+                                style="max-width: 100%; height: auto;">
                         </div>
                         
                         <div class="flex-grow min-w-0">
-                            <p class="font-bold truncate text-sm sm:text-base text-gray-800">${item.product.Nombre}</p>
+                            <p class="font-bold text-sm sm:text-base text-gray-800 truncate">${item.product.Nombre}</p>
                             <p class="text-xs text-gray-500">Ref: ${item.ref}</p>
-                            <p class="sm:hidden text-sm font-semibold text-red-600 mt-1">$${price.toFixed(2)}</p> </div>
+                            <p class="sm:hidden text-sm font-semibold text-red-600 mt-1">$${price.toFixed(2)}</p>
+                        </div>
                         
-                        <div class="flex items-center gap-1 sm:gap-2 flex-shrink-0">
+                        <div class="flex items-center gap-2 flex-shrink-0">
                             <button class="change-quantity-button bg-gray-200 w-7 h-7 sm:w-8 sm:h-8 rounded-full font-bold flex items-center justify-center hover:bg-gray-300 transition" data-ref="${item.ref}" data-change="-1">-</button>
                             <span class="font-bold w-6 text-center text-sm sm:text-base">${item.quantity}</span>
                             <button class="change-quantity-button bg-gray-200 w-7 h-7 sm:w-8 sm:h-8 rounded-full font-bold flex items-center justify-center hover:bg-gray-300 transition" data-ref="${item.ref}" data-change="1">+</button>
                         </div>
 
-                        <div class="hidden sm:flex flex-col items-end w-28 text-sm">
+                        <div class="hidden sm:flex flex-col items-end w-20 text-sm flex-shrink-0">
                             <p class="text-gray-600">$${price.toFixed(2)}</p>
                             <p class="font-bold text-base text-gray-900">$${subtotal.toFixed(2)}</p>
                         </div>
