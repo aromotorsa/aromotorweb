@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#EF4444"/>
-    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/jspdf-autotable@3.8.2/dist/jspdf.autotable.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jspdf-autotable@3.8.2/dist/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
     <style>
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #f1f1f1; }
@@ -524,6 +524,12 @@
                 // Verificar que las librerías estén cargadas
                 if (typeof window.jspdf === 'undefined' || typeof window.jspdf.jsPDF === 'undefined') {
                     alert('Error: La librería jsPDF no se pudo cargar. Revisa tu conexión.');
+                    return;
+                }
+                
+                // Verificar que autoTable esté disponible
+                if (typeof window.jspdf.autoTable === 'undefined') {
+                    alert('Error: El plugin autoTable no se cargó. Revisa tu conexión o bloqueador de anuncios.');
                     return;
                 }
 
