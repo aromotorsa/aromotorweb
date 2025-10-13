@@ -298,12 +298,23 @@
             
             function addToCart(ref, buttonElement, quantity = 1) {
                 if (quantity <= 0) return;
+
+                const product = allProducts.find(p => p['Referencia Interna'] === ref);
+                if (!product) return; // Si el producto no existe, no hacemos nada.
+
+                const stock = product.Stock || 0;
                 const existingProduct = cart.find(item => item.ref === ref);
+                const currentQuantityInCart = existingProduct ? existingProduct.quantity : 0;
+
+                if (currentQuantityInCart + quantity > stock) {
+                    alert(`No puedes añadir más unidades. Stock disponible: ${stock}`);
+                    return; // Detenemos la función si se excede el stock.
+                }
+
                 if (existingProduct) {
                     existingProduct.quantity += quantity;
                 } else {
-                    const product = allProducts.find(p => p['Referencia Interna'] === ref);
-                    if (product) cart.push({ ref: ref, quantity: quantity, product: product });
+                    cart.push({ ref: ref, quantity: quantity, product: product });
                 }
                 updateCart();
                 const card = document.querySelector(`[data-ref="${ref}"]`);
@@ -342,10 +353,24 @@
 
             function changeQuantity(ref, change) {
                 const itemInCart = cart.find(item => item.ref === ref);
-                if (itemInCart) {
-                    itemInCart.quantity += change;
-                    if (itemInCart.quantity <= 0) cart = cart.filter(item => item.ref !== ref);
+                if (!itemInCart) return;
+
+                if (change > 0) { // Solo verificamos al aumentar la cantidad.
+                    const product = allProducts.find(p => p['Referencia Interna'] === ref);
+                    const stock = product ? product.Stock || 0 : 0;
+
+                    if (itemInCart.quantity + change > stock) {
+                        alert(`No puedes añadir más unidades. Stock disponible: ${stock}`);
+                        return; // Detenemos la función.
+                    }
                 }
+
+                itemInCart.quantity += change;
+
+                if (itemInCart.quantity <= 0) {
+                    cart = cart.filter(item => item.ref !== ref);
+                }
+                
                 updateCart();
             }
             
