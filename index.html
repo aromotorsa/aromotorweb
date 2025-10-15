@@ -32,7 +32,7 @@
                 <img src="logos/AROMOTOR.png" alt="Logo Empresa" class="h-10 mr-3 flex-shrink-0">
             </div>
             <div class="flex items-center gap-2 sm:gap-4 flex-wrap justify-center">
-                <button id="download-catalog-button" class="bg-purple-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-purple-700 transition-colors flex items-center gap-2" title="Descargar catálogo para uso offline">
+                <button id="download-catalog-button" class="bg-purple-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-purple-700 transition-colors flex items-center gap-2" title="Descargar catálogo para uso offline" disabled>
                     <i class="fas fa-cloud-download-alt"></i>
                     <span class="hidden sm:inline">Offline</span>
                 </button>
@@ -534,12 +534,17 @@
             closeZoomModalButton.addEventListener('click', closeZoomModal);
             imageZoomModalOverlay.addEventListener('click', (e) => { if (e.target === imageZoomModalOverlay) closeZoomModal(); });
 
-            downloadCatalogButton.addEventListener('click', async () => {
-                if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {
-                    alert('El modo offline no es compatible con tu navegador o el service worker no está activo.');
-                    return;
+            function setupOfflineButton() {
+                if ('serviceWorker' in navigator) {
+                    navigator.serviceWorker.ready.then(registration => {
+                        if (registration.active) {
+                            downloadCatalogButton.disabled = false;
+                        }
+                    });
                 }
+            }
 
+            downloadCatalogButton.addEventListener('click', async () => {
                 const buttonIcon = downloadCatalogButton.querySelector('i');
                 const buttonText = downloadCatalogButton.querySelector('span');
                 
@@ -572,6 +577,7 @@
             });
 
             loadProducts();
+            setupOfflineButton();
         });
     </script>
 </body>
