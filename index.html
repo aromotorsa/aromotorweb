@@ -34,7 +34,8 @@
             <div class="flex items-center gap-2 sm:gap-4 flex-wrap justify-center">
                 <button id="download-catalog-button" class="bg-purple-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-purple-700 transition-colors flex items-center gap-2" title="Descargar catálogo para uso offline" disabled>
                     <i class="fas fa-cloud-download-alt"></i>
-                    <span class="hidden sm:inline">Offline</span>
+                    <span class="hidden sm:inline preparing-text">Preparando...</span>
+                    <span class="hidden sm:inline offline-text">Offline</span>
                 </button>
                 <button id="saved-orders-button" class="bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2">
                     <i class="fas fa-save"></i>
@@ -538,8 +539,13 @@
             function setupOfflineButton() {
                 if ('serviceWorker' in navigator) {
                     navigator.serviceWorker.ready.then(registration => {
-                        if (registration.active) {
+                        if (registration.active && navigator.serviceWorker.controller) {
                             downloadCatalogButton.disabled = false;
+                        } else {
+                            // Service worker is not yet in control. Wait for it.
+                            navigator.serviceWorker.addEventListener('controllerchange', () => {
+                                downloadCatalogButton.disabled = false;
+                            });
                         }
                     });
                 }
