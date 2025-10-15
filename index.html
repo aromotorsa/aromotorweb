@@ -207,7 +207,6 @@
             // Popula solo los filtros de Nivel 1 (Categoría y Marca) al inicio
             function populateFilters() {
                 const categories = [...new Set(allProducts.map(p => p.Categoría).filter(Boolean))].sort();
-                const brands = [...new Set(allProducts.map(p => p.Marca).filter(Boolean))].sort();
 
                 categoryFilter.innerHTML = '<option value="">Categoría</option>';
                 categories.forEach(cat => {
@@ -263,8 +262,7 @@
                     (searchTerm === '' || p.Nombre?.toLowerCase().includes(searchTerm) || p['Referencia Interna']?.toLowerCase().includes(searchTerm) || p.Marca?.toLowerCase().includes(searchTerm)) &&
                     (selectedCategory === '' || p.Categoría === selectedCategory) &&
                     (selectedSubcategory === '' || p.Subcategoría === selectedSubcategory) &&
-                    (selectedType === '' || p.Tipo === selectedType) && // Nueva condición de filtro
-                    (selectedBrand === '' || p.Marca === selectedBrand)
+                    (selectedType === '' || p.Tipo === selectedType) // Nueva condición de filtro
                 );
 
                 productGrid.innerHTML = '';
