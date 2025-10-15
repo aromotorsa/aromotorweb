@@ -204,7 +204,7 @@
 
             // --- CAMBIO: Lógica de filtros reescrita para ser más inteligente y conectada ---
 
-            // Popula solo los filtros de Nivel 1 (Categoría y Marca) al inicio
+            // Popula el filtro de Categoría (Nivel 1) al inicio
             function populateFilters() {
                 const categories = [...new Set(allProducts.map(p => p.Categoría).filter(Boolean))].sort();
 
@@ -258,7 +258,7 @@
                 const selectedType = typeFilter.value; // Nuevo valor de filtro
 
                 const filteredProducts = allProducts.filter(p => 
-                    (searchTerm === '' || p.Nombre?.toLowerCase().includes(searchTerm) || p['Referencia Interna']?.toLowerCase().includes(searchTerm) || p.Marca?.toLowerCase().includes(searchTerm)) &&
+                    (searchTerm === '' || p.Nombre?.toLowerCase().includes(searchTerm) || p['Referencia Interna']?.toLowerCase().includes(searchTerm)) &&
                     (selectedCategory === '' || p.Categoría === selectedCategory) &&
                     (selectedSubcategory === '' || p.Subcategoría === selectedSubcategory) &&
                     (selectedType === '' || p.Tipo === selectedType) // Nueva condición de filtro
