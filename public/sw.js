@@ -1,4 +1,4 @@
-const CACHE_NAME = 'aromotor-pro-cache-v5'; // 1. ¡VERSIÓN INCREMENTADA!
+const CACHE_NAME = 'aromotor-pro-cache-v6'; // 1. ¡VERSIÓN INCREMENTADA!
 const urlsToCache = [
     '/',
     'index.html',
@@ -78,8 +78,8 @@ self.addEventListener('fetch', event => {
             caches.open(CACHE_NAME).then(cache => {
                 return cache.match(event.request).then(cachedResponse => {
                     const fetchPromise = fetch(event.request).then(networkResponse => {
-                        // Si la respuesta de la red es buena, la clonamos y la guardamos en caché para el futuro
-                        if (networkResponse.ok) {
+                        // Si la respuesta de la red es buena y es un recurso cacheadle, la clonamos y la guardamos en caché para el futuro
+                        if (networkResponse.ok && url.protocol.startsWith('http')) {
                             cache.put(event.request, networkResponse.clone());
                         }
                         return networkResponse;
