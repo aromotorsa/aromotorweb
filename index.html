@@ -49,13 +49,13 @@
                 <input type="search" id="search-box" placeholder="Buscar por nombre, referencia..." class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition">
                 <div class="grid grid-cols-2 gap-4">
                     <select id="category-filter" class="w-full p-2 border border-gray-300 rounded-lg bg-white focus:ring-2 focus:ring-red-500 focus:border-transparent transition">
-                        <option value="">Categoría</option>
+                        <option value="">Grupo</option>
                     </select>
                     <select id="subcategory-filter" class="w-full p-2 border border-gray-300 rounded-lg bg-white focus:ring-2 focus:ring-red-500 focus:border-transparent transition">
-                        <option value="">Subcategoría</option>
+                        <option value="">Categoría</option>
                     </select>
                     <select id="type-filter" class="w-full p-2 border border-gray-300 rounded-lg bg-white focus:ring-2 focus:ring-red-500 focus:border-transparent transition">
-                         <option value="">Tipo</option>
+                         <option value="">Subcategoría</option>
                     </select>
                 </div>
             </div>
@@ -204,50 +204,41 @@
 
             // --- CAMBIO: Lógica de filtros reescrita para ser más inteligente y conectada ---
 
-            // Popula solo los filtros de Nivel 1 (Categoría y Marca) al inicio
+            // Popula todos los filtros al inicio
             function populateFilters() {
                 const categories = [...new Set(allProducts.map(p => p.Categoría).filter(Boolean))].sort();
+                const subcategories = [...new Set(allProducts.map(p => p.Subcategoría).filter(Boolean))].sort();
+                const types = [...new Set(allProducts.map(p => p.Tipo).filter(Boolean))].sort();
 
-                categoryFilter.innerHTML = '<option value="">Categoría</option>';
+                categoryFilter.innerHTML = '<option value="">Grupo</option>';
                 categories.forEach(cat => {
                     const option = document.createElement('option');
                     option.value = cat; option.textContent = cat;
                     categoryFilter.appendChild(option);
                 });
-                
+
+                subcategoryFilter.innerHTML = '<option value="">Categoría</option>';
+                subcategories.forEach(sub => {
+                    const option = document.createElement('option');
+                    option.value = sub; option.textContent = sub;
+                    subcategoryFilter.appendChild(option);
+                });
+
+                typeFilter.innerHTML = '<option value="">Subcategoría</option>';
+                types.forEach(type => {
+                    const option = document.createElement('option');
+                    option.value = type; option.textContent = type;
+                    typeFilter.appendChild(option);
+                });
             }
             
             // Se activa al cambiar Categoría. Popula Subcategorías y resetea Tipos.
             function updateSubcategories() {
-                const selectedCategory = categoryFilter.value;
-                subcategoryFilter.innerHTML = '<option value="">Subcategoría</option>';
-                typeFilter.innerHTML = '<option value="">Tipo</option>'; // Resetea el filtro hijo
-                
-                if (selectedCategory) {
-                    const relevantSubcategories = [...new Set(allProducts.filter(p => p.Categoría === selectedCategory && p.Subcategoría).map(p => p.Subcategoría))].sort();
-                    relevantSubcategories.forEach(sub => {
-                        const option = document.createElement('option');
-                        option.value = sub; option.textContent = sub;
-                        subcategoryFilter.appendChild(option);
-                    });
-                }
                 renderProducts(); // Actualiza la vista
             }
 
             // Se activa al cambiar Subcategoría. Popula Tipos.
             function updateTypes() {
-                const selectedCategory = categoryFilter.value;
-                const selectedSubcategory = subcategoryFilter.value;
-                typeFilter.innerHTML = '<option value="">Tipo</option>';
-                
-                if (selectedCategory && selectedSubcategory) {
-                     const relevantTypes = [...new Set(allProducts.filter(p => p.Categoría === selectedCategory && p.Subcategoría === selectedSubcategory && p.Tipo).map(p => p.Tipo))].sort();
-                     relevantTypes.forEach(type => {
-                        const option = document.createElement('option');
-                        option.value = type; option.textContent = type;
-                        typeFilter.appendChild(option);
-                    });
-                }
                 renderProducts(); // Actualiza la vista
             }
 
@@ -473,13 +464,15 @@
 
             // --- CAMBIO: Event Listeners actualizados para la nueva lógica de filtros ---
             searchBox.addEventListener('input', renderProducts);
-            categoryFilter.addEventListener('change', updateSubcategories);
-            subcategoryFilter.addEventListener('change', updateTypes);
+            categoryFilter.addEventListener('change', renderProducts);
+            subcategoryFilter.addEventListener('change', renderProducts);
             typeFilter.addEventListener('change', renderProducts);
             clearFiltersBtn.addEventListener('click', () => { 
                 searchBox.value = ''; 
                 categoryFilter.value = ''; 
-                updateSubcategories(); // Esto resetea los 3 filtros de categoría y renderiza
+                subcategoryFilter.value = '';
+                typeFilter.value = '';
+                renderProducts();
             });
             
             // (El resto de listeners permanecen igual)
