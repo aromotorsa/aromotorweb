@@ -36,7 +36,6 @@
                     <i class="fas fa-cloud-download-alt"></i>
                     <span class="hidden sm:inline">Offline</span>
                 </button>
-                <p class="text-xs text-gray-500 mt-1">Si la descarga no funciona, recargue la página.</p>
                 <button id="saved-orders-button" class="bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2">
                     <i class="fas fa-save"></i>
                     <span class="hidden sm:inline">Pedidos</span>
@@ -87,6 +86,7 @@
     <div id="saved-notification" class="notification fixed bottom-5 left-5 bg-blue-600 text-white py-2 px-4 rounded-lg shadow-lg opacity-0 transform translate-y-2 z-50">¡Pedido guardado!</div>
     <div id="offline-notification" class="hidden fixed top-0 left-0 right-0 bg-yellow-500 text-black text-center p-2 font-bold z-50">Modo Offline: Estás trabajando sin conexión.</div>
     <div id="sync-notification" class="hidden fixed top-0 left-0 right-0 bg-blue-500 text-white text-center p-2 font-bold z-50 cursor-pointer">¡Conexión recuperada! Tienes pedidos guardados. Haz clic para verlos.</div>
+    <div id="download-failed-notification" class="notification fixed bottom-5 left-5 bg-red-600 text-white py-2 px-4 rounded-lg shadow-lg opacity-0 transform translate-y-2 z-50">La descarga falló. Por favor, recargue la página.</div>
 
 
     <button id="cart-button" class="fixed bottom-5 right-5 bg-red-600 text-white w-16 h-16 rounded-full shadow-lg flex items-center justify-center text-2xl z-20">
@@ -548,6 +548,11 @@
             downloadCatalogButton.addEventListener('click', async () => {
                 const buttonIcon = downloadCatalogButton.querySelector('i');
                 const buttonText = downloadCatalogButton.querySelector('span');
+
+                if (!navigator.serviceWorker.controller) {
+                    showNotification('download-failed-notification');
+                    return;
+                }
                 
                 downloadCatalogButton.disabled = true;
                 buttonIcon.classList.remove('fa-cloud-download-alt');
@@ -561,9 +566,19 @@
                     urls: imageUrls
                 });
 
+                const timeout = setTimeout(() => {
+                    showNotification('download-failed-notification');
+                    downloadCatalogButton.disabled = false;
+                    buttonIcon.classList.add('fa-cloud-download-alt');
+                    buttonIcon.classList.remove('fa-spinner', 'fa-spin');
+                    if(buttonText) buttonText.textContent = 'Offline';
+                    navigator.serviceWorker.removeEventListener('message', handler);
+                }, 20000); // 30 second timeout
+
                 // Esperar a que el SW nos avise que terminó
-                navigator.serviceWorker.addEventListener('message', function handler(event) {
+                const handler = function(event) {
                     if (event.data.type === 'CACHE_COMPLETE') {
+                        clearTimeout(timeout);
                         downloadCatalogButton.disabled = false;
                         buttonIcon.classList.remove('fa-spinner', 'fa-spin');
                         buttonIcon.classList.add('fa-check-circle');
@@ -586,7 +601,8 @@
                         // Removemos el listener para no volver a ejecutar esto si el SW envía otros mensajes
                         navigator.serviceWorker.removeEventListener('message', handler);
                     }
-                });
+                };
+                navigator.serviceWorker.addEventListener('message', handler);
             });
 
             loadProducts();
