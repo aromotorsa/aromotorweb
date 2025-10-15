@@ -216,12 +216,6 @@
                     categoryFilter.appendChild(option);
                 });
                 
-                brandFilter.innerHTML = '<option value="">Todas las Marcas</option>';
-                brands.forEach(brand => {
-                    const option = document.createElement('option');
-                    option.value = brand; option.textContent = brand;
-                    brandFilter.appendChild(option);
-                });
             }
             
             // Se activa al cambiar Categoría. Popula Subcategorías y resetea Tipos.
@@ -264,7 +258,6 @@
                 const selectedCategory = categoryFilter.value;
                 const selectedSubcategory = subcategoryFilter.value;
                 const selectedType = typeFilter.value; // Nuevo valor de filtro
-                const selectedBrand = brandFilter.value;
 
                 const filteredProducts = allProducts.filter(p => 
                     (searchTerm === '' || p.Nombre?.toLowerCase().includes(searchTerm) || p['Referencia Interna']?.toLowerCase().includes(searchTerm) || p.Marca?.toLowerCase().includes(searchTerm)) &&
@@ -485,11 +478,9 @@
             categoryFilter.addEventListener('change', updateSubcategories);
             subcategoryFilter.addEventListener('change', updateTypes);
             typeFilter.addEventListener('change', renderProducts);
-            brandFilter.addEventListener('change', renderProducts);
             clearFiltersBtn.addEventListener('click', () => { 
                 searchBox.value = ''; 
                 categoryFilter.value = ''; 
-                brandFilter.value = ''; 
                 updateSubcategories(); // Esto resetea los 3 filtros de categoría y renderiza
             });
             
