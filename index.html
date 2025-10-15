@@ -534,6 +534,47 @@
             closeZoomModalButton.addEventListener('click', closeZoomModal);
             imageZoomModalOverlay.addEventListener('click', (e) => { if (e.target === imageZoomModalOverlay) closeZoomModal(); });
 
+            downloadCatalogButton.addEventListener('click', async () => {
+                if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {
+                    alert('El modo offline no es compatible con tu navegador o el service worker no está activo.');
+                    return;
+                }
+
+                if (!confirm('¿Quieres descargar todas las imágenes para usar el catálogo sin conexión? Esto puede usar una cantidad significativa de datos y espacio.')) {
+                    return;
+                }
+
+                const buttonIcon = downloadCatalogButton.querySelector('i');
+                const buttonText = downloadCatalogButton.querySelector('span');
+                
+                downloadCatalogButton.disabled = true;
+                buttonIcon.classList.remove('fa-cloud-download-alt');
+                buttonIcon.classList.add('fa-spinner', 'fa-spin');
+                if(buttonText) buttonText.textContent = 'Descargando...';
+
+                const imageUrls = allProducts.map(p => `images/${p['Referencia Interna']}.webp`);
+                
+                navigator.serviceWorker.controller.postMessage({
+                    type: 'CACHE_IMAGES',
+                    urls: imageUrls
+                });
+
+                // Esperar a que el SW nos avise que terminó
+                navigator.serviceWorker.addEventListener('message', function handler(event) {
+                    if (event.data.type === 'CACHE_COMPLETE') {
+                        downloadCatalogButton.disabled = false;
+                        buttonIcon.classList.remove('fa-spinner', 'fa-spin');
+                        buttonIcon.classList.add('fa-check-circle');
+                        if(buttonText) buttonText.textContent = 'Descargado';
+                        
+                        alert('¡Catálogo descargado! Ahora puedes usar la app sin conexión.');
+
+                        // Removemos el listener para no volver a ejecutar esto si el SW envía otros mensajes
+                        navigator.serviceWorker.removeEventListener('message', handler);
+                    }
+                });
+            });
+
             loadProducts();
         });
     </script>
