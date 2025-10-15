@@ -44,40 +44,61 @@ self.addEventListener('activate', event => {
 });
 
 self.addEventListener('fetch', event => {
+    // Ignoramos las peticiones que no son GET
     if (event.request.method !== 'GET') {
         return;
     }
 
-    event.respondWith(
-        caches.match(event.request)
-            .then(cachedResponse => {
-                if (cachedResponse) {
-                    return cachedResponse;
-                }
+    const url = new URL(event.request.url);
 
-                return fetch(event.request).then(
-                    networkResponse => {
-                        // Solo cacheamos respuestas válidas y de protocolos que entendemos
-                        if (!networkResponse || networkResponse.status !== 200 || !event.request.url.startsWith('http')) {
+    // Estrategia: Network First para el HTML principal y el JSON de datos
+    // Así siempre tenemos la última versión si hay conexión.
+    if (url.pathname === '/' || url.pathname.endsWith('/index.html') || url.pathname.endsWith('/Resultado_Final.json')) {
+        event.respondWith(
+            fetch(event.request)
+                .then(networkResponse => {
+                    // Si la respuesta de la red es buena, la clonamos y la guardamos en caché para el futuro modo offline
+                    if (networkResponse.ok) {
+                        const responseToCache = networkResponse.clone();
+                        caches.open(CACHE_NAME).then(cache => {
+                            cache.put(event.request, responseToCache);
+                        });
+                    }
+                    return networkResponse;
+                })
+                .catch(() => {
+                    // Si la red falla (estamos offline), entonces buscamos en la caché.
+                    console.log(`[SW] Red falló para ${url.pathname}. Sirviendo desde caché.`);
+                    return caches.match(event.request);
+                })
+        );
+    } else {
+        // Estrategia: Cache First para todo lo demás (CSS, imágenes, fuentes, etc.)
+        // Son archivos estáticos, es más rápido servirlos desde la caché.
+        event.respondWith(
+            caches.match(event.request)
+                .then(cachedResponse => {
+                    if (cachedResponse) {
+                        return cachedResponse;
+                    }
+
+                    return fetch(event.request).then(networkResponse => {
+                        // Solo cacheamos respuestas válidas
+                        if (!networkResponse || networkResponse.status !== 200 || !url.protocol.startsWith('http')) {
                             return networkResponse;
                         }
                         
-                        // Clonamos la respuesta para poder guardarla en caché y devolverla al navegador
                         const responseToCache = networkResponse.clone();
                         caches.open(CACHE_NAME).then(cache => {
                             cache.put(event.request, responseToCache);
                         });
 
                         return networkResponse;
-                    }
-                ).catch(() => {
-                    // Manejo de error si la red falla
-                    // Podrías devolver una imagen placeholder aquí si quisieras
-                });
-            })
-    );
+                    });
+                })
+        );
+    }
 });
-
 
 async function cacheUrlsInParallel(cacheName, urls) {
     const cache = await caches.open(cacheName);
