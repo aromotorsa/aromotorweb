@@ -47,7 +47,7 @@
         <div class="bg-white rounded-lg shadow-md p-4 mb-6">
             <div class="space-y-4">
                 <input type="search" id="search-box" placeholder="Buscar por nombre, referencia..." class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition">
-                <div class="grid grid-cols-2 gap-4">
+                <div class="grid grid-cols-3 gap-4">
                     <select id="category-filter" class="w-full p-2 border border-gray-300 rounded-lg bg-white focus:ring-2 focus:ring-red-500 focus:border-transparent transition">
                         <option value="">Categoría (Nivel 1)</option>
                     </select>
@@ -56,9 +56,6 @@
                     </select>
                     <select id="type-filter" class="w-full p-2 border border-gray-300 rounded-lg bg-white focus:ring-2 focus:ring-red-500 focus:border-transparent transition">
                          <option value="">Tipo (Nivel 3)</option>
-                    </select>
-                    <select id="brand-filter" class="w-full p-2 border border-gray-300 rounded-lg bg-white focus:ring-2 focus:ring-red-500 focus:border-transparent transition">
-                        <option value="">Todas las Marcas</option>
                     </select>
                 </div>
             </div>
@@ -76,7 +73,7 @@
 
         <div id="loading-spinner" class="animate-spin rounded-full h-16 w-16 border-4 border-gray-300 mx-auto mt-20"></div>
         
-        <div id="product-grid" class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6"></div>
+        <div id="product-grid" class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 sm:gap-6"></div>
         
        <div id="no-results" class="hidden text-center py-10">
             <p class="text-xl text-gray-500">No se encontraron productos.</p>
@@ -153,7 +150,6 @@
             const categoryFilter = document.getElementById('category-filter');
             const subcategoryFilter = document.getElementById('subcategory-filter');
             const typeFilter = document.getElementById('type-filter'); // Nuevo selector
-            const brandFilter = document.getElementById('brand-filter');
             const clearFiltersBtn = document.getElementById('clear-filters');
             const productGrid = document.getElementById('product-grid');
             const resultsCount = document.getElementById('results-count');
@@ -211,20 +207,12 @@
             // Popula solo los filtros de Nivel 1 (Categoría y Marca) al inicio
             function populateFilters() {
                 const categories = [...new Set(allProducts.map(p => p.Categoría).filter(Boolean))].sort();
-                const brands = [...new Set(allProducts.map(p => p.Marca).filter(Boolean))].sort();
 
                 categoryFilter.innerHTML = '<option value="">Categoría (Nivel 1)</option>';
                 categories.forEach(cat => {
                     const option = document.createElement('option');
                     option.value = cat; option.textContent = cat;
                     categoryFilter.appendChild(option);
-                });
-                
-                brandFilter.innerHTML = '<option value="">Todas las Marcas</option>';
-                brands.forEach(brand => {
-                    const option = document.createElement('option');
-                    option.value = brand; option.textContent = brand;
-                    brandFilter.appendChild(option);
                 });
             }
             
@@ -268,19 +256,17 @@
                 const selectedCategory = categoryFilter.value;
                 const selectedSubcategory = subcategoryFilter.value;
                 const selectedType = typeFilter.value; // Nuevo valor de filtro
-                const selectedBrand = brandFilter.value;
 
                 const filteredProducts = allProducts.filter(p => 
                     (searchTerm === '' || p.Nombre?.toLowerCase().includes(searchTerm) || p['Referencia Interna']?.toLowerCase().includes(searchTerm) || p.Marca?.toLowerCase().includes(searchTerm)) &&
                     (selectedCategory === '' || p.Categoría === selectedCategory) &&
                     (selectedSubcategory === '' || p.Subcategoría === selectedSubcategory) &&
-                    (selectedType === '' || p.Tipo === selectedType) && // Nueva condición de filtro
-                    (selectedBrand === '' || p.Marca === selectedBrand)
+                    (selectedType === '' || p.Tipo === selectedType) // Nueva condición de filtro
                 );
 
                 productGrid.innerHTML = '';
                 productGrid.className = currentView === 'grid' 
-                    ? 'grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6' 
+                    ? 'grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 sm:gap-6' 
                     : 'flex flex-col gap-3';
                 noResults.classList.toggle('hidden', filteredProducts.length > 0);
                 resultsCount.textContent = `${filteredProducts.length} producto(s)`;
@@ -310,7 +296,7 @@
                             <img src="${imagePath}" alt="${product.Nombre}" class="w-full h-full object-cover zoomable-image cursor-zoom-in" loading="lazy" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';">
                         </div>
                         <div class="p-3 flex-grow flex flex-col text-sm">
-                            <h3 class="font-bold text-gray-800 flex-grow">${product.Nombre || 'Sin Nombre'}</h3>
+                            <h3 class="font-bold text-gray-800 flex-grow text-sm">${product.Nombre || 'Sin Nombre'}</h3>
                             <p class="text-xs text-gray-500 mt-1">${ref || ''}</p>
                             <div class="text-xs text-gray-600 mt-2 leading-tight">${categoryPath}</div>
                             <div class="mt-3 pt-3 border-t flex justify-between items-center">
@@ -489,11 +475,9 @@
             categoryFilter.addEventListener('change', updateSubcategories);
             subcategoryFilter.addEventListener('change', updateTypes);
             typeFilter.addEventListener('change', renderProducts);
-            brandFilter.addEventListener('change', renderProducts);
             clearFiltersBtn.addEventListener('click', () => { 
                 searchBox.value = ''; 
                 categoryFilter.value = ''; 
-                brandFilter.value = ''; 
                 updateSubcategories(); // Esto resetea los 3 filtros de categoría y renderiza
             });
             
@@ -514,7 +498,7 @@
             productGrid.addEventListener('mousedown', e => { const cartBtn = e.target.closest('.add-to-cart-button'); if (cartBtn) handleAddToCartPress(cartBtn); });
             productGrid.addEventListener('mouseup', e => { const cartBtn = e.target.closest('.add-to-cart-button'); if (cartBtn) handleAddToCartRelease(); });
             productGrid.addEventListener('mouseleave', e => { const cartBtn = e.target.closest('.add-to-cart-button'); if (cartBtn) handleAddToCartRelease(); }, true);
-            productGrid.addEventListener('touchstart', e => { const cartBtn = e.target.closest('.add-to-cart-button'); if (cartBtn) handleAddToCartPress(cartBtn); });
+            productGrid.addEventListener('touchstart', e => { const cartBtn = e.target.closest('add-to-cart-button'); if (cartBtn) handleAddToCartPress(cartBtn); });
             productGrid.addEventListener('touchend', e => { const cartBtn = e.target.closest('.add-to-cart-button'); if (cartBtn) handleAddToCartRelease(); });
             shareWhatsappButton.addEventListener('click', shareOnWhatsApp);
             saveCartButton.addEventListener('click', saveCurrentCart);
