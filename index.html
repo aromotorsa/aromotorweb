@@ -204,42 +204,59 @@
 
             // --- CAMBIO: Lógica de filtros reescrita para ser más inteligente y conectada ---
 
-            // Popula todos los filtros al inicio
             function populateFilters() {
                 const categories = [...new Set(allProducts.map(p => p.Categoría).filter(Boolean))].sort();
-                const subcategories = [...new Set(allProducts.map(p => p.Subcategoría).filter(Boolean))].sort();
-                const types = [...new Set(allProducts.map(p => p.Tipo).filter(Boolean))].sort();
+                updateSelect(categoryFilter, categories, 'Grupo');
 
-                categoryFilter.innerHTML = '<option value="">Grupo</option>';
-                categories.forEach(cat => {
-                    const option = document.createElement('option');
-                    option.value = cat; option.textContent = cat;
-                    categoryFilter.appendChild(option);
-                });
+                // Initially populate subcategories and types with all values
+                const allSubcategories = [...new Set(allProducts.map(p => p.Subcategoría).filter(Boolean))].sort();
+                updateSelect(subcategoryFilter, allSubcategories, 'Categoría');
 
-                subcategoryFilter.innerHTML = '<option value="">Categoría</option>';
-                subcategories.forEach(sub => {
-                    const option = document.createElement('option');
-                    option.value = sub; option.textContent = sub;
-                    subcategoryFilter.appendChild(option);
-                });
-
-                typeFilter.innerHTML = '<option value="">Subcategoría</option>';
-                types.forEach(type => {
-                    const option = document.createElement('option');
-                    option.value = type; option.textContent = type;
-                    typeFilter.appendChild(option);
-                });
-            }
-            
-            // Se activa al cambiar Categoría. Popula Subcategorías y resetea Tipos.
-            function updateSubcategories() {
-                renderProducts(); // Actualiza la vista
+                const allTypes = [...new Set(allProducts.map(p => p.Tipo).filter(Boolean))].sort();
+                updateSelect(typeFilter, allTypes, 'Subcategoría');
             }
 
-            // Se activa al cambiar Subcategoría. Popula Tipos.
-            function updateTypes() {
-                renderProducts(); // Actualiza la vista
+            function updateSelect(selectElement, options, placeholder) {
+                const currentValue = selectElement.value;
+                selectElement.innerHTML = `<option value="">${placeholder}</option>`;
+                options.forEach(optionValue => {
+                    const option = document.createElement('option');
+                    option.value = optionValue; 
+                    option.textContent = optionValue;
+                    selectElement.appendChild(option);
+                });
+                
+                if (options.includes(currentValue)) {
+                    selectElement.value = currentValue;
+                } else {
+                    selectElement.value = '';
+                }
+            }
+
+            function updateFiltersAndRender() {
+                let availableProducts = [...allProducts];
+
+                const selectedCategory = categoryFilter.value;
+                const selectedSubcategory = subcategoryFilter.value;
+
+                if (selectedCategory) {
+                    availableProducts = availableProducts.filter(p => p.Categoría === selectedCategory);
+                }
+
+                const availableSubcategories = [...new Set(availableProducts.map(p => p.Subcategoría).filter(Boolean))].sort();
+                updateSelect(subcategoryFilter, availableSubcategories, 'Categoría');
+                
+                if (selectedCategory && availableSubcategories.includes(selectedSubcategory)) {
+                    subcategoryFilter.value = selectedSubcategory;
+                    availableProducts = availableProducts.filter(p => p.Subcategoría === selectedSubcategory);
+                } else {
+                    subcategoryFilter.value = '';
+                }
+
+                const availableTypes = [...new Set(availableProducts.map(p => p.Tipo).filter(Boolean))].sort();
+                updateSelect(typeFilter, availableTypes, 'Subcategoría');
+
+                renderProducts();
             }
 
             // Renderiza los productos aplicando TODOS los filtros actuales
@@ -464,14 +481,16 @@
 
             // --- CAMBIO: Event Listeners actualizados para la nueva lógica de filtros ---
             searchBox.addEventListener('input', renderProducts);
-            categoryFilter.addEventListener('change', renderProducts);
-            subcategoryFilter.addEventListener('change', renderProducts);
+            categoryFilter.addEventListener('change', updateFiltersAndRender);
+            subcategoryFilter.addEventListener('change', updateFiltersAndRender);
             typeFilter.addEventListener('change', renderProducts);
             clearFiltersBtn.addEventListener('click', () => { 
                 searchBox.value = ''; 
                 categoryFilter.value = ''; 
                 subcategoryFilter.value = '';
                 typeFilter.value = '';
+                // Al limpiar, repoblamos los filtros a su estado inicial y renderizamos
+                populateFilters();
                 renderProducts();
             });
             
