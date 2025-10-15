@@ -34,8 +34,7 @@
             <div class="flex items-center gap-2 sm:gap-4 flex-wrap justify-center">
                 <button id="download-catalog-button" class="bg-purple-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-purple-700 transition-colors flex items-center gap-2" title="Descargar catálogo para uso offline" disabled>
                     <i class="fas fa-cloud-download-alt"></i>
-                    <span class="hidden sm:inline preparing-text">Preparando...</span>
-                    <span class="hidden sm:inline offline-text">Offline</span>
+                    <span class="hidden sm:inline">Offline</span>
                 </button>
                 <button id="saved-orders-button" class="bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2">
                     <i class="fas fa-save"></i>
@@ -191,8 +190,7 @@
             // Carga inicial de productos
             async function loadProducts() {
                 try {
-                    const response = await fetch('Resultado_Final.json?v=' + new Date().getTime()); // Evita caché
-                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                    const response = await fetch('Resultado_Final.json');                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                     allProducts = await response.json();
                     populateFilters();
                     renderProducts();
@@ -539,13 +537,8 @@
             function setupOfflineButton() {
                 if ('serviceWorker' in navigator) {
                     navigator.serviceWorker.ready.then(registration => {
-                        if (registration.active && navigator.serviceWorker.controller) {
+                        if (registration.active) {
                             downloadCatalogButton.disabled = false;
-                        } else {
-                            // Service worker is not yet in control. Wait for it.
-                            navigator.serviceWorker.addEventListener('controllerchange', () => {
-                                downloadCatalogButton.disabled = false;
-                            });
                         }
                     });
                 }
@@ -579,7 +572,7 @@
                     buttonIcon.classList.remove('fa-spinner', 'fa-spin');
                     if(buttonText) buttonText.textContent = 'Offline';
                     navigator.serviceWorker.removeEventListener('message', handler);
-                }, 20000); // 30 second timeout
+                }, 30000); // 30 second timeout
 
                 // Esperar a que el SW nos avise que terminó
                 const handler = function(event) {
@@ -613,6 +606,17 @@
 
             loadProducts();
             setupOfflineButton();
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/sw.js')
+                        .then(registration => {
+                            console.log('Service Worker registrado con éxito:', registration.scope);
+                        })
+                        .catch(err => {
+                            console.error('Falló el registro del Service Worker:', err);
+                        });
+                });
+            }
         });
     </script>
 </body>

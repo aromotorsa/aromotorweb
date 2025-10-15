@@ -44,37 +44,54 @@ self.addEventListener('activate', event => {
 });
 
 self.addEventListener('fetch', event => {
+    // Ignoramos peticiones que no sean GET
     if (event.request.method !== 'GET') {
         return;
     }
 
-    event.respondWith(
-        caches.match(event.request)
-            .then(cachedResponse => {
-                if (cachedResponse) {
-                    return cachedResponse;
-                }
+    const url = new URL(event.request.url);
 
-                return fetch(event.request).then(
-                    networkResponse => {
-                        // Solo cacheamos respuestas válidas y de protocolos que entendemos
-                        if (!networkResponse || networkResponse.status !== 200 || !event.request.url.startsWith('http')) {
-                            return networkResponse;
-                        }
-                        
-                        // Clonamos la respuesta para poder guardarla en caché y devolverla al navegador
-                        const responseToCache = networkResponse.clone();
-                        caches.open(CACHE_NAME).then(cache => {
-                            cache.put(event.request, responseToCache);
-                        });
-
+    // Estrategia: Stale-While-Revalidate para el JSON de productos
+    if (url.pathname.endsWith('Resultado_Final.json')) {
+        event.respondWith(
+            caches.open(CACHE_NAME).then(cache => {
+                return cache.match(event.request).then(cachedResponse => {
+                    // Ir a la red para actualizar en segundo plano
+                    const fetchPromise = fetch(event.request).then(networkResponse => {
+                        // Clonar la respuesta para poder guardarla y devolverla
+                        cache.put(event.request, networkResponse.clone());
                         return networkResponse;
-                    }
-                ).catch(() => {
-                    // Manejo de error si la red falla
-                    // Podrías devolver una imagen placeholder aquí si quisieras
+                    });
+
+                    // Devolver la respuesta del caché inmediatamente si existe,
+                    // si no, esperar a la respuesta de la red.
+                    return cachedResponse || fetchPromise;
                 });
             })
+        );
+        return; // Detenemos la ejecución aquí para el JSON
+    }
+    
+    // Estrategia: Cache First para todas las demás peticiones (imágenes, CSS, etc.)
+    event.respondWith(
+        caches.match(event.request).then(cachedResponse => {
+            // Si está en caché, lo devolvemos
+            if (cachedResponse) {
+                return cachedResponse;
+            }
+            // Si no, vamos a la red, lo cacheamos y lo devolvemos
+            return fetch(event.request).then(networkResponse => {
+                // Solo cacheamos respuestas válidas
+                if (!networkResponse || networkResponse.status !== 200 || !event.request.url.startsWith('http')) {
+                    return networkResponse;
+                }
+                
+                return caches.open(CACHE_NAME).then(cache => {
+                    cache.put(event.request, networkResponse.clone());
+                    return networkResponse;
+                });
+            });
+        })
     );
 });
 
@@ -107,7 +124,7 @@ self.addEventListener('message', event => {
         event.waitUntil(
             cacheUrlsInParallel(CACHE_NAME, event.data.urls)
                 .then((failures) => {
-                    console.log(`[SW] Proceso de cacheo completado. Fallaron ${failures} imágenes.`);
+                    console.log(`[SW] Procesoself.addEventListener('fetch' de cacheo completado. Fallaron ${failures} imágenes.`);
                     // Es importante asegurarse de que event.source no sea nulo antes de enviar el mensaje
                     if (event.source) {
                         event.source.postMessage({ type: 'CACHE_COMPLETE' });
