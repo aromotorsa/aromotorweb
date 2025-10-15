@@ -102,24 +102,24 @@ self.addEventListener('fetch', event => {
 
 async function cacheUrlsInParallel(cacheName, urls) {
     const cache = await caches.open(cacheName);
+    const failedUrls = [];
 
     const promises = urls.map(url => {
         return (async () => {
             try {
-                // Usamos 'reload' para asegurarnos de que no usamos una versión cacheada por el navegador (HTTP cache)
                 const request = new Request(url, { cache: 'reload' });
                 await cache.add(request);
                 return { status: 'fulfilled' };
             } catch (error) {
                 console.warn(`[SW] No se pudo cachear la URL: ${url}`);
+                failedUrls.push(url);
                 return { status: 'rejected' };
             }
         })();
     });
 
-    const results = await Promise.all(promises);
-    const failures = results.filter(result => result.status === 'rejected').length;
-    return failures;
+    await Promise.all(promises);
+    return failedUrls;
 }
 
 self.addEventListener('message', event => {
@@ -127,11 +127,10 @@ self.addEventListener('message', event => {
         console.log('[SW] Recibida orden de cachear imágenes en PARALELO.');
         event.waitUntil(
             cacheUrlsInParallel(CACHE_NAME, event.data.urls)
-                .then((failures) => {
-                    console.log(`[SW] Proceso de cacheo completado. Fallaron ${failures} imágenes.`);
-                    // Es importante asegurarse de que event.source no sea nulo antes de enviar el mensaje
+                .then((failedUrls) => {
+                    console.log(`[SW] Proceso de cacheo completado. Fallaron ${failedUrls.length} imágenes.`);
                     if (event.source) {
-                        event.source.postMessage({ type: 'CACHE_COMPLETE' });
+                        event.source.postMessage({ type: 'CACHE_COMPLETE', failedUrls: failedUrls });
                     }
                 })
         );

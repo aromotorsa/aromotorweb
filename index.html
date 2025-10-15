@@ -571,6 +571,18 @@
                         
                         alert('¡Catálogo descargado! Ahora puedes usar la app sin conexión.');
 
+                        if (event.data.failedUrls && event.data.failedUrls.length > 0) {
+                            console.log('--- Imágenes no encontradas ---');
+                            const failedImageNames = event.data.failedUrls.map(url => {
+                                const parts = url.split('/');
+                                const fileName = parts[parts.length - 1];
+                                const nameOnly = fileName.split('.').slice(0, -1).join('.');
+                                return nameOnly;
+                            });
+                            console.log(failedImageNames);
+                            console.log('---------------------------------');
+                        }
+
                         // Removemos el listener para no volver a ejecutar esto si el SW envía otros mensajes
                         navigator.serviceWorker.removeEventListener('message', handler);
                     }
