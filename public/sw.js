@@ -1,4 +1,4 @@
-const CACHE_NAME = 'aromotor-pro-cache-v4'; // 1. ¡VERSIÓN INCREMENTADA!
+const CACHE_NAME = 'aromotor-pro-cache-v5'; // 1. ¡VERSIÓN INCREMENTADA!
 const urlsToCache = [
     '/',
     'index.html',
@@ -73,29 +73,22 @@ self.addEventListener('fetch', event => {
                 })
         );
     } else {
-        // Estrategia: Cache First para todo lo demás (CSS, imágenes, fuentes, etc.)
-        // Son archivos estáticos, es más rápido servirlos desde la caché.
+        // Estrategia: Stale-While-Revalidate para todo lo demás (CSS, imágenes, fuentes, etc.)
         event.respondWith(
-            caches.match(event.request)
-                .then(cachedResponse => {
-                    if (cachedResponse) {
-                        return cachedResponse;
-                    }
-
-                    return fetch(event.request).then(networkResponse => {
-                        // Solo cacheamos respuestas válidas
-                        if (!networkResponse || networkResponse.status !== 200 || !url.protocol.startsWith('http')) {
-                            return networkResponse;
+            caches.open(CACHE_NAME).then(cache => {
+                return cache.match(event.request).then(cachedResponse => {
+                    const fetchPromise = fetch(event.request).then(networkResponse => {
+                        // Si la respuesta de la red es buena, la clonamos y la guardamos en caché para el futuro
+                        if (networkResponse.ok) {
+                            cache.put(event.request, networkResponse.clone());
                         }
-                        
-                        const responseToCache = networkResponse.clone();
-                        caches.open(CACHE_NAME).then(cache => {
-                            cache.put(event.request, responseToCache);
-                        });
-
                         return networkResponse;
                     });
-                })
+
+                    // Devolvemos la respuesta cacheada si existe, si no, esperamos a la red.
+                    return cachedResponse || fetchPromise;
+                });
+            })
         );
     }
 });
