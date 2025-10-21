@@ -7,7 +7,7 @@
         "Tipo":" SISTEMA SOLAR",
         "Marca":"MUST",
         "Categoria de producto":"SISTEMA SOLAR",
-        "Stock":70.0,
+        "Stock":71.0,
         "Precio":null
     },
     {
@@ -40,7 +40,7 @@
         "Tipo":" SISTEMA SOLAR",
         "Marca":"MUST",
         "Categoria de producto":"SISTEMA SOLAR",
-        "Stock":29.0,
+        "Stock":30.0,
         "Precio":null
     },
     {
@@ -161,7 +161,7 @@
         "Tipo":" SISTEMA SOLAR",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"SISTEMA SOLAR",
-        "Stock":75.0,
+        "Stock":74.0,
         "Precio":null
     },
     {
@@ -172,7 +172,7 @@
         "Tipo":" SISTEMA SOLAR",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"SISTEMA SOLAR",
-        "Stock":51.0,
+        "Stock":49.0,
         "Precio":null
     },
     {
@@ -228,6 +228,17 @@
         "Marca":"VICTORIA LED",
         "Categoria de producto":"SISTEMA SOLAR",
         "Stock":66.0,
+        "Precio":null
+    },
+    {
+        "Referencia Interna":"SSP-615W JA BI",
+        "Nombre":"[SSP-615W JA BI] SOLAR PANEL 615W JA SOLAR BIFACIAL TOPCON",
+        "Categoría":"ILUMINACIÓN SOLAR",
+        "Subcategoría":"LUCES LED 0%",
+        "Tipo":" SISTEMA SOLAR",
+        "Marca":"JA SOLAR",
+        "Categoria de producto":"SISTEMA SOLAR",
+        "Stock":720.0,
         "Precio":null
     },
     {
@@ -293,7 +304,7 @@
         "Tipo":"DOMÓTICA",
         "Marca":"EVA",
         "Categoria de producto":"DOMOTICA",
-        "Stock":47.0,
+        "Stock":43.0,
         "Precio":null
     },
     {
@@ -304,7 +315,7 @@
         "Tipo":"DOMÓTICA",
         "Marca":"EVA",
         "Categoria de producto":"DOMOTICA",
-        "Stock":35.0,
+        "Stock":31.0,
         "Precio":null
     },
     {
@@ -315,7 +326,7 @@
         "Tipo":"DOMÓTICA",
         "Marca":"EVA",
         "Categoria de producto":"DOMOTICA",
-        "Stock":201.0,
+        "Stock":199.0,
         "Precio":null
     },
     {
@@ -326,7 +337,7 @@
         "Tipo":"DOMÓTICA",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"DOMOTICA",
-        "Stock":109.0,
+        "Stock":107.0,
         "Precio":null
     },
     {
@@ -359,7 +370,7 @@
         "Tipo":"DOMÓTICA",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"DOMOTICA",
-        "Stock":604.0,
+        "Stock":599.0,
         "Precio":null
     },
     {
@@ -370,7 +381,7 @@
         "Tipo":"DOMÓTICA",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"DOMOTICA",
-        "Stock":285.0,
+        "Stock":280.0,
         "Precio":null
     },
     {
@@ -381,7 +392,7 @@
         "Tipo":"DOMÓTICA",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"DOMOTICA",
-        "Stock":671.0,
+        "Stock":659.0,
         "Precio":null
     },
     {
@@ -392,7 +403,7 @@
         "Tipo":"DOMÓTICA",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"DOMOTICA",
-        "Stock":403.0,
+        "Stock":393.0,
         "Precio":null
     },
     {
@@ -403,7 +414,7 @@
         "Tipo":"DOMÓTICA",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"DOMOTICA",
-        "Stock":805.0,
+        "Stock":795.0,
         "Precio":null
     },
     {
@@ -414,7 +425,7 @@
         "Tipo":"DOMÓTICA",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"DOMOTICA",
-        "Stock":496.0,
+        "Stock":486.0,
         "Precio":null
     },
     {
@@ -568,7 +579,7 @@
         "Tipo":" PILAS",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PILAS",
-        "Stock":607.0,
+        "Stock":595.0,
         "Precio":null
     },
     {
@@ -623,7 +634,7 @@
         "Tipo":" BREAKER",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"BREAKER",
-        "Stock":627.0,
+        "Stock":603.0,
         "Precio":null
     },
     {
@@ -645,7 +656,7 @@
         "Tipo":" BREAKER",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"BREAKER",
-        "Stock":1132.0,
+        "Stock":1120.0,
         "Precio":null
     },
     {
@@ -700,7 +711,7 @@
         "Tipo":" BREAKER",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"BREAKER",
-        "Stock":370.0,
+        "Stock":358.0,
         "Precio":null
     },
     {
@@ -766,7 +777,7 @@
         "Tipo":" BREAKER",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"BREAKER",
-        "Stock":403.0,
+        "Stock":391.0,
         "Precio":null
     },
     {
@@ -777,7 +788,7 @@
         "Tipo":" BREAKER",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"BREAKER",
-        "Stock":194.0,
+        "Stock":182.0,
         "Precio":null
     },
     {
@@ -788,7 +799,7 @@
         "Tipo":" BREAKER",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"BREAKER",
-        "Stock":185.0,
+        "Stock":179.0,
         "Precio":null
     },
     {
@@ -799,7 +810,7 @@
         "Tipo":" BREAKER",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"BREAKER",
-        "Stock":385.0,
+        "Stock":367.0,
         "Precio":null
     },
     {
@@ -964,7 +975,7 @@
         "Tipo":" BREAKER",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"BREAKER",
-        "Stock":199.0,
+        "Stock":187.0,
         "Precio":null
     },
     {
@@ -986,7 +997,7 @@
         "Tipo":" BREAKER",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"BREAKER",
-        "Stock":535.0,
+        "Stock":523.0,
         "Precio":null
     },
     {
@@ -1232,6 +1243,17 @@
         "Precio":null
     },
     {
+        "Referencia Interna":"APV05",
+        "Nombre":"[APV05] APLIQUE DE PARED IP65 6*1W 3000K NEGRO 170*80MM AC85-265V",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" APLIQUES DE PARED",
+        "Marca":"VICTORIA LED",
+        "Categoria de producto":"APLIQUES DE PARED",
+        "Stock":1000.0,
+        "Precio":null
+    },
+    {
         "Referencia Interna":"APV13",
         "Nombre":"[APV13] APLIQUE DE PARED IP20 5W 3000K NEGRO 100*100MM AC85-265V",
         "Categoría":"ILUMINACIÓN",
@@ -1250,7 +1272,7 @@
         "Tipo":" APLIQUES DE PARED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"APLIQUES DE PARED",
-        "Stock":168.0,
+        "Stock":158.0,
         "Precio":null
     },
     {
@@ -1331,17 +1353,6 @@
         "Precio":null
     },
     {
-        "Referencia Interna":"APV48",
-        "Nombre":"[APV48] APLIQUE DE PARED IP65 6W 3000K NEGRO DORADO 150*150MM AC85-265V",
-        "Categoría":"ILUMINACIÓN",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":" APLIQUES DE PARED",
-        "Marca":"VICTORIA LED",
-        "Categoria de producto":"APLIQUES DE PARED",
-        "Stock":2.0,
-        "Precio":null
-    },
-    {
         "Referencia Interna":"APV49",
         "Nombre":"[APV49] APLIQUE DE PARED IP65 5W 3000K NEGRO 122*116MM AC85-265V",
         "Categoría":"ILUMINACIÓN",
@@ -1361,6 +1372,39 @@
         "Marca":"VICTORIA LED",
         "Categoria de producto":"APLIQUES DE PARED",
         "Stock":42.0,
+        "Precio":null
+    },
+    {
+        "Referencia Interna":"APV62",
+        "Nombre":"[APV62] APLIQUE DE PARED IP20 6W 3000K BLANCO 260*125*60MM AC85-265V",
+        "Categoría":"No Clasificado",
+        "Subcategoría":"No Clasificado",
+        "Tipo":"No Clasificado",
+        "Marca":"VICTORIA LED",
+        "Categoria de producto":"APLIQUES DE PARED",
+        "Stock":50.0,
+        "Precio":null
+    },
+    {
+        "Referencia Interna":"APV63",
+        "Nombre":"[APV63] APLIQUE DE PARED IP20 3W 6500K PLATEADO 75*60MM AC85-265V",
+        "Categoría":"No Clasificado",
+        "Subcategoría":"No Clasificado",
+        "Tipo":"No Clasificado",
+        "Marca":"VICTORIA LED",
+        "Categoria de producto":"APLIQUES DE PARED",
+        "Stock":200.0,
+        "Precio":null
+    },
+    {
+        "Referencia Interna":"APV64",
+        "Nombre":"[APV64] APLIQUE DE PARED IP20 3W RGB PLATEADO 60*60*80MM AC85-265V",
+        "Categoría":"No Clasificado",
+        "Subcategoría":"No Clasificado",
+        "Tipo":"No Clasificado",
+        "Marca":"VICTORIA LED",
+        "Categoria de producto":"APLIQUES DE PARED",
+        "Stock":200.0,
         "Precio":null
     },
     {
@@ -1811,7 +1855,7 @@
         "Tipo":" AMARRAS PLÁSTICAS",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"AMARRAS PLASTICAS",
-        "Stock":1476.0,
+        "Stock":1446.0,
         "Precio":null
     },
     {
@@ -1822,7 +1866,7 @@
         "Tipo":" AMARRAS PLÁSTICAS",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"AMARRAS PLASTICAS",
-        "Stock":3613.0,
+        "Stock":3611.0,
         "Precio":null
     },
     {
@@ -1899,7 +1943,7 @@
         "Tipo":" ACCESORIOS Y REPUESTOS LUCES",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"ACCESORIOS Y REPUESTOS LUCES",
-        "Stock":1546.0,
+        "Stock":1496.0,
         "Precio":null
     },
     {
@@ -1954,7 +1998,7 @@
         "Tipo":" PERFIL DE ALUMINIO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PERFIL DE ALUMINIO",
-        "Stock":5789.0,
+        "Stock":5489.0,
         "Precio":null
     },
     {
@@ -2009,7 +2053,7 @@
         "Tipo":" PERFIL DE ALUMINIO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PERFIL DE ALUMINIO",
-        "Stock":694.0,
+        "Stock":673.0,
         "Precio":null
     },
     {
@@ -2108,7 +2152,7 @@
         "Tipo":" CINTA LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"CINTA LED",
-        "Stock":621.0,
+        "Stock":618.0,
         "Precio":null
     },
     {
@@ -2141,7 +2185,7 @@
         "Tipo":" CAJA DE BREAKER",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"CAJA DE BREAKER",
-        "Stock":357.0,
+        "Stock":347.0,
         "Precio":null
     },
     {
@@ -2152,7 +2196,7 @@
         "Tipo":" CAJA DE BREAKER",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"CAJA DE BREAKER",
-        "Stock":1959.0,
+        "Stock":1919.0,
         "Precio":null
     },
     {
@@ -2163,7 +2207,7 @@
         "Tipo":" CAJA DE PASO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"CAJA DE PASO",
-        "Stock":631.0,
+        "Stock":559.0,
         "Precio":null
     },
     {
@@ -2218,7 +2262,7 @@
         "Tipo":" CAJA DE PASO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"CAJA DE PASO",
-        "Stock":7953.0,
+        "Stock":7943.0,
         "Precio":null
     },
     {
@@ -2284,7 +2328,7 @@
         "Tipo":" CINTA LED",
         "Marca":"EVA",
         "Categoria de producto":"CINTA LED",
-        "Stock":62.0,
+        "Stock":59.0,
         "Precio":null
     },
     {
@@ -2295,7 +2339,7 @@
         "Tipo":" MANGUERA LED",
         "Marca":"EVA",
         "Categoria de producto":"MANGUERA LED",
-        "Stock":1450.0,
+        "Stock":1440.0,
         "Precio":null
     },
     {
@@ -2317,7 +2361,7 @@
         "Tipo":" MANGUERA LED",
         "Marca":"EVA",
         "Categoria de producto":"MANGUERA LED",
-        "Stock":3031.0,
+        "Stock":3021.0,
         "Precio":null
     },
     {
@@ -2328,7 +2372,7 @@
         "Tipo":" CINTA ELÉCTRICA",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"CINTA ELECTRICA",
-        "Stock":4701.0,
+        "Stock":4691.0,
         "Precio":null
     },
     {
@@ -2350,7 +2394,7 @@
         "Tipo":" CINTA ELÉCTRICA",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"CINTA ELECTRICA",
-        "Stock":4256.0,
+        "Stock":4236.0,
         "Precio":null
     },
     {
@@ -2372,7 +2416,7 @@
         "Tipo":" CINTA ELÉCTRICA",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"CINTA ELECTRICA",
-        "Stock":6499.0,
+        "Stock":6487.0,
         "Precio":null
     },
     {
@@ -2383,7 +2427,7 @@
         "Tipo":" CINTA ELÉCTRICA",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"CINTA ELECTRICA",
-        "Stock":15889.0,
+        "Stock":15769.0,
         "Precio":null
     },
     {
@@ -2427,7 +2471,7 @@
         "Tipo":" CINTA ELÉCTRICA",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"CINTA ELECTRICA",
-        "Stock":3318.0,
+        "Stock":3308.0,
         "Precio":null
     },
     {
@@ -2581,7 +2625,7 @@
         "Tipo":" CINTA LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"CINTA LED",
-        "Stock":1093.0,
+        "Stock":1092.0,
         "Precio":null
     },
     {
@@ -2647,7 +2691,7 @@
         "Tipo":" MANGUERA LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"MANGUERA LED",
-        "Stock":6825.0,
+        "Stock":6670.0,
         "Precio":null
     },
     {
@@ -2658,7 +2702,7 @@
         "Tipo":" MANGUERA LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"MANGUERA LED",
-        "Stock":2922.0,
+        "Stock":2859.0,
         "Precio":null
     },
     {
@@ -2669,7 +2713,7 @@
         "Tipo":" MANGUERA LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"MANGUERA LED",
-        "Stock":6590.0,
+        "Stock":6587.0,
         "Precio":null
     },
     {
@@ -2867,7 +2911,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"TIMER",
-        "Stock":2766.0,
+        "Stock":2746.0,
         "Precio":null
     },
     {
@@ -2966,7 +3010,7 @@
         "Tipo":" ACCESORIOS Y REPUESTOS LUCES",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"ACCESORIOS Y REPUESTOS LUCES",
-        "Stock":1253.0,
+        "Stock":1179.0,
         "Precio":null
     },
     {
@@ -3109,7 +3153,7 @@
         "Tipo":" KIT SOLARES",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"KIT SOLARES",
-        "Stock":179.0,
+        "Stock":176.0,
         "Precio":null
     },
     {
@@ -3175,7 +3219,7 @@
         "Tipo":" EXTRACTOR DE AIRE",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"EXTRACTOR DE AIRE",
-        "Stock":365.0,
+        "Stock":364.0,
         "Precio":null
     },
     {
@@ -3230,7 +3274,7 @@
         "Tipo":" SOLAR CÁMARAS",
         "Marca":"EVA",
         "Categoria de producto":"SOLAR CAMARAS",
-        "Stock":51.0,
+        "Stock":48.0,
         "Precio":null
     },
     {
@@ -3263,7 +3307,7 @@
         "Tipo":" CINTA LED",
         "Marca":"EVA",
         "Categoria de producto":"CINTA LED",
-        "Stock":18.0,
+        "Stock":10.0,
         "Precio":null
     },
     {
@@ -3274,7 +3318,7 @@
         "Tipo":" CINTA LED",
         "Marca":"EVA",
         "Categoria de producto":"CINTA LED",
-        "Stock":100.0,
+        "Stock":88.0,
         "Precio":null
     },
     {
@@ -3285,7 +3329,7 @@
         "Tipo":" CINTA LED",
         "Marca":"EVA",
         "Categoria de producto":"CINTA LED",
-        "Stock":14863.0,
+        "Stock":14815.0,
         "Precio":null
     },
     {
@@ -3296,7 +3340,7 @@
         "Tipo":" CINTA LED",
         "Marca":"EVA",
         "Categoria de producto":"CINTA LED",
-        "Stock":19884.0,
+        "Stock":19751.0,
         "Precio":null
     },
     {
@@ -3351,7 +3395,7 @@
         "Tipo":" CINTA LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"CINTA LED",
-        "Stock":42.0,
+        "Stock":38.0,
         "Precio":null
     },
     {
@@ -3373,7 +3417,7 @@
         "Tipo":" ACCESORIOS Y REPUESTOS LUCES",
         "Marca":"EVA",
         "Categoria de producto":"ACCESORIOS Y REPUESTOS LUCES",
-        "Stock":40.0,
+        "Stock":34.0,
         "Precio":null
     },
     {
@@ -3406,7 +3450,7 @@
         "Tipo":" FOCO LED",
         "Marca":"EVA",
         "Categoria de producto":"FOCO LED",
-        "Stock":1664.0,
+        "Stock":1603.0,
         "Precio":null
     },
     {
@@ -3417,7 +3461,7 @@
         "Tipo":" FOCO LED",
         "Marca":"EVA",
         "Categoria de producto":"FOCO LED",
-        "Stock":5580.0,
+        "Stock":5430.0,
         "Precio":null
     },
     {
@@ -3428,7 +3472,7 @@
         "Tipo":" FOCO LED",
         "Marca":"EVA",
         "Categoria de producto":"FOCO LED",
-        "Stock":1909.0,
+        "Stock":1509.0,
         "Precio":null
     },
     {
@@ -3450,7 +3494,7 @@
         "Tipo":" FOCO LED",
         "Marca":"EVA",
         "Categoria de producto":"FOCO LED",
-        "Stock":8898.0,
+        "Stock":8588.0,
         "Precio":null
     },
     {
@@ -3472,7 +3516,7 @@
         "Tipo":" FOCO LED",
         "Marca":"EVA",
         "Categoria de producto":"FOCO LED",
-        "Stock":5217.0,
+        "Stock":4962.0,
         "Precio":null
     },
     {
@@ -3483,7 +3527,7 @@
         "Tipo":" FOCO LED",
         "Marca":"EVA",
         "Categoria de producto":"FOCO LED",
-        "Stock":2027.0,
+        "Stock":2017.0,
         "Precio":null
     },
     {
@@ -3505,7 +3549,7 @@
         "Tipo":" FOCO LED",
         "Marca":"EVA",
         "Categoria de producto":"FOCO LED",
-        "Stock":8681.0,
+        "Stock":8546.0,
         "Precio":null
     },
     {
@@ -3516,7 +3560,7 @@
         "Tipo":" FOCO LED",
         "Marca":"EVA",
         "Categoria de producto":"FOCO LED",
-        "Stock":636.0,
+        "Stock":610.0,
         "Precio":null
     },
     {
@@ -3527,7 +3571,7 @@
         "Tipo":" FOCO LED",
         "Marca":"EVA",
         "Categoria de producto":"FOCO LED",
-        "Stock":125501.0,
+        "Stock":124101.0,
         "Precio":null
     },
     {
@@ -3571,7 +3615,7 @@
         "Tipo":" FOCO LED RECARGABLE",
         "Marca":"EVA",
         "Categoria de producto":"FOCO LED RECARGABLE",
-        "Stock":757.0,
+        "Stock":753.0,
         "Precio":null
     },
     {
@@ -3703,7 +3747,7 @@
         "Tipo":" PANEL DOBLE COLOR",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL DOBLE COLOR",
-        "Stock":5503.0,
+        "Stock":5483.0,
         "Precio":null
     },
     {
@@ -3714,7 +3758,7 @@
         "Tipo":" PANEL DOBLE COLOR",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL DOBLE COLOR",
-        "Stock":7609.0,
+        "Stock":7589.0,
         "Precio":null
     },
     {
@@ -3736,7 +3780,7 @@
         "Tipo":"No Clasificado",
         "Marca":"EVA",
         "Categoria de producto":"REFLECTORES LED",
-        "Stock":534.0,
+        "Stock":528.0,
         "Precio":null
     },
     {
@@ -3769,7 +3813,7 @@
         "Tipo":"No Clasificado",
         "Marca":"EVA",
         "Categoria de producto":"REFLECTORES LED",
-        "Stock":280.0,
+        "Stock":263.0,
         "Precio":null
     },
     {
@@ -3780,7 +3824,7 @@
         "Tipo":"No Clasificado",
         "Marca":"EVA",
         "Categoria de producto":"REFLECTORES LED",
-        "Stock":1431.0,
+        "Stock":1421.0,
         "Precio":null
     },
     {
@@ -3791,7 +3835,7 @@
         "Tipo":" REFLECTORES LED",
         "Marca":"EVA",
         "Categoria de producto":"REFLECTORES LED",
-        "Stock":72.0,
+        "Stock":56.0,
         "Precio":null
     },
     {
@@ -3824,7 +3868,7 @@
         "Tipo":"No Clasificado",
         "Marca":"EVA",
         "Categoria de producto":"REFLECTORES LED",
-        "Stock":109.0,
+        "Stock":81.0,
         "Precio":null
     },
     {
@@ -3835,7 +3879,7 @@
         "Tipo":"No Clasificado",
         "Marca":"EVA",
         "Categoria de producto":"REFLECTORES LED",
-        "Stock":194.0,
+        "Stock":172.0,
         "Precio":null
     },
     {
@@ -3857,7 +3901,7 @@
         "Tipo":"No Clasificado",
         "Marca":"EVA",
         "Categoria de producto":"REFLECTORES LED",
-        "Stock":204.0,
+        "Stock":153.0,
         "Precio":null
     },
     {
@@ -3868,7 +3912,7 @@
         "Tipo":"No Clasificado",
         "Marca":"EVA",
         "Categoria de producto":"REFLECTORES LED",
-        "Stock":477.0,
+        "Stock":473.0,
         "Precio":null
     },
     {
@@ -3879,7 +3923,7 @@
         "Tipo":"No Clasificado",
         "Marca":"EVA",
         "Categoria de producto":"REFLECTORES LED",
-        "Stock":43.0,
+        "Stock":13.0,
         "Precio":null
     },
     {
@@ -3901,7 +3945,7 @@
         "Tipo":" REGLETA LED",
         "Marca":"EVA",
         "Categoria de producto":"REGLETA LED",
-        "Stock":5752.0,
+        "Stock":5748.0,
         "Precio":null
     },
     {
@@ -4110,7 +4154,7 @@
         "Tipo":" ACCESORIOS Y REPUESTOS LUCES",
         "Marca":"EVA",
         "Categoria de producto":"ACCESORIOS Y REPUESTOS LUCES",
-        "Stock":1815.0,
+        "Stock":1799.0,
         "Precio":null
     },
     {
@@ -4143,7 +4187,7 @@
         "Tipo":"No Clasificado",
         "Marca":"EVA",
         "Categoria de producto":"PANEL EMPOTRABLE REDONDO",
-        "Stock":110586.0,
+        "Stock":109786.0,
         "Precio":null
     },
     {
@@ -4242,7 +4286,7 @@
         "Tipo":" FOCO LED RECARGABLE",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"FOCO LED RECARGABLE",
-        "Stock":844.0,
+        "Stock":843.0,
         "Precio":null
     },
     {
@@ -4352,7 +4396,7 @@
         "Tipo":" GUIRNALDA DE EXTERIOR",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"GUIRNALDA DE EXTERIOR",
-        "Stock":81.0,
+        "Stock":53.0,
         "Precio":null
     },
     {
@@ -4363,7 +4407,7 @@
         "Tipo":" GUIRNALDA DE EXTERIOR",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"GUIRNALDA DE EXTERIOR",
-        "Stock":1512.0,
+        "Stock":1500.0,
         "Precio":null
     },
     {
@@ -4418,7 +4462,7 @@
         "Tipo":" FOCO LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"FOCO LED",
-        "Stock":3947.0,
+        "Stock":3747.0,
         "Precio":null
     },
     {
@@ -4429,7 +4473,7 @@
         "Tipo":" FOCO LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"FOCO LED",
-        "Stock":3113.0,
+        "Stock":2883.0,
         "Precio":null
     },
     {
@@ -5148,6 +5192,17 @@
         "Precio":null
     },
     {
+        "Referencia Interna":"LJOC-150W",
+        "Nombre":"[LJOC-150W] LAMPARA DE JARDIN 4000K IP65 FP0.9 85-265V",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" LUZ DE JARDÍN",
+        "Marca":"VICTORIA LED",
+        "Categoria de producto":"LUZ DE JARDIN",
+        "Stock":50.0,
+        "Precio":null
+    },
+    {
         "Referencia Interna":"LJOV-100W",
         "Nombre":"[LJOV-100W] LAMPARA DE JARDIN 4000K IP65 FP0.9 85-265V",
         "Categoría":"ILUMINACIÓN",
@@ -5155,7 +5210,7 @@
         "Tipo":" LUZ DE JARDÍN",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"LUZ DE JARDIN",
-        "Stock":2.0,
+        "Stock":102.0,
         "Precio":null
     },
     {
@@ -5177,7 +5232,7 @@
         "Tipo":" SOLAR LUZ DE CALLE",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"SOLAR LUZ DE CALLE",
-        "Stock":494.0,
+        "Stock":492.0,
         "Precio":null
     },
     {
@@ -5210,7 +5265,7 @@
         "Tipo":" PILAS",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PILAS",
-        "Stock":405.0,
+        "Stock":393.0,
         "Precio":null
     },
     {
@@ -5221,7 +5276,7 @@
         "Tipo":" PILAS",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PILAS",
-        "Stock":678.0,
+        "Stock":666.0,
         "Precio":null
     },
     {
@@ -5232,7 +5287,7 @@
         "Tipo":" PILAS",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PILAS",
-        "Stock":679.0,
+        "Stock":678.0,
         "Precio":null
     },
     {
@@ -5243,7 +5298,7 @@
         "Tipo":" PILAS",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PILAS",
-        "Stock":1157.0,
+        "Stock":1133.0,
         "Precio":null
     },
     {
@@ -5254,7 +5309,7 @@
         "Tipo":" PILAS",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PILAS",
-        "Stock":475.0,
+        "Stock":463.0,
         "Precio":null
     },
     {
@@ -5331,7 +5386,7 @@
         "Tipo":" PANEL EMPOTRABLE CUADRADO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL EMPOTRABLE CUADRADO",
-        "Stock":1435.0,
+        "Stock":1423.0,
         "Precio":null
     },
     {
@@ -5386,7 +5441,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL EMPOTRABLE REDONDO",
-        "Stock":295.0,
+        "Stock":245.0,
         "Precio":null
     },
     {
@@ -5397,7 +5452,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL EMPOTRABLE REDONDO",
-        "Stock":1103.0,
+        "Stock":1053.0,
         "Precio":null
     },
     {
@@ -5419,7 +5474,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL EMPOTRABLE REDONDO",
-        "Stock":1342.0,
+        "Stock":1292.0,
         "Precio":null
     },
     {
@@ -5430,7 +5485,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL EMPOTRABLE REDONDO",
-        "Stock":1611.0,
+        "Stock":1561.0,
         "Precio":null
     },
     {
@@ -5518,7 +5573,7 @@
         "Tipo":" PANEL EMPOTRABLE CUADRADO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL EMPOTRABLE CUADRADO",
-        "Stock":577.0,
+        "Stock":567.0,
         "Precio":null
     },
     {
@@ -5529,7 +5584,7 @@
         "Tipo":" FOCO LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"FOCO LED",
-        "Stock":17969.0,
+        "Stock":17612.0,
         "Precio":null
     },
     {
@@ -5540,7 +5595,7 @@
         "Tipo":" FOCO LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"FOCO LED",
-        "Stock":18988.0,
+        "Stock":18767.0,
         "Precio":null
     },
     {
@@ -5551,7 +5606,7 @@
         "Tipo":" FOCO LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"FOCO LED",
-        "Stock":6360.0,
+        "Stock":6108.0,
         "Precio":null
     },
     {
@@ -5562,7 +5617,7 @@
         "Tipo":" FOCO LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"FOCO LED",
-        "Stock":27144.0,
+        "Stock":26609.0,
         "Precio":null
     },
     {
@@ -5573,7 +5628,7 @@
         "Tipo":" FOCO LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"FOCO LED",
-        "Stock":4338.0,
+        "Stock":4328.0,
         "Precio":null
     },
     {
@@ -5716,7 +5771,7 @@
         "Tipo":" PANEL DOBLE COLOR",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL DOBLE COLOR",
-        "Stock":764.0,
+        "Stock":729.0,
         "Precio":null
     },
     {
@@ -5727,7 +5782,7 @@
         "Tipo":" PANEL DOBLE COLOR",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL DOBLE COLOR",
-        "Stock":14102.0,
+        "Stock":14005.0,
         "Precio":null
     },
     {
@@ -5738,7 +5793,7 @@
         "Tipo":" PANEL DOBLE COLOR",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL DOBLE COLOR",
-        "Stock":2839.0,
+        "Stock":2799.0,
         "Precio":null
     },
     {
@@ -5749,7 +5804,7 @@
         "Tipo":" PANEL DOBLE COLOR",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL DOBLE COLOR",
-        "Stock":785.0,
+        "Stock":735.0,
         "Precio":null
     },
     {
@@ -5815,7 +5870,7 @@
         "Tipo":" PANEL DOBLE COLOR",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL DOBLE COLOR",
-        "Stock":1586.0,
+        "Stock":1566.0,
         "Precio":null
     },
     {
@@ -5892,7 +5947,7 @@
         "Tipo":" PANEL DOBLE COLOR",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL DOBLE COLOR",
-        "Stock":159.0,
+        "Stock":39.0,
         "Precio":null
     },
     {
@@ -5914,7 +5969,7 @@
         "Tipo":" PANEL DOBLE COLOR",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL DOBLE COLOR",
-        "Stock":1406.0,
+        "Stock":1366.0,
         "Precio":null
     },
     {
@@ -5925,7 +5980,7 @@
         "Tipo":" PANEL DOBLE COLOR",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL DOBLE COLOR",
-        "Stock":2480.96,
+        "Stock":2430.96,
         "Precio":null
     },
     {
@@ -5947,7 +6002,7 @@
         "Tipo":" PANEL DOBLE COLOR",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL DOBLE COLOR",
-        "Stock":918.0,
+        "Stock":906.0,
         "Precio":null
     },
     {
@@ -5991,7 +6046,7 @@
         "Tipo":" PANEL DOBLE COLOR",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL DOBLE COLOR",
-        "Stock":263.0,
+        "Stock":251.0,
         "Precio":null
     },
     {
@@ -6002,7 +6057,7 @@
         "Tipo":" PANEL DOBLE COLOR",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL DOBLE COLOR",
-        "Stock":451.0,
+        "Stock":439.0,
         "Precio":null
     },
     {
@@ -6035,7 +6090,7 @@
         "Tipo":" LUZ DE POSTE",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"LUZ DE POSTE",
-        "Stock":118.0,
+        "Stock":105.0,
         "Precio":null
     },
     {
@@ -6046,7 +6101,7 @@
         "Tipo":" LUZ DE POSTE",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"LUZ DE POSTE",
-        "Stock":467.0,
+        "Stock":758.0,
         "Precio":null
     },
     {
@@ -6057,7 +6112,7 @@
         "Tipo":" LUZ DE POSTE",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"LUZ DE POSTE",
-        "Stock":33.0,
+        "Stock":133.0,
         "Precio":null
     },
     {
@@ -6101,7 +6156,7 @@
         "Tipo":" PANEL SOBREPUESTO CUADRADO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL SOBREPUESTO CUADRADO",
-        "Stock":29.0,
+        "Stock":17.0,
         "Precio":null
     },
     {
@@ -6123,7 +6178,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL SOBREPUESTO REDONDO",
-        "Stock":656.0,
+        "Stock":644.0,
         "Precio":null
     },
     {
@@ -6222,7 +6277,7 @@
         "Tipo":" PANEL SOBREPUESTO CUADRADO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL SOBREPUESTO CUADRADO",
-        "Stock":2582.0,
+        "Stock":2562.0,
         "Precio":null
     },
     {
@@ -6244,7 +6299,7 @@
         "Tipo":" FOCO LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"FOCO LED",
-        "Stock":120.0,
+        "Stock":110.0,
         "Precio":null
     },
     {
@@ -6321,7 +6376,7 @@
         "Tipo":" MANGUERA LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"MANGUERA LED",
-        "Stock":279.0,
+        "Stock":270.0,
         "Precio":null
     },
     {
@@ -6332,7 +6387,7 @@
         "Tipo":" MANGUERA LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"MANGUERA LED",
-        "Stock":111.0,
+        "Stock":110.0,
         "Precio":null
     },
     {
@@ -6343,7 +6398,7 @@
         "Tipo":" MANGUERA LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"MANGUERA LED",
-        "Stock":357.0,
+        "Stock":351.0,
         "Precio":null
     },
     {
@@ -6354,7 +6409,7 @@
         "Tipo":" MANGUERA LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"MANGUERA LED",
-        "Stock":420.0,
+        "Stock":403.0,
         "Precio":null
     },
     {
@@ -6431,7 +6486,7 @@
         "Tipo":" MÓDULO LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"MODULO LED",
-        "Stock":18860.0,
+        "Stock":38860.0,
         "Precio":null
     },
     {
@@ -6442,7 +6497,7 @@
         "Tipo":" MÓDULO LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"MODULO LED",
-        "Stock":22040.0,
+        "Stock":21040.0,
         "Precio":null
     },
     {
@@ -6453,7 +6508,7 @@
         "Tipo":" MÓDULO LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"MODULO LED",
-        "Stock":14691.0,
+        "Stock":62491.0,
         "Precio":null
     },
     {
@@ -6464,7 +6519,7 @@
         "Tipo":" MÓDULO LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"MODULO LED",
-        "Stock":20830.0,
+        "Stock":20630.0,
         "Precio":null
     },
     {
@@ -6475,7 +6530,7 @@
         "Tipo":" MÓDULO LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"MODULO LED",
-        "Stock":8160.0,
+        "Stock":7960.0,
         "Precio":null
     },
     {
@@ -6596,7 +6651,7 @@
         "Tipo":" FOCO LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"FOCO LED",
-        "Stock":5073.0,
+        "Stock":4853.0,
         "Precio":null
     },
     {
@@ -6607,7 +6662,7 @@
         "Tipo":" FOCO LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"FOCO LED",
-        "Stock":7537.0,
+        "Stock":7057.0,
         "Precio":null
     },
     {
@@ -6915,7 +6970,7 @@
         "Tipo":" AMARRAS PLÁSTICAS",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"AMARRAS PLASTICAS",
-        "Stock":4486.0,
+        "Stock":4479.0,
         "Precio":null
     },
     {
@@ -6937,7 +6992,7 @@
         "Tipo":" AMARRAS PLÁSTICAS",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"AMARRAS PLASTICAS",
-        "Stock":502.0,
+        "Stock":501.0,
         "Precio":null
     },
     {
@@ -6948,7 +7003,7 @@
         "Tipo":" AMARRAS PLÁSTICAS",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"AMARRAS PLASTICAS",
-        "Stock":592.0,
+        "Stock":585.0,
         "Precio":null
     },
     {
@@ -6959,7 +7014,7 @@
         "Tipo":" AMARRAS PLÁSTICAS",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"AMARRAS PLASTICAS",
-        "Stock":507.0,
+        "Stock":501.0,
         "Precio":null
     },
     {
@@ -6970,7 +7025,7 @@
         "Tipo":" AMARRAS PLÁSTICAS",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"AMARRAS PLASTICAS",
-        "Stock":209.0,
+        "Stock":199.0,
         "Precio":null
     },
     {
@@ -6981,7 +7036,7 @@
         "Tipo":" AMARRAS PLÁSTICAS",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"AMARRAS PLASTICAS",
-        "Stock":149.0,
+        "Stock":147.0,
         "Precio":null
     },
     {
@@ -7014,7 +7069,7 @@
         "Tipo":" CINTA LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"CINTA LED",
-        "Stock":102.0,
+        "Stock":100.0,
         "Precio":null
     },
     {
@@ -7597,7 +7652,7 @@
         "Tipo":" PERFIL DE ALUMINIO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PERFIL DE ALUMINIO",
-        "Stock":110.0,
+        "Stock":10.0,
         "Precio":null
     },
     {
@@ -7729,7 +7784,7 @@
         "Tipo":" PERFIL DE ALUMINIO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PERFIL DE ALUMINIO",
-        "Stock":69317.0,
+        "Stock":68917.0,
         "Precio":null
     },
     {
@@ -7740,7 +7795,7 @@
         "Tipo":" PERFIL DE ALUMINIO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PERFIL DE ALUMINIO",
-        "Stock":71960.0,
+        "Stock":71560.0,
         "Precio":null
     },
     {
@@ -8294,17 +8349,6 @@
         "Precio":null
     },
     {
-        "Referencia Interna":"PD12W 6500K",
-        "Nombre":"[PD12W 6500K] VICTORIA LED PANEL 6500K 12W EMPOTRABLE REDONDO 40U\/C",
-        "Categoría":"ILUMINACIÓN",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":" PANEL EMPOTRABLE REDONDO",
-        "Marca":"VICTORIA LED",
-        "Categoria de producto":"PANEL EMPOTRABLE REDONDO",
-        "Stock":4.0,
-        "Precio":null
-    },
-    {
         "Referencia Interna":"PD24W 6500K",
         "Nombre":"[PD24W 6500K] VICTORIA LED PANEL 6500K 24W EMPOTRABLE REDONDO 20U\/C",
         "Categoría":"ILUMINACIÓN",
@@ -8345,7 +8389,7 @@
         "Tipo":" PANEL EMPOTRABLE CUADRADO",
         "Marca":"EVA",
         "Categoria de producto":"PANEL EMPOTRABLE CUADRADO",
-        "Stock":4551.0,
+        "Stock":4521.0,
         "Precio":null
     },
     {
@@ -8356,7 +8400,7 @@
         "Tipo":" PANEL EMPOTRABLE CUADRADO",
         "Marca":"EVA",
         "Categoria de producto":"PANEL EMPOTRABLE CUADRADO",
-        "Stock":1166.0,
+        "Stock":1162.0,
         "Precio":null
     },
     {
@@ -8400,7 +8444,7 @@
         "Tipo":" PANEL SOBREPUESTO CUADRADO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL SOBREPUESTO CUADRADO",
-        "Stock":1347.0,
+        "Stock":1337.0,
         "Precio":null
     },
     {
@@ -8433,7 +8477,7 @@
         "Tipo":" SPOT LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"SPOT LED",
-        "Stock":6.0,
+        "Stock":5.0,
         "Precio":null
     },
     {
@@ -8477,7 +8521,7 @@
         "Tipo":" REGLETA LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"REGLETA LED",
-        "Stock":2309.0,
+        "Stock":2274.0,
         "Precio":null
     },
     {
@@ -8664,7 +8708,18 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL SOBREPUESTO REDONDO",
-        "Stock":146.0,
+        "Stock":136.0,
+        "Precio":null
+    },
+    {
+        "Referencia Interna":"SCL02-BTH",
+        "Nombre":"[SCL02-BTH] PANEL PARLANTE SOBREPUESTO 36W RGB BLUETOOTH + CONTROL",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" PANEL SOBREPUESTO REDONDO",
+        "Marca":"VICTORIA LED",
+        "Categoria de producto":"PANEL SOBREPUESTO REDONDO",
+        "Stock":8.0,
         "Precio":null
     },
     {
@@ -8686,7 +8741,7 @@
         "Tipo":" PANEL SOBREPUESTO CUADRADO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL SOBREPUESTO CUADRADO",
-        "Stock":20.0,
+        "Stock":14.0,
         "Precio":null
     },
     {
@@ -8840,7 +8895,7 @@
         "Tipo":" SOLAR FOCO",
         "Marca":"EVA",
         "Categoria de producto":"SOLAR FOCO",
-        "Stock":4986.0,
+        "Stock":4984.0,
         "Precio":null
     },
     {
@@ -8950,7 +9005,7 @@
         "Tipo":" SPOT LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"SPOT LED",
-        "Stock":301.0,
+        "Stock":296.0,
         "Precio":null
     },
     {
@@ -9060,7 +9115,7 @@
         "Tipo":" OJO DE BUEY",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"OJO DE BUEY",
-        "Stock":2187.0,
+        "Stock":2157.0,
         "Precio":null
     },
     {
@@ -9071,7 +9126,7 @@
         "Tipo":" OJO DE BUEY",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"OJO DE BUEY",
-        "Stock":4858.0,
+        "Stock":4828.0,
         "Precio":null
     },
     {
@@ -9082,7 +9137,7 @@
         "Tipo":" OJO DE BUEY",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"OJO DE BUEY",
-        "Stock":3635.0,
+        "Stock":3605.0,
         "Precio":null
     },
     {
@@ -9093,7 +9148,7 @@
         "Tipo":" OJO DE BUEY",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"OJO DE BUEY",
-        "Stock":3552.0,
+        "Stock":3522.0,
         "Precio":null
     },
     {
@@ -9104,7 +9159,7 @@
         "Tipo":" OJO DE BUEY",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"OJO DE BUEY",
-        "Stock":933.0,
+        "Stock":913.0,
         "Precio":null
     },
     {
@@ -9115,7 +9170,7 @@
         "Tipo":" OJO DE BUEY",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"OJO DE BUEY",
-        "Stock":685.0,
+        "Stock":665.0,
         "Precio":null
     },
     {
@@ -9137,7 +9192,7 @@
         "Tipo":" OJO DE BUEY",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"OJO DE BUEY",
-        "Stock":2800.0,
+        "Stock":2770.0,
         "Precio":null
     },
     {
@@ -9148,7 +9203,7 @@
         "Tipo":" OJO DE BUEY",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"OJO DE BUEY",
-        "Stock":4722.0,
+        "Stock":4692.0,
         "Precio":null
     },
     {
@@ -9214,7 +9269,7 @@
         "Tipo":" CONECTOR DENTADO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"CONECTOR DENTADO",
-        "Stock":2698.0,
+        "Stock":2654.0,
         "Precio":null
     },
     {
@@ -9225,7 +9280,7 @@
         "Tipo":" CONECTOR DENTADO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"CONECTOR DENTADO",
-        "Stock":1793.0,
+        "Stock":1787.0,
         "Precio":null
     },
     {
@@ -9269,7 +9324,7 @@
         "Tipo":" REFLECTORES LED",
         "Marca":"EVA",
         "Categoria de producto":"REFLECTORES LED",
-        "Stock":92.0,
+        "Stock":87.0,
         "Precio":null
     },
     {
@@ -9291,7 +9346,7 @@
         "Tipo":" CONECTOR DENTADO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"CONECTOR DENTADO",
-        "Stock":3729.0,
+        "Stock":3672.0,
         "Precio":null
     },
     {
@@ -9302,7 +9357,7 @@
         "Tipo":" CONECTOR DENTADO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"CONECTOR DENTADO",
-        "Stock":176.0,
+        "Stock":161.0,
         "Precio":null
     },
     {
@@ -9346,7 +9401,7 @@
         "Tipo":" PANEL DOBLE COLOR",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL DOBLE COLOR",
-        "Stock":1567.0,
+        "Stock":1545.0,
         "Precio":null
     },
     {
@@ -9357,7 +9412,7 @@
         "Tipo":" PANEL DOBLE COLOR",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL DOBLE COLOR",
-        "Stock":1538.0,
+        "Stock":1520.0,
         "Precio":null
     },
     {
@@ -9379,7 +9434,7 @@
         "Tipo":" PANEL DOBLE COLOR",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL DOBLE COLOR",
-        "Stock":1553.0,
+        "Stock":1550.0,
         "Precio":null
     },
     {
@@ -9427,17 +9482,6 @@
         "Precio":null
     },
     {
-        "Referencia Interna":"SS-BDW8",
-        "Nombre":"[SS-BDW8] SOLAR APLIQUE 3000K",
-        "Categoría":"ILUMINACIÓN SOLAR",
-        "Subcategoría":"LUZ LED SOLAR",
-        "Tipo":" SOLAR APLIQUE DE PARED",
-        "Marca":null,
-        "Categoria de producto":"SOLAR APLIQUE DE PARED",
-        "Stock":19.0,
-        "Precio":null
-    },
-    {
         "Referencia Interna":"ST05C",
         "Nombre":"[ST05C] VICTORIA LED SENSOR DE MOVIMIENTO 360° 9V 110V BLANCO",
         "Categoría":"ILUMINACIÓN",
@@ -9456,7 +9500,7 @@
         "Tipo":" SENSOR MOVIMIENTO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"SENSOR MOVIMIENTO",
-        "Stock":708.0,
+        "Stock":658.0,
         "Precio":null
     },
     {
@@ -9467,7 +9511,7 @@
         "Tipo":" SENSOR DE HUMO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"SENSOR DE HUMO",
-        "Stock":73.0,
+        "Stock":67.0,
         "Precio":null
     },
     {
@@ -9588,7 +9632,7 @@
         "Tipo":" SPOT LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"SPOT LED",
-        "Stock":1245.0,
+        "Stock":1145.0,
         "Precio":null
     },
     {
@@ -9665,7 +9709,7 @@
         "Tipo":" UFO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"UFO",
-        "Stock":237.0,
+        "Stock":231.0,
         "Precio":null
     },
     {
@@ -9676,7 +9720,7 @@
         "Tipo":" UFO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"UFO",
-        "Stock":163.0,
+        "Stock":101.0,
         "Precio":null
     },
     {
@@ -9709,7 +9753,7 @@
         "Tipo":" UFO",
         "Marca":"EVA",
         "Categoria de producto":"UFO",
-        "Stock":372.0,
+        "Stock":368.0,
         "Precio":null
     },
     {
@@ -9918,7 +9962,7 @@
         "Tipo":" CAJA DE DISTRIBUCIÓN",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"CAJA DE DISTRIBUCION",
-        "Stock":1471.0,
+        "Stock":1425.0,
         "Precio":null
     },
     {
@@ -9929,7 +9973,7 @@
         "Tipo":" CAJA DE DISTRIBUCIÓN",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"CAJA DE DISTRIBUCION",
-        "Stock":1425.0,
+        "Stock":1422.0,
         "Precio":null
     },
     {
@@ -9951,7 +9995,7 @@
         "Tipo":" CAJA DE DISTRIBUCIÓN",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"CAJA DE DISTRIBUCION",
-        "Stock":1580.0,
+        "Stock":1550.0,
         "Precio":null
     },
     {
@@ -10039,7 +10083,7 @@
         "Tipo":"No Clasificado",
         "Marca":"VICTORIA",
         "Categoria de producto":"PIEZAS ELECTRICAS",
-        "Stock":1730.0,
+        "Stock":1705.0,
         "Precio":null
     },
     {
@@ -10116,7 +10160,7 @@
         "Tipo":" CINTA LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"CINTA LED",
-        "Stock":3293.0,
+        "Stock":3213.0,
         "Precio":null
     },
     {
@@ -10138,7 +10182,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PIEZAS ELECTRICAS",
-        "Stock":1929.0,
+        "Stock":1907.0,
         "Precio":null
     },
     {
@@ -10281,7 +10325,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"VICTORIA",
         "Categoria de producto":"PIEZAS ELECTRICAS",
-        "Stock":3621.0,
+        "Stock":3571.0,
         "Precio":null
     },
     {
@@ -10292,7 +10336,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"VICTORIA",
         "Categoria de producto":"PIEZAS ELECTRICAS",
-        "Stock":8090.0,
+        "Stock":8065.0,
         "Precio":null
     },
     {
@@ -10347,7 +10391,7 @@
         "Tipo":" REGLETA ELÉCTRICA",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"REGLETA ELECTRICA",
-        "Stock":648.0,
+        "Stock":840.0,
         "Precio":null
     },
     {
@@ -10358,7 +10402,7 @@
         "Tipo":" CINTA LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"CINTA LED",
-        "Stock":711.0,
+        "Stock":665.0,
         "Precio":null
     },
     {
@@ -10369,7 +10413,7 @@
         "Tipo":" CINTA LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"CINTA LED",
-        "Stock":657.0,
+        "Stock":632.0,
         "Precio":null
     },
     {
@@ -10380,7 +10424,7 @@
         "Tipo":" CINTA LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"CINTA LED",
-        "Stock":152.0,
+        "Stock":142.0,
         "Precio":null
     },
     {
@@ -10391,7 +10435,7 @@
         "Tipo":"No Clasificado",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"CINTA LED",
-        "Stock":207.0,
+        "Stock":197.0,
         "Precio":null
     },
     {
@@ -10413,7 +10457,7 @@
         "Tipo":" CINTA LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"CINTA LED",
-        "Stock":481.0,
+        "Stock":471.0,
         "Precio":null
     },
     {
@@ -10457,7 +10501,18 @@
         "Tipo":" CARCASA PARA DICROICO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"CARCASA PARA DICROICO",
-        "Stock":1183.0,
+        "Stock":1143.0,
+        "Precio":null
+    },
+    {
+        "Referencia Interna":"VL-CRLY",
+        "Nombre":"[VL-CRLY] CONTROL PARA REFLECTORES SOLARES",
+        "Categoría":"No Clasificado",
+        "Subcategoría":"No Clasificado",
+        "Tipo":"No Clasificado",
+        "Marca":"VICTORIA LED",
+        "Categoria de producto":"ACCESORIOS Y REPUESTOS LUCES",
+        "Stock":3000.0,
         "Precio":null
     },
     {
@@ -10480,17 +10535,6 @@
         "Marca":"VICTORIA LED",
         "Categoria de producto":"ACCESORIOS Y REPUESTOS LUCES",
         "Stock":9.0,
-        "Precio":null
-    },
-    {
-        "Referencia Interna":"VL-CTB 240L",
-        "Nombre":"[VL-CTB 240L] CONECTOR CINTA LED 110V 10MM 240L",
-        "Categoría":"ILUMINACIÓN",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":" CINTA LED",
-        "Marca":"VICTORIA LED",
-        "Categoria de producto":"CINTA LED",
-        "Stock":8.0,
         "Precio":null
     },
     {
@@ -10545,7 +10589,7 @@
         "Tipo":"No Clasificado",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"REGLETA ELECTRICA",
-        "Stock":387.0,
+        "Stock":362.0,
         "Precio":null
     },
     {
@@ -10556,7 +10600,7 @@
         "Tipo":" REGLETA ELÉCTRICA",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"REGLETA ELECTRICA",
-        "Stock":834.0,
+        "Stock":819.0,
         "Precio":null
     },
     {
@@ -10567,18 +10611,7 @@
         "Tipo":" REGLETA ELÉCTRICA",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"REGLETA ELECTRICA",
-        "Stock":829.0,
-        "Precio":null
-    },
-    {
-        "Referencia Interna":"VL-F10A",
-        "Nombre":"[VL-F10A] VICTORIA LED FUENTES DE PODER 12V 120W 100-265V",
-        "Categoría":"ILUMINACIÓN",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":" FUENTES DE PODER",
-        "Marca":"VICTORIA LED",
-        "Categoria de producto":"FUENTES DE PODER",
-        "Stock":4.0,
+        "Stock":790.0,
         "Precio":null
     },
     {
@@ -10633,7 +10666,7 @@
         "Tipo":" FUENTES DE PODER",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"FUENTES DE PODER",
-        "Stock":1649.0,
+        "Stock":1616.0,
         "Precio":null
     },
     {
@@ -10721,7 +10754,7 @@
         "Tipo":" FOCO LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"FOCO LED",
-        "Stock":7986.0,
+        "Stock":7967.0,
         "Precio":null
     },
     {
@@ -10754,7 +10787,7 @@
         "Tipo":"No Clasificado",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PLACAS ELECTRICAS LYRA",
-        "Stock":8226.0,
+        "Stock":8196.0,
         "Precio":null
     },
     {
@@ -10765,7 +10798,7 @@
         "Tipo":"No Clasificado",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PLACAS ELECTRICAS LYRA",
-        "Stock":6967.0,
+        "Stock":6937.0,
         "Precio":null
     },
     {
@@ -10776,7 +10809,7 @@
         "Tipo":"No Clasificado",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PLACAS ELECTRICAS LYRA",
-        "Stock":14737.0,
+        "Stock":14727.0,
         "Precio":null
     },
     {
@@ -10787,7 +10820,7 @@
         "Tipo":"No Clasificado",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PLACAS ELECTRICAS LYRA",
-        "Stock":6372.0,
+        "Stock":6362.0,
         "Precio":null
     },
     {
@@ -10798,7 +10831,7 @@
         "Tipo":"No Clasificado",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PLACAS ELECTRICAS LYRA",
-        "Stock":11162.0,
+        "Stock":11152.0,
         "Precio":null
     },
     {
@@ -10842,7 +10875,7 @@
         "Tipo":"No Clasificado",
         "Marca":"VICTORIA",
         "Categoria de producto":"PIEZAS ELECTRICAS",
-        "Stock":4240.0,
+        "Stock":4040.0,
         "Precio":null
     },
     {
@@ -10875,7 +10908,7 @@
         "Tipo":" LUZ DE POSTE",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"LUZ DE POSTE",
-        "Stock":18.0,
+        "Stock":368.0,
         "Precio":null
     },
     {
@@ -10897,7 +10930,7 @@
         "Tipo":" LUZ DE POSTE",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"LUZ DE POSTE",
-        "Stock":91.0,
+        "Stock":191.0,
         "Precio":null
     },
     {
@@ -11150,7 +11183,7 @@
         "Tipo":" PERFIL DE ALUMINIO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PERFIL DE ALUMINIO",
-        "Stock":2378.0,
+        "Stock":2358.0,
         "Precio":null
     },
     {
@@ -11183,7 +11216,7 @@
         "Tipo":" PERFIL DE ALUMINIO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PERFIL DE ALUMINIO",
-        "Stock":642.0,
+        "Stock":542.0,
         "Precio":null
     },
     {
@@ -11260,7 +11293,7 @@
         "Tipo":" PERFIL DE ALUMINIO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PERFIL DE ALUMINIO",
-        "Stock":4348.0,
+        "Stock":4194.0,
         "Precio":null
     },
     {
@@ -11381,7 +11414,7 @@
         "Tipo":" PERFIL DE ALUMINIO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PERFIL DE ALUMINIO",
-        "Stock":35379.0,
+        "Stock":34489.0,
         "Precio":null
     },
     {
@@ -11546,7 +11579,7 @@
         "Tipo":" PERFIL DE ALUMINIO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PERFIL DE ALUMINIO",
-        "Stock":3301.0,
+        "Stock":3298.0,
         "Precio":null
     },
     {
@@ -11678,7 +11711,7 @@
         "Tipo":" PERFIL DE ALUMINIO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PERFIL DE ALUMINIO",
-        "Stock":4337.0,
+        "Stock":4317.0,
         "Precio":null
     },
     {
@@ -11689,7 +11722,7 @@
         "Tipo":" PERFIL DE ALUMINIO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PERFIL DE ALUMINIO",
-        "Stock":964.0,
+        "Stock":959.0,
         "Precio":null
     },
     {
@@ -11700,7 +11733,7 @@
         "Tipo":" PERFIL DE ALUMINIO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PERFIL DE ALUMINIO",
-        "Stock":319.0,
+        "Stock":299.0,
         "Precio":null
     },
     {
@@ -11777,7 +11810,7 @@
         "Tipo":" PANEL LED MULTIFUNCIONAL",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL LED MULTIFUNCIONAL",
-        "Stock":863.0,
+        "Stock":862.0,
         "Precio":null
     },
     {
@@ -11788,7 +11821,7 @@
         "Tipo":" FOCO LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"FOCO LED",
-        "Stock":940.0,
+        "Stock":934.0,
         "Precio":null
     },
     {
@@ -11800,6 +11833,17 @@
         "Marca":"VICTORIA",
         "Categoria de producto":"PIEZAS ELECTRICAS",
         "Stock":16977.0,
+        "Precio":null
+    },
+    {
+        "Referencia Interna":"VL-PLD 5W",
+        "Nombre":"[VL-PLD 5W] OJO DE BUEY 5W 6500K CUADRADO NEGRO 200U\/C",
+        "Categoría":"No Clasificado",
+        "Subcategoría":"No Clasificado",
+        "Tipo":"No Clasificado",
+        "Marca":"VICTORIA LED",
+        "Categoria de producto":"OJO DE BUEY",
+        "Stock":40000.0,
         "Precio":null
     },
     {
@@ -11821,7 +11865,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"VICTORIA",
         "Categoria de producto":"PIEZAS ELECTRICAS",
-        "Stock":8673.0,
+        "Stock":8623.0,
         "Precio":null
     },
     {
@@ -11953,7 +11997,7 @@
         "Tipo":" REFLECTORES LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"REFLECTORES LED",
-        "Stock":384.0,
+        "Stock":374.0,
         "Precio":null
     },
     {
@@ -11997,7 +12041,7 @@
         "Tipo":" REFLECTORES LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"REFLECTORES LED",
-        "Stock":400.0,
+        "Stock":376.0,
         "Precio":null
     },
     {
@@ -12008,7 +12052,7 @@
         "Tipo":" REFLECTORES LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"REFLECTORES LED",
-        "Stock":213.0,
+        "Stock":208.0,
         "Precio":null
     },
     {
@@ -12030,7 +12074,7 @@
         "Tipo":" REFLECTORES LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"REFLECTORES LED",
-        "Stock":287.0,
+        "Stock":271.0,
         "Precio":null
     },
     {
@@ -12096,7 +12140,7 @@
         "Tipo":" TIMBRE",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"TIMBRE",
-        "Stock":1428.0,
+        "Stock":1424.0,
         "Precio":null
     },
     {
@@ -12129,7 +12173,7 @@
         "Tipo":" REFLECTORES LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"REFLECTORES LED",
-        "Stock":183.0,
+        "Stock":182.0,
         "Precio":null
     },
     {
@@ -12173,7 +12217,7 @@
         "Tipo":" SOLAR REFLECTORES",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"SOLAR REFLECTORES",
-        "Stock":247.0,
+        "Stock":245.0,
         "Precio":null
     },
     {
@@ -12184,7 +12228,7 @@
         "Tipo":" OJO DE BUEY",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"OJO DE BUEY",
-        "Stock":1591.0,
+        "Stock":3591.0,
         "Precio":null
     },
     {
@@ -12199,6 +12243,28 @@
         "Precio":null
     },
     {
+        "Referencia Interna":"VL-SCN7W 3K",
+        "Nombre":"[VL-SCN7W 3K] OJO DE BUEY 7W 3000K CUADRADO NEGRO 100U\/C",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" OJO DE BUEY",
+        "Marca":"VICTORIA LED",
+        "Categoria de producto":"OJO DE BUEY",
+        "Stock":1500.0,
+        "Precio":null
+    },
+    {
+        "Referencia Interna":"VL-SCN7W 6K",
+        "Nombre":"[VL-SCN7W 6K] OJO DE BUEY 7W 6000K CUADRADO NEGRO 100U\/C",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" OJO DE BUEY",
+        "Marca":"VICTORIA LED",
+        "Categoria de producto":"OJO DE BUEY",
+        "Stock":1500.0,
+        "Precio":null
+    },
+    {
         "Referencia Interna":"VL-SL10A",
         "Nombre":"[VL-SL10A] FUENTE DE PODER LINE SLIM 12V 120W 100-264V",
         "Categoría":"ILUMINACIÓN",
@@ -12206,7 +12272,7 @@
         "Tipo":" FUENTES DE PODER",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"FUENTES DE PODER",
-        "Stock":878.0,
+        "Stock":872.0,
         "Precio":null
     },
     {
@@ -12217,7 +12283,7 @@
         "Tipo":" FUENTES DE PODER",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"FUENTES DE PODER",
-        "Stock":116.0,
+        "Stock":106.0,
         "Precio":null
     },
     {
@@ -12250,7 +12316,7 @@
         "Tipo":" OJO DE BUEY",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"OJO DE BUEY",
-        "Stock":2496.0,
+        "Stock":5456.0,
         "Precio":null
     },
     {
@@ -12261,7 +12327,7 @@
         "Tipo":" OJO DE BUEY",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"OJO DE BUEY",
-        "Stock":2005.0,
+        "Stock":5505.0,
         "Precio":null
     },
     {
@@ -12272,7 +12338,18 @@
         "Tipo":" OJO DE BUEY",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"OJO DE BUEY",
-        "Stock":1.0,
+        "Stock":2001.0,
+        "Precio":null
+    },
+    {
+        "Referencia Interna":"VL-SRN7W 6K",
+        "Nombre":"[VL-SRN7W 6K] OJO DE BUEY 7W 6000K REDONDO NEGRO 100U\/C",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" OJO DE BUEY",
+        "Marca":"VICTORIA LED",
+        "Categoria de producto":"OJO DE BUEY",
+        "Stock":2000.0,
         "Precio":null
     },
     {
@@ -12305,7 +12382,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"VICTORIA",
         "Categoria de producto":"PIEZAS ELECTRICAS",
-        "Stock":5487.0,
+        "Stock":5437.0,
         "Precio":null
     },
     {
@@ -12316,7 +12393,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PIEZAS ELECTRICAS",
-        "Stock":2809.0,
+        "Stock":2779.0,
         "Precio":null
     },
     {
@@ -12327,7 +12404,7 @@
         "Tipo":"No Clasificado",
         "Marca":"VICTORIA",
         "Categoria de producto":"PIEZAS ELECTRICAS",
-        "Stock":7311.0,
+        "Stock":7291.0,
         "Precio":null
     },
     {
@@ -12338,7 +12415,7 @@
         "Tipo":"No Clasificado",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PLACAS ELECTRICAS LYRA",
-        "Stock":807.0,
+        "Stock":797.0,
         "Precio":null
     },
     {
@@ -12349,7 +12426,7 @@
         "Tipo":"No Clasificado",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PLACAS ELECTRICAS LYRA",
-        "Stock":701.0,
+        "Stock":691.0,
         "Precio":null
     },
     {
@@ -12360,7 +12437,7 @@
         "Tipo":"No Clasificado",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PLACAS ELECTRICAS LYRA",
-        "Stock":10993.0,
+        "Stock":10983.0,
         "Precio":null
     },
     {
@@ -12371,7 +12448,7 @@
         "Tipo":"No Clasificado",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PLACAS ELECTRICAS LYRA",
-        "Stock":7471.0,
+        "Stock":7461.0,
         "Precio":null
     },
     {
@@ -12382,7 +12459,7 @@
         "Tipo":"No Clasificado",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PLACAS ELECTRICAS LYRA",
-        "Stock":17464.0,
+        "Stock":17394.0,
         "Precio":null
     },
     {
@@ -12393,7 +12470,7 @@
         "Tipo":"No Clasificado",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PLACAS ELECTRICAS LYRA",
-        "Stock":7958.0,
+        "Stock":7918.0,
         "Precio":null
     },
     {
@@ -12415,7 +12492,7 @@
         "Tipo":"No Clasificado",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PLACAS ELECTRICAS LYRA",
-        "Stock":1256.0,
+        "Stock":1246.0,
         "Precio":null
     },
     {
@@ -12448,7 +12525,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"VICTORIA",
         "Categoria de producto":"PIEZAS ELECTRICAS",
-        "Stock":2068.0,
+        "Stock":2066.0,
         "Precio":null
     },
     {
@@ -12459,7 +12536,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"REFLECTORES LED",
-        "Stock":230.0,
+        "Stock":228.0,
         "Precio":null
     },
     {
@@ -12470,7 +12547,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"REFLECTORES LED",
-        "Stock":733.0,
+        "Stock":678.0,
         "Precio":null
     },
     {
@@ -12492,7 +12569,7 @@
         "Tipo":" REFLECTORES LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"REFLECTORES LED",
-        "Stock":202.0,
+        "Stock":153.0,
         "Precio":null
     },
     {
@@ -12503,7 +12580,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"REFLECTORES LED",
-        "Stock":429.0,
+        "Stock":416.0,
         "Precio":null
     },
     {
@@ -12536,7 +12613,7 @@
         "Tipo":" REFLECTORES LED",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"REFLECTORES LED",
-        "Stock":1322.0,
+        "Stock":1293.0,
         "Precio":null
     },
     {
@@ -12547,7 +12624,7 @@
         "Tipo":" PANEL EMPOTRABLE CUADRADO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL EMPOTRABLE CUADRADO",
-        "Stock":2040.0,
+        "Stock":1888.0,
         "Precio":null
     },
     {
@@ -12558,7 +12635,7 @@
         "Tipo":" PANEL EMPOTRABLE CUADRADO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL EMPOTRABLE CUADRADO",
-        "Stock":1247.0,
+        "Stock":967.0,
         "Precio":null
     },
     {
@@ -12569,7 +12646,7 @@
         "Tipo":" PANEL EMPOTRABLE CUADRADO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL EMPOTRABLE CUADRADO",
-        "Stock":5245.0,
+        "Stock":5095.0,
         "Precio":null
     },
     {
@@ -12591,7 +12668,7 @@
         "Tipo":" PANEL EMPOTRABLE CUADRADO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL EMPOTRABLE CUADRADO",
-        "Stock":1682.0,
+        "Stock":1552.0,
         "Precio":null
     },
     {
@@ -12602,7 +12679,7 @@
         "Tipo":" PANEL EMPOTRABLE CUADRADO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL EMPOTRABLE CUADRADO",
-        "Stock":2901.0,
+        "Stock":2831.0,
         "Precio":null
     },
     {
@@ -12613,7 +12690,7 @@
         "Tipo":" PANEL EMPOTRABLE CUADRADO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL EMPOTRABLE CUADRADO",
-        "Stock":844.0,
+        "Stock":820.0,
         "Precio":null
     },
     {
@@ -12624,7 +12701,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL EMPOTRABLE REDONDO",
-        "Stock":6238.0,
+        "Stock":5993.0,
         "Precio":null
     },
     {
@@ -12635,7 +12712,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL EMPOTRABLE REDONDO",
-        "Stock":2310.0,
+        "Stock":2210.0,
         "Precio":null
     },
     {
@@ -12646,7 +12723,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL EMPOTRABLE REDONDO",
-        "Stock":4457.0,
+        "Stock":3957.0,
         "Precio":null
     },
     {
@@ -12657,7 +12734,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL EMPOTRABLE REDONDO",
-        "Stock":1406.0,
+        "Stock":1286.0,
         "Precio":null
     },
     {
@@ -12668,7 +12745,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL EMPOTRABLE REDONDO",
-        "Stock":14762.0,
+        "Stock":14542.0,
         "Precio":null
     },
     {
@@ -12679,7 +12756,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL EMPOTRABLE REDONDO",
-        "Stock":4028.0,
+        "Stock":48.0,
         "Precio":null
     },
     {
@@ -12690,7 +12767,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL EMPOTRABLE REDONDO",
-        "Stock":6095.0,
+        "Stock":5895.0,
         "Precio":null
     },
     {
@@ -12701,7 +12778,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL EMPOTRABLE REDONDO",
-        "Stock":8938.0,
+        "Stock":8853.0,
         "Precio":null
     },
     {
@@ -12734,7 +12811,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL EMPOTRABLE REDONDO",
-        "Stock":1600.0,
+        "Stock":1500.0,
         "Precio":null
     },
     {
@@ -12745,7 +12822,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL EMPOTRABLE REDONDO",
-        "Stock":1243.0,
+        "Stock":1083.0,
         "Precio":null
     },
     {
@@ -12756,7 +12833,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL EMPOTRABLE REDONDO",
-        "Stock":4339.0,
+        "Stock":4179.0,
         "Precio":null
     },
     {
@@ -12767,7 +12844,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL EMPOTRABLE REDONDO",
-        "Stock":1873.0,
+        "Stock":1753.0,
         "Precio":null
     },
     {
@@ -12778,7 +12855,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL EMPOTRABLE REDONDO",
-        "Stock":270.0,
+        "Stock":260.0,
         "Precio":null
     },
     {
@@ -12789,7 +12866,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL EMPOTRABLE REDONDO",
-        "Stock":290.0,
+        "Stock":280.0,
         "Precio":null
     },
     {
@@ -12800,7 +12877,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL EMPOTRABLE REDONDO",
-        "Stock":354.0,
+        "Stock":344.0,
         "Precio":null
     },
     {
@@ -12866,7 +12943,7 @@
         "Tipo":" PANEL DOBLE COLOR",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL DOBLE COLOR",
-        "Stock":974.0,
+        "Stock":934.0,
         "Precio":null
     },
     {
@@ -12877,7 +12954,7 @@
         "Tipo":" PANEL DOBLE COLOR",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL DOBLE COLOR",
-        "Stock":985.0,
+        "Stock":975.0,
         "Precio":null
     },
     {
@@ -12976,7 +13053,7 @@
         "Tipo":" PANEL SOBREPUESTO CUADRADO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL SOBREPUESTO CUADRADO",
-        "Stock":1555.0,
+        "Stock":1535.0,
         "Precio":null
     },
     {
@@ -12987,7 +13064,7 @@
         "Tipo":" PANEL SOBREPUESTO CUADRADO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL SOBREPUESTO CUADRADO",
-        "Stock":6522.0,
+        "Stock":6502.0,
         "Precio":null
     },
     {
@@ -12998,7 +13075,7 @@
         "Tipo":" PANEL SOBREPUESTO CUADRADO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL SOBREPUESTO CUADRADO",
-        "Stock":2642.0,
+        "Stock":2582.0,
         "Precio":null
     },
     {
@@ -13009,7 +13086,7 @@
         "Tipo":" PANEL SOBREPUESTO CUADRADO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL SOBREPUESTO CUADRADO",
-        "Stock":2260.0,
+        "Stock":2160.0,
         "Precio":null
     },
     {
@@ -13020,7 +13097,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL SOBREPUESTO CUADRADO",
-        "Stock":3510.0,
+        "Stock":3486.0,
         "Precio":null
     },
     {
@@ -13042,7 +13119,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL SOBREPUESTO REDONDO",
-        "Stock":4922.0,
+        "Stock":4736.0,
         "Precio":null
     },
     {
@@ -13053,7 +13130,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL SOBREPUESTO REDONDO",
-        "Stock":462.0,
+        "Stock":322.0,
         "Precio":null
     },
     {
@@ -13064,7 +13141,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL SOBREPUESTO REDONDO",
-        "Stock":4514.0,
+        "Stock":4354.0,
         "Precio":null
     },
     {
@@ -13075,7 +13152,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL SOBREPUESTO REDONDO",
-        "Stock":1891.0,
+        "Stock":1791.0,
         "Precio":null
     },
     {
@@ -13086,7 +13163,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL SOBREPUESTO REDONDO",
-        "Stock":11365.0,
+        "Stock":11245.0,
         "Precio":null
     },
     {
@@ -13097,7 +13174,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL SOBREPUESTO REDONDO",
-        "Stock":3067.0,
+        "Stock":3017.0,
         "Precio":null
     },
     {
@@ -13119,7 +13196,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL SOBREPUESTO REDONDO",
-        "Stock":1357.0,
+        "Stock":1307.0,
         "Precio":null
     },
     {
@@ -13130,7 +13207,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL SOBREPUESTO REDONDO",
-        "Stock":1017.0,
+        "Stock":967.0,
         "Precio":null
     },
     {
@@ -13141,7 +13218,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL SOBREPUESTO REDONDO",
-        "Stock":6104.0,
+        "Stock":6015.0,
         "Precio":null
     },
     {
@@ -13152,7 +13229,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL SOBREPUESTO REDONDO",
-        "Stock":11653.0,
+        "Stock":11541.0,
         "Precio":null
     },
     {
@@ -13163,7 +13240,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL SOBREPUESTO REDONDO",
-        "Stock":321.0,
+        "Stock":271.0,
         "Precio":null
     },
     {
@@ -13174,7 +13251,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL SOBREPUESTO REDONDO",
-        "Stock":2379.0,
+        "Stock":2293.0,
         "Precio":null
     },
     {
@@ -13185,7 +13262,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL SOBREPUESTO REDONDO",
-        "Stock":379.0,
+        "Stock":329.0,
         "Precio":null
     },
     {
@@ -13196,7 +13273,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL SOBREPUESTO REDONDO",
-        "Stock":140.0,
+        "Stock":130.0,
         "Precio":null
     },
     {
@@ -13207,7 +13284,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL SOBREPUESTO REDONDO",
-        "Stock":191.0,
+        "Stock":181.0,
         "Precio":null
     },
     {
@@ -13218,7 +13295,7 @@
         "Tipo":" PANEL SOBREPUESTO CUADRADO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PANEL SOBREPUESTO CUADRADO",
-        "Stock":277.0,
+        "Stock":267.0,
         "Precio":null
     },
     {
@@ -13229,7 +13306,7 @@
         "Tipo":" PROTECTOR DE VOLTAJE",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PROTECTOR DE VOLTAJE",
-        "Stock":4821.0,
+        "Stock":4882.0,
         "Precio":null
     },
     {
@@ -13251,7 +13328,7 @@
         "Tipo":" PROTECTOR DE VOLTAJE",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"PROTECTOR DE VOLTAJE",
-        "Stock":3323.0,
+        "Stock":3351.0,
         "Precio":null
     },
     {
@@ -13383,7 +13460,7 @@
         "Tipo":" BORNERA",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"BORNERA",
-        "Stock":309.0,
+        "Stock":289.0,
         "Precio":null
     },
     {
@@ -13427,7 +13504,7 @@
         "Tipo":" BORNERA",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"BORNERA",
-        "Stock":120.0,
+        "Stock":110.0,
         "Precio":null
     },
     {
@@ -13548,7 +13625,7 @@
         "Tipo":" SOLAR FOCO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"SOLAR FOCO",
-        "Stock":1487.0,
+        "Stock":1484.0,
         "Precio":null
     },
     {
@@ -13658,7 +13735,7 @@
         "Tipo":" FOCO LED DECORATIVO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"FOCO LED DECORATIVO",
-        "Stock":6628.0,
+        "Stock":6566.0,
         "Precio":null
     },
     {
@@ -13669,7 +13746,7 @@
         "Tipo":" FOCO LED DECORATIVO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"FOCO LED DECORATIVO",
-        "Stock":11227.0,
+        "Stock":11127.0,
         "Precio":null
     },
     {
@@ -13680,7 +13757,7 @@
         "Tipo":" FOCO LED DECORATIVO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"FOCO LED DECORATIVO",
-        "Stock":9086.0,
+        "Stock":8786.0,
         "Precio":null
     },
     {
@@ -13691,7 +13768,7 @@
         "Tipo":" FOCO LED DECORATIVO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"FOCO LED DECORATIVO",
-        "Stock":5853.0,
+        "Stock":5829.0,
         "Precio":null
     },
     {
@@ -13702,7 +13779,7 @@
         "Tipo":" FOCO LED DECORATIVO",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"FOCO LED DECORATIVO",
-        "Stock":8665.0,
+        "Stock":8465.0,
         "Precio":null
     }
 ]
