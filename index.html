@@ -559,7 +559,6 @@
                 if(buttonText) buttonText.textContent = 'Descargando...';
 
                 const imageUrls = allProducts.map(p => `images/${p['Referencia Interna']}.webp`);
-                console.log('Generated image URLs:', imageUrls);
                 
                 navigator.serviceWorker.controller.postMessage({
                     type: 'CACHE_IMAGES',
