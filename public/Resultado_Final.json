@@ -1,5 +1,181 @@
 [
     {
+        "Referencia Interna":"EV-SP01",
+        "Nombre":"[EV-SP01] SMART SENSOR PUERTA WIFI TUYA",
+        "Categoría":"VARIOS Y REPUESTOS",
+        "Subcategoría":"TECNOLOGÍA",
+        "Tipo":"DOMÓTICA",
+        "Marca":"EVA",
+        "Categoria de producto":"DOMOTICA",
+        "Stock":52,
+        "Precio":9.2
+    },
+    {
+        "Referencia Interna":"EV-T4US BLANCO",
+        "Nombre":"[EV-T4US BLANCO] SMART INTERRUPTOR 4CH WIFI TUYA BLANCO",
+        "Categoría":"VARIOS Y REPUESTOS",
+        "Subcategoría":"TECNOLOGÍA",
+        "Tipo":"DOMÓTICA",
+        "Marca":"EVA",
+        "Categoria de producto":"DOMOTICA",
+        "Stock":36,
+        "Precio":17.4915
+    },
+    {
+        "Referencia Interna":"EV-T4US NEGRO",
+        "Nombre":"[EV-T4US NEGRO] SMART INTERRUPTOR 4CH WIFI TUYA NEGRO",
+        "Categoría":"VARIOS Y REPUESTOS",
+        "Subcategoría":"TECNOLOGÍA",
+        "Tipo":"DOMÓTICA",
+        "Marca":"EVA",
+        "Categoria de producto":"DOMOTICA",
+        "Stock":2,
+        "Precio":17.4915
+    },
+    {
+        "Referencia Interna":"EV-TS04",
+        "Nombre":"[EV-TS04] SMART REGLETA WIFI TUYA",
+        "Categoría":"VARIOS Y REPUESTOS",
+        "Subcategoría":"TECNOLOGÍA",
+        "Tipo":"DOMÓTICA",
+        "Marca":"EVA",
+        "Categoria de producto":"DOMOTICA",
+        "Stock":196,
+        "Precio":37.4325
+    },
+    {
+        "Referencia Interna":"EY-528TT WIFFI",
+        "Nombre":"[EY-528TT WIFFI] SMART CHAPA ALUMINIO 280*21MM TOUCH\/LECTOR HUELLA\/APP ALEXA",
+        "Categoría":"VARIOS Y REPUESTOS",
+        "Subcategoría":"TECNOLOGÍA",
+        "Tipo":"DOMÓTICA",
+        "Marca":"VICTORIA LED",
+        "Categoria de producto":"DOMOTICA",
+        "Stock":103,
+        "Precio":112.999
+    },
+    {
+        "Referencia Interna":"VL-SP01",
+        "Nombre":"[VL-SP01] SMART SENSOR PUERTA WIFI TUYA 100U\/C",
+        "Categoría":"VARIOS Y REPUESTOS",
+        "Subcategoría":"TECNOLOGÍA",
+        "Tipo":"DOMÓTICA",
+        "Marca":"VICTORIA LED",
+        "Categoria de producto":"DOMOTICA",
+        "Stock":1116,
+        "Precio":10.189
+    },
+    {
+        "Referencia Interna":"VL-SWS2",
+        "Nombre":"[VL-SWS2] SMART TOMACORRIENTE WIFI TUYA USB EMPOTRABLE 70U\/C",
+        "Categoría":"VARIOS Y REPUESTOS",
+        "Subcategoría":"TECNOLOGÍA",
+        "Tipo":"DOMÓTICA",
+        "Marca":"VICTORIA LED",
+        "Categoria de producto":"DOMOTICA",
+        "Stock":344,
+        "Precio":24.15
+    },
+    {
+        "Referencia Interna":"VL-T1USB",
+        "Nombre":"[VL-T1USB] SMART INTERRUPTOR SIMPLE WIFI TUYA BLANCO 86U\/C",
+        "Categoría":"VARIOS Y REPUESTOS",
+        "Subcategoría":"TECNOLOGÍA",
+        "Tipo":"DOMÓTICA",
+        "Marca":"VICTORIA LED",
+        "Categoria de producto":"DOMOTICA",
+        "Stock":505,
+        "Precio":16.4335
+    },
+    {
+        "Referencia Interna":"VL-T1USN",
+        "Nombre":"[VL-T1USN] SMART INTERRUPTOR SIMPLE WIFI TUYA NEGRO 86U\/C",
+        "Categoría":"VARIOS Y REPUESTOS",
+        "Subcategoría":"TECNOLOGÍA",
+        "Tipo":"DOMÓTICA",
+        "Marca":"VICTORIA LED",
+        "Categoria de producto":"DOMOTICA",
+        "Stock":244,
+        "Precio":16.4335
+    },
+    {
+        "Referencia Interna":"VL-T2USB",
+        "Nombre":"[VL-T2USB] SMART INTERRUPTOR DOBLE WIFI TUYA BLANCO 86U\/C",
+        "Categoría":"VARIOS Y REPUESTOS",
+        "Subcategoría":"TECNOLOGÍA",
+        "Tipo":"DOMÓTICA",
+        "Marca":"VICTORIA LED",
+        "Categoria de producto":"DOMOTICA",
+        "Stock":614,
+        "Precio":16.5945
+    },
+    {
+        "Referencia Interna":"VL-T2USN",
+        "Nombre":"[VL-T2USN] SMART INTERRUPTOR DOBLE WIFI TUYA NEGRO 86U\/C",
+        "Categoría":"VARIOS Y REPUESTOS",
+        "Subcategoría":"TECNOLOGÍA",
+        "Tipo":"DOMÓTICA",
+        "Marca":"VICTORIA LED",
+        "Categoria de producto":"DOMOTICA",
+        "Stock":325,
+        "Precio":16.5945
+    },
+    {
+        "Referencia Interna":"VL-T3USB",
+        "Nombre":"[VL-T3USB] SMART INTERRUPTOR TRIPLE WIFI TUYA BLANCO 86U\/C",
+        "Categoría":"VARIOS Y REPUESTOS",
+        "Subcategoría":"TECNOLOGÍA",
+        "Tipo":"DOMÓTICA",
+        "Marca":"VICTORIA LED",
+        "Categoria de producto":"DOMOTICA",
+        "Stock":726,
+        "Precio":18.4
+    },
+    {
+        "Referencia Interna":"VL-T3USN",
+        "Nombre":"[VL-T3USN] SMART INTERRUPTOR TRIPLE WIFI TUYA NEGRO 86U\/C",
+        "Categoría":"VARIOS Y REPUESTOS",
+        "Subcategoría":"TECNOLOGÍA",
+        "Tipo":"DOMÓTICA",
+        "Marca":"VICTORIA LED",
+        "Categoria de producto":"DOMOTICA",
+        "Stock":457,
+        "Precio":18.4
+    },
+    {
+        "Referencia Interna":"VL-T4USB",
+        "Nombre":"[VL-T4USB] SMART INTERRUPTOR 4CH WIFI TUYA BLANCO 86U\/C",
+        "Categoría":"VARIOS Y REPUESTOS",
+        "Subcategoría":"TECNOLOGÍA",
+        "Tipo":"DOMÓTICA",
+        "Marca":"VICTORIA LED",
+        "Categoria de producto":"DOMOTICA",
+        "Stock":15,
+        "Precio":19.389
+    },
+    {
+        "Referencia Interna":"VL-TS01",
+        "Nombre":"[VL-TS01] SMART TOMACORRIENTE WIFI TUYA AC100V-240V 10A 160U\/C",
+        "Categoría":"VARIOS Y REPUESTOS",
+        "Subcategoría":"TECNOLOGÍA",
+        "Tipo":"DOMÓTICA",
+        "Marca":"VICTORIA LED",
+        "Categoria de producto":"DOMOTICA",
+        "Stock":600,
+        "Precio":9.2
+    },
+    {
+        "Referencia Interna":"VL-VP01",
+        "Nombre":"[VL-VP01] SMART TIMBRE WIFI PANTALLA 3.4 HD TUYA",
+        "Categoría":"VARIOS Y REPUESTOS",
+        "Subcategoría":"TECNOLOGÍA",
+        "Tipo":"DOMÓTICA",
+        "Marca":"VICTORIA LED",
+        "Categoria de producto":"DOMOTICA",
+        "Stock":87,
+        "Precio":89.24
+    },
+    {
         "Referencia Interna":"LP15-12100",
         "Nombre":"[LP15-12100] SOLAR BATERIA LITIO 12.8V100AH MUST",
         "Categoría":"ILUMINACIÓN SOLAR",
@@ -8,7 +184,7 @@
         "Marca":"MUST",
         "Categoria de producto":"SISTEMA SOLAR",
         "Stock":63,
-        "Precio":333.89
+        "Precio":383.9735
     },
     {
         "Referencia Interna":"LP15-24100",
@@ -19,7 +195,7 @@
         "Marca":"MUST",
         "Categoria de producto":"SISTEMA SOLAR",
         "Stock":25,
-        "Precio":580.21
+        "Precio":667.2415
     },
     {
         "Referencia Interna":"LP15-24200",
@@ -30,7 +206,7 @@
         "Marca":"MUST",
         "Categoria de producto":"SISTEMA SOLAR",
         "Stock":22,
-        "Precio":1094.73
+        "Precio":1258.9395
     },
     {
         "Referencia Interna":"LP18-48100",
@@ -41,7 +217,7 @@
         "Marca":"MUST",
         "Categoria de producto":"SISTEMA SOLAR",
         "Stock":30,
-        "Precio":1518.94
+        "Precio":1746.781
     },
     {
         "Referencia Interna":"PH11-6048 US",
@@ -52,7 +228,7 @@
         "Marca":"MUST",
         "Categoria de producto":"SISTEMA SOLAR",
         "Stock":3,
-        "Precio":3244.42
+        "Precio":3731.083
     },
     {
         "Referencia Interna":"PI15-1012 LV",
@@ -63,7 +239,7 @@
         "Marca":"MUST",
         "Categoria de producto":"SISTEMA SOLAR",
         "Stock":97,
-        "Precio":199.16
+        "Precio":229.034
     },
     {
         "Referencia Interna":"PI15-2024 LV",
@@ -74,7 +250,7 @@
         "Marca":"MUST",
         "Categoria de producto":"SISTEMA SOLAR",
         "Stock":100,
-        "Precio":279.47
+        "Precio":321.3905
     },
     {
         "Referencia Interna":"PV 18-1012 LV",
@@ -85,7 +261,7 @@
         "Marca":"MUST",
         "Categoria de producto":"SISTEMA SOLAR",
         "Stock":94,
-        "Precio":401.54
+        "Precio":461.771
     },
     {
         "Referencia Interna":"PV30-5048 LVHM",
@@ -96,7 +272,7 @@
         "Marca":"MUST",
         "Categoria de producto":"SISTEMA SOLAR",
         "Stock":49,
-        "Precio":774.16
+        "Precio":890.284
     },
     {
         "Referencia Interna":"SPF 3000TL LVM-ES",
@@ -107,7 +283,7 @@
         "Marca":"GROWATT",
         "Categoria de producto":"SISTEMA SOLAR",
         "Stock":58,
-        "Precio":844.62
+        "Precio":971.313
     },
     {
         "Referencia Interna":"SPF 6000T DVM-MPV",
@@ -118,7 +294,7 @@
         "Marca":"GROWATT",
         "Categoria de producto":"SISTEMA SOLAR",
         "Stock":14,
-        "Precio":1656.98
+        "Precio":1905.527
     },
     {
         "Referencia Interna":"SPH 10000TL HU US",
@@ -129,18 +305,18 @@
         "Marca":"GROWATT",
         "Categoria de producto":"SISTEMA SOLAR",
         "Stock":6,
-        "Precio":5901.46
+        "Precio":6786.679
     },
     {
         "Referencia Interna":"SSB-12V100AH",
         "Nombre":"[SSB-12V100AH] SOLAR BATERIA GEL 12V100AH",
         "Categoría":"ILUMINACIÓN SOLAR",
-        "Subcategoría":"LUZ LED SOLAR",
+        "Subcategoría":"LUCES LED 0%",
         "Tipo":" SISTEMA SOLAR",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"SISTEMA SOLAR",
         "Stock":257,
-        "Precio":217.01
+        "Precio":249.5615
     },
     {
         "Referencia Interna":"SSB-12V200AH",
@@ -151,7 +327,7 @@
         "Marca":"VICTORIA LED",
         "Categoria de producto":"SISTEMA SOLAR",
         "Stock":494,
-        "Precio":420.0
+        "Precio":483.0
     },
     {
         "Referencia Interna":"SSB-12V250AH",
@@ -162,18 +338,18 @@
         "Marca":"VICTORIA LED",
         "Categoria de producto":"SISTEMA SOLAR",
         "Stock":70,
-        "Precio":550.0
+        "Precio":632.5
     },
     {
         "Referencia Interna":"SSB-12V50AH",
         "Nombre":"[SSB-12V50AH] SOLAR BATERIA GEL 12V50AH",
         "Categoría":"ILUMINACIÓN SOLAR",
-        "Subcategoría":"LUCES LED 0%",
+        "Subcategoría":"LUZ LED SOLAR",
         "Tipo":" SISTEMA SOLAR",
         "Marca":"VICTORIA LED",
         "Categoria de producto":"SISTEMA SOLAR",
         "Stock":46,
-        "Precio":106.09
+        "Precio":122.0035
     },
     {
         "Referencia Interna":"SSP-230W",
@@ -184,7 +360,7 @@
         "Marca":"VICTORIA LED",
         "Categoria de producto":"SISTEMA SOLAR",
         "Stock":7,
-        "Precio":78.58
+        "Precio":90.367
     },
     {
         "Referencia Interna":"SSP-550W",
@@ -195,7 +371,7 @@
         "Marca":"VICTORIA LED",
         "Categoria de producto":"SISTEMA SOLAR",
         "Stock":54,
-        "Precio":118.6
+        "Precio":136.39
     },
     {
         "Referencia Interna":"SSP-585W JA BI",
@@ -206,7 +382,7 @@
         "Marca":"VICTORIA LED",
         "Categoria de producto":"SISTEMA SOLAR",
         "Stock":15,
-        "Precio":140.1
+        "Precio":161.115
     },
     {
         "Referencia Interna":"SSP-585W JINKO",
@@ -217,7 +393,7 @@
         "Marca":"VICTORIA LED",
         "Categoria de producto":"SISTEMA SOLAR",
         "Stock":74,
-        "Precio":168.6
+        "Precio":193.89
     },
     {
         "Referencia Interna":"SSP-610W",
@@ -228,7 +404,7 @@
         "Marca":"VICTORIA LED",
         "Categoria de producto":"SISTEMA SOLAR",
         "Stock":60,
-        "Precio":164.0
+        "Precio":188.6
     },
     {
         "Referencia Interna":"SSP-615W JA BI",
@@ -239,7 +415,7 @@
         "Marca":"JA SOLAR",
         "Categoria de producto":"SISTEMA SOLAR",
         "Stock":719,
-        "Precio":181.0
+        "Precio":208.15
     },
     {
         "Referencia Interna":"VLPSN-250W",
@@ -250,7 +426,7 @@
         "Marca":"VICTORIA",
         "Categoria de producto":"SISTEMA SOLAR",
         "Stock":179,
-        "Precio":96.98
+        "Precio":111.527
     },
     {
         "Referencia Interna":"VLPSN-450W",
@@ -261,7 +437,7 @@
         "Marca":"VICTORIA",
         "Categoria de producto":"SISTEMA SOLAR",
         "Stock":91,
-        "Precio":104.96
+        "Precio":120.704
     },
     {
         "Referencia Interna":"VLPSN-610W",
@@ -272,7 +448,7 @@
         "Marca":"VICTORIA",
         "Categoria de producto":"SISTEMA SOLAR",
         "Stock":127,
-        "Precio":164.0
+        "Precio":188.6
     },
     {
         "Referencia Interna":"WIT 28K HU US L2",
@@ -283,6 +459,6 @@
         "Marca":"GROWATT",
         "Categoria de producto":"SISTEMA SOLAR",
         "Stock":1,
-        "Precio":16215.81
+        "Precio":18648.1815
     }
 ]
