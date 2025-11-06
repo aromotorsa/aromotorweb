@@ -237,7 +237,6 @@
                 let availableProducts = [...allProducts];
 
                 const selectedCategory = categoryFilter.value;
-                const selectedSubcategory = subcategoryFilter.value;
 
                 if (selectedCategory) {
                     availableProducts = availableProducts.filter(p => p.Categoría === selectedCategory);
@@ -246,11 +245,9 @@
                 const availableSubcategories = [...new Set(availableProducts.map(p => p.Subcategoría).filter(Boolean))].sort();
                 updateSelect(subcategoryFilter, availableSubcategories, 'Categoría');
                 
-                if (selectedCategory && availableSubcategories.includes(selectedSubcategory)) {
-                    subcategoryFilter.value = selectedSubcategory;
-                    availableProducts = availableProducts.filter(p => p.Subcategoría === selectedSubcategory);
-                } else {
-                    subcategoryFilter.value = '';
+                // If a subcategory is selected, further filter the products for the type filter
+                if (subcategoryFilter.value) {
+                    availableProducts = availableProducts.filter(p => p.Subcategoría === subcategoryFilter.value);
                 }
 
                 const availableTypes = [...new Set(availableProducts.map(p => p.Tipo).filter(Boolean))].sort();
