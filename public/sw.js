@@ -1,9 +1,10 @@
 const CACHE_NAME = 'aromotor-pro-cache-v6'; // 1. ¡VERSIÓN INCREMENTADA!
 const urlsToCache = [
     '/',
-    'index.html',
-    'Resultado_Final.json',
-    'logos/AROMOTOR.png',
+    '/index.html',
+    '/Resultado_Final.json',
+    '/public/logos/AROMOTOR.png',
+    '/public/manifest.json',
     'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css'
 ];
 
