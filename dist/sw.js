@@ -1,4 +1,4 @@
-const CACHE_NAME = 'aromotor-pro-cache-v4'; // 1. ¡VERSIÓN INCREMENTADA!
+const CACHE_NAME = 'aromotor-pro-cache-v6'; // 1. ¡VERSIÓN INCREMENTADA!
 const urlsToCache = [
     '/',
     'index.html',
@@ -44,78 +44,75 @@ self.addEventListener('activate', event => {
 });
 
 self.addEventListener('fetch', event => {
-    // Ignoramos peticiones que no sean GET
+    // Ignoramos las peticiones que no son GET
     if (event.request.method !== 'GET') {
         return;
     }
 
     const url = new URL(event.request.url);
 
-    // Estrategia: Stale-While-Revalidate para el JSON de productos
-    if (url.pathname.endsWith('Resultado_Final.json')) {
+    // Estrategia: Network First para el HTML principal y el JSON de datos
+    // Así siempre tenemos la última versión si hay conexión.
+    if (url.pathname === '/' || url.pathname.endsWith('/index.html') || url.pathname.endsWith('/Resultado_Final.json')) {
+        event.respondWith(
+            fetch(event.request)
+                .then(networkResponse => {
+                    // Si la respuesta de la red es buena, la clonamos y la guardamos en caché para el futuro modo offline
+                    if (networkResponse.ok) {
+                        const responseToCache = networkResponse.clone();
+                        caches.open(CACHE_NAME).then(cache => {
+                            cache.put(event.request, responseToCache);
+                        });
+                    }
+                    return networkResponse;
+                })
+                .catch(() => {
+                    // Si la red falla (estamos offline), entonces buscamos en la caché.
+                    console.log(`[SW] Red falló para ${url.pathname}. Sirviendo desde caché.`);
+                    return caches.match(event.request);
+                })
+        );
+    } else {
+        // Estrategia: Stale-While-Revalidate para todo lo demás (CSS, imágenes, fuentes, etc.)
         event.respondWith(
             caches.open(CACHE_NAME).then(cache => {
                 return cache.match(event.request).then(cachedResponse => {
-                    // Ir a la red para actualizar en segundo plano
                     const fetchPromise = fetch(event.request).then(networkResponse => {
-                        // Clonar la respuesta para poder guardarla y devolverla
-                        cache.put(event.request, networkResponse.clone());
+                        // Si la respuesta de la red es buena y es un recurso cacheadle, la clonamos y la guardamos en caché para el futuro
+                        if (networkResponse.ok && url.protocol.startsWith('http')) {
+                            cache.put(event.request, networkResponse.clone());
+                        }
                         return networkResponse;
                     });
 
-                    // Devolver la respuesta del caché inmediatamente si existe,
-                    // si no, esperar a la respuesta de la red.
+                    // Devolvemos la respuesta cacheada si existe, si no, esperamos a la red.
                     return cachedResponse || fetchPromise;
                 });
             })
         );
-        return; // Detenemos la ejecución aquí para el JSON
     }
-    
-    // Estrategia: Cache First para todas las demás peticiones (imágenes, CSS, etc.)
-    event.respondWith(
-        caches.match(event.request).then(cachedResponse => {
-            // Si está en caché, lo devolvemos
-            if (cachedResponse) {
-                return cachedResponse;
-            }
-            // Si no, vamos a la red, lo cacheamos y lo devolvemos
-            return fetch(event.request).then(networkResponse => {
-                // Solo cacheamos respuestas válidas
-                if (!networkResponse || networkResponse.status !== 200 || !event.request.url.startsWith('http')) {
-                    return networkResponse;
-                }
-                
-                return caches.open(CACHE_NAME).then(cache => {
-                    cache.put(event.request, networkResponse.clone());
-                    return networkResponse;
-                });
-            });
-        })
-    );
 });
-
 
 async function cacheUrlsInParallel(cacheName, urls) {
     const cache = await caches.open(cacheName);
+    const failedUrls = [];
 
     const promises = urls.map(url => {
         return (async () => {
             try {
-                // Usamos 'reload' para asegurarnos de que no usamos una versión cacheada por el navegador (HTTP cache)
                 const request = new Request(url, { cache: 'reload' });
                 await cache.add(request);
                 return { status: 'fulfilled' };
             } catch (error) {
                 console.warn(`[SW] No se pudo cachear la URL: ${url}`);
+                failedUrls.push(url);
                 return { status: 'rejected' };
             }
         })();
     });
 
-    const results = await Promise.all(promises);
-    const failures = results.filter(result => result.status === 'rejected').length;
-    return failures;
+    await Promise.all(promises);
+    return failedUrls;
 }
 
 self.addEventListener('message', event => {
@@ -123,11 +120,10 @@ self.addEventListener('message', event => {
         console.log('[SW] Recibida orden de cachear imágenes en PARALELO.');
         event.waitUntil(
             cacheUrlsInParallel(CACHE_NAME, event.data.urls)
-                .then((failures) => {
-                    console.log(`[SW] Procesoself.addEventListener('fetch' de cacheo completado. Fallaron ${failures} imágenes.`);
-                    // Es importante asegurarse de que event.source no sea nulo antes de enviar el mensaje
+                .then((failedUrls) => {
+                    console.log(`[SW] Proceso de cacheo completado. Fallaron ${failedUrls.length} imágenes.`);
                     if (event.source) {
-                        event.source.postMessage({ type: 'CACHE_COMPLETE' });
+                        event.source.postMessage({ type: 'CACHE_COMPLETE', failedUrls: failedUrls });
                     }
                 })
         );

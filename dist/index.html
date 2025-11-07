@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" class="bg-gray-100">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#EF4444"/>
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
     <style>
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #f1f1f1; }
@@ -26,16 +23,31 @@
         }
     </style>
 </head>
-<body class="antialiased font-sans">
+<body class="antialiased font-sans bg-gray-100">
 
-    <div id="app" class="container mx-auto p-4">
+    <div id="login-overlay" class="fixed inset-0 bg-gray-800 bg-opacity-95 z-50 flex items-center justify-center p-4">
+        <div class="bg-white w-full max-w-sm p-6 md:p-8 rounded-2xl shadow-2xl text-center">
+            <img src="logos/AROMOTOR.png" alt="Logo" class="mx-auto h-12 mb-6">
+            <h2 class="text-2xl font-bold text-gray-800 mb-2">Acceso Restringido</h2>
+            <p class="text-gray-600 mb-6">Por favor, ingrese la contraseña para continuar.</p>
+            <form id="login-form" class="space-y-4">
+                <input type="password" id="password-input" placeholder="Contraseña" class="w-full p-3 border border-gray-300 rounded-lg text-center focus:ring-2 focus:ring-red-500 focus:border-transparent transition">
+                <p id="login-error" class="text-red-500 text-sm h-4"></p>
+                <button type="submit" class="w-full bg-red-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-red-700 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                    Entrar
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div id="app" class="container mx-auto p-4" style="display: none;">
 
         <header class="bg-white rounded-lg shadow-md p-4 mb-6 flex flex-col sm:flex-row justify-between items-center gap-4">
             <div class="flex items-center min-w-0">
                 <img src="logos/AROMOTOR.png" alt="Logo Empresa" class="h-10 mr-3 flex-shrink-0">
             </div>
             <div class="flex items-center gap-2 sm:gap-4 flex-wrap justify-center">
-                <button id="download-catalog-button" class="bg-purple-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-purple-700 transition-colors flex items-center gap-2" title="Descargar catálogo para uso offline">
+                <button id="download-catalog-button" class="bg-purple-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-purple-700 transition-colors flex items-center gap-2" title="Descargar catálogo para uso offline" disabled>
                     <i class="fas fa-cloud-download-alt"></i>
                     <span class="hidden sm:inline">Offline</span>
                 </button>
@@ -50,7 +62,7 @@
         <div class="bg-white rounded-lg shadow-md p-4 mb-6">
             <div class="space-y-4">
                 <input type="search" id="search-box" placeholder="Buscar por nombre, referencia..." class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition">
-                <div class="grid grid-cols-3 gap-4">
+                <div class="grid grid-cols-2 gap-4">
                     <select id="category-filter" class="w-full p-2 border border-gray-300 rounded-lg bg-white focus:ring-2 focus:ring-red-500 focus:border-transparent transition">
                         <option value="">Grupo</option>
                     </select>
@@ -76,7 +88,7 @@
 
         <div id="loading-spinner" class="animate-spin rounded-full h-16 w-16 border-4 border-gray-300 mx-auto mt-20"></div>
         
-        <div id="product-grid" class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 sm:gap-6"></div>
+        <div id="product-grid" class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6"></div>
         
        <div id="no-results" class="hidden text-center py-10">
             <p class="text-xl text-gray-500">No se encontraron productos.</p>
@@ -84,11 +96,12 @@
     </div>
 
     <!-- Notificaciones y Modales (sin cambios estructurales) -->
-    <div id="copy-notification" class="notification fixed bottom-5 left-5 bg-gray-800 text-white py-2 px-4 rounded-lg shadow-lg opacity-0 transform translate-y-2 z-50">¡Info copiada!</div>
-    <div id="cart-notification" class="notification fixed bottom-5 left-5 bg-green-600 text-white py-2 px-4 rounded-lg shadow-lg opacity-0 transform translate-y-2 z-50">¡Producto añadido!</div>
-    <div id="saved-notification" class="notification fixed bottom-5 left-5 bg-blue-600 text-white py-2 px-4 rounded-lg shadow-lg opacity-0 transform translate-y-2 z-50">¡Pedido guardado!</div>
+    <div id="copy-notification" class="notification fixed bottom-5 left-5 bg-gray-800 text-white py-2 px-4 rounded-lg shadow-lg opacity-0 transform translate-y-2 z-50 pointer-events-none">¡Info copiada!</div>
+    <div id="cart-notification" class="notification fixed bottom-5 left-5 bg-green-600 text-white py-2 px-4 rounded-lg shadow-lg opacity-0 transform translate-y-2 z-50 pointer-events-none">¡Producto añadido!</div>
+    <div id="saved-notification" class="notification fixed bottom-5 left-5 bg-blue-600 text-white py-2 px-4 rounded-lg shadow-lg opacity-0 transform translate-y-2 z-50 pointer-events-none">¡Pedido guardado!</div>
     <div id="offline-notification" class="hidden fixed top-0 left-0 right-0 bg-yellow-500 text-black text-center p-2 font-bold z-50">Modo Offline: Estás trabajando sin conexión.</div>
     <div id="sync-notification" class="hidden fixed top-0 left-0 right-0 bg-blue-500 text-white text-center p-2 font-bold z-50 cursor-pointer">¡Conexión recuperada! Tienes pedidos guardados. Haz clic para verlos.</div>
+    <div id="download-failed-notification" class="notification fixed bottom-5 left-5 bg-red-600 text-white py-2 px-4 rounded-lg shadow-lg opacity-0 transform translate-y-2 z-50 pointer-events-none">La descarga falló. Por favor, recargue la página.</div>
 
 
     <button id="cart-button" class="fixed bottom-5 right-5 bg-red-600 text-white w-16 h-16 rounded-full shadow-lg flex items-center justify-center text-2xl z-20">
@@ -148,6 +161,56 @@
     
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            const loginForm = document.getElementById('login-form');
+            const passwordInput = document.getElementById('password-input');
+            const loginError = document.getElementById('login-error');
+            const loginOverlay = document.getElementById('login-overlay');
+            const appContainer = document.getElementById('app');
+
+            loginForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const enteredPassword = passwordInput.value.trim().toLowerCase();
+                
+                // Hash the entered password using SHA-256
+                const encoder = new TextEncoder();
+                const data = encoder.encode(enteredPassword);
+                const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+                const hashArray = Array.from(new Uint8Array(hashBuffer));
+                const enteredHash = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+
+                // Stored SHA-256 hash of 'aromotor2025'
+                const storedHash = 'f9b4b78736c63562a33311b6a75534e674473a78a48a23330e7237177c1a5929';
+
+                if (enteredHash === storedHash) {
+                    loginOverlay.style.display = 'none';
+                    appContainer.style.display = 'block';
+                } else {
+                    loginError.textContent = 'Contraseña incorrecta.';
+                    passwordInput.value = '';
+                    passwordInput.focus();
+                    // Shake animation for error
+                    const loginBox = loginOverlay.querySelector('div');
+                    loginBox.classList.add('animate-shake');
+                    setTimeout(() => {
+                        loginBox.classList.remove('animate-shake');
+                        loginError.textContent = '';
+                    }, 1000);
+                }
+            });
+
+            // Add a simple shake animation for visual feedback
+            const style = document.createElement('style');
+            style.innerHTML = `
+                @keyframes shake {
+                    0%, 100% { transform: translateX(0); }
+                    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+                    20%, 40%, 60%, 80% { transform: translateX(5px); }
+                }
+                .animate-shake {
+                    animation: shake 0.5s ease-in-out;
+                }
+            `;
+            document.head.appendChild(style);
             // --- CAMBIO: Selectores DOM actualizados ---
             const searchBox = document.getElementById('search-box');
             const categoryFilter = document.getElementById('category-filter');
@@ -192,8 +255,7 @@
             // Carga inicial de productos
             async function loadProducts() {
                 try {
-                    const response = await fetch('Resultado_Final.json?v=' + new Date().getTime()); // Evita caché
-                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                    const response = await fetch('Resultado_Final.json');                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                     allProducts = await response.json();
                     populateFilters();
                     renderProducts();
@@ -207,50 +269,56 @@
 
             // --- CAMBIO: Lógica de filtros reescrita para ser más inteligente y conectada ---
 
-            // Popula el filtro de Categoría (Nivel 1) al inicio
             function populateFilters() {
                 const categories = [...new Set(allProducts.map(p => p.Categoría).filter(Boolean))].sort();
+                updateSelect(categoryFilter, categories, 'Grupo');
 
-                categoryFilter.innerHTML = '<option value="">Categoría (Nivel 1)</option>';
-                categories.forEach(cat => {
+                // Initially populate subcategories and types with all values
+                const allSubcategories = [...new Set(allProducts.map(p => p.Subcategoría).filter(Boolean))].sort();
+                updateSelect(subcategoryFilter, allSubcategories, 'Categoría');
+
+                const allTypes = [...new Set(allProducts.map(p => p.Tipo).filter(Boolean))].sort();
+                updateSelect(typeFilter, allTypes, 'Subcategoría');
+            }
+
+            function updateSelect(selectElement, options, placeholder) {
+                const currentValue = selectElement.value;
+                selectElement.innerHTML = `<option value="">${placeholder}</option>`;
+                options.forEach(optionValue => {
                     const option = document.createElement('option');
-                    option.value = cat; option.textContent = cat;
-                    categoryFilter.appendChild(option);
+                    option.value = optionValue; 
+                    option.textContent = optionValue;
+                    selectElement.appendChild(option);
                 });
-            }
-            
-            // Se activa al cambiar Categoría. Popula Subcategorías y resetea Tipos.
-            function updateSubcategories() {
-                const selectedCategory = categoryFilter.value;
-                subcategoryFilter.innerHTML = '<option value="">Subcategoría (Nivel 2)</option>';
-                typeFilter.innerHTML = '<option value="">Tipo (Nivel 3)</option>'; // Resetea el filtro hijo
                 
-                if (selectedCategory) {
-                    const relevantSubcategories = [...new Set(allProducts.filter(p => p.Categoría === selectedCategory && p.Subcategoría).map(p => p.Subcategoría))].sort();
-                    relevantSubcategories.forEach(sub => {
-                        const option = document.createElement('option');
-                        option.value = sub; option.textContent = sub;
-                        subcategoryFilter.appendChild(option);
-                    });
+                if (options.includes(currentValue)) {
+                    selectElement.value = currentValue;
+                } else {
+                    selectElement.value = '';
                 }
-                renderProducts(); // Actualiza la vista
             }
 
-            // Se activa al cambiar Subcategoría. Popula Tipos.
-            function updateTypes() {
+            function updateFiltersAndRender() {
+                let availableProducts = [...allProducts];
+
                 const selectedCategory = categoryFilter.value;
-                const selectedSubcategory = subcategoryFilter.value;
-                typeFilter.innerHTML = '<option value="">Tipo (Nivel 3)</option>';
-                
-                if (selectedCategory && selectedSubcategory) {
-                     const relevantTypes = [...new Set(allProducts.filter(p => p.Categoría === selectedCategory && p.Subcategoría === selectedSubcategory && p.Tipo).map(p => p.Tipo))].sort();
-                     relevantTypes.forEach(type => {
-                        const option = document.createElement('option');
-                        option.value = type; option.textContent = type;
-                        typeFilter.appendChild(option);
-                    });
+
+                if (selectedCategory) {
+                    availableProducts = availableProducts.filter(p => p.Categoría === selectedCategory);
                 }
-                renderProducts(); // Actualiza la vista
+
+                const availableSubcategories = [...new Set(availableProducts.map(p => p.Subcategoría).filter(Boolean))].sort();
+                updateSelect(subcategoryFilter, availableSubcategories, 'Categoría');
+                
+                // If a subcategory is selected, further filter the products for the type filter
+                if (subcategoryFilter.value) {
+                    availableProducts = availableProducts.filter(p => p.Subcategoría === subcategoryFilter.value);
+                }
+
+                const availableTypes = [...new Set(availableProducts.map(p => p.Tipo).filter(Boolean))].sort();
+                updateSelect(typeFilter, availableTypes, 'Subcategoría');
+
+                renderProducts();
             }
 
             // Renderiza los productos aplicando TODOS los filtros actuales
@@ -261,7 +329,7 @@
                 const selectedType = typeFilter.value; // Nuevo valor de filtro
 
                 const filteredProducts = allProducts.filter(p => 
-                    (searchTerm === '' || p.Nombre?.toLowerCase().includes(searchTerm) || p['Referencia Interna']?.toLowerCase().includes(searchTerm)) &&
+                    (searchTerm === '' || p.Nombre?.toLowerCase().includes(searchTerm) || p['Referencia Interna']?.toLowerCase().includes(searchTerm) || p.Marca?.toLowerCase().includes(searchTerm)) &&
                     (selectedCategory === '' || p.Categoría === selectedCategory) &&
                     (selectedSubcategory === '' || p.Subcategoría === selectedSubcategory) &&
                     (selectedType === '' || p.Tipo === selectedType) // Nueva condición de filtro
@@ -269,7 +337,7 @@
 
                 productGrid.innerHTML = '';
                 productGrid.className = currentView === 'grid' 
-                    ? 'grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 sm:gap-6' 
+                    ? 'grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6' 
                     : 'flex flex-col gap-3';
                 noResults.classList.toggle('hidden', filteredProducts.length > 0);
                 resultsCount.textContent = `${filteredProducts.length} producto(s)`;
@@ -299,7 +367,7 @@
                             <img src="${imagePath}" alt="${product.Nombre}" class="w-full h-full object-cover zoomable-image cursor-zoom-in" loading="lazy" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';">
                         </div>
                         <div class="p-3 flex-grow flex flex-col text-sm">
-                            <h3 class="font-bold text-gray-800 flex-grow text-sm">${product.Nombre || 'Sin Nombre'}</h3>
+                            <h3 class="font-bold text-gray-800 flex-grow">${product.Nombre || 'Sin Nombre'}</h3>
                             <p class="text-xs text-gray-500 mt-1">${ref || ''}</p>
                             <div class="text-xs text-gray-600 mt-2 leading-tight">${categoryPath}</div>
                             <div class="mt-3 pt-3 border-t flex justify-between items-center">
@@ -469,19 +537,27 @@
             }
             function showNotification(id) {
                 const n = document.getElementById(id);
+                n.classList.remove('pointer-events-none');
                 n.classList.add('opacity-100', 'translate-y-0'); n.classList.remove('opacity-0', 'translate-y-2');
-                setTimeout(() => { n.classList.remove('opacity-100', 'translate-y-0'); n.classList.add('opacity-0', 'translate-y-2'); }, 2000);
+                setTimeout(() => { 
+                    n.classList.remove('opacity-100', 'translate-y-0'); n.classList.add('opacity-0', 'translate-y-2'); 
+                    n.classList.add('pointer-events-none');
+                }, 2000);
             }
 
             // --- CAMBIO: Event Listeners actualizados para la nueva lógica de filtros ---
             searchBox.addEventListener('input', renderProducts);
-            categoryFilter.addEventListener('change', updateSubcategories);
-            subcategoryFilter.addEventListener('change', updateTypes);
+            categoryFilter.addEventListener('change', updateFiltersAndRender);
+            subcategoryFilter.addEventListener('change', updateFiltersAndRender);
             typeFilter.addEventListener('change', renderProducts);
             clearFiltersBtn.addEventListener('click', () => { 
                 searchBox.value = ''; 
                 categoryFilter.value = ''; 
-                updateSubcategories(); // Esto resetea los 3 filtros de categoría y renderiza
+                subcategoryFilter.value = '';
+                typeFilter.value = '';
+                // Al limpiar, repoblamos los filtros a su estado inicial y renderizamos
+                populateFilters();
+                renderProducts();
             });
             
             // (El resto de listeners permanecen igual)
@@ -501,7 +577,7 @@
             productGrid.addEventListener('mousedown', e => { const cartBtn = e.target.closest('.add-to-cart-button'); if (cartBtn) handleAddToCartPress(cartBtn); });
             productGrid.addEventListener('mouseup', e => { const cartBtn = e.target.closest('.add-to-cart-button'); if (cartBtn) handleAddToCartRelease(); });
             productGrid.addEventListener('mouseleave', e => { const cartBtn = e.target.closest('.add-to-cart-button'); if (cartBtn) handleAddToCartRelease(); }, true);
-            productGrid.addEventListener('touchstart', e => { const cartBtn = e.target.closest('add-to-cart-button'); if (cartBtn) handleAddToCartPress(cartBtn); });
+            productGrid.addEventListener('touchstart', e => { const cartBtn = e.target.closest('.add-to-cart-button'); if (cartBtn) handleAddToCartPress(cartBtn); });
             productGrid.addEventListener('touchend', e => { const cartBtn = e.target.closest('.add-to-cart-button'); if (cartBtn) handleAddToCartRelease(); });
             shareWhatsappButton.addEventListener('click', shareOnWhatsApp);
             saveCartButton.addEventListener('click', saveCurrentCart);
@@ -524,7 +600,89 @@
             closeZoomModalButton.addEventListener('click', closeZoomModal);
             imageZoomModalOverlay.addEventListener('click', (e) => { if (e.target === imageZoomModalOverlay) closeZoomModal(); });
 
+            function setupOfflineButton() {
+                if ('serviceWorker' in navigator) {
+                    navigator.serviceWorker.ready.then(registration => {
+                        if (registration.active) {
+                            downloadCatalogButton.disabled = false;
+                        }
+                    });
+                }
+            }
+
+            downloadCatalogButton.addEventListener('click', async () => {
+                const buttonIcon = downloadCatalogButton.querySelector('i');
+                const buttonText = downloadCatalogButton.querySelector('span');
+
+                if (!navigator.serviceWorker.controller) {
+                    showNotification('download-failed-notification');
+                    return;
+                }
+                
+                downloadCatalogButton.disabled = true;
+                buttonIcon.classList.remove('fa-cloud-download-alt');
+                buttonIcon.classList.add('fa-spinner', 'fa-spin');
+                if(buttonText) buttonText.textContent = 'Descargando...';
+
+                const imageUrls = allProducts.map(p => `images/${p['Referencia Interna']}.webp`);
+                
+                navigator.serviceWorker.controller.postMessage({
+                    type: 'CACHE_IMAGES',
+                    urls: imageUrls
+                });
+
+                const timeout = setTimeout(() => {
+                    showNotification('download-failed-notification');
+                    downloadCatalogButton.disabled = false;
+                    buttonIcon.classList.add('fa-cloud-download-alt');
+                    buttonIcon.classList.remove('fa-spinner', 'fa-spin');
+                    if(buttonText) buttonText.textContent = 'Offline';
+                    navigator.serviceWorker.removeEventListener('message', handler);
+                }, 30000); // 30 second timeout
+
+                // Esperar a que el SW nos avise que terminó
+                const handler = function(event) {
+                    if (event.data.type === 'CACHE_COMPLETE') {
+                        clearTimeout(timeout);
+                        downloadCatalogButton.disabled = false;
+                        buttonIcon.classList.remove('fa-spinner', 'fa-spin');
+                        buttonIcon.classList.add('fa-check-circle');
+                        if(buttonText) buttonText.textContent = 'Descargado';
+                        
+                        alert('¡Catálogo descargado! Ahora puedes usar la app sin conexión.');
+
+                        if (event.data.failedUrls && event.data.failedUrls.length > 0) {
+                            console.log('--- Imágenes no encontradas ---');
+                            const failedImageNames = event.data.failedUrls.map(url => {
+                                const parts = url.split('/');
+                                const fileName = parts[parts.length - 1];
+                                const nameOnly = fileName.split('.').slice(0, -1).join('.');
+                                return nameOnly;
+                            });
+                            console.log(failedImageNames);
+                            console.log('---------------------------------');
+                        }
+
+                        // Removemos el listener para no volver a ejecutar esto si el SW envía otros mensajes
+                        navigator.serviceWorker.removeEventListener('message', handler);
+                    }
+                };
+                navigator.serviceWorker.addEventListener('message', handler);
+            });
+
             loadProducts();
+            setupOfflineButton();
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/sw.js')
+                        .then(registration => {
+                            console.log('Service Worker registrado con éxito:', registration.scope);
+                        })
+                        .catch(err => {
+                            console.error('Falló el registro del Service Worker:', err);
+                        });
+                });
+            }
         });
     </script>
 </body>
