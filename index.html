@@ -170,6 +170,7 @@
             loginForm.addEventListener('submit', async (e) => {
                 e.preventDefault();
                 const enteredPassword = passwordInput.value.trim().toLowerCase();
+                console.log("Contraseña introducida (después de trim y toLowerCase):", enteredPassword);
                 
                 // Hash the entered password using SHA-256
                 const encoder = new TextEncoder();
