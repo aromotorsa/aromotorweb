@@ -277,12 +277,8 @@
                 const categories = [...new Set(allProducts.map(p => p.Categoría).filter(Boolean))].sort();
                 updateSelect(categoryFilter, categories, 'Grupo');
 
-                // Initially populate subcategories and types with all values
-                const allSubcategories = [...new Set(allProducts.map(p => p.Subcategoría).filter(Boolean))].sort();
-                updateSelect(subcategoryFilter, allSubcategories, 'Categoría');
-
-                const allTypes = [...new Set(allProducts.map(p => p.Tipo).filter(Boolean))].sort();
-                updateSelect(typeFilter, allTypes, 'Subcategoría');
+                // Disparar un cambio para poblar los sub-filtros correctamente desde el inicio
+                categoryFilter.dispatchEvent(new Event('change'));
             }
 
             function updateSelect(selectElement, options, placeholder) {
@@ -295,6 +291,7 @@
                     selectElement.appendChild(option);
                 });
                 
+                // Restaurar el valor si todavía es una opción válida
                 if (options.includes(currentValue)) {
                     selectElement.value = currentValue;
                 } else {
@@ -302,26 +299,27 @@
                 }
             }
 
-            function updateFiltersAndRender() {
-                let availableProducts = [...allProducts];
-
+            function updateDependentFilters() {
+                let availableForSubcategory = [...allProducts];
                 const selectedCategory = categoryFilter.value;
 
                 if (selectedCategory) {
-                    availableProducts = availableProducts.filter(p => p.Categoría === selectedCategory);
+                    availableForSubcategory = availableForSubcategory.filter(p => p.Categoría === selectedCategory);
                 }
-
-                const availableSubcategories = [...new Set(availableProducts.map(p => p.Subcategoría).filter(Boolean))].sort();
-                updateSelect(subcategoryFilter, availableSubcategories, 'Categoría');
                 
-                // If a subcategory is selected, further filter the products for the type filter
-                if (subcategoryFilter.value) {
-                    availableProducts = availableProducts.filter(p => p.Subcategoría === subcategoryFilter.value);
+                const availableSubcategories = [...new Set(availableForSubcategory.map(p => p.Subcategoría).filter(Boolean))].sort();
+                updateSelect(subcategoryFilter, availableSubcategories, 'Subcategoría');
+
+                let availableForType = [...availableForSubcategory];
+                const selectedSubcategory = subcategoryFilter.value;
+
+                if (selectedSubcategory) {
+                    availableForType = availableForType.filter(p => p.Subcategoría === selectedSubcategory);
                 }
 
-                const availableTypes = [...new Set(availableProducts.map(p => p.Tipo).filter(Boolean))].sort();
-                updateSelect(typeFilter, availableTypes, 'Subcategoría');
-
+                const availableTypes = [...new Set(availableForType.map(p => p.Tipo).filter(Boolean))].sort();
+                updateSelect(typeFilter, availableTypes, 'Tipo');
+                
                 renderProducts();
             }
 
@@ -551,17 +549,16 @@
 
             // --- CAMBIO: Event Listeners actualizados para la nueva lógica de filtros ---
             searchBox.addEventListener('input', renderProducts);
-            categoryFilter.addEventListener('change', updateFiltersAndRender);
-            subcategoryFilter.addEventListener('change', updateFiltersAndRender);
+            categoryFilter.addEventListener('change', updateDependentFilters);
+            subcategoryFilter.addEventListener('change', updateDependentFilters);
             typeFilter.addEventListener('change', renderProducts);
+
             clearFiltersBtn.addEventListener('click', () => { 
                 searchBox.value = ''; 
                 categoryFilter.value = ''; 
-                subcategoryFilter.value = '';
-                typeFilter.value = '';
-                // Al limpiar, repoblamos los filtros a su estado inicial y renderizamos
-                populateFilters();
-                renderProducts();
+                // Al limpiar, disparamos el evento change en el filtro de categoría
+                // para que se re-poblen los filtros dependientes en su estado inicial.
+                categoryFilter.dispatchEvent(new Event('change'));
             });
             
             // (El resto de listeners permanecen igual)
