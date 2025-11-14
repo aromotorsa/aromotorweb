@@ -259,8 +259,17 @@
             // Carga inicial de productos
             async function loadProducts() {
                 try {
-                    const response = await fetch('Resultado_Final.json');                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                    const response = await fetch('Resultado_Final.json');
+                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                     allProducts = await response.json();
+
+                    // FIX: Sanitize data by trimming whitespace from category fields
+                    allProducts.forEach(p => {
+                        if (p.Categoría) p.Categoría = p.Categoría.trim();
+                        if (p.Subcategoría) p.Subcategoría = p.Subcategoría.trim();
+                        if (p.Tipo) p.Tipo = p.Tipo.trim();
+                    });
+
                     populateFilters();
                     renderProducts();
                 } catch (error) {
@@ -271,56 +280,26 @@
                 }
             }
 
-            // --- CAMBIO: Lógica de filtros reescrita para ser más inteligente y conectada ---
-
+            // --- REWORKED: Independent filter population ---
             function populateFilters() {
                 const categories = [...new Set(allProducts.map(p => p.Categoría).filter(Boolean))].sort();
-                updateSelect(categoryFilter, categories, 'Grupo');
+                const subcategories = [...new Set(allProducts.map(p => p.Subcategoría).filter(Boolean))].sort();
+                const types = [...new Set(allProducts.map(p => p.Tipo).filter(Boolean))].sort();
 
-                // Disparar un cambio para poblar los sub-filtros correctamente desde el inicio
-                categoryFilter.dispatchEvent(new Event('change'));
+                updateSelect(categoryFilter, categories, 'Grupo');
+                updateSelect(subcategoryFilter, subcategories, 'Categoría');
+                updateSelect(typeFilter, types, 'Subcategoría');
             }
 
             function updateSelect(selectElement, options, placeholder) {
-                const currentValue = selectElement.value;
                 selectElement.innerHTML = `<option value="">${placeholder}</option>`;
                 options.forEach(optionValue => {
                     const option = document.createElement('option');
-                    option.value = optionValue; 
+                    option.value = optionValue;
                     option.textContent = optionValue;
                     selectElement.appendChild(option);
                 });
-                
-                // Restaurar el valor si todavía es una opción válida
-                if (options.includes(currentValue)) {
-                    selectElement.value = currentValue;
-                } else {
-                    selectElement.value = '';
-                }
-            }
-
-            function updateDependentFilters() {
-                let availableForSubcategory = [...allProducts];
-                const selectedCategory = categoryFilter.value;
-
-                if (selectedCategory) {
-                    availableForSubcategory = availableForSubcategory.filter(p => p.Categoría === selectedCategory);
-                }
-                
-                const availableSubcategories = [...new Set(availableForSubcategory.map(p => p.Subcategoría).filter(Boolean))].sort();
-                updateSelect(subcategoryFilter, availableSubcategories, 'Subcategoría');
-
-                let availableForType = [...availableForSubcategory];
-                const selectedSubcategory = subcategoryFilter.value;
-
-                if (selectedSubcategory) {
-                    availableForType = availableForType.filter(p => p.Subcategoría === selectedSubcategory);
-                }
-
-                const availableTypes = [...new Set(availableForType.map(p => p.Tipo).filter(Boolean))].sort();
-                updateSelect(typeFilter, availableTypes, 'Tipo');
-                
-                renderProducts();
+                selectElement.value = ''; // Always reset to default
             }
 
             // Renderiza los productos aplicando TODOS los filtros actuales
@@ -328,18 +307,18 @@
                 const searchTerm = searchBox.value.toLowerCase();
                 const selectedCategory = categoryFilter.value;
                 const selectedSubcategory = subcategoryFilter.value;
-                const selectedType = typeFilter.value; // Nuevo valor de filtro
+                const selectedType = typeFilter.value;
 
-                const filteredProducts = allProducts.filter(p => 
+                const filteredProducts = allProducts.filter(p =>
                     (searchTerm === '' || p.Nombre?.toLowerCase().includes(searchTerm) || p['Referencia Interna']?.toLowerCase().includes(searchTerm) || p.Marca?.toLowerCase().includes(searchTerm)) &&
                     (selectedCategory === '' || p.Categoría === selectedCategory) &&
                     (selectedSubcategory === '' || p.Subcategoría === selectedSubcategory) &&
-                    (selectedType === '' || p.Tipo === selectedType) // Nueva condición de filtro
+                    (selectedType === '' || p.Tipo === selectedType)
                 );
 
                 productGrid.innerHTML = '';
-                productGrid.className = currentView === 'grid' 
-                    ? 'grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6' 
+                productGrid.className = currentView === 'grid'
+                    ? 'grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6'
                     : 'flex flex-col gap-3';
                 noResults.classList.toggle('hidden', filteredProducts.length > 0);
                 resultsCount.textContent = `${filteredProducts.length} producto(s)`;
@@ -356,7 +335,6 @@
                 const quantityInCart = itemInCart ? itemInCart.quantity : 0;
                 const stockIndicator = stock > 10 ? '<span class="w-3 h-3 bg-green-500 rounded-full"></span>' : stock > 0 ? '<span class="w-3 h-3 bg-yellow-500 rounded-full"></span>' : '<span class="w-3 h-3 bg-red-500 rounded-full"></span>';
                 
-                // --- CAMBIO: Muestra la ruta de categoría completa (breadcrumb) ---
                 const categoryPath = [product.Categoría, product.Subcategoría, product.Tipo]
                     .filter(c => c && c !== 'No Clasificado' && c !== 'N/A')
                     .join(' <span class="mx-1 text-gray-400">&gt;</span> ');
@@ -547,18 +525,18 @@
                 }, 2000);
             }
 
-            // --- CAMBIO: Event Listeners actualizados para la nueva lógica de filtros ---
+            // --- REWORKED: Event listeners for independent filters ---
             searchBox.addEventListener('input', renderProducts);
-            categoryFilter.addEventListener('change', updateDependentFilters);
-            subcategoryFilter.addEventListener('change', updateDependentFilters);
+            categoryFilter.addEventListener('change', renderProducts);
+            subcategoryFilter.addEventListener('change', renderProducts);
             typeFilter.addEventListener('change', renderProducts);
 
-            clearFiltersBtn.addEventListener('click', () => { 
-                searchBox.value = ''; 
-                categoryFilter.value = ''; 
-                // Al limpiar, disparamos el evento change en el filtro de categoría
-                // para que se re-poblen los filtros dependientes en su estado inicial.
-                categoryFilter.dispatchEvent(new Event('change'));
+            clearFiltersBtn.addEventListener('click', () => {
+                searchBox.value = '';
+                categoryFilter.value = '';
+                subcategoryFilter.value = '';
+                typeFilter.value = '';
+                renderProducts();
             });
             
             // (El resto de listeners permanecen igual)
