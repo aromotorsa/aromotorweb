@@ -1041,7 +1041,7 @@
         "Tipo":" SOLAR FOCO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR FOCO",
-        "Stock":7443.0,
+        "Stock":7442.0,
         "Precio":11.201
     },
     {
@@ -1129,7 +1129,7 @@
         "Tipo":" SOLAR FOCO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR FOCO",
-        "Stock":7827.0,
+        "Stock":7826.0,
         "Precio":8.4065
     },
     {
@@ -1173,7 +1173,7 @@
         "Tipo":" MANGUERA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ MANGUERA LED",
-        "Stock":5712.0,
+        "Stock":5711.0,
         "Precio":5.6925
     },
     {
@@ -2123,6 +2123,17 @@
         "Precio":0.7935
     },
     {
+        "Referencia Interna":"EF-100W",
+        "Nombre":"EVA FOCO 100W 85-265V 6500K 20U\/C",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" FOCO LED",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
+        "Stock":7.0,
+        "Precio":13.179
+    },
+    {
         "Referencia Interna":"EF-20W 3K",
         "Nombre":"EVA FOCO 20W 85-265V 3000K",
         "Categoría":"ILUMINACIÓN",
@@ -2504,7 +2515,7 @@
         "Tipo":" PLACAS ELÉCTRICAS LYRA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PLACAS ELECTRICAS LYRA",
-        "Stock":1404.0,
+        "Stock":1405.0,
         "Precio":3.289
     },
     {
@@ -3153,7 +3164,7 @@
         "Tipo":" FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":12167.0,
+        "Stock":12168.0,
         "Precio":3.68
     },
     {
@@ -3749,6 +3760,17 @@
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE REDONDO",
         "Stock":1.0,
         "Precio":4.9335
+    },
+    {
+        "Referencia Interna":"LV-210 24W 6500K",
+        "Nombre":"VICTORIA LED PANEL 6500K 24W SOBREPUESTO REDONDO 15U\/C",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" PANEL SOBREPUESTO REDONDO",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO REDONDO",
+        "Stock":1.0,
+        "Precio":6.0145
     },
     {
         "Referencia Interna":"LV-109 3W 6500K",
@@ -5947,7 +5969,7 @@
         "Tipo":" PLACAS ELÉCTRICAS LYRA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PLACAS ELECTRICAS LYRA",
-        "Stock":5592.0,
+        "Stock":5593.0,
         "Precio":0.828
     },
     {
@@ -5958,7 +5980,7 @@
         "Tipo":" PLACAS ELÉCTRICAS LYRA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PLACAS ELECTRICAS LYRA",
-        "Stock":416.0,
+        "Stock":417.0,
         "Precio":1.3455
     },
     {
@@ -5969,7 +5991,7 @@
         "Tipo":" PLACAS ELÉCTRICAS LYRA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PLACAS ELECTRICAS LYRA",
-        "Stock":7034.0,
+        "Stock":7035.0,
         "Precio":1.449
     },
     {
@@ -6002,7 +6024,7 @@
         "Tipo":" PLACAS ELÉCTRICAS LYRA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PLACAS ELECTRICAS LYRA",
-        "Stock":10410.0,
+        "Stock":10411.0,
         "Precio":2.07
     },
     {
@@ -6046,7 +6068,7 @@
         "Tipo":" PLACAS ELÉCTRICAS LYRA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PLACAS ELECTRICAS LYRA",
-        "Stock":891.0,
+        "Stock":892.0,
         "Precio":2.07
     },
     {
@@ -6057,7 +6079,7 @@
         "Tipo":" PLACAS ELÉCTRICAS LYRA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PLACAS ELECTRICAS LYRA",
-        "Stock":114.0,
+        "Stock":115.0,
         "Precio":3.1395
     },
     {
@@ -6090,7 +6112,7 @@
         "Tipo":" PLACAS ELÉCTRICAS LYRA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PLACAS ELECTRICAS LYRA",
-        "Stock":6430.0,
+        "Stock":6431.0,
         "Precio":1.748
     },
     {
@@ -6101,7 +6123,7 @@
         "Tipo":" PLACAS ELÉCTRICAS LYRA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PLACAS ELECTRICAS LYRA",
-        "Stock":6144.0,
+        "Stock":6145.0,
         "Precio":2.5185
     },
     {
@@ -6134,7 +6156,7 @@
         "Tipo":" PLACAS ELÉCTRICAS LYRA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PLACAS ELECTRICAS LYRA",
-        "Stock":6585.0,
+        "Stock":6586.0,
         "Precio":1.978
     },
     {
@@ -8180,7 +8202,7 @@
         "Tipo":" REGLETA ELÉCTRICA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ REGLETA ELECTRICA",
-        "Stock":20.0,
+        "Stock":21.0,
         "Precio":3.8295
     },
     {
@@ -8191,7 +8213,7 @@
         "Tipo":" REGLETA ELÉCTRICA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ REGLETA ELECTRICA",
-        "Stock":1.0,
+        "Stock":2.0,
         "Precio":4.9105
     },
     {
@@ -8213,7 +8235,7 @@
         "Tipo":" REGLETA ELÉCTRICA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ REGLETA ELECTRICA",
-        "Stock":2866.0,
+        "Stock":2865.0,
         "Precio":6.6355
     },
     {
@@ -8382,17 +8404,6 @@
         "Precio":21.1945
     },
     {
-        "Referencia Interna":"ML110-3000K",
-        "Nombre":"MODULO LED 1.6W 110V 3000K BLANCO 200U\/C",
-        "Categoría":"ILUMINACIÓN",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":" MÓDULO LED",
-        "Marca":"N\/A",
-        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ MODULO LED",
-        "Stock":14500.0,
-        "Precio":0.414
-    },
-    {
         "Referencia Interna":"UFOP-150W",
         "Nombre":"EVA UFO 6500K FP09 IP66 AC100-240V",
         "Categoría":"INDUSTRIAL",
@@ -8402,6 +8413,17 @@
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ UFO",
         "Stock":106.0,
         "Precio":29.785
+    },
+    {
+        "Referencia Interna":"ML110-6500K",
+        "Nombre":"MODULO LED 1.6W 110V 6500K BLANCO 200U\/C",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" MÓDULO LED",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ MODULO LED",
+        "Stock":37040.0,
+        "Precio":0.414
     },
     {
         "Referencia Interna":"ML-110AZ",
@@ -8448,17 +8470,6 @@
         "Precio":1.104
     },
     {
-        "Referencia Interna":"ML110-6500K",
-        "Nombre":"MODULO LED 1.6W 110V 6500K BLANCO 200U\/C",
-        "Categoría":"ILUMINACIÓN",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":" MÓDULO LED",
-        "Marca":"N\/A",
-        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ MODULO LED",
-        "Stock":37040.0,
-        "Precio":0.414
-    },
-    {
         "Referencia Interna":"ML110-10000K",
         "Nombre":"MODULO LED 1.6W 110V 10000K BLANCO 200U\/C",
         "Categoría":"ILUMINACIÓN",
@@ -8467,6 +8478,17 @@
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ MODULO LED",
         "Stock":13080.0,
+        "Precio":0.414
+    },
+    {
+        "Referencia Interna":"ML110-3000K",
+        "Nombre":"MODULO LED 1.6W 110V 3000K BLANCO 200U\/C",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" MÓDULO LED",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ MODULO LED",
+        "Stock":14500.0,
         "Precio":0.414
     },
     {
@@ -8686,7 +8708,7 @@
         "Tipo":" OJO DE BUEY",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ OJO DE BUEY",
-        "Stock":1578.0,
+        "Stock":1577.0,
         "Precio":1.932
     },
     {
@@ -8802,9 +8824,9 @@
     {
         "Referencia Interna":"E-LMM 3W",
         "Nombre":"LINTERNA SOLAR MATA MOSQUITO EVA 6500K",
-        "Categoría":"No Clasificado",
-        "Subcategoría":"No Clasificado",
-        "Tipo":"No Clasificado",
+        "Categoría":"ILUMINACIÓN SOLAR",
+        "Subcategoría":"LUZ LED SOLAR",
+        "Tipo":"SOLAR FOCO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR FOCO",
         "Stock":198.0,
@@ -10551,9 +10573,9 @@
     {
         "Referencia Interna":"LSD-500W",
         "Nombre":"LAMPARA DE POSTE SOLAR CON PANEL SEPARADO 500W",
-        "Categoría":"No Clasificado",
-        "Subcategoría":"No Clasificado",
-        "Tipo":"No Clasificado",
+        "Categoría":"ILUMINACIÓN SOLAR",
+        "Subcategoría":"LUZ LED SOLAR",
+        "Tipo":"SOLAR LUZ DE CALLE",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR LUZ DE CALLE",
         "Stock":190.0,
@@ -10694,9 +10716,9 @@
     {
         "Referencia Interna":"VL-FSPD",
         "Nombre":"FUSIBLE DPS 500\/600VDC 20-40kA",
-        "Categoría":"No Clasificado",
-        "Subcategoría":"No Clasificado",
-        "Tipo":"No Clasificado",
+        "Categoría":"MATERIAL ELÉCTRICO",
+        "Subcategoría":"FERRETERÍA",
+        "Tipo":" BREAKER",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ BREAKER",
         "Stock":960.0,
@@ -10881,9 +10903,9 @@
     {
         "Referencia Interna":"VL-BL42W",
         "Nombre":"TIRA RIGIDA LED 2835SMD 42W 4000K 42VDC",
-        "Categoría":"No Clasificado",
-        "Subcategoría":"No Clasificado",
-        "Tipo":"No Clasificado",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":"CINTA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CINTA LED",
         "Stock":1152.0,
@@ -11128,7 +11150,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":1950.0,
+        "Stock":1951.0,
         "Precio":9.292
     },
     {
