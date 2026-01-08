@@ -3894,17 +3894,6 @@
         "Precio":1.817
     },
     {
-        "Referencia Interna":"VL-TLS 14W",
-        "Nombre":"TUBO LED T5 14W 90CM SMART 100-240V",
-        "Categoría":"ILUMINACIÓN",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":"FOCO LED",
-        "Marca":"N\/A",
-        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":998.0,
-        "Precio":5.658
-    },
-    {
         "Referencia Interna":"LV-210 18W 6500K",
         "Nombre":"VICTORIA LED PANEL 6500K 18W SOBREPUESTO REDONDO 20U\/C",
         "Categoría":"ILUMINACIÓN",
@@ -8228,6 +8217,17 @@
         "Precio":20.332
     },
     {
+        "Referencia Interna":"VL-VTL 70W",
+        "Nombre":"FOCO LED 70W VENTILADOR 2CCT 110-265V",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":"FOCO LED",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
+        "Stock":193.0,
+        "Precio":29.8195
+    },
+    {
         "Referencia Interna":"JH-L923",
         "Nombre":"LAMPARA DECORATIVA  3CCT - 36W",
         "Categoría":"ILUMINACIÓN",
@@ -8446,6 +8446,17 @@
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ REGLETA ELECTRICA",
         "Stock":33.0,
         "Precio":3.8295
+    },
+    {
+        "Referencia Interna":"VL-LSTBN 24W",
+        "Nombre":"LUCES TIPO BARCO OVAL NEGRO 24W SMART",
+        "Categoría":"No Clasificado",
+        "Subcategoría":"No Clasificado",
+        "Tipo":"No Clasificado",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
+        "Stock":495.0,
+        "Precio":7.6475
     },
     {
         "Referencia Interna":"VLEX-3P 10M",
@@ -8886,17 +8897,6 @@
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PERFIL DE ALUMINIO",
         "Stock":9620.0,
         "Precio":6.21
-    },
-    {
-        "Referencia Interna":"VL-TLRGB 5V",
-        "Nombre":"CINTA MAGICA 5M SMART IP65 AC100-240V DC5V",
-        "Categoría":"ILUMINACIÓN",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":"CINTA LED",
-        "Marca":"N\/A",
-        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CINTA LED",
-        "Stock":496.0,
-        "Precio":19.619
     },
     {
         "Referencia Interna":"EFE-30W",
@@ -12562,17 +12562,6 @@
         "Precio":19.8835
     },
     {
-        "Referencia Interna":"VL-VTL 70W",
-        "Nombre":"FOCO LED 70W VENTILADOR 2CCT 110-265V",
-        "Categoría":"ILUMINACIÓN",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":"FOCO LED",
-        "Marca":"N\/A",
-        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":193.0,
-        "Precio":29.8195
-    },
-    {
         "Referencia Interna":"VL-LSTBN 18W",
         "Nombre":"LUCES TIPO BARCO OVAL NEGRO 18W SMART",
         "Categoría":"ILUMINACIÓN",
@@ -12584,17 +12573,6 @@
         "Precio":6.3135
     },
     {
-        "Referencia Interna":"VL-LSTBN 24W",
-        "Nombre":"LUCES TIPO BARCO OVAL NEGRO 24W SMART",
-        "Categoría":"No Clasificado",
-        "Subcategoría":"No Clasificado",
-        "Tipo":"No Clasificado",
-        "Marca":"N\/A",
-        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":495.0,
-        "Precio":7.6475
-    },
-    {
         "Referencia Interna":"VL-TLS 18W",
         "Nombre":"TUBO LED T5 18W 120CM SMART 100-240V",
         "Categoría":"ILUMINACIÓN",
@@ -12604,6 +12582,28 @@
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
         "Stock":1989.0,
         "Precio":6.118
+    },
+    {
+        "Referencia Interna":"VL-TLS 14W",
+        "Nombre":"TUBO LED T5 14W 90CM SMART 100-240V",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":"FOCO LED",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
+        "Stock":998.0,
+        "Precio":5.658
+    },
+    {
+        "Referencia Interna":"VL-TLRGB 5V",
+        "Nombre":"CINTA MAGICA 5M SMART IP65 AC100-240V DC5V",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":"CINTA LED",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CINTA LED",
+        "Stock":496.0,
+        "Precio":19.619
     },
     {
         "Referencia Interna":"CBD-50A",
