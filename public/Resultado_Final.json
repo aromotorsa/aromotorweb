@@ -1877,7 +1877,7 @@
         "Tipo":"SOLAR FOCO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR FOCO",
-        "Stock":199.0,
+        "Stock":200.0,
         "Precio":20.3205
     },
     {
@@ -2009,7 +2009,7 @@
         "Tipo":"SOLAR LUZ DE CALLE",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR LUZ DE CALLE",
-        "Stock":190.0,
+        "Stock":191.0,
         "Precio":226.0095
     },
     {
@@ -2560,7 +2560,7 @@
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SISTEMA SOLAR",
         "Stock":740.0,
-        "Precio":0.0
+        "Precio":2.1735
     },
     {
         "Referencia Interna":"RN-IC1",
@@ -2571,7 +2571,7 @@
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SISTEMA SOLAR",
         "Stock":1100.0,
-        "Precio":0.0
+        "Precio":2.1735
     },
     {
         "Referencia Interna":"RN-SR-RB2",
@@ -2582,7 +2582,7 @@
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SISTEMA SOLAR",
         "Stock":360.0,
-        "Precio":0.0
+        "Precio":64.8715
     },
     {
         "Referencia Interna":"RN-SR-SPC",
@@ -2593,7 +2593,7 @@
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SISTEMA SOLAR",
         "Stock":370.0,
-        "Precio":0.0
+        "Precio":3.151
     },
     {
         "Referencia Interna":"RN7-SW-3-A001",
@@ -2604,7 +2604,7 @@
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SISTEMA SOLAR",
         "Stock":730.0,
-        "Precio":0.0
+        "Precio":3.7145
     },
     {
         "Referencia Interna":"RN-TF-A",
@@ -2615,7 +2615,7 @@
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SISTEMA SOLAR",
         "Stock":730.0,
-        "Precio":0.0
+        "Precio":2.1735
     },
     {
         "Referencia Interna":"RN-5D",
@@ -2626,7 +2626,7 @@
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SISTEMA SOLAR",
         "Stock":360.0,
-        "Precio":0.0
+        "Precio":87.837
     },
     {
         "Referencia Interna":"RN-EP",
@@ -2637,7 +2637,7 @@
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SISTEMA SOLAR",
         "Stock":740.0,
-        "Precio":0.0
+        "Precio":3.266
     },
     {
         "Referencia Interna":"RN7-PW-A001",
@@ -2648,7 +2648,7 @@
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SISTEMA SOLAR",
         "Stock":144.0,
-        "Precio":0.0
+        "Precio":8.832
     },
     {
         "Referencia Interna":"VL-FD3 18W",
@@ -2659,7 +2659,7 @@
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED DECORATIVO",
         "Stock":600.0,
-        "Precio":0.0
+        "Precio":11.0975
     },
     {
         "Referencia Interna":"VL-FD2 18W",
@@ -2670,7 +2670,7 @@
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED DECORATIVO",
         "Stock":600.0,
-        "Precio":0.0
+        "Precio":11.0975
     },
     {
         "Referencia Interna":"VL-FD1 18W",
@@ -2681,7 +2681,7 @@
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED DECORATIVO",
         "Stock":600.0,
-        "Precio":0.0
+        "Precio":11.0975
     },
     {
         "Referencia Interna":"VL-TN20",
@@ -2692,7 +2692,7 @@
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
         "Stock":8000.0,
-        "Precio":0.0
+        "Precio":2.1045
     },
     {
         "Referencia Interna":"VL-TA1S",
@@ -2703,7 +2703,7 @@
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
         "Stock":16000.0,
-        "Precio":0.0
+        "Precio":0.4025
     },
     {
         "Referencia Interna":"VL-TPN",
@@ -2714,7 +2714,7 @@
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
         "Stock":8400.0,
-        "Precio":0.0
+        "Precio":0.23
     },
     {
         "Referencia Interna":"VL-CSM",
@@ -2725,7 +2725,7 @@
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
         "Stock":18000.0,
-        "Precio":0.0
+        "Precio":0.6785
     },
     {
         "Referencia Interna":"AR-T",
@@ -2856,7 +2856,7 @@
         "Tipo":" AMARRAS PLÁSTICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ AMARRAS PLASTICAS",
-        "Stock":1188.0,
+        "Stock":1189.0,
         "Precio":0.3795
     },
     {
@@ -2911,7 +2911,7 @@
         "Tipo":" AMARRAS PLÁSTICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ AMARRAS PLASTICAS",
-        "Stock":3536.0,
+        "Stock":3537.0,
         "Precio":1.9665
     },
     {
@@ -2955,7 +2955,7 @@
         "Tipo":" AMARRAS PLÁSTICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ AMARRAS PLASTICAS",
-        "Stock":1168.0,
+        "Stock":1169.0,
         "Precio":6.118
     },
     {
@@ -2977,7 +2977,7 @@
         "Tipo":" AMARRAS PLÁSTICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ AMARRAS PLASTICAS",
-        "Stock":2501.0,
+        "Stock":2502.0,
         "Precio":0.805
     },
     {
@@ -3025,6 +3025,17 @@
         "Precio":2.3
     },
     {
+        "Referencia Interna":"N-4.8X30",
+        "Nombre":"AMARRAS PLASTICAS NEGRA 4.8MMX300MM 100PZAS",
+        "Categoría":"MATERIAL ELÉCTRICO",
+        "Subcategoría":"FERRETERÍA",
+        "Tipo":" AMARRAS PLÁSTICAS",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ AMARRAS PLASTICAS",
+        "Stock":1.0,
+        "Precio":2.622
+    },
+    {
         "Referencia Interna":"N-4.8X35",
         "Nombre":"AMARRAS PLASTICAS NEGRA 4.8MMX350MM 100PZAS",
         "Categoría":"MATERIAL ELÉCTRICO",
@@ -3065,7 +3076,7 @@
         "Tipo":" AMARRAS PLÁSTICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ AMARRAS PLASTICAS",
-        "Stock":994.0,
+        "Stock":995.0,
         "Precio":6.118
     },
     {
@@ -4682,7 +4693,7 @@
         "Tipo":" CINTA ELÉCTRICA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ CINTA ELECTRICA",
-        "Stock":1891.0,
+        "Stock":1892.0,
         "Precio":0.621
     },
     {
@@ -4693,7 +4704,7 @@
         "Tipo":" CINTA ELÉCTRICA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ CINTA ELECTRICA",
-        "Stock":3720.0,
+        "Stock":3721.0,
         "Precio":0.3565
     },
     {
@@ -4715,7 +4726,7 @@
         "Tipo":" CINTA ELÉCTRICA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ CINTA ELECTRICA",
-        "Stock":5266.0,
+        "Stock":5267.0,
         "Precio":0.3565
     },
     {
@@ -4726,7 +4737,7 @@
         "Tipo":" CINTA ELÉCTRICA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ CINTA ELECTRICA",
-        "Stock":8549.0,
+        "Stock":8550.0,
         "Precio":0.3565
     },
     {
@@ -4759,7 +4770,7 @@
         "Tipo":" CINTA ELÉCTRICA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ CINTA ELECTRICA",
-        "Stock":692.0,
+        "Stock":693.0,
         "Precio":0.621
     },
     {
@@ -5100,7 +5111,7 @@
         "Tipo":" CONECTOR DENTADO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ CONECTOR DENTADO",
-        "Stock":2025.0,
+        "Stock":2033.0,
         "Precio":2.2655
     },
     {
@@ -5155,7 +5166,7 @@
         "Tipo":" MANGUERA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ MANGUERA LED",
-        "Stock":180.0,
+        "Stock":183.0,
         "Precio":6.9575
     },
     {
@@ -5419,7 +5430,7 @@
         "Tipo":" FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":15896.0,
+        "Stock":15796.0,
         "Precio":2.208
     },
     {
@@ -5463,7 +5474,7 @@
         "Tipo":" FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":17353.0,
+        "Stock":17113.0,
         "Precio":3.565
     },
     {
@@ -5485,7 +5496,7 @@
         "Tipo":" FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":94715.0,
+        "Stock":94515.0,
         "Precio":0.5175
     },
     {
@@ -5507,7 +5518,7 @@
         "Tipo":" SOLAR LUZ DE CALLE",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR LUZ DE CALLE",
-        "Stock":280.0,
+        "Stock":276.0,
         "Precio":70.8975
     },
     {
@@ -5830,6 +5841,17 @@
         "Precio":1.449
     },
     {
+        "Referencia Interna":"ZM-1",
+        "Nombre":"FOCO LED E14 4W 2700K 110V TRANSPARENTE",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" FOCO LED DECORATIVO",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED DECORATIVO",
+        "Stock":1.0,
+        "Precio":1.0695
+    },
+    {
         "Referencia Interna":"ZM-9",
         "Nombre":"FOCO LED E27 4W 2700K 110V AMBAR",
         "Categoría":"ILUMINACIÓN",
@@ -5837,7 +5859,7 @@
         "Tipo":" FOCO LED DECORATIVO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED DECORATIVO",
-        "Stock":7910.0,
+        "Stock":7911.0,
         "Precio":1.357
     },
     {
@@ -5848,7 +5870,7 @@
         "Tipo":" FOCO LED DECORATIVO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED DECORATIVO",
-        "Stock":7460.0,
+        "Stock":7461.0,
         "Precio":1.0235
     },
     {
@@ -5859,7 +5881,7 @@
         "Tipo":" FOCO LED DECORATIVO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED DECORATIVO",
-        "Stock":3886.0,
+        "Stock":3887.0,
         "Precio":1.311
     },
     {
@@ -5881,7 +5903,7 @@
         "Tipo":" FOCO LED DECORATIVO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED DECORATIVO",
-        "Stock":3963.0,
+        "Stock":3964.0,
         "Precio":2.553
     },
     {
@@ -6255,7 +6277,7 @@
         "Tipo":" GUIRNALDA DE EXTERIOR",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ GUIRNALDA DE EXTERIOR",
-        "Stock":353.0,
+        "Stock":354.0,
         "Precio":14.1565
     },
     {
@@ -6288,7 +6310,7 @@
         "Tipo":" KIT SOLARES",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ KIT SOLARES",
-        "Stock":380.0,
+        "Stock":381.0,
         "Precio":39.1805
     },
     {
@@ -6873,6 +6895,17 @@
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ LAMPARAS DECORATIVAS",
         "Stock":3.0,
         "Precio":15.7665
+    },
+    {
+        "Referencia Interna":"CL0613-26W BLACK",
+        "Nombre":"LAMPARA DECORATIVA DE TECHO LED METAL\/ACRILICO BLACK",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" LÁMPARAS DECORATIVAS",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ LAMPARAS DECORATIVAS",
+        "Stock":1.0,
+        "Precio":31.809
     },
     {
         "Referencia Interna":"GT063B-800",
@@ -7806,7 +7839,7 @@
         "Tipo":" OJO DE BUEY",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ OJO DE BUEY",
-        "Stock":1504.0,
+        "Stock":1505.0,
         "Precio":2.1505
     },
     {
@@ -7817,7 +7850,7 @@
         "Tipo":" OJO DE BUEY",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ OJO DE BUEY",
-        "Stock":5352.0,
+        "Stock":5353.0,
         "Precio":2.1505
     },
     {
@@ -9918,7 +9951,7 @@
         "Tipo":" SOLAR FOCO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR FOCO",
-        "Stock":7421.0,
+        "Stock":7422.0,
         "Precio":11.201
     },
     {
@@ -9984,7 +10017,7 @@
         "Tipo":" SOLAR FOCO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR FOCO",
-        "Stock":4933.0,
+        "Stock":4934.0,
         "Precio":11.2125
     },
     {
@@ -10006,7 +10039,7 @@
         "Tipo":" SOLAR FOCO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR FOCO",
-        "Stock":7773.0,
+        "Stock":7774.0,
         "Precio":8.4065
     },
     {
@@ -10017,7 +10050,7 @@
         "Tipo":" SOLAR FOCO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR FOCO",
-        "Stock":4733.0,
+        "Stock":4734.0,
         "Precio":11.9945
     },
     {
@@ -11370,7 +11403,7 @@
         "Tipo":" MANGUERA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ MANGUERA LED",
-        "Stock":391.0,
+        "Stock":397.0,
         "Precio":89.8955
     },
     {
@@ -12789,7 +12822,7 @@
         "Tipo":" FOCO LED DECORATIVO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED DECORATIVO",
-        "Stock":23880.0,
+        "Stock":23881.0,
         "Precio":1.104
     },
     {
@@ -13483,7 +13516,7 @@
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
         "Stock":35000.0,
-        "Precio":0.1955
+        "Precio":0.2415
     },
     {
         "Referencia Interna":"VLEB-10A",
@@ -13494,7 +13527,7 @@
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
         "Stock":45000.0,
-        "Precio":0.1955
+        "Precio":0.2415
     },
     {
         "Referencia Interna":"VLCIA3-15A",
@@ -13515,7 +13548,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":11190.0,
+        "Stock":11195.0,
         "Precio":0.437
     },
     {
@@ -13669,7 +13702,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":38330.0,
+        "Stock":38340.0,
         "Precio":0.368
     },
     {
@@ -13681,7 +13714,7 @@
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
         "Stock":73670.0,
-        "Precio":0.4255
+        "Precio":0.4945
     },
     {
         "Referencia Interna":"VLIH-3B",
