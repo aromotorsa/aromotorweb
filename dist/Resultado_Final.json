@@ -40,7 +40,7 @@
         "Tipo":" SISTEMA SOLAR",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES LED 0% \/ SISTEMA SOLAR",
-        "Stock":13.0,
+        "Stock":9.0,
         "Precio":550.0
     },
     {
@@ -51,7 +51,7 @@
         "Tipo":" PERFIL DE ALUMINIO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PERFIL DE ALUMINIO",
-        "Stock":10187.0,
+        "Stock":10181.0,
         "Precio":3.9905
     },
     {
@@ -128,7 +128,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE REDONDO",
-        "Stock":5130.0,
+        "Stock":5160.0,
         "Precio":4.83
     },
     {
@@ -205,7 +205,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO REDONDO",
-        "Stock":8808.0,
+        "Stock":8788.0,
         "Precio":5.635
     },
     {
@@ -238,7 +238,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO REDONDO",
-        "Stock":175.0,
+        "Stock":135.0,
         "Precio":8.901
     },
     {
@@ -308,6 +308,17 @@
         "Precio":5901.46
     },
     {
+        "Referencia Interna":"VP-ER 6W 3K",
+        "Nombre":"VICTORIA LED PANEL 3000K 6W EMPOTRABLE REDONDO 80U\/C",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" PANEL EMPOTRABLE REDONDO",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE REDONDO",
+        "Stock":30.0,
+        "Precio":1.725
+    },
+    {
         "Referencia Interna":"VP-ER 12W 3K",
         "Nombre":"VICTORIA LED PANEL 3000K 12W EMPOTRABLE REDONDO 40U\/C",
         "Categoría":"ILUMINACIÓN",
@@ -337,7 +348,7 @@
         "Tipo":" PANEL EMPOTRABLE CUADRADO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE CUADRADO",
-        "Stock":2786.0,
+        "Stock":2766.0,
         "Precio":4.7495
     },
     {
@@ -975,7 +986,7 @@
         "Tipo":" OJO DE BUEY",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ OJO DE BUEY",
-        "Stock":4491.0,
+        "Stock":4495.0,
         "Precio":2.1505
     },
     {
@@ -1140,7 +1151,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO REDONDO",
-        "Stock":3849.0,
+        "Stock":3829.0,
         "Precio":2.668
     },
     {
@@ -1151,7 +1162,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO REDONDO",
-        "Stock":5910.0,
+        "Stock":5890.0,
         "Precio":3.979
     },
     {
@@ -1239,7 +1250,7 @@
         "Tipo":" PANEL EMPOTRABLE CUADRADO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE CUADRADO",
-        "Stock":1068.0,
+        "Stock":1048.0,
         "Precio":3.0705
     },
     {
@@ -1646,8 +1657,19 @@
         "Tipo":" REGLETA ELÉCTRICA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ REGLETA ELECTRICA",
-        "Stock":9.0,
+        "Stock":7.0,
         "Precio":3.8295
+    },
+    {
+        "Referencia Interna":"VLEX-3P 5M",
+        "Nombre":"CABLE DE EXTENSIÓN 5 METROS 3 SALIDAS",
+        "Categoría":"MATERIAL ELÉCTRICO",
+        "Subcategoría":"FERRETERÍA",
+        "Tipo":" REGLETA ELÉCTRICA",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ REGLETA ELECTRICA",
+        "Stock":2.0,
+        "Precio":4.9105
     },
     {
         "Referencia Interna":"VLEX-3P 10M",
@@ -1668,7 +1690,7 @@
         "Tipo":" REGLETA ELÉCTRICA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ REGLETA ELECTRICA",
-        "Stock":2830.0,
+        "Stock":2860.0,
         "Precio":6.6355
     },
     {
@@ -1679,7 +1701,7 @@
         "Tipo":" FOCO LED DECORATIVO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED DECORATIVO",
-        "Stock":1520.0,
+        "Stock":1521.0,
         "Precio":1.311
     },
     {
@@ -3516,7 +3538,7 @@
         "Tipo":" BREAKER",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ BREAKER",
-        "Stock":989.0,
+        "Stock":984.0,
         "Precio":3.9445
     },
     {
@@ -3637,7 +3659,7 @@
         "Tipo":" BREAKER",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ BREAKER",
-        "Stock":481.0,
+        "Stock":480.0,
         "Precio":7.7625
     },
     {
@@ -3692,7 +3714,7 @@
         "Tipo":" BREAKER",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ BREAKER",
-        "Stock":624.0,
+        "Stock":635.0,
         "Precio":8.4065
     },
     {
@@ -3934,7 +3956,7 @@
         "Tipo":" BREAKER",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ BREAKER",
-        "Stock":462.0,
+        "Stock":461.0,
         "Precio":4.715
     },
     {
@@ -3945,7 +3967,7 @@
         "Tipo":" BREAKER",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ BREAKER",
-        "Stock":885.0,
+        "Stock":886.0,
         "Precio":4.715
     },
     {
@@ -3956,7 +3978,7 @@
         "Tipo":" BREAKER",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ BREAKER",
-        "Stock":290.0,
+        "Stock":289.0,
         "Precio":4.715
     },
     {
@@ -4000,7 +4022,7 @@
         "Tipo":" BREAKER",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ BREAKER",
-        "Stock":366.0,
+        "Stock":360.0,
         "Precio":4.8415
     },
     {
@@ -4055,7 +4077,7 @@
         "Tipo":" BREAKER",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ BREAKER",
-        "Stock":74.0,
+        "Stock":76.0,
         "Precio":7.084
     },
     {
@@ -4121,7 +4143,7 @@
         "Tipo":" BREAKER",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ BREAKER",
-        "Stock":15.0,
+        "Stock":16.0,
         "Precio":9.0505
     },
     {
@@ -4132,7 +4154,7 @@
         "Tipo":" BREAKER",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ BREAKER",
-        "Stock":501.0,
+        "Stock":499.0,
         "Precio":9.0505
     },
     {
@@ -4231,7 +4253,7 @@
         "Tipo":" BREAKER",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ BREAKER",
-        "Stock":56.0,
+        "Stock":57.0,
         "Precio":8.0615
     },
     {
@@ -4451,7 +4473,7 @@
         "Tipo":" CARCASA PARA DICROICO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CARCASA PARA DICROICO",
-        "Stock":805.0,
+        "Stock":804.0,
         "Precio":0.8395
     },
     {
@@ -4462,7 +4484,7 @@
         "Tipo":" CARCASA PARA DICROICO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CARCASA PARA DICROICO",
-        "Stock":1958.0,
+        "Stock":2016.0,
         "Precio":1.3915
     },
     {
@@ -4473,7 +4495,7 @@
         "Tipo":" CARCASA PARA DICROICO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CARCASA PARA DICROICO",
-        "Stock":854.0,
+        "Stock":796.0,
         "Precio":1.3915
     },
     {
@@ -4550,7 +4572,7 @@
         "Tipo":" CARCASA PARA DICROICO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CARCASA PARA DICROICO",
-        "Stock":635.0,
+        "Stock":636.0,
         "Precio":1.0235
     },
     {
@@ -4671,7 +4693,7 @@
         "Tipo":" CINTA ELÉCTRICA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ CINTA ELECTRICA",
-        "Stock":8229.0,
+        "Stock":8223.0,
         "Precio":0.3565
     },
     {
@@ -4682,7 +4704,7 @@
         "Tipo":" CINTA ELÉCTRICA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ CINTA ELECTRICA",
-        "Stock":2568.0,
+        "Stock":2545.0,
         "Precio":0.621
     },
     {
@@ -4704,7 +4726,7 @@
         "Tipo":" CINTA ELÉCTRICA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ CINTA ELECTRICA",
-        "Stock":693.0,
+        "Stock":694.0,
         "Precio":0.621
     },
     {
@@ -4715,7 +4737,7 @@
         "Tipo":" CINTA ELÉCTRICA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ CINTA ELECTRICA",
-        "Stock":2899.0,
+        "Stock":2908.0,
         "Precio":0.3565
     },
     {
@@ -4726,7 +4748,7 @@
         "Tipo":" CINTA ELÉCTRICA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ CINTA ELECTRICA",
-        "Stock":2616.0,
+        "Stock":2615.0,
         "Precio":0.6095
     },
     {
@@ -5045,8 +5067,19 @@
         "Tipo":" CONECTOR DENTADO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ CONECTOR DENTADO",
-        "Stock":1823.0,
+        "Stock":1768.0,
         "Precio":2.2655
+    },
+    {
+        "Referencia Interna":"SMEP AL",
+        "Nombre":"CONECTOR DENTADO IPC 16-95MM\/1.5-10MM 400U\/C",
+        "Categoría":"MATERIAL ELÉCTRICO",
+        "Subcategoría":"FERRETERÍA",
+        "Tipo":" CONECTOR DENTADO",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ CONECTOR DENTADO",
+        "Stock":56.0,
+        "Precio":1.3915
     },
     {
         "Referencia Interna":"SM2-95 AL",
@@ -5067,8 +5100,19 @@
         "Tipo":" CONECTOR DENTADO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ CONECTOR DENTADO",
-        "Stock":1366.0,
+        "Stock":1365.0,
         "Precio":4.8645
+    },
+    {
+        "Referencia Interna":"CONTROL REMOTO MAGIC",
+        "Nombre":"CONTROL REMOTO MAGIC BOTONES ACCESO DIRECTO NETFLIX DISNEY AMAZON PRIME",
+        "Categoría":"No Clasificado",
+        "Subcategoría":"No Clasificado",
+        "Tipo":"No Clasificado",
+        "Marca":"N\/A",
+        "Categoria de producto":"TECNOLOGIA \/ PARTES Y ACCESORIOS TECNOLOGIA \/ NACIONALES",
+        "Stock":1.0,
+        "Precio":0.0
     },
     {
         "Referencia Interna":"VL-RGB SET",
@@ -5166,7 +5210,7 @@
         "Tipo":" CINTA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CINTA LED",
-        "Stock":30963.0,
+        "Stock":30953.0,
         "Precio":8.8435
     },
     {
@@ -5177,7 +5221,7 @@
         "Tipo":" CINTA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CINTA LED",
-        "Stock":37129.0,
+        "Stock":37119.0,
         "Precio":8.8435
     },
     {
@@ -5225,17 +5269,6 @@
         "Precio":11.9025
     },
     {
-        "Referencia Interna":"E-CL100M 3K",
-        "Nombre":"EVA CINTA LED ROLLO 100M AC110V 2835 IP20 120L 3000K",
-        "Categoría":"ILUMINACIÓN",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":" CINTA LED",
-        "Marca":"N\/A",
-        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CINTA LED",
-        "Stock":1.0,
-        "Precio":86.9975
-    },
-    {
         "Referencia Interna":"CE-2835 12MM",
         "Nombre":"EVA CONTROLADOR 2835 12MM 110V",
         "Categoría":"ILUMINACIÓN",
@@ -5254,7 +5287,7 @@
         "Tipo":" MANGUERA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ MANGUERA LED",
-        "Stock":14742.0,
+        "Stock":14792.0,
         "Precio":1.012
     },
     {
@@ -5391,10 +5424,10 @@
     },
     {
         "Referencia Interna":"EF-50W",
-        "Nombre":"EVA FOCO 50W 85-265V 6500K 30U\/C",
-        "Categoría":"ILUMINACIÓN",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":" FOCO LED",
+        "Nombre":"EVA FOCO 50W 85-265V 6500K 40U\/C",
+        "Categoría":"No Clasificado",
+        "Subcategoría":"No Clasificado",
+        "Tipo":"No Clasificado",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
         "Stock":16876.0,
@@ -5463,7 +5496,7 @@
         "Tipo":" PANEL EMPOTRABLE CUADRADO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE CUADRADO",
-        "Stock":978.0,
+        "Stock":251.0,
         "Precio":35.3395
     },
     {
@@ -5485,7 +5518,7 @@
         "Tipo":" PANEL EMPOTRABLE CUADRADO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE CUADRADO",
-        "Stock":1249.0,
+        "Stock":694.0,
         "Precio":10.2925
     },
     {
@@ -5683,7 +5716,7 @@
         "Tipo":" REGLETA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ REGLETA LED",
-        "Stock":1281.0,
+        "Stock":1279.0,
         "Precio":3.565
     },
     {
@@ -5815,7 +5848,7 @@
         "Tipo":" FOCO LED DECORATIVO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED DECORATIVO",
-        "Stock":4328.0,
+        "Stock":4377.0,
         "Precio":1.2075
     },
     {
@@ -6024,7 +6057,7 @@
         "Tipo":" FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":94.0,
+        "Stock":84.0,
         "Precio":3.772
     },
     {
@@ -6090,7 +6123,7 @@
         "Tipo":" FOCO LED RECARGABLE",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED RECARGABLE",
-        "Stock":4483.0,
+        "Stock":4481.0,
         "Precio":7.153
     },
     {
@@ -6266,7 +6299,7 @@
         "Tipo":" KIT SOLARES",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ KIT SOLARES",
-        "Stock":92.0,
+        "Stock":105.0,
         "Precio":31.9355
     },
     {
@@ -6299,7 +6332,7 @@
         "Tipo":" KIT SOLARES",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ KIT SOLARES",
-        "Stock":60.0,
+        "Stock":47.0,
         "Precio":37.5705
     },
     {
@@ -7740,7 +7773,7 @@
         "Tipo":" OJO DE BUEY",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ OJO DE BUEY",
-        "Stock":5328.0,
+        "Stock":5325.0,
         "Precio":2.1505
     },
     {
@@ -8180,7 +8213,7 @@
         "Tipo":" PERFIL DE ALUMINIO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PERFIL DE ALUMINIO",
-        "Stock":30.0,
+        "Stock":27.0,
         "Precio":8.2455
     },
     {
@@ -8235,7 +8268,7 @@
         "Tipo":" PERFIL DE ALUMINIO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PERFIL DE ALUMINIO",
-        "Stock":1349.0,
+        "Stock":1449.0,
         "Precio":5.451
     },
     {
@@ -8455,7 +8488,7 @@
         "Tipo":" PERFIL DE ALUMINIO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PERFIL DE ALUMINIO",
-        "Stock":152.0,
+        "Stock":150.0,
         "Precio":17.8365
     },
     {
@@ -8774,7 +8807,7 @@
         "Tipo":" PILAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PILAS",
-        "Stock":629.0,
+        "Stock":630.0,
         "Precio":4.002
     },
     {
@@ -8785,7 +8818,7 @@
         "Tipo":" PILAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PILAS",
-        "Stock":527.0,
+        "Stock":525.0,
         "Precio":0.9085
     },
     {
@@ -8807,7 +8840,7 @@
         "Tipo":" PILAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PILAS",
-        "Stock":574.0,
+        "Stock":575.0,
         "Precio":4.002
     },
     {
@@ -8851,7 +8884,7 @@
         "Tipo":" PROTECTOR DE VOLTAJE",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PROTECTOR DE VOLTAJE",
-        "Stock":4336.0,
+        "Stock":4347.0,
         "Precio":9.2575
     },
     {
@@ -8873,7 +8906,7 @@
         "Tipo":" PROTECTOR DE VOLTAJE",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PROTECTOR DE VOLTAJE",
-        "Stock":3137.0,
+        "Stock":3126.0,
         "Precio":12.443
     },
     {
@@ -8950,7 +8983,7 @@
         "Tipo":" REGLETA ELÉCTRICA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ REGLETA ELECTRICA",
-        "Stock":2388.0,
+        "Stock":2386.0,
         "Precio":5.566
     },
     {
@@ -8972,7 +9005,7 @@
         "Tipo":" REGLETA ELÉCTRICA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ REGLETA ELECTRICA",
-        "Stock":221.0,
+        "Stock":220.0,
         "Precio":6.7045
     },
     {
@@ -9038,7 +9071,7 @@
         "Tipo":"DOMÓTICA",
         "Marca":"N\/A",
         "Categoria de producto":"TECNOLOGIA \/ DOMOTICA \/ DOMOTICA",
-        "Stock":18.0,
+        "Stock":19.0,
         "Precio":112.999
     },
     {
@@ -9115,7 +9148,7 @@
         "Tipo":"DOMÓTICA",
         "Marca":"N\/A",
         "Categoria de producto":"TECNOLOGIA \/ DOMOTICA \/ DOMOTICA",
-        "Stock":522.0,
+        "Stock":533.0,
         "Precio":18.4
     },
     {
@@ -9126,7 +9159,7 @@
         "Tipo":"DOMÓTICA",
         "Marca":"N\/A",
         "Categoria de producto":"TECNOLOGIA \/ DOMOTICA \/ DOMOTICA",
-        "Stock":156.0,
+        "Stock":148.0,
         "Precio":18.4
     },
     {
@@ -9148,7 +9181,7 @@
         "Tipo":"DOMÓTICA",
         "Marca":"N\/A",
         "Categoria de producto":"TECNOLOGIA \/ DOMOTICA \/ DOMOTICA",
-        "Stock":47.0,
+        "Stock":49.0,
         "Precio":9.2
     },
     {
@@ -9159,7 +9192,7 @@
         "Tipo":"DOMÓTICA",
         "Marca":"N\/A",
         "Categoria de producto":"TECNOLOGIA \/ DOMOTICA \/ DOMOTICA",
-        "Stock":1102.0,
+        "Stock":1100.0,
         "Precio":10.189
     },
     {
@@ -9192,7 +9225,7 @@
         "Tipo":"DOMÓTICA",
         "Marca":"N\/A",
         "Categoria de producto":"TECNOLOGIA \/ DOMOTICA \/ DOMOTICA",
-        "Stock":229.0,
+        "Stock":226.0,
         "Precio":24.15
     },
     {
@@ -9302,7 +9335,7 @@
         "Tipo":" SOLAR APLIQUE DE PARED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR APLIQUE DE PARED",
-        "Stock":14.0,
+        "Stock":7.0,
         "Precio":9.223
     },
     {
@@ -9313,7 +9346,7 @@
         "Tipo":" SOLAR APLIQUE DE PARED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR APLIQUE DE PARED",
-        "Stock":239.0,
+        "Stock":237.0,
         "Precio":6.9805
     },
     {
@@ -9368,7 +9401,7 @@
         "Tipo":" SISTEMA SOLAR",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES LED 0% \/ SISTEMA SOLAR",
-        "Stock":18.0,
+        "Stock":17.0,
         "Precio":420.0
     },
     {
@@ -9423,7 +9456,7 @@
         "Tipo":" SISTEMA SOLAR",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SISTEMA SOLAR",
-        "Stock":2164.0,
+        "Stock":2124.0,
         "Precio":3.8985
     },
     {
@@ -9445,7 +9478,7 @@
         "Tipo":" SISTEMA SOLAR",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SISTEMA SOLAR",
-        "Stock":334.0,
+        "Stock":294.0,
         "Precio":3.8985
     },
     {
@@ -9533,7 +9566,7 @@
         "Tipo":" SISTEMA SOLAR",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SISTEMA SOLAR",
-        "Stock":30.0,
+        "Stock":29.0,
         "Precio":167.9805
     },
     {
@@ -9823,17 +9856,6 @@
         "Precio":8.9815
     },
     {
-        "Referencia Interna":"PRGBS-150W",
-        "Nombre":"SOLAR FOCO LED 3 TONOS DE LUZ",
-        "Categoría":"ILUMINACIÓN SOLAR",
-        "Subcategoría":"LUZ LED SOLAR",
-        "Tipo":" SOLAR FOCO",
-        "Marca":"N\/A",
-        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR FOCO",
-        "Stock":1.0,
-        "Precio":53.4865
-    },
-    {
         "Referencia Interna":"YL-EM04",
         "Nombre":"SOLAR FOCO LED 300W",
         "Categoría":"ILUMINACIÓN SOLAR",
@@ -9852,7 +9874,7 @@
         "Tipo":" SOLAR FOCO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR FOCO",
-        "Stock":1468.0,
+        "Stock":1465.0,
         "Precio":5.3245
     },
     {
@@ -9885,7 +9907,7 @@
         "Tipo":" SOLAR FOCO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR FOCO",
-        "Stock":7714.0,
+        "Stock":7715.0,
         "Precio":8.4065
     },
     {
@@ -9896,7 +9918,7 @@
         "Tipo":" SOLAR FOCO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR FOCO",
-        "Stock":4732.0,
+        "Stock":4735.0,
         "Precio":11.9945
     },
     {
@@ -10875,7 +10897,7 @@
         "Tipo":" FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":25746.0,
+        "Stock":25742.0,
         "Precio":2.4265
     },
     {
@@ -10886,7 +10908,7 @@
         "Tipo":" FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":13878.0,
+        "Stock":13877.0,
         "Precio":3.2085
     },
     {
@@ -10897,7 +10919,7 @@
         "Tipo":" FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":3990.0,
+        "Stock":4000.0,
         "Precio":3.68
     },
     {
@@ -10908,7 +10930,7 @@
         "Tipo":" FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":4193.0,
+        "Stock":4148.0,
         "Precio":3.68
     },
     {
@@ -10952,7 +10974,7 @@
         "Tipo":" FUENTES DE PODER",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FUENTES DE PODER",
-        "Stock":720.0,
+        "Stock":717.0,
         "Precio":16.0195
     },
     {
@@ -10963,7 +10985,7 @@
         "Tipo":" FUENTES DE PODER",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FUENTES DE PODER",
-        "Stock":153.0,
+        "Stock":154.0,
         "Precio":24.8975
     },
     {
@@ -10974,7 +10996,7 @@
         "Tipo":" FUENTES DE PODER",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FUENTES DE PODER",
-        "Stock":3277.0,
+        "Stock":3279.0,
         "Precio":4.945
     },
     {
@@ -11007,7 +11029,7 @@
         "Tipo":" LUZ DE POSTE",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ LUZ DE POSTE",
-        "Stock":22.0,
+        "Stock":21.0,
         "Precio":44.4935
     },
     {
@@ -11337,7 +11359,7 @@
         "Tipo":" PANEL EMPOTRABLE CUADRADO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE CUADRADO",
-        "Stock":442.0,
+        "Stock":342.0,
         "Precio":20.562
     },
     {
@@ -11700,7 +11722,7 @@
         "Tipo":" PANEL DOBLE COLOR",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL DOBLE COLOR",
-        "Stock":4022.0,
+        "Stock":4036.0,
         "Precio":4.485
     },
     {
@@ -11942,7 +11964,7 @@
         "Tipo":" PANEL SOBREPUESTO CUADRADO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO CUADRADO",
-        "Stock":23.0,
+        "Stock":18.0,
         "Precio":6.279
     },
     {
@@ -12316,7 +12338,7 @@
         "Tipo":" REFLECTORES LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ REFLECTORES LED",
-        "Stock":869.0,
+        "Stock":874.0,
         "Precio":12.1555
     },
     {
@@ -12327,7 +12349,7 @@
         "Tipo":" REFLECTORES LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ REFLECTORES LED",
-        "Stock":472.0,
+        "Stock":477.0,
         "Precio":9.177
     },
     {
@@ -12349,7 +12371,7 @@
         "Tipo":" REFLECTORES LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ REFLECTORES LED",
-        "Stock":90.0,
+        "Stock":95.0,
         "Precio":57.9255
     },
     {
@@ -12481,7 +12503,7 @@
         "Tipo":" SENSOR MOVIMIENTO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ SENSOR MOVIMIENTO",
-        "Stock":175.0,
+        "Stock":155.0,
         "Precio":7.061
     },
     {
@@ -12558,7 +12580,7 @@
         "Tipo":" UFO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ UFO",
-        "Stock":813.0,
+        "Stock":814.0,
         "Precio":63.5605
     },
     {
@@ -12569,7 +12591,7 @@
         "Tipo":" CARCASA PARA DICROICO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CARCASA PARA DICROICO",
-        "Stock":110.0,
+        "Stock":109.0,
         "Precio":10.143
     },
     {
@@ -12580,7 +12602,7 @@
         "Tipo":" CARCASA PARA DICROICO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CARCASA PARA DICROICO",
-        "Stock":185.0,
+        "Stock":186.0,
         "Precio":10.143
     },
     {
@@ -12650,17 +12672,6 @@
         "Precio":29.785
     },
     {
-        "Referencia Interna":"UFOP-200W",
-        "Nombre":"EVA UFO 6500K FP09 IP66 AC100-240V",
-        "Categoría":"INDUSTRIAL",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":" UFO",
-        "Marca":"N\/A",
-        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ UFO",
-        "Stock":1.0,
-        "Precio":36.961
-    },
-    {
         "Referencia Interna":"ZM-3",
         "Nombre":"FOCO LED E27 4W 2700K 110V AMBAR",
         "Categoría":"ILUMINACIÓN",
@@ -12701,7 +12712,7 @@
         "Tipo":" OJO DE BUEY",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ OJO DE BUEY",
-        "Stock":2868.0,
+        "Stock":2867.0,
         "Precio":1.955
     },
     {
@@ -12811,7 +12822,7 @@
         "Tipo":" SOLAR APLIQUE DE PARED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR APLIQUE DE PARED",
-        "Stock":57.0,
+        "Stock":56.0,
         "Precio":10.672
     },
     {
@@ -12822,7 +12833,7 @@
         "Tipo":" SOLAR APLIQUE DE PARED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR APLIQUE DE PARED",
-        "Stock":137.0,
+        "Stock":136.0,
         "Precio":8.6825
     },
     {
@@ -12833,7 +12844,7 @@
         "Tipo":" SOLAR APLIQUE DE PARED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR APLIQUE DE PARED",
-        "Stock":167.0,
+        "Stock":165.0,
         "Precio":14.8925
     },
     {
@@ -12855,7 +12866,7 @@
         "Tipo":" SOLAR APLIQUE DE PARED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR APLIQUE DE PARED",
-        "Stock":99.0,
+        "Stock":98.0,
         "Precio":10.0395
     },
     {
@@ -12866,8 +12877,30 @@
         "Tipo":" SOLAR APLIQUE DE PARED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR APLIQUE DE PARED",
-        "Stock":111.0,
+        "Stock":125.0,
         "Precio":10.6375
+    },
+    {
+        "Referencia Interna":"SSB-12V100AH",
+        "Nombre":"SOLAR BATERIA GEL 12V100AH",
+        "Categoría":"ILUMINACIÓN SOLAR",
+        "Subcategoría":"LUCES LED 0%",
+        "Tipo":" SISTEMA SOLAR",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES LED 0% \/ SISTEMA SOLAR",
+        "Stock":15.0,
+        "Precio":217.01
+    },
+    {
+        "Referencia Interna":"SSB-12V50AH",
+        "Nombre":"SOLAR BATERIA GEL 12V50AH",
+        "Categoría":"ILUMINACIÓN SOLAR",
+        "Subcategoría":"LUCES LED 0%",
+        "Tipo":" SISTEMA SOLAR",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES LED 0% \/ SISTEMA SOLAR",
+        "Stock":10.0,
+        "Precio":106.09
     },
     {
         "Referencia Interna":"MPK2-60",
@@ -12943,7 +12976,7 @@
         "Tipo":" SISTEMA SOLAR",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES LED 0% \/ SISTEMA SOLAR",
-        "Stock":36.0,
+        "Stock":33.0,
         "Precio":164.0
     },
     {
@@ -13042,7 +13075,7 @@
         "Tipo":" TIMBRE",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ TIMBRE",
-        "Stock":746.0,
+        "Stock":741.0,
         "Precio":14.352
     },
     {
@@ -13064,7 +13097,7 @@
         "Tipo":" TIMBRE",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ TIMBRE",
-        "Stock":911.0,
+        "Stock":916.0,
         "Precio":14.352
     },
     {
@@ -13108,7 +13141,7 @@
         "Tipo":" LUZ DE POSTE",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ LUZ DE POSTE",
-        "Stock":67.0,
+        "Stock":68.0,
         "Precio":232.9325
     },
     {
@@ -13119,7 +13152,7 @@
         "Tipo":" LUZ DE POSTE",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ LUZ DE POSTE",
-        "Stock":357.0,
+        "Stock":356.0,
         "Precio":269.905
     },
     {
@@ -13163,7 +13196,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE REDONDO",
-        "Stock":4060.0,
+        "Stock":4100.0,
         "Precio":2.415
     },
     {
@@ -13394,7 +13427,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":19319.0,
+        "Stock":19294.0,
         "Precio":0.46
     },
     {
