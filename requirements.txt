@@ -2,4 +2,4 @@ pandas
 gspread
 oauth2client
 Pillow
-GitPython
+PyGithub
