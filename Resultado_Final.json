@@ -1976,7 +1976,7 @@
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
         "Stock":1000.0,
-        "Precio":0.0,
+        "Precio":1.7,
         "Imagen":"\/images\/VL-DPL 18W.webp"
     },
     {
@@ -1985,7 +1985,7 @@
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
         "Stock":1000.0,
-        "Precio":0.0,
+        "Precio":1.74,
         "Imagen":"\/images\/VL-DPL 24W.webp"
     },
     {
@@ -2398,7 +2398,7 @@
         "Nombre":"REPUESTO SCOOTER ZAPATAS DE FRENO TAMBOR",
         "Categoria":"Sin Cat",
         "Subcategoria":"Sin Subcat",
-        "Stock":159.0,
+        "Stock":158.0,
         "Precio":4.74,
         "Imagen":"\/images\/RSZ R.webp"
     },
@@ -2416,7 +2416,7 @@
         "Nombre":"REPUESTO SCOOTER ZAPATA DISCO",
         "Categoria":"Sin Cat",
         "Subcategoria":"Sin Subcat",
-        "Stock":78.0,
+        "Stock":77.0,
         "Precio":2.83,
         "Imagen":"\/images\/SZD F.webp"
     },
