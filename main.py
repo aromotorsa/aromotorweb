@@ -5,26 +5,34 @@ import logging
 import json
 import base64
 import io
-import xmlrpc.client
 import time
+import gc  # <--- NUEVO: Para limpiar memoria
+import xmlrpc.client
 from datetime import datetime
 from collections import defaultdict
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 from PIL import Image
-from github import Github, GithubException, Auth # Importamos Auth para corregir el warning
+from github import Github, GithubException, Auth
 
 # --- CONFIGURACIÓN DE LOGS ---
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s')
 
-# --- VARIABLES ---
+# --- VARIABLES DE ENTORNO ---
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN")
 REPO_NAME = os.environ.get("REPO_NAME") 
+
+# --- FUNCIÓN DE AYUDA PARA LOTES (CHUNKS) ---
+def chunker(seq, size):
+    return (seq[pos:pos + size] for pos in range(0, len(seq), size))
 
 def cargar_gsheets():
     try:
         json_str = os.environ.get("GOOGLE_JSON")
-        if not json_str: raise ValueError("Falta GOOGLE_JSON")
+        if not json_str: 
+            logging.warning("Falta variable GOOGLE_JSON")
+            return pd.DataFrame()
+            
         creds_dict = json.loads(json_str)
         scope = ["https://www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive"]
         creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
@@ -32,7 +40,7 @@ def cargar_gsheets():
         sheet = client.open("categorias_maestras").sheet1 
         return pd.DataFrame(sheet.get_all_records())
     except Exception as e:
-        logging.warning(f"Error Sheets (Usando default): {e}")
+        logging.warning(f"Error cargando Sheets (Se usará default): {e}")
         return pd.DataFrame()
 
 def clasificar(nombre, df_cat):
@@ -58,131 +66,127 @@ def update_file_in_github(repo, path, content, message):
     except Exception as e:
         logging.error(f"Error GitHub {path}: {e}")
 
-# --- FUNCIÓN PARA DIVIDIR LISTAS EN LOTES ---
-def chunker(seq, size):
-    return (seq[pos:pos + size] for pos in range(0, len(seq), size))
-
 def main():
-    logging.info("Iniciando Sincronización Optimizada...")
+    logging.info("=== INICIANDO SINCRONIZACIÓN (MODO MEMORIA BAJA) ===")
 
-    # 1. CONEXIÓN GITHUB (Corregido Warning)
+    if not GITHUB_TOKEN or not REPO_NAME:
+        logging.error("Faltan variables GITHUB_TOKEN o REPO_NAME.")
+        return
+
     auth = Auth.Token(GITHUB_TOKEN)
     g = Github(auth=auth)
     repo = g.get_repo(REPO_NAME)
     
-    # Listar imágenes existentes para no descargarlas de Odoo si no hace falta
     existing_files = set()
     try:
+        logging.info("Verificando imágenes en GitHub...")
         contents = repo.get_contents("public/images")
         while contents:
             file_content = contents.pop(0)
             existing_files.add(file_content.name)
-    except:
-        pass 
-    logging.info(f"Imágenes ya en GitHub: {len(existing_files)}")
+    except Exception:
+        pass
 
-    # 2. CONEXIÓN ODOO
-    url, db, usr = 'https://aromotor.com', 'aromotor', 'pruebas'
+    logging.info(f"Imágenes en repo: {len(existing_files)}")
+
+    # CONEXIÓN ODOO
+    url_odoo, db, usr = 'https://aromotor.com', 'aromotor', 'pruebas'
     pwd = os.environ.get("ODOO_PWD")
-    common = xmlrpc.client.ServerProxy(f'{url}/xmlrpc/2/common')
+    common = xmlrpc.client.ServerProxy(f'{url_odoo}/xmlrpc/2/common')
     uid = common.authenticate(db, usr, pwd, {})
-    models = xmlrpc.client.ServerProxy(f'{url}/xmlrpc/2/object')
+    models = xmlrpc.client.ServerProxy(f'{url_odoo}/xmlrpc/2/object')
 
-    # 3. OBTENER STOCK (Solo IDs y Cantidad)
-    logging.info("Consultando Stock...")
-    stock = models.execute_kw(db, uid, pwd, 'stock.quant', 'search_read',
-        [[('location_id', 'in', [732, 700, 8]), ('quantity', '>', 0)]], {'fields': ['product_id', 'quantity']})
+    # STOCK
+    stock_data = models.execute_kw(db, uid, pwd, 'stock.quant', 'search_read',
+        [[('location_id', 'in', [732, 700, 8]), ('quantity', '>', 0)]], 
+        {'fields': ['product_id', 'quantity']})
     
     stock_map = defaultdict(float)
-    p_ids = set()
-    for s in stock:
+    p_ids_set = set()
+    for s in stock_data:
         pid = s['product_id'][0]
         stock_map[pid] += s['quantity']
-        p_ids.add(pid)
+        p_ids_set.add(pid)
     
-    lista_ids = list(p_ids)
+    lista_ids = list(p_ids_set)
     logging.info(f"Productos con stock: {len(lista_ids)}")
 
-    # 4. PASO CLAVE: Descargar SOLO DATOS LIGEROS primero (Sin imágenes)
-    logging.info("Descargando metadatos (rápido)...")
-    # Pedimos todo MENOS la imagen para que sea rápido y no se corte
-    prods_light = models.execute_kw(db, uid, pwd, 'product.product', 'read', [lista_ids], 
-        {'fields': ['default_code', 'name', 'x_fob_subtotal']})
-
-    # Preparar diccionario para fácil acceso
+    # METADATOS
+    prods_light = models.execute_kw(db, uid, pwd, 'product.product', 'read', 
+        [lista_ids], {'fields': ['default_code', 'name', 'x_fob_subtotal']})
     prods_dict = {p['id']: p for p in prods_light}
 
-    # 5. IDENTIFICAR QUÉ IMÁGENES FALTAN
+    # IDENTIFICAR FALTANTES
     ids_faltantes = []
-    mapa_referencias = {} # ID -> Referencia limpia
+    mapa_referencias = {}
 
     for p in prods_light:
-        ref = str(p.get('default_code') or '').replace('/', '').replace('*', '').strip()
-        if not ref: continue
-        
+        ref_raw = p.get('default_code')
+        if not ref_raw: continue
+        ref = str(ref_raw).replace('/', '').replace('*', '').strip()
         mapa_referencias[p['id']] = ref
         fname = f"{ref}.webp"
         
-        # Si NO está en GitHub, añadimos el ID a la lista para descargar su foto
         if fname not in existing_files:
             ids_faltantes.append(p['id'])
 
-    logging.info(f"Imágenes nuevas a descargar: {len(ids_faltantes)}")
+    logging.info(f"Faltan descargar: {len(ids_faltantes)}")
 
-    # 6. DESCARGAR IMÁGENES POR LOTES (Para evitar el error XML ExpatError)
-    BATCH_SIZE = 10 # Descargar de 10 en 10
+    # --- PROCESAMIENTO DE IMÁGENES OPTIMIZADO ---
+    BATCH_SIZE = 5 # Bajamos a 5 para no llenar la RAM
     
-    for lote_ids in chunker(ids_faltantes, BATCH_SIZE):
-        try:
-            logging.info(f"Descargando lote de imágenes ({len(lote_ids)})...")
-            # Solicitamos SOLO el campo imagen para estos 10 productos
-            lote_imgs = models.execute_kw(db, uid, pwd, 'product.product', 'read', [lote_ids], {'fields': ['image_1920']})
-            
-            for item in lote_imgs:
-                p_id = item['id']
-                b64 = item.get('image_1920')
-                ref = mapa_referencias.get(p_id)
-                fname = f"{ref}.webp"
-
-                if b64:
-                    try:
-                        img_data = base64.b64decode(b64)
-                        img = Image.open(io.BytesIO(img_data))
-                        if img.width > 1000: img.thumbnail((1000, 1000))
-                        
-                        buf = io.BytesIO()
-                        img.save(buf, 'WEBP', quality=80)
-                        
-                        # Subir a GitHub inmediatamente
-                        update_file_in_github(repo, f"public/images/{fname}", buf.getvalue(), f"Img {fname}")
-                    except Exception as e:
-                        logging.error(f"Error procesando imagen {fname}: {e}")
-            
-            # Pequeña pausa para no saturar Odoo
-            time.sleep(1) 
-
-        except Exception as e:
-            logging.error(f"Error en lote de imágenes: {e}")
-
-    # 7. GENERAR JSON FINAL
+    if ids_faltantes:
+        for lote_ids in chunker(ids_faltantes, BATCH_SIZE):
+            try:
+                lote_data = models.execute_kw(db, uid, pwd, 'product.product', 'read', 
+                    [lote_ids], {'fields': ['image_1920']})
+                
+                for item in lote_data:
+                    p_id = item['id']
+                    b64 = item.get('image_1920')
+                    ref = mapa_referencias.get(p_id)
+                    
+                    if b64 and ref:
+                        fname = f"{ref}.webp"
+                        try:
+                            img_bytes = base64.b64decode(b64)
+                            img = Image.open(io.BytesIO(img_bytes))
+                            if img.width > 1000: img.thumbnail((1000, 1000))
+                            
+                            buffer = io.BytesIO()
+                            img.save(buffer, 'WEBP', quality=80)
+                            
+                            update_file_in_github(repo, f"public/images/{fname}", buffer.getvalue(), f"Add {fname}")
+                            
+                            # LIMPIEZA AGRESIVA DE MEMORIA
+                            del img_bytes
+                            del img
+                            del buffer
+                            
+                        except Exception as e:
+                            logging.error(f"Error {fname}: {e}")
+                
+                # Forzar recolección de basura de Python
+                gc.collect()
+                time.sleep(1) 
+                
+            except Exception as e:
+                logging.error(f"Error lote: {e}")
+    
+    # JSON FINAL
+    logging.info("Generando JSON...")
     df_cat = cargar_gsheets()
     data_list = []
 
-    logging.info("Generando JSON final...")
     for pid in lista_ids:
         p = prods_dict.get(pid)
         if not p: continue
-
-        ref = mapa_referencias.get(pid) # Ya la limpiamos antes
+        ref = mapa_referencias.get(pid)
         if not ref: continue
         
-        fname = f"{ref}.webp"
-
-        # Clasificación
         c1, c2, c3 = clasificar(p.get('name'), df_cat)
         precio = p.get('x_fob_subtotal', 0)
-        if "LED 0%" not in str(c1) and "LED 0%" not in str(c2):
-            precio = precio * 1.15
+        if "LED 0%" not in str(c1) and "LED 0%" not in str(c2): precio *= 1.15
 
         data_list.append({
             'Referencia': ref,
@@ -191,15 +195,14 @@ def main():
             'Subcategoria': c2,
             'Stock': stock_map[pid],
             'Precio': round(precio, 2),
-            'Imagen': f"/images/{fname}"
+            'Imagen': f"/images/{ref}.webp"
         })
 
-    # Subir JSON
-    df_final = pd.DataFrame(data_list)
-    json_str = df_final.to_json(orient='records', force_ascii=False, indent=4)
+    df = pd.DataFrame(data_list)
+    json_str = df.to_json(orient='records', force_ascii=False, indent=4)
     update_file_in_github(repo, "public/catalogo.json", json_str, f"Update {datetime.now()}")
-    
-    logging.info("¡Sincronización Completada con Éxito!")
+
+    logging.info("=== FIN ===")
 
 if __name__ == "__main__":
     main()
