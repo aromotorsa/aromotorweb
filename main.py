@@ -6,7 +6,7 @@ import json
 import base64
 import io
 import time
-import gc  # <--- NUEVO: Para limpiar memoria
+import gc
 import xmlrpc.client
 from datetime import datetime
 from collections import defaultdict
@@ -22,25 +22,20 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s')
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN")
 REPO_NAME = os.environ.get("REPO_NAME") 
 
-# --- FUNCIÓN DE AYUDA PARA LOTES (CHUNKS) ---
 def chunker(seq, size):
     return (seq[pos:pos + size] for pos in range(0, len(seq), size))
 
 def cargar_gsheets():
     try:
         json_str = os.environ.get("GOOGLE_JSON")
-        if not json_str: 
-            logging.warning("Falta variable GOOGLE_JSON")
-            return pd.DataFrame()
-            
+        if not json_str: return pd.DataFrame()
         creds_dict = json.loads(json_str)
         scope = ["https://www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive"]
         creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
         client = gspread.authorize(creds)
         sheet = client.open("categorias_maestras").sheet1 
         return pd.DataFrame(sheet.get_all_records())
-    except Exception as e:
-        logging.warning(f"Error cargando Sheets (Se usará default): {e}")
+    except Exception:
         return pd.DataFrame()
 
 def clasificar(nombre, df_cat):
@@ -67,29 +62,41 @@ def update_file_in_github(repo, path, content, message):
         logging.error(f"Error GitHub {path}: {e}")
 
 def main():
-    logging.info("=== INICIANDO SINCRONIZACIÓN (MODO MEMORIA BAJA) ===")
+    logging.info("=== SINCRONIZACIÓN INTELIGENTE (LARGE REPO) ===")
 
     if not GITHUB_TOKEN or not REPO_NAME:
-        logging.error("Faltan variables GITHUB_TOKEN o REPO_NAME.")
+        logging.error("Faltan credenciales.")
         return
 
     auth = Auth.Token(GITHUB_TOKEN)
     g = Github(auth=auth)
     repo = g.get_repo(REPO_NAME)
     
+    # --- FIX CRÍTICO: USAR GIT TREE PARA VER MÁS DE 1000 ARCHIVOS ---
     existing_files = set()
     try:
-        logging.info("Verificando imágenes en GitHub...")
-        contents = repo.get_contents("public/images")
-        while contents:
-            file_content = contents.pop(0)
-            existing_files.add(file_content.name)
-    except Exception:
-        pass
+        logging.info("Escaneando repositorio completo (Git Tree)...")
+        # Obtenemos la rama por defecto (main/master)
+        branch = repo.default_branch
+        sha = repo.get_branch(branch).commit.sha
+        
+        # recursive=True permite ver carpetas anidadas y supera el límite de 1000
+        tree = repo.get_git_tree(sha, recursive=True).tree
+        
+        for element in tree:
+            # Buscamos solo archivos dentro de public/images/
+            if element.path.startswith("public/images/"):
+                # Obtenemos solo el nombre del archivo (ej: foto.webp)
+                fname = element.path.split("/")[-1]
+                existing_files.add(fname)
+                
+    except Exception as e:
+        logging.error(f"Error leyendo árbol git: {e}")
 
-    logging.info(f"Imágenes en repo: {len(existing_files)}")
+    logging.info(f"Total imágenes detectadas en GitHub: {len(existing_files)}")
+    # ----------------------------------------------------------------
 
-    # CONEXIÓN ODOO
+    # ODOO
     url_odoo, db, usr = 'https://aromotor.com', 'aromotor', 'pruebas'
     pwd = os.environ.get("ODOO_PWD")
     common = xmlrpc.client.ServerProxy(f'{url_odoo}/xmlrpc/2/common')
@@ -109,14 +116,14 @@ def main():
         p_ids_set.add(pid)
     
     lista_ids = list(p_ids_set)
-    logging.info(f"Productos con stock: {len(lista_ids)}")
+    logging.info(f"Productos con stock en Odoo: {len(lista_ids)}")
 
     # METADATOS
     prods_light = models.execute_kw(db, uid, pwd, 'product.product', 'read', 
         [lista_ids], {'fields': ['default_code', 'name', 'x_fob_subtotal']})
     prods_dict = {p['id']: p for p in prods_light}
 
-    # IDENTIFICAR FALTANTES
+    # COMPARACIÓN REAL
     ids_faltantes = []
     mapa_referencias = {}
 
@@ -130,10 +137,10 @@ def main():
         if fname not in existing_files:
             ids_faltantes.append(p['id'])
 
-    logging.info(f"Faltan descargar: {len(ids_faltantes)}")
+    logging.info(f"Faltan descargar realmente: {len(ids_faltantes)}")
 
-    # --- PROCESAMIENTO DE IMÁGENES OPTIMIZADO ---
-    BATCH_SIZE = 5 # Bajamos a 5 para no llenar la RAM
+    # PROCESAMIENTO (Lotes pequeños + Limpieza)
+    BATCH_SIZE = 5 
     
     if ids_faltantes:
         for lote_ids in chunker(ids_faltantes, BATCH_SIZE):
@@ -158,23 +165,19 @@ def main():
                             
                             update_file_in_github(repo, f"public/images/{fname}", buffer.getvalue(), f"Add {fname}")
                             
-                            # LIMPIEZA AGRESIVA DE MEMORIA
-                            del img_bytes
-                            del img
-                            del buffer
-                            
+                            del img_bytes, img, buffer
                         except Exception as e:
-                            logging.error(f"Error {fname}: {e}")
+                            logging.error(f"Error img {fname}: {e}")
                 
-                # Forzar recolección de basura de Python
                 gc.collect()
-                time.sleep(1) 
-                
+                time.sleep(0.5)
             except Exception as e:
                 logging.error(f"Error lote: {e}")
-    
+    else:
+        logging.info("¡Todo sincronizado! No se requieren descargas.")
+
     # JSON FINAL
-    logging.info("Generando JSON...")
+    logging.info("Actualizando JSON...")
     df_cat = cargar_gsheets()
     data_list = []
 
@@ -200,7 +203,7 @@ def main():
 
     df = pd.DataFrame(data_list)
     json_str = df.to_json(orient='records', force_ascii=False, indent=4)
-    update_file_in_github(repo, "public/catalogo.json", json_str, f"Update {datetime.now()}")
+    update_file_in_github(repo, "public/catalogo.json", json_str, f"Update Catalog {datetime.now()}")
 
     logging.info("=== FIN ===")
 
