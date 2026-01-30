@@ -103,7 +103,7 @@
         "Nombre":"VICTORIA LED PANEL 6500K 24W EMPOTRABLE REDONDO 10U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":3896.0,
+        "Stock":3895.0,
         "Precio":4.83,
         "Imagen":"\/images\/VP-ER 24W.webp"
     },
@@ -211,7 +211,7 @@
         "Nombre":"VICTORIA LED PANEL 6500K 18W EMPOTRABLE REDONDO 20U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":27435.0,
+        "Stock":27434.0,
         "Precio":3.02,
         "Imagen":"\/images\/VP-ER 18W.webp"
     },
@@ -229,7 +229,7 @@
         "Nombre":"VICTORIA LED PANEL 6500K 18W SOBREPUESTO REDONDO 20U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":2918.0,
+        "Stock":2917.0,
         "Precio":4.15,
         "Imagen":"\/images\/VP-SR 18W.webp"
     },
@@ -2542,7 +2542,7 @@
         "Nombre":"FOCO LED DECORATIVO 15W E27",
         "Categoria":"Sin Cat",
         "Subcategoria":"Sin Subcat",
-        "Stock":3.0,
+        "Stock":2.0,
         "Precio":12.56,
         "Imagen":"\/images\/VL-FD3 18W.webp"
     },
@@ -2551,7 +2551,7 @@
         "Nombre":"FOCO LED DECORATIVO 15W E27",
         "Categoria":"Sin Cat",
         "Subcategoria":"Sin Subcat",
-        "Stock":3.0,
+        "Stock":2.0,
         "Precio":11.97,
         "Imagen":"\/images\/VL-FD2 18W.webp"
     },
@@ -2560,7 +2560,7 @@
         "Nombre":"FOCO LED DECORATIVO 15W E27",
         "Categoria":"Sin Cat",
         "Subcategoria":"Sin Subcat",
-        "Stock":3.0,
+        "Stock":2.0,
         "Precio":11.1,
         "Imagen":"\/images\/VL-FD1 18W.webp"
     },
@@ -10993,7 +10993,7 @@
         "Nombre":"EVA PANEL 6500K 18W EMPOTRABLE REDONDO 20U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":14880.0,
+        "Stock":14879.0,
         "Precio":2.36,
         "Imagen":"\/images\/EV-PER18W.webp"
     },
@@ -11002,7 +11002,7 @@
         "Nombre":"EVA PANEL 6500K 24W EMPOTRABLE REDONDO 10U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":19940.0,
+        "Stock":19939.0,
         "Precio":3.75,
         "Imagen":"\/images\/EV-PER24W.webp"
     },
@@ -11475,15 +11475,6 @@
         "Imagen":"\/images\/VP-SR 12W.webp"
     },
     {
-        "Referencia":"VP-EC24W",
-        "Nombre":"VICTORIA LED PANEL 6500K 24W EMPOTRABLE CUADRADO 10U\/C",
-        "Categoria":"ILUMINACIÓN",
-        "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":1.0,
-        "Precio":5.17,
-        "Imagen":"\/images\/VP-EC24W.webp"
-    },
-    {
         "Referencia":"VP-EC 3W",
         "Nombre":"VICTORIA LED PANEL 6500K 3W EMPOTRABLE CUADRADO 80U\/C",
         "Categoria":"ILUMINACIÓN",
@@ -11740,7 +11731,7 @@
         "Nombre":"BOQUILLA DE CAUCHO E27 250V 660W NEGRO 20U\/C",
         "Categoria":"MATERIAL ELÉCTRICO",
         "Subcategoria":"FERRETERÍA",
-        "Stock":58469.0,
+        "Stock":58464.0,
         "Precio":0.28,
         "Imagen":"\/images\/VLCL-12N.webp"
     },
