@@ -936,15 +936,6 @@
         "Imagen":"\/images\/VLA-5A.webp"
     },
     {
-        "Referencia":"VLMC-3K",
-        "Nombre":"MANGUERA LED COB 3000K 8MM AC110V 12W\/M IP68 100M\/ROLL",
-        "Categoria":"ILUMINACIÓN",
-        "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":1.0,
-        "Precio":164.99,
-        "Imagen":"\/images\/VLMC-3K.webp"
-    },
-    {
         "Referencia":"VLBV-12V7.5AH",
         "Nombre":"BATERIA VRLA PLOMO ACIDO 12V 7.5AH",
         "Categoria":"Sin Cat",
@@ -1021,7 +1012,7 @@
         "Nombre":"EVA PANEL 6500K 3W EMPOTRABLE REDONDO U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":183184.0,
+        "Stock":183183.0,
         "Precio":0.75,
         "Imagen":"\/images\/EV-PER 3W.webp"
     },
@@ -1192,7 +1183,7 @@
         "Nombre":"VICTORIA LED PANEL DIMERIZABLE 18W EMPOTRABLE REDONDO",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":512.0,
+        "Stock":511.0,
         "Precio":7.0,
         "Imagen":"\/images\/VL-PD 18W.webp"
     },
@@ -1494,15 +1485,6 @@
         "Imagen":"\/images\/VLEX-3P 3M.webp"
     },
     {
-        "Referencia":"VLEX-3P 10M",
-        "Nombre":"10 METROS CABLE DE EXTENSIÓN 3 SALIDAS",
-        "Categoria":"Sin Cat",
-        "Subcategoria":"Sin Subcat",
-        "Stock":1.0,
-        "Precio":7.59,
-        "Imagen":"\/images\/VLEX-3P 10M.webp"
-    },
-    {
         "Referencia":"VLRE-6P USBC 1M",
         "Nombre":"REGLETA 6 PUERTOS 1 METRO DE CABLE 1USB Y 1C",
         "Categoria":"MATERIAL ELÉCTRICO",
@@ -1732,7 +1714,7 @@
         "Nombre":"BARRA LED 2835SMD 42W 4000K 42VDC",
         "Categoria":"Sin Cat",
         "Subcategoria":"Sin Subcat",
-        "Stock":1138.0,
+        "Stock":1137.0,
         "Precio":24.99,
         "Imagen":"\/images\/VL-BL42W.webp"
     },
@@ -1894,7 +1876,7 @@
         "Nombre":"FOCO LED 45W VENTILADOR E27 2CCT 110-265V",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":109.0,
+        "Stock":108.0,
         "Precio":19.88,
         "Imagen":"\/images\/VL-VTL 45W.webp"
     },
@@ -1912,7 +1894,7 @@
         "Nombre":"VICTORIA LED PANEL 6500K 18W SOBREPUESTO REDONDO EUROPEO",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":4930.0,
+        "Stock":4929.0,
         "Precio":3.93,
         "Imagen":"\/images\/VL-PLSE 18W.webp"
     },
@@ -1921,7 +1903,7 @@
         "Nombre":"LUCES TIPO BARCO OVAL SMART 18W 6500K",
         "Categoria":"Sin Cat",
         "Subcategoria":"Sin Subcat",
-        "Stock":422.0,
+        "Stock":420.0,
         "Precio":6.31,
         "Imagen":"\/images\/VL-LSTBN 18W.webp"
     },
@@ -1939,7 +1921,7 @@
         "Nombre":"TUBO LED T5 18W SMART 100-240V",
         "Categoria":"Sin Cat",
         "Subcategoria":"Sin Subcat",
-        "Stock":1610.0,
+        "Stock":1609.0,
         "Precio":6.12,
         "Imagen":"\/images\/VL-TLS 18W.webp"
     },
@@ -1948,7 +1930,7 @@
         "Nombre":"TUBO LED T5 14W 90CM SMART 100-240V",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":871.0,
+        "Stock":869.0,
         "Precio":5.66,
         "Imagen":"\/images\/VL-TLS 14W.webp"
     },
@@ -1957,7 +1939,7 @@
         "Nombre":"CINTA MAGICA 5M SMART IP65 AC100-240V DC5V",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":216.0,
+        "Stock":215.0,
         "Precio":19.62,
         "Imagen":"\/images\/VL-TLRGB 5V.webp"
     },
@@ -2011,7 +1993,7 @@
         "Nombre":"LUCES TIPO BARCO OVAL BLANCO 24W SMART",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":913.0,
+        "Stock":912.0,
         "Precio":7.65,
         "Imagen":"\/images\/VL-LSTB 24W.webp"
     },
@@ -2556,33 +2538,6 @@
         "Imagen":"\/images\/RN7-PW-A001.webp"
     },
     {
-        "Referencia":"VL-FD3 18W",
-        "Nombre":"FOCO LED DECORATIVO 15W E27",
-        "Categoria":"Sin Cat",
-        "Subcategoria":"Sin Subcat",
-        "Stock":2.0,
-        "Precio":12.56,
-        "Imagen":"\/images\/VL-FD3 18W.webp"
-    },
-    {
-        "Referencia":"VL-FD2 18W",
-        "Nombre":"FOCO LED DECORATIVO 15W E27",
-        "Categoria":"Sin Cat",
-        "Subcategoria":"Sin Subcat",
-        "Stock":2.0,
-        "Precio":11.97,
-        "Imagen":"\/images\/VL-FD2 18W.webp"
-    },
-    {
-        "Referencia":"VL-FD1 18W",
-        "Nombre":"FOCO LED DECORATIVO 15W E27",
-        "Categoria":"Sin Cat",
-        "Subcategoria":"Sin Subcat",
-        "Stock":2.0,
-        "Precio":11.1,
-        "Imagen":"\/images\/VL-FD1 18W.webp"
-    },
-    {
         "Referencia":"VL-TN20",
         "Nombre":"TOMACORRIENTE DOBLE 110V NARANJA",
         "Categoria":"Sin Cat",
@@ -2614,7 +2569,7 @@
         "Nombre":"CAJA UNIVERSAL PARA CANALETAS",
         "Categoria":"Sin Cat",
         "Subcategoria":"Sin Subcat",
-        "Stock":16061.0,
+        "Stock":16060.0,
         "Precio":0.68,
         "Imagen":"\/images\/VL-CSM.webp"
     },
@@ -4423,7 +4378,7 @@
         "Nombre":"CINTA ELECTRICA NEGRA 0.13X19X11.1M FUEGO RETARDANTE 250U",
         "Categoria":"MATERIAL ELÉCTRICO",
         "Subcategoria":"FERRETERÍA",
-        "Stock":6151.0,
+        "Stock":6141.0,
         "Precio":0.36,
         "Imagen":"\/images\/CEN-11.1M.webp"
     },
@@ -4432,7 +4387,7 @@
         "Nombre":"CINTA ELECTRICA NEGRA 0.13X19X20.2M FUEGO RETARDANTE 200U",
         "Categoria":"MATERIAL ELÉCTRICO",
         "Subcategoria":"FERRETERÍA",
-        "Stock":984.0,
+        "Stock":974.0,
         "Precio":0.62,
         "Imagen":"\/images\/CEN-20.2M.webp"
     },
@@ -5026,7 +4981,7 @@
         "Nombre":"EVA FOCO 9W 110V 6500K 100U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":89976.0,
+        "Stock":89975.0,
         "Precio":0.52,
         "Imagen":"\/images\/EF-9W.webp"
     },
@@ -5035,7 +4990,7 @@
         "Nombre":"EVA LED LAMPARA DE POSTE SOLAR 6500K",
         "Categoria":"ILUMINACIÓN SOLAR",
         "Subcategoria":"LUZ LED SOLAR",
-        "Stock":157.0,
+        "Stock":156.0,
         "Precio":93.58,
         "Imagen":"\/images\/EVSL-1400W.webp"
     },
@@ -5044,7 +4999,7 @@
         "Nombre":"EVA LED LAMPARA DE POSTE SOLAR 6500K",
         "Categoria":"ILUMINACIÓN SOLAR",
         "Subcategoria":"LUZ LED SOLAR",
-        "Stock":267.0,
+        "Stock":266.0,
         "Precio":70.9,
         "Imagen":"\/images\/EVSL-1000W.webp"
     },
@@ -5440,7 +5395,7 @@
         "Nombre":"FOCO LED EMERGENCIA 9W 6500K 100U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":1976.0,
+        "Stock":1975.0,
         "Precio":3.36,
         "Imagen":"\/images\/FE9W.webp"
     },
@@ -5638,7 +5593,7 @@
         "Nombre":"FUENTE 63W",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":1007.0,
+        "Stock":1006.0,
         "Precio":27.95,
         "Imagen":"\/images\/CL-63W.webp"
     },
@@ -5827,7 +5782,7 @@
         "Nombre":"LAMPARA DE JARDIN 4000K IP65 FP0.9 85-265V",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":49.0,
+        "Stock":48.0,
         "Precio":125.99,
         "Imagen":"\/images\/LJOC-150W.webp"
     },
@@ -7843,7 +7798,7 @@
         "Nombre":"PROTECTOR DE VOLTAJE 3 TOMA 15A 90V-140V 25U\/C",
         "Categoria":"MATERIAL ELÉCTRICO",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":3060.0,
+        "Stock":3059.0,
         "Precio":12.44,
         "Imagen":"\/images\/VPV-3N.webp"
     },
@@ -8482,7 +8437,7 @@
         "Nombre":"SOLAR ESTACA 3000K CASA",
         "Categoria":"ILUMINACIÓN SOLAR",
         "Subcategoria":"LUZ LED SOLAR",
-        "Stock":21.0,
+        "Stock":20.0,
         "Precio":11.6,
         "Imagen":"\/images\/ES-11.webp"
     },
@@ -8491,7 +8446,7 @@
         "Nombre":"SOLAR ESTACA 3000K CONEJO",
         "Categoria":"ILUMINACIÓN SOLAR",
         "Subcategoria":"LUZ LED SOLAR",
-        "Stock":62.0,
+        "Stock":61.0,
         "Precio":10.01,
         "Imagen":"\/images\/ES-05.webp"
     },
@@ -8500,7 +8455,7 @@
         "Nombre":"SOLAR ESTACA 3000K CONEJO CAFE",
         "Categoria":"ILUMINACIÓN SOLAR",
         "Subcategoria":"LUZ LED SOLAR",
-        "Stock":25.0,
+        "Stock":24.0,
         "Precio":11.6,
         "Imagen":"\/images\/ES-13.webp"
     },
@@ -8536,7 +8491,7 @@
         "Nombre":"SOLAR ESTACA 3000K FLORES 2U\/C",
         "Categoria":"ILUMINACIÓN SOLAR",
         "Subcategoria":"LUZ LED SOLAR",
-        "Stock":78.0,
+        "Stock":77.0,
         "Precio":8.07,
         "Imagen":"\/images\/ES-20.webp"
     },
@@ -8545,7 +8500,7 @@
         "Nombre":"SOLAR ESTACA 3000K FLORES 2U\/C",
         "Categoria":"ILUMINACIÓN SOLAR",
         "Subcategoria":"LUZ LED SOLAR",
-        "Stock":22.0,
+        "Stock":21.0,
         "Precio":8.07,
         "Imagen":"\/images\/ES-19.webp"
     },
@@ -8554,7 +8509,7 @@
         "Nombre":"SOLAR ESTACA 3000K FLORES 2U\/C",
         "Categoria":"ILUMINACIÓN SOLAR",
         "Subcategoria":"LUZ LED SOLAR",
-        "Stock":33.0,
+        "Stock":32.0,
         "Precio":8.07,
         "Imagen":"\/images\/ES-18.webp"
     },
@@ -8662,7 +8617,7 @@
         "Nombre":"SOLAR FOCO LED 100W 50U\/C",
         "Categoria":"ILUMINACIÓN SOLAR",
         "Subcategoria":"LUZ LED SOLAR",
-        "Stock":7332.0,
+        "Stock":7331.0,
         "Precio":11.2,
         "Imagen":"\/images\/FSL-100W.webp"
     },
@@ -8860,7 +8815,7 @@
         "Nombre":"SOLAR LAMPARA DE POSTE 6500K 500W",
         "Categoria":"ILUMINACIÓN SOLAR",
         "Subcategoria":"LUZ LED SOLAR",
-        "Stock":428.0,
+        "Stock":427.0,
         "Precio":102.03,
         "Imagen":"\/images\/LPSF-500W.webp"
     },
@@ -8977,7 +8932,7 @@
         "Nombre":"SOLAR REFLECTOR MULTIPUNTO 250W 3 TONOS DE LUZ",
         "Categoria":"ILUMINACIÓN SOLAR",
         "Subcategoria":"LUZ LED SOLAR",
-        "Stock":1468.0,
+        "Stock":1467.0,
         "Precio":107.89,
         "Imagen":"\/images\/RMS-250W.webp"
     },
@@ -9544,7 +9499,7 @@
         "Nombre":"VICTORIA LED FOCO 20W 100-260V 6500K 100U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":24103.0,
+        "Stock":24102.0,
         "Precio":1.66,
         "Imagen":"\/images\/LV-130 20W.webp"
     },
@@ -11605,7 +11560,7 @@
         "Nombre":"TOMACORRIENTE UNIVERSAL DE PISO ACERO INOXIDABLE 250V 15A SILVER 1U\/C",
         "Categoria":"MATERIAL ELÉCTRICO",
         "Subcategoria":"FERRETERÍA",
-        "Stock":1683.0,
+        "Stock":1682.0,
         "Precio":9.29,
         "Imagen":"\/images\/VLTPS-15A.webp"
     },
@@ -11641,7 +11596,7 @@
         "Nombre":"ADAPTADOR UNIVERSAL DE ENCHUFE 250V 10A BLANCO 25U\/C",
         "Categoria":"MATERIAL ELÉCTRICO",
         "Subcategoria":"FERRETERÍA",
-        "Stock":9570.0,
+        "Stock":9569.0,
         "Precio":0.44,
         "Imagen":"\/images\/VLAE-10A.webp"
     },
@@ -11650,7 +11605,7 @@
         "Nombre":"ENCHUFE MACHO 2P 125V 15A AMARILLO 25U\/C",
         "Categoria":"MATERIAL ELÉCTRICO",
         "Subcategoria":"FERRETERÍA",
-        "Stock":18469.0,
+        "Stock":18468.0,
         "Precio":0.46,
         "Imagen":"\/images\/VLCIA2-15A.webp"
     },
@@ -11731,7 +11686,7 @@
         "Nombre":"BOQUILLA DE CAUCHO E27 250V 660W NEGRO 20U\/C",
         "Categoria":"MATERIAL ELÉCTRICO",
         "Subcategoria":"FERRETERÍA",
-        "Stock":56264.0,
+        "Stock":56263.0,
         "Precio":0.28,
         "Imagen":"\/images\/VLCL-12N.webp"
     },
