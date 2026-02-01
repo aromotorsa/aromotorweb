@@ -31,7 +31,7 @@
         "Nombre":"PERFIL ALUMINIO 3M TOKIO",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":9309.0,
+        "Stock":9289.0,
         "Precio":3.99,
         "Imagen":"\/images\/VL-P3.webp"
     },
@@ -49,7 +49,7 @@
         "Nombre":"PERFIL ALUMINIO 3M LUCCA",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":3959.0,
+        "Stock":3929.0,
         "Precio":4.75,
         "Imagen":"\/images\/VL-P53.webp"
     },
@@ -103,7 +103,7 @@
         "Nombre":"VICTORIA LED PANEL 6500K 24W EMPOTRABLE REDONDO 10U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":3619.0,
+        "Stock":3609.0,
         "Precio":4.83,
         "Imagen":"\/images\/VP-ER 24W.webp"
     },
@@ -121,7 +121,7 @@
         "Nombre":"VICTORIA LED PANEL SIN BORDE 24W EMPOTRABLE REDONDO 10U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":3097.0,
+        "Stock":3077.0,
         "Precio":2.98,
         "Imagen":"\/images\/VP-ERS 24W.webp"
     },
@@ -157,7 +157,7 @@
         "Nombre":"VICTORIA LED PANEL 6500K 24W SOBREPUESTO REDONDO 10U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":8151.0,
+        "Stock":8146.0,
         "Precio":6.01,
         "Imagen":"\/images\/VP-SR 24W.webp"
     },
@@ -166,7 +166,7 @@
         "Nombre":"VICTORIA LED PANEL SIN BORDE 36W SOBREPUESTO REDONDO 10U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":7990.0,
+        "Stock":7970.0,
         "Precio":5.63,
         "Imagen":"\/images\/VP-SRF 36W.webp"
     },
@@ -211,7 +211,7 @@
         "Nombre":"VICTORIA LED PANEL 6500K 18W EMPOTRABLE REDONDO 20U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":26669.0,
+        "Stock":26569.0,
         "Precio":3.02,
         "Imagen":"\/images\/VP-ER 18W.webp"
     },
@@ -220,7 +220,7 @@
         "Nombre":"VICTORIA LED PANEL 6500K 6W EMPOTRABLE CUADRADO 80U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":6161.0,
+        "Stock":6146.0,
         "Precio":1.76,
         "Imagen":"\/images\/VP-EC 6W.webp"
     },
@@ -229,7 +229,7 @@
         "Nombre":"VICTORIA LED PANEL 6500K 18W SOBREPUESTO REDONDO 20U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":2751.0,
+        "Stock":2611.0,
         "Precio":4.15,
         "Imagen":"\/images\/VP-SR 18W.webp"
     },
@@ -319,7 +319,7 @@
         "Nombre":"VICTORIA LED PANEL SOBREPUESTO CUADRADO 24W 6500K",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":3730.0,
+        "Stock":3715.0,
         "Precio":6.62,
         "Imagen":"\/images\/VP-SC 24W.webp"
     },
@@ -481,7 +481,7 @@
         "Nombre":"VICTORIA LED PANEL EMP RED 12W+4W FUCHSIA 100U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":678.0,
+        "Stock":663.0,
         "Precio":4.76,
         "Imagen":"\/images\/VP-REF 12+4.webp"
     },
@@ -634,7 +634,7 @@
         "Nombre":"TOMACORRIENTE DOBLE 16A 125\/250V PC BLANCO",
         "Categoria":"MATERIAL ELÉCTRICO",
         "Subcategoria":"FERRETERÍA",
-        "Stock":10724.0,
+        "Stock":10723.0,
         "Precio":1.69,
         "Imagen":"\/images\/VL-TM3B.webp"
     },
@@ -742,7 +742,7 @@
         "Nombre":"TOMACORRIENTE DOBLE 16A 125\/250V PC NEGRO",
         "Categoria":"MATERIAL ELÉCTRICO",
         "Subcategoria":"FERRETERÍA",
-        "Stock":4782.0,
+        "Stock":4781.0,
         "Precio":1.98,
         "Imagen":"\/images\/VL-TM3N.webp"
     },
@@ -1012,7 +1012,7 @@
         "Nombre":"EVA PANEL 6500K 3W EMPOTRABLE REDONDO U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":183183.0,
+        "Stock":183153.0,
         "Precio":0.75,
         "Imagen":"\/images\/EV-PER 3W.webp"
     },
@@ -1021,7 +1021,7 @@
         "Nombre":"EVA PANEL 6500K 6W EMPOTRABLE REDONDO U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":7732.0,
+        "Stock":7702.0,
         "Precio":1.6,
         "Imagen":"\/images\/EV-PER6W.webp"
     },
@@ -1129,7 +1129,7 @@
         "Nombre":"EVA REFLECTOR 6500K 100-240V IP66 FP0.5 30U\/C",
         "Categoria":"INDUSTRIAL",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":580.0,
+        "Stock":570.0,
         "Precio":13.31,
         "Imagen":"\/images\/ERE-150W.webp"
     },
@@ -1168,15 +1168,6 @@
         "Stock":613.0,
         "Precio":21.19,
         "Imagen":"\/images\/ERE-200W 3K.webp"
-    },
-    {
-        "Referencia":"BR90 NEGRO",
-        "Nombre":"BRAVO TRICICLO ELECTRICO 1500W 60V32A NEGRO",
-        "Categoria":"Sin Cat",
-        "Subcategoria":"Sin Subcat",
-        "Stock":1.0,
-        "Precio":1469.0,
-        "Imagen":"\/images\/BR90 NEGRO.webp"
     },
     {
         "Referencia":"VL-PD 18W",
@@ -1246,7 +1237,7 @@
         "Nombre":"VICTORIA LED PANEL EMP RED 6W+3W AZUL U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":4102.0,
+        "Stock":4087.0,
         "Precio":3.21,
         "Imagen":"\/images\/VP-REAZ 6+3.webp"
     },
@@ -1264,7 +1255,7 @@
         "Nombre":"VICTORIA LED PANEL EMP RED 12W+4W AZUL U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":3136.0,
+        "Stock":3121.0,
         "Precio":4.76,
         "Imagen":"\/images\/VP-REAZ 12+4.webp"
     },
@@ -1489,27 +1480,9 @@
         "Nombre":"REGLETA 6 PUERTOS 1 METRO DE CABLE 1USB Y 1C",
         "Categoria":"MATERIAL ELÉCTRICO",
         "Subcategoria":"FERRETERÍA",
-        "Stock":2857.0,
+        "Stock":2847.0,
         "Precio":6.64,
         "Imagen":"\/images\/VLRE-6P USBC 1M.webp"
-    },
-    {
-        "Referencia":"EGVQ5-3",
-        "Nombre":"ENCIMERA EVA 5 QUEMADORES VIDRIO",
-        "Categoria":"Sin Cat",
-        "Subcategoria":"Sin Subcat",
-        "Stock":6.0,
-        "Precio":128.14,
-        "Imagen":"\/images\/EGVQ5-3.webp"
-    },
-    {
-        "Referencia":"EGVQ4-2",
-        "Nombre":"ENCIMERA EVA 4 QUEMADORES",
-        "Categoria":"Sin Cat",
-        "Subcategoria":"Sin Subcat",
-        "Stock":4.0,
-        "Precio":104.99,
-        "Imagen":"\/images\/EGVQ4-2.webp"
     },
     {
         "Referencia":"ZM-10 AMBAR",
@@ -1795,7 +1768,7 @@
         "Nombre":"VICTORIA LED PANEL EMP RED 3W+3W AZUL",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":13296.0,
+        "Stock":13266.0,
         "Precio":2.53,
         "Imagen":"\/images\/VP-REAZ 3+3.webp"
     },
@@ -1804,7 +1777,7 @@
         "Nombre":"VICTORIA LED PANEL EMP RED 3W+3W FUCHSIA",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":3800.0,
+        "Stock":3770.0,
         "Precio":2.53,
         "Imagen":"\/images\/VP-REF 3+3.webp"
     },
@@ -1876,7 +1849,7 @@
         "Nombre":"FOCO LED 45W VENTILADOR E27 2CCT 110-265V",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":108.0,
+        "Stock":98.0,
         "Precio":19.88,
         "Imagen":"\/images\/VL-VTL 45W.webp"
     },
@@ -1885,7 +1858,7 @@
         "Nombre":"FOCO LED 70W VENTILADOR 2CCT 110-265V",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":158.0,
+        "Stock":148.0,
         "Precio":29.82,
         "Imagen":"\/images\/VL-VTL 70W.webp"
     },
@@ -1939,7 +1912,7 @@
         "Nombre":"CINTA MAGICA 5M SMART IP65 AC100-240V DC5V",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":215.0,
+        "Stock":210.0,
         "Precio":19.62,
         "Imagen":"\/images\/VL-TLRGB 5V.webp"
     },
@@ -2164,7 +2137,7 @@
         "Nombre":"RAF SANDUCHERA 110V 750W",
         "Categoria":"Sin Cat",
         "Subcategoria":"Sin Subcat",
-        "Stock":22.0,
+        "Stock":2.0,
         "Precio":12.49,
         "Imagen":"\/images\/R9207S-110V.webp"
     },
@@ -2218,7 +2191,7 @@
         "Nombre":"VICTORIA LED FOCO 80W 120-245V 6500K 30U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":1576.0,
+        "Stock":1541.0,
         "Precio":11.36,
         "Imagen":"\/images\/LV-130 80W.webp"
     },
@@ -2227,7 +2200,7 @@
         "Nombre":"VICTORIA LED FOCO 100W 120-245V 6500K 30U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":1463.0,
+        "Stock":1456.0,
         "Precio":13.89,
         "Imagen":"\/images\/LV-130 100W.webp"
     },
@@ -2569,7 +2542,7 @@
         "Nombre":"CAJA UNIVERSAL PARA CANALETAS",
         "Categoria":"Sin Cat",
         "Subcategoria":"Sin Subcat",
-        "Stock":16060.0,
+        "Stock":16056.0,
         "Precio":0.68,
         "Imagen":"\/images\/VL-CSM.webp"
     },
@@ -2902,7 +2875,7 @@
         "Nombre":"AMARRAS PLASTICAS NEGRA 4.8MMX250MM 100PZAS",
         "Categoria":"MATERIAL ELÉCTRICO",
         "Subcategoria":"FERRETERÍA",
-        "Stock":547.0,
+        "Stock":535.0,
         "Precio":2.3,
         "Imagen":"\/images\/N-4.8X25.webp"
     },
@@ -2920,7 +2893,7 @@
         "Nombre":"AMARRAS PLASTICAS NEGRA 4.8MMX400MM 100PZAS",
         "Categoria":"MATERIAL ELÉCTRICO",
         "Subcategoria":"FERRETERÍA",
-        "Stock":629.0,
+        "Stock":617.0,
         "Precio":3.85,
         "Imagen":"\/images\/N-4.8X40.webp"
     },
@@ -4063,7 +4036,7 @@
         "Nombre":"CAJA DE BREAKER PARA DUCHA 2P 40A 60U\/C",
         "Categoria":"MATERIAL ELÉCTRICO",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":2510.0,
+        "Stock":2504.0,
         "Precio":7.58,
         "Imagen":"\/images\/CBD-40A.webp"
     },
@@ -4072,7 +4045,7 @@
         "Nombre":"CAJA DE BREAKER PARA DUCHA 2P 50A 60U\/C",
         "Categoria":"MATERIAL ELÉCTRICO",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":1969.0,
+        "Stock":1959.0,
         "Precio":7.58,
         "Imagen":"\/images\/CBD-50A.webp"
     },
@@ -4720,7 +4693,7 @@
         "Nombre":"CONTROLADOR MANGUERA LED 5050 RGB 10MM + CONTROL",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":5097.0,
+        "Stock":5091.0,
         "Precio":5.69,
         "Imagen":"\/images\/CMG-5050CR RGB 10MM.webp"
     },
@@ -4765,7 +4738,7 @@
         "Nombre":"EVA CINTA LED 10M AC110V 2835 IP20 70W CON CONECTORES 50U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":2053.0,
+        "Stock":1578.0,
         "Precio":8.84,
         "Imagen":"\/images\/E-CL110V-4K.webp"
     },
@@ -4774,7 +4747,7 @@
         "Nombre":"EVA CINTA LED 10M AC110V 2835 IP20 70W CON CONECTORES 50U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":28798.0,
+        "Stock":28133.0,
         "Precio":8.84,
         "Imagen":"\/images\/E-CL110V-3K.webp"
     },
@@ -4783,7 +4756,7 @@
         "Nombre":"EVA CINTA LED 10M AC110V 2835 IP20 70W CON CONECTORES 50U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":35413.0,
+        "Stock":34993.0,
         "Precio":8.84,
         "Imagen":"\/images\/E-CL110V-6K.webp"
     },
@@ -4801,7 +4774,7 @@
         "Nombre":"EVA CINTA LED 10M AC110V 2835 IP20 CON CONECTORES 50U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":130.0,
+        "Stock":124.0,
         "Precio":11.9,
         "Imagen":"\/images\/E-CL110V AZUL.webp"
     },
@@ -4909,7 +4882,7 @@
         "Nombre":"EVA FOCO 20W 85-265V 6500K 100U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":25174.0,
+        "Stock":24994.0,
         "Precio":1.54,
         "Imagen":"\/images\/EF-20W.webp"
     },
@@ -4927,7 +4900,7 @@
         "Nombre":"EVA FOCO 30W 85-265V 6500K 50U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":14658.0,
+        "Stock":14583.0,
         "Precio":2.21,
         "Imagen":"\/images\/EF-30W.webp"
     },
@@ -4945,7 +4918,7 @@
         "Nombre":"EVA FOCO 40W 85-265V 6500K 30U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":12630.0,
+        "Stock":12545.0,
         "Precio":2.98,
         "Imagen":"\/images\/EF-40W.webp"
     },
@@ -4963,7 +4936,7 @@
         "Nombre":"EVA FOCO 50W 85-265V 6500K 30U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":15322.0,
+        "Stock":15267.0,
         "Precio":3.56,
         "Imagen":"\/images\/EF-50W.webp"
     },
@@ -4972,7 +4945,7 @@
         "Nombre":"EVA FOCO 60W 85-265V 6500K 30U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":9743.0,
+        "Stock":9653.0,
         "Precio":4.23,
         "Imagen":"\/images\/EF-60W.webp"
     },
@@ -4981,7 +4954,7 @@
         "Nombre":"EVA FOCO 9W 110V 6500K 100U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":89975.0,
+        "Stock":89925.0,
         "Precio":0.52,
         "Imagen":"\/images\/EF-9W.webp"
     },
@@ -5035,7 +5008,7 @@
         "Nombre":"EVA LED PANEL 60X60 45W 6500K FP 0.9 EMPOTRABLE CUADRADO",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":379.0,
+        "Stock":369.0,
         "Precio":10.29,
         "Imagen":"\/images\/PEC60-45W 6K.webp"
     },
@@ -5116,7 +5089,7 @@
         "Nombre":"EVA PANEL 6500K 6W SOBREPUESTO REDONDO 40U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":881.0,
+        "Stock":866.0,
         "Precio":1.79,
         "Imagen":"\/images\/EP-SR6W.webp"
     },
@@ -5251,7 +5224,7 @@
         "Nombre":"FOCO LED E12 1.5W 110V 6500K",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":2595.0,
+        "Stock":2585.0,
         "Precio":1.45,
         "Imagen":"\/images\/FNE12.webp"
     },
@@ -5260,7 +5233,7 @@
         "Nombre":"FOCO LED E14 1.5W 110V 6500K",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":2340.0,
+        "Stock":2330.0,
         "Precio":1.45,
         "Imagen":"\/images\/FNE14.webp"
     },
@@ -6817,7 +6790,7 @@
         "Nombre":"MODULO LED 1.6W 110V 10000K BLANCO 200U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":1420.0,
+        "Stock":1020.0,
         "Precio":0.41,
         "Imagen":"\/images\/ML110-10000K.webp"
     },
@@ -6826,7 +6799,7 @@
         "Nombre":"MODULO LED 1.6W 110V 3000K BLANCO 200U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":8520.0,
+        "Stock":8420.0,
         "Precio":0.41,
         "Imagen":"\/images\/ML110-3000K.webp"
     },
@@ -6853,7 +6826,7 @@
         "Nombre":"MODULO LED 1.6W 110V ROJO 200U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":5240.0,
+        "Stock":5140.0,
         "Precio":0.41,
         "Imagen":"\/images\/ML110-R.webp"
     },
@@ -6988,7 +6961,7 @@
         "Nombre":"PERFIL ALUMINIO 3M BERLIN",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":969.0,
+        "Stock":949.0,
         "Precio":41.47,
         "Imagen":"\/images\/VL-P1.webp"
     },
@@ -6997,7 +6970,7 @@
         "Nombre":"PERFIL ALUMINIO 3M BERLIN ACC CABLE",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":4433.0,
+        "Stock":4333.0,
         "Precio":2.08,
         "Imagen":"\/images\/VL-P101.webp"
     },
@@ -7069,7 +7042,7 @@
         "Nombre":"PERFIL ALUMINIO 3M BUENOS AIRES",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":67778.0,
+        "Stock":66738.0,
         "Precio":4.82,
         "Imagen":"\/images\/VL-P43.webp"
     },
@@ -8032,7 +8005,7 @@
         "Nombre":"SMART INTERRUPTOR DOBLE WIFI TUYA BLANCO 86U\/C",
         "Categoria":"VARIOS Y REPUESTOS",
         "Subcategoria":"TECNOLOGÍA",
-        "Stock":237.0,
+        "Stock":231.0,
         "Precio":16.59,
         "Imagen":"\/images\/VL-T2USB.webp"
     },
@@ -8041,7 +8014,7 @@
         "Nombre":"SMART INTERRUPTOR DOBLE WIFI TUYA NEGRO 86U\/C",
         "Categoria":"VARIOS Y REPUESTOS",
         "Subcategoria":"TECNOLOGÍA",
-        "Stock":283.0,
+        "Stock":277.0,
         "Precio":16.59,
         "Imagen":"\/images\/VL-T2USN.webp"
     },
@@ -8050,7 +8023,7 @@
         "Nombre":"SMART INTERRUPTOR SIMPLE WIFI TUYA BLANCO 86U\/C",
         "Categoria":"VARIOS Y REPUESTOS",
         "Subcategoria":"TECNOLOGÍA",
-        "Stock":580.0,
+        "Stock":574.0,
         "Precio":16.43,
         "Imagen":"\/images\/VL-T1USB.webp"
     },
@@ -8059,7 +8032,7 @@
         "Nombre":"SMART INTERRUPTOR SIMPLE WIFI TUYA NEGRO 86U\/C",
         "Categoria":"VARIOS Y REPUESTOS",
         "Subcategoria":"TECNOLOGÍA",
-        "Stock":737.0,
+        "Stock":731.0,
         "Precio":16.43,
         "Imagen":"\/images\/VL-T1USN.webp"
     },
@@ -8068,7 +8041,7 @@
         "Nombre":"SMART INTERRUPTOR TRIPLE WIFI TUYA BLANCO 86U\/C",
         "Categoria":"VARIOS Y REPUESTOS",
         "Subcategoria":"TECNOLOGÍA",
-        "Stock":485.0,
+        "Stock":479.0,
         "Precio":18.4,
         "Imagen":"\/images\/VL-T3USB.webp"
     },
@@ -8077,7 +8050,7 @@
         "Nombre":"SMART INTERRUPTOR TRIPLE WIFI TUYA NEGRO 86U\/C",
         "Categoria":"VARIOS Y REPUESTOS",
         "Subcategoria":"TECNOLOGÍA",
-        "Stock":67.0,
+        "Stock":61.0,
         "Precio":18.4,
         "Imagen":"\/images\/VL-T3USN.webp"
     },
@@ -9490,7 +9463,7 @@
         "Nombre":"VICTORIA LED EXHIBIDOR DE PANELES",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":21.0,
+        "Stock":20.0,
         "Precio":0.0,
         "Imagen":"\/images\/VLEXP.webp"
     },
@@ -9499,7 +9472,7 @@
         "Nombre":"VICTORIA LED FOCO 20W 100-260V 6500K 100U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":24102.0,
+        "Stock":23952.0,
         "Precio":1.66,
         "Imagen":"\/images\/LV-130 20W.webp"
     },
@@ -9508,7 +9481,7 @@
         "Nombre":"VICTORIA LED FOCO 30W 100-260V 6500K 50U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":24046.0,
+        "Stock":24021.0,
         "Precio":2.43,
         "Imagen":"\/images\/LV-130 30W.webp"
     },
@@ -9517,7 +9490,7 @@
         "Nombre":"VICTORIA LED FOCO 40W 100-260V 6500K 30U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":12803.0,
+        "Stock":12788.0,
         "Precio":3.21,
         "Imagen":"\/images\/LV-130 40W.webp"
     },
@@ -9535,7 +9508,7 @@
         "Nombre":"VICTORIA LED FOCO 50W 100-260V 6500K 30U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":2642.0,
+        "Stock":2627.0,
         "Precio":3.68,
         "Imagen":"\/images\/LV-130 50W.webp"
     },
@@ -9544,7 +9517,7 @@
         "Nombre":"VICTORIA LED FOCO INFRAROJO 250W 50 U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":4817.0,
+        "Stock":4814.0,
         "Precio":6.01,
         "Imagen":"\/images\/VL-IFR250W.webp"
     },
@@ -9553,7 +9526,7 @@
         "Nombre":"VICTORIA LED FUENTES DE PODER 12V 120W 100-265V",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":1873.0,
+        "Stock":1867.0,
         "Precio":7.42,
         "Imagen":"\/images\/VL-F10A.webp"
     },
@@ -10498,7 +10471,7 @@
         "Nombre":"VICTORIA LED PANEL SOB RED 18W+6W AZUL 20U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":652.0,
+        "Stock":632.0,
         "Precio":6.38,
         "Imagen":"\/images\/LV-206SRA 18+6.webp"
     },
@@ -10633,7 +10606,7 @@
         "Nombre":"VICTORIA LED REFLECTOR 6500K 100-240V IP66 20U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":2561.0,
+        "Stock":2555.0,
         "Precio":16.53,
         "Imagen":"\/images\/VLY-100W 6500K.webp"
     },
@@ -10840,7 +10813,7 @@
         "Nombre":"VICTORIA LED TIMER 85-264V AC 30A NEGRO 30U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":2189.0,
+        "Stock":2183.0,
         "Precio":14.16,
         "Imagen":"\/images\/KG-316T.webp"
     },
@@ -10966,7 +10939,7 @@
         "Nombre":"EVA REFLECTOR 6500K 100-240V IP66 FP0.6 10U\/C",
         "Categoria":"INDUSTRIAL",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":3253.0,
+        "Stock":3248.0,
         "Precio":21.19,
         "Imagen":"\/images\/ERE-200W.webp"
     },
@@ -11029,7 +11002,7 @@
         "Nombre":"OJO DE BUEY 7W 3000K CUADRADO NEGRO 100U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":3010.0,
+        "Stock":2980.0,
         "Precio":1.95,
         "Imagen":"\/images\/VL-SCN7W 3K.webp"
     },
@@ -11047,7 +11020,7 @@
         "Nombre":"OJO DE BUEY 7W 3000K REDONDO NEGRO 100U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":4259.0,
+        "Stock":4239.0,
         "Precio":1.93,
         "Imagen":"\/images\/VL-SRN7W 3K.webp"
     },
@@ -11074,7 +11047,7 @@
         "Nombre":"OJO DE BUEY 7W 6000K REDONDO BLANCO 100U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":5634.0,
+        "Stock":5614.0,
         "Precio":1.93,
         "Imagen":"\/images\/VL-SRB7W 6K.webp"
     },
@@ -11083,7 +11056,7 @@
         "Nombre":"OJO DE BUEY 7W 6000K REDONDO NEGRO 100U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":2979.0,
+        "Stock":2959.0,
         "Precio":1.93,
         "Imagen":"\/images\/VL-SRN7W 6K.webp"
     },
@@ -11353,7 +11326,7 @@
         "Nombre":"VICTORIA LED FOCO INFRA BLANCO 250W 50U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":5252.0,
+        "Stock":5249.0,
         "Precio":6.01,
         "Imagen":"\/images\/VL-PL250W.webp"
     },
@@ -11407,7 +11380,7 @@
         "Nombre":"VICTORIA LED PANEL 6500K 12W EMPOTRABLE CUADRADO 40U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":12035.0,
+        "Stock":12020.0,
         "Precio":2.59,
         "Imagen":"\/images\/VP-EC 12W.webp"
     },
@@ -11416,7 +11389,7 @@
         "Nombre":"VICTORIA LED PANEL 6500K 12W EMPOTRABLE REDONDO 40U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":2908.0,
+        "Stock":2853.0,
         "Precio":2.42,
         "Imagen":"\/images\/VP-ER 12W.webp"
     },
@@ -11425,7 +11398,7 @@
         "Nombre":"VICTORIA LED PANEL 6500K 12W SOBREPUESTO REDONDO 40U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":5838.0,
+        "Stock":5788.0,
         "Precio":3.38,
         "Imagen":"\/images\/VP-SR 12W.webp"
     },
@@ -11434,7 +11407,7 @@
         "Nombre":"VICTORIA LED PANEL 6500K 3W EMPOTRABLE CUADRADO 80U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":6021.0,
+        "Stock":6006.0,
         "Precio":1.35,
         "Imagen":"\/images\/VP-EC 3W.webp"
     },
@@ -11443,7 +11416,7 @@
         "Nombre":"VICTORIA LED PANEL 6500K 3W EMPOTRABLE REDONDO 80U\/C",
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
-        "Stock":53178.0,
+        "Stock":53163.0,
         "Precio":0.97,
         "Imagen":"\/images\/VP-ER 3W.webp"
     },
@@ -11515,7 +11488,7 @@
         "Nombre":"TOMACORRIENTE DOBLE SOBREPUESTO IVORY 10 U\/C",
         "Categoria":"Sin Cat",
         "Subcategoria":"Sin Subcat",
-        "Stock":15569.0,
+        "Stock":15469.0,
         "Precio":0.64,
         "Imagen":"\/images\/VLTDI-15A.webp"
     },
@@ -11524,7 +11497,7 @@
         "Nombre":"TOMACORRIENTE DOBLE OVALADO IVORY 10U\/C",
         "Categoria":"Sin Cat",
         "Subcategoria":"Sin Subcat",
-        "Stock":16490.0,
+        "Stock":16190.0,
         "Precio":0.71,
         "Imagen":"\/images\/VLTPI-15A.webp"
     },
@@ -11578,7 +11551,7 @@
         "Nombre":"ENCHUFE PLANO 250V 10A BLANCO 50U\/C",
         "Categoria":"MATERIAL ELÉCTRICO",
         "Subcategoria":"FERRETERÍA",
-        "Stock":40450.0,
+        "Stock":40400.0,
         "Precio":0.24,
         "Imagen":"\/images\/VLEB-10A.webp"
     },
@@ -11614,7 +11587,7 @@
         "Nombre":"BOQUILLA PLAFÓN DE PORCELANA E27 250V 660W BLANCO 10U\/C",
         "Categoria":"MATERIAL ELÉCTRICO",
         "Subcategoria":"FERRETERÍA",
-        "Stock":14867.0,
+        "Stock":14737.0,
         "Precio":0.69,
         "Imagen":"\/images\/VLPLB-E27.webp"
     },
@@ -11641,7 +11614,7 @@
         "Nombre":"BOQUILLA DE PORCELONA E12 220V 660W BLANCO 50U\/C",
         "Categoria":"MATERIAL ELÉCTRICO",
         "Subcategoria":"FERRETERÍA",
-        "Stock":11999.0,
+        "Stock":11949.0,
         "Precio":0.2,
         "Imagen":"\/images\/VLPL-E12.webp"
     },
@@ -11686,7 +11659,7 @@
         "Nombre":"BOQUILLA DE CAUCHO E27 250V 660W NEGRO 20U\/C",
         "Categoria":"MATERIAL ELÉCTRICO",
         "Subcategoria":"FERRETERÍA",
-        "Stock":56263.0,
+        "Stock":55743.0,
         "Precio":0.28,
         "Imagen":"\/images\/VLCL-12N.webp"
     },
@@ -11731,7 +11704,7 @@
         "Nombre":"INTERRUPTOR OVALADO SOBREPUESTO 125\/250V 10A BLANCO 10U\/C",
         "Categoria":"MATERIAL ELÉCTRICO",
         "Subcategoria":"FERRETERÍA",
-        "Stock":73129.0,
+        "Stock":73119.0,
         "Precio":0.49,
         "Imagen":"\/images\/VLIH-2B.webp"
     },
@@ -11749,7 +11722,7 @@
         "Nombre":"ENCHUFE HEMBRA 3P 250V 15A AMARILLO 25U\/C",
         "Categoria":"MATERIAL ELÉCTRICO",
         "Subcategoria":"FERRETERÍA",
-        "Stock":14381.0,
+        "Stock":14356.0,
         "Precio":0.61,
         "Imagen":"\/images\/VL3H-IA.webp"
     },
@@ -11758,7 +11731,7 @@
         "Nombre":"ENCHUFE HEMBRA 2P 125V 15A AMARILLO 25U\/C",
         "Categoria":"MATERIAL ELÉCTRICO",
         "Subcategoria":"FERRETERÍA",
-        "Stock":8696.0,
+        "Stock":8671.0,
         "Precio":0.59,
         "Imagen":"\/images\/VL2H-IA.webp"
     },
