@@ -1066,7 +1066,7 @@
         "Nombre":"BRAVO SCOOTER ELECTRICO 2000W 72V20AH NEGRO",
         "Categoria":"Sin Cat",
         "Subcategoria":"Sin Subcat",
-        "Stock":33.0,
+        "Stock":32.0,
         "Precio":699.0,
         "Imagen":"\/images\/BS8 NEGRO.webp"
     },
@@ -1084,7 +1084,7 @@
         "Nombre":"BRAVO SCOOTER ELECTRICO 2000W 72V20AH VINO",
         "Categoria":"Sin Cat",
         "Subcategoria":"Sin Subcat",
-        "Stock":4.0,
+        "Stock":1.0,
         "Precio":699.0,
         "Imagen":"\/images\/BS8 VINO.webp"
     },
@@ -1093,7 +1093,7 @@
         "Nombre":"BRAVO SCOOTER ELECTRICO 2000W 72V20AH GRIS",
         "Categoria":"Sin Cat",
         "Subcategoria":"Sin Subcat",
-        "Stock":29.0,
+        "Stock":26.0,
         "Precio":699.0,
         "Imagen":"\/images\/BS8 GRIS.webp"
     },
@@ -1408,7 +1408,7 @@
         "Nombre":"BRAVO SCOOTER ELECTRICO 1500W 60V20AH NEGRO\/GRIS",
         "Categoria":"Sin Cat",
         "Subcategoria":"Sin Subcat",
-        "Stock":15.0,
+        "Stock":12.0,
         "Precio":579.98,
         "Imagen":"\/images\/BM54 NEGROGRIS.webp"
     },
