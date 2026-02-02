@@ -34,7 +34,6 @@ def cargar_gsheets():
         creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
         client = gspread.authorize(creds)
         
-        # Intenta abrir la hoja correcta como en el script 2
         spreadsheet = client.open("categorias_maestras")
         try:
             sheet = spreadsheet.worksheet("INVENTARIO")
@@ -43,8 +42,7 @@ def cargar_gsheets():
             
         df = pd.DataFrame(sheet.get_all_records())
         
-        # --- FIX LÓGICO: ORDENAR POR LONGITUD DE DETALLE ---
-        # Esto es vital para que "Cinta LED" se detecte antes que "Cinta"
+        # Ordenar por longitud para coincidencia exacta
         if 'DETALLE' in df.columns:
             df['DETALLE_len'] = df['DETALLE'].astype(str).str.len()
             df.sort_values(by='DETALLE_len', ascending=False, inplace=True)
@@ -55,13 +53,17 @@ def cargar_gsheets():
         return pd.DataFrame()
 
 def clasificar(nombre, df_cat):
-    if df_cat.empty or not isinstance(nombre, str): return ('Sin Cat', 'Sin Subcat', 'General')
+    # CORRECCIÓN: Usar 'No Clasificado' como en el segundo script
+    fallback = ('No Clasificado', 'No Clasificado', 'No Clasificado')
+    
+    if df_cat.empty or not isinstance(nombre, str): return fallback
+    
     nombre = nombre.lower()
     for _, row in df_cat.iterrows():
-        # Al estar ordenado por longitud, coincidirá primero con la frase más específica
         if str(row.get('DETALLE', '')).lower() in nombre:
             return (row.get('Categoría Nivel 1'), row.get('Categoría Nivel 2'), row.get('Categoría Nivel 3'))
-    return ('Sin Cat', 'Sin Subcat', 'General')
+            
+    return fallback
 
 def update_file_in_github(repo, path, content, message):
     try:
@@ -79,7 +81,7 @@ def update_file_in_github(repo, path, content, message):
         logging.error(f"Error GitHub {path}: {e}")
 
 def main():
-    logging.info("=== SINCRONIZACIÓN INTELIGENTE (LOGIC UPDATED) ===")
+    logging.info("=== SINCRONIZACIÓN INTELIGENTE (VERSIÓN CORREGIDA) ===")
 
     if not GITHUB_TOKEN or not REPO_NAME:
         logging.error("Faltan credenciales.")
@@ -114,15 +116,13 @@ def main():
     uid = common.authenticate(db, usr, pwd, {})
     models = xmlrpc.client.ServerProxy(f'{url_odoo}/xmlrpc/2/object')
 
-    # --- FILTRADO DE CATEGORÍAS (LÓGICA SCRIPT 2) ---
+    # --- FILTRADO DE CATEGORÍAS ---
     logging.info("Filtrando productos por categorías maestras...")
     NOMBRES_CATEGORIAS = ["LUCES GRAVADAS", "LUCES LED 0%", "TECNOLOGIA"]
     
-    # 1. Buscar IDs de las categorías padre
     cat_ids = models.execute_kw(db, uid, pwd, 'product.category', 'search', 
         [[('name', 'in', NOMBRES_CATEGORIAS)]])
     
-    # 2. Buscar TODOS los productos dentro de esas categorías (child_of)
     product_ids_filtered = models.execute_kw(db, uid, pwd, 'product.product', 'search', 
         [[('categ_id', 'child_of', cat_ids)]])
     
@@ -130,13 +130,13 @@ def main():
         logging.warning("No se encontraron productos en las categorías indicadas.")
         return
 
-    # --- STOCK (Solo de los productos filtrados) ---
+    # --- STOCK (Solo filtrados) ---
     logging.info("Consultando stock...")
     stock_data = models.execute_kw(db, uid, pwd, 'stock.quant', 'search_read',
         [[
             ('location_id', 'in', [732, 700, 8]), 
             ('quantity', '>', 0),
-            ('product_id', 'in', product_ids_filtered) # Filtro aplicado aquí
+            ('product_id', 'in', product_ids_filtered)
         ]], 
         {'fields': ['product_id', 'quantity']})
     
@@ -151,7 +151,6 @@ def main():
     logging.info(f"Productos filtrados con stock > 0: {len(lista_ids)}")
 
     # --- METADATOS ---
-    # Agregamos 'categ_id' para obtener el nombre de la categoría de Odoo
     prods_light = models.execute_kw(db, uid, pwd, 'product.product', 'read', 
         [lista_ids], {'fields': ['default_code', 'name', 'x_fob_subtotal', 'categ_id']})
     prods_dict = {p['id']: p for p in prods_light}
@@ -163,7 +162,6 @@ def main():
     for p in prods_light:
         ref_raw = p.get('default_code')
         if not ref_raw: continue
-        # Limpieza idéntica al script 2
         ref = str(ref_raw).replace('/', '').replace('*', '').strip()
         mapa_referencias[p['id']] = ref
         fname = f"{ref}.webp"
@@ -173,7 +171,7 @@ def main():
 
     logging.info(f"Faltan descargar realmente: {len(ids_faltantes)}")
 
-    # DESCARGA DE IMÁGENES
+    # DESCARGA IMÁGENES
     BATCH_SIZE = 5 
     if ids_faltantes:
         for lote_ids in chunker(ids_faltantes, BATCH_SIZE):
@@ -206,11 +204,11 @@ def main():
             except Exception as e:
                 logging.error(f"Error lote: {e}")
     else:
-        logging.info("¡Todo sincronizado! No se requieren descargas.")
+        logging.info("¡Todo sincronizado!")
 
-    # --- GENERACIÓN DE JSON FINAL ---
+    # --- JSON FINAL ---
     logging.info("Clasificando y generando JSON...")
-    df_cat = cargar_gsheets() # Ya viene ordenada por longitud
+    df_cat = cargar_gsheets()
     data_list = []
 
     for pid in lista_ids:
@@ -219,45 +217,39 @@ def main():
         ref = mapa_referencias.get(pid)
         if not ref: continue
         
-        # Clasificación (ahora usa la lógica de prioridad por longitud)
         c1, c2, c3 = clasificar(p.get('name'), df_cat)
         
-        # Precio Base
         precio_base = p.get('x_fob_subtotal', 0)
         
-        # Cálculo de Precio (Lógica Script 2)
-        # Si NO es LED 0% en categoría ni subcategoría, suma 15%
+        # Lógica precio script 2
         if "LED 0%" not in str(c1) and "LED 0%" not in str(c2):
             precio_final = precio_base * 1.15
         else:
             precio_final = precio_base
 
-        # Nombre de la categoría de Odoo
         cat_odoo_name = p.get('categ_id')[1] if p.get('categ_id') else 'N/A'
 
-        # Estructura JSON idéntica al Script 2 (+ Imagen para compatibilidad web)
         data_list.append({
             'Referencia Interna': ref,
             'Nombre': p.get('name'),
-            'Categoría': c1,          # Con tilde
-            'Subcategoría': c2,       # Con tilde
-            'Tipo': c3,               # Nuevo campo (Nivel 3)
-            'Marca': 'N/A',           # Nuevo campo default
-            'Categoria de producto': cat_odoo_name, # Nuevo campo Odoo
+            'Categoría': c1,
+            'Subcategoría': c2,
+            'Tipo': c3,
+            'Marca': 'N/A',
+            'Categoria de producto': cat_odoo_name,
             'Stock': stock_map[pid],
             'Precio': round(precio_final, 2),
-            'Imagen': f"/images/{ref}.webp" # Mantenemos este campo para la web
+            'Imagen': f"/images/{ref}.webp"
         })
 
     df = pd.DataFrame(data_list)
     
-    # Ordenar columnas para limpieza visual (opcional)
+    # Orden consistente
     cols = ['Referencia Interna', 'Nombre', 'Categoría', 'Subcategoría', 'Tipo', 'Marca', 'Categoria de producto', 'Stock', 'Precio', 'Imagen']
     df = df[cols]
 
     json_str = df.to_json(orient='records', force_ascii=False, indent=4)
     
-    # Actualizar archivos
     update_file_in_github(repo, "/Resultado_Final.json", json_str, f"Update Catalog {datetime.now()}")
     update_file_in_github(repo, "dist/Resultado_Final.json", json_str, f"Update Catalog {datetime.now()}")
     update_file_in_github(repo, "public/Resultado_Final.json", json_str, f"Update Catalog {datetime.now()}")
