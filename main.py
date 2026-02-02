@@ -192,7 +192,7 @@ def main():
         if "LED 0%" not in str(c1) and "LED 0%" not in str(c2): precio *= 1.15
 
         data_list.append({
-            'Referencia': ref,
+            'Referencia Interna': ref,
             'Nombre': p.get('name'),
             'Categoria': c1,
             'Subcategoria': c2,
