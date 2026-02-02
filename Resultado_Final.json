@@ -1922,7 +1922,7 @@
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
         "Stock":300.0,
-        "Precio":0.0,
+        "Precio":0.99,
         "Imagen":"\/images\/VL-DPL 12W.webp"
     },
     {
@@ -1931,7 +1931,7 @@
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
         "Stock":1000.0,
-        "Precio":1.7,
+        "Precio":1.24,
         "Imagen":"\/images\/VL-DPL 18W.webp"
     },
     {
@@ -1940,7 +1940,7 @@
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
         "Stock":1000.0,
-        "Precio":1.74,
+        "Precio":1.49,
         "Imagen":"\/images\/VL-DPL 24W.webp"
     },
     {
@@ -1949,7 +1949,7 @@
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
         "Stock":500.0,
-        "Precio":0.0,
+        "Precio":1.75,
         "Imagen":"\/images\/VL-DPL 36W.webp"
     },
     {
@@ -1958,7 +1958,7 @@
         "Categoria":"ILUMINACIÓN",
         "Subcategoria":"LUZ LED ELÉCTRICA",
         "Stock":500.0,
-        "Precio":0.0,
+        "Precio":2.36,
         "Imagen":"\/images\/VL-DPL 48W.webp"
     },
     {
@@ -4351,7 +4351,7 @@
         "Nombre":"CINTA ELECTRICA NEGRA 0.13X19X11.1M FUEGO RETARDANTE 250U",
         "Categoria":"MATERIAL ELÉCTRICO",
         "Subcategoria":"FERRETERÍA",
-        "Stock":6141.0,
+        "Stock":6131.0,
         "Precio":0.36,
         "Imagen":"\/images\/CEN-11.1M.webp"
     },
@@ -4369,7 +4369,7 @@
         "Nombre":"CINTA ELECTRICA ROJO 0.13X19X11.1M FUEGO RETARDANTE 250U",
         "Categoria":"MATERIAL ELÉCTRICO",
         "Subcategoria":"FERRETERÍA",
-        "Stock":3380.0,
+        "Stock":3370.0,
         "Precio":0.36,
         "Imagen":"\/images\/CER-11.1M.webp"
     },
@@ -7915,7 +7915,7 @@
         "Nombre":"REPUESTO SCOOTER CONTROLADOR 1500W",
         "Categoria":"Sin Cat",
         "Subcategoria":"Sin Subcat",
-        "Stock":177.0,
+        "Stock":175.0,
         "Precio":43.18,
         "Imagen":"\/images\/SEC1 1500W.webp"
     },
