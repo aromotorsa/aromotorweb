@@ -205,6 +205,7 @@ def main():
     json_str = df.to_json(orient='records', force_ascii=False, indent=4)
     update_file_in_github(repo, "/Resultado_Final.json", json_str, f"Update Catalog {datetime.now()}")
     update_file_in_github(repo, "public/Resultado_Final.json", json_str, f"Update Catalog {datetime.now()}")
+    update_file_in_github(repo, "dist/Resultado_Final.json", json_str, f"Update Catalog {datetime.now()}")
 
     logging.info("=== FIN ===")
 
