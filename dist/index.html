@@ -255,7 +255,7 @@
             // Carga inicial de productos
             async function loadProducts() {
                 try {
-                    const response = await fetch('Resultado_Final.json');                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                    const response = await fetch('/Resultado_Final.json');                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                     allProducts = await response.json();
                     populateFilters();
                     renderProducts();
