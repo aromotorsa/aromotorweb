@@ -1212,6 +1212,18 @@
         "Imagen":"\/images\/VLA-5A.webp"
     },
     {
+        "Referencia Interna":"VLMC-6K",
+        "Nombre":"MANGUERA LED COB 6500K 8MM AC110V 12W\/M IP68",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":"MANGUERA LED",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ MANGUERA LED",
+        "Stock":1.0,
+        "Precio":164.99,
+        "Imagen":"\/images\/VLMC-6K.webp"
+    },
+    {
         "Referencia Interna":"VP-RSA 12+4",
         "Nombre":"VICTORIA LED PANEL SOB RED 12W+4W RGB",
         "Categoría":"ILUMINACIÓN",
@@ -1339,7 +1351,7 @@
         "Tipo":"No Clasificado",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ KIT SOLARES",
-        "Stock":298.0,
+        "Stock":299.0,
         "Precio":46.06,
         "Imagen":"\/images\/AT-9910B.webp"
     },
@@ -1812,6 +1824,18 @@
         "Imagen":"\/images\/VLRE-6P USBC 1M.webp"
     },
     {
+        "Referencia Interna":"E-CLR110V 3000K",
+        "Nombre":"CINTA LED CON RECUBRIMIENTO PLASTICO 110V IP66 3000K",
+        "Categoría":"No Clasificado",
+        "Subcategoría":"No Clasificado",
+        "Tipo":"No Clasificado",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CINTA LED",
+        "Stock":1.0,
+        "Precio":97.0,
+        "Imagen":"\/images\/E-CLR110V 3000K.webp"
+    },
+    {
         "Referencia Interna":"ZM-10 AMBAR",
         "Nombre":"FOCO LED E27 4W 2700K 110V AMBAR",
         "Categoría":"ILUMINACIÓN",
@@ -1843,7 +1867,7 @@
         "Tipo":"No Clasificado",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ OJO DE BUEY",
-        "Stock":25905.0,
+        "Stock":25906.0,
         "Precio":0.97,
         "Imagen":"\/images\/VL-PLD 5W.webp"
     },
@@ -2179,7 +2203,7 @@
         "Tipo":"FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":92.0,
+        "Stock":94.0,
         "Precio":19.88,
         "Imagen":"\/images\/VL-VTL 45W.webp"
     },
@@ -2191,7 +2215,7 @@
         "Tipo":"FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":148.0,
+        "Stock":149.0,
         "Precio":29.82,
         "Imagen":"\/images\/VL-VTL 70W.webp"
     },
@@ -2203,7 +2227,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO REDONDO",
-        "Stock":4929.0,
+        "Stock":4930.0,
         "Precio":3.93,
         "Imagen":"\/images\/VL-PLSE 18W.webp"
     },
@@ -2215,7 +2239,7 @@
         "Tipo":"No Clasificado",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":420.0,
+        "Stock":421.0,
         "Precio":6.31,
         "Imagen":"\/images\/VL-LSTBN 18W.webp"
     },
@@ -2239,7 +2263,7 @@
         "Tipo":"No Clasificado",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":1609.0,
+        "Stock":1610.0,
         "Precio":6.12,
         "Imagen":"\/images\/VL-TLS 18W.webp"
     },
@@ -2263,7 +2287,7 @@
         "Tipo":"CINTA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CINTA LED",
-        "Stock":198.0,
+        "Stock":199.0,
         "Precio":19.62,
         "Imagen":"\/images\/VL-TLRGB 5V.webp"
     },
@@ -2546,9 +2570,9 @@
     {
         "Referencia Interna":"UFOF-100W",
         "Nombre":"VICTORIA LED REFLECTOR UFO INDUSTRIAL 6500K",
-        "Categoría":"ILUMINACIÓN",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":" PANEL SOBREPUESTO REDONDO",
+        "Categoría":"",
+        "Subcategoría":"",
+        "Tipo":"",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ UFO",
         "Stock":88.0,
@@ -2558,9 +2582,9 @@
     {
         "Referencia Interna":"UFOF-150W",
         "Nombre":"VICTORIA LED REFLECTOR UFO INDUSTRIAL 6500K",
-        "Categoría":"ILUMINACIÓN",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":" PANEL SOBREPUESTO REDONDO",
+        "Categoría":"",
+        "Subcategoría":"",
+        "Tipo":"",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ UFO",
         "Stock":58.0,
@@ -2570,9 +2594,9 @@
     {
         "Referencia Interna":"UFOF-200W",
         "Nombre":"VICTORIA LED REFLECTOR UFO INDUSTRIAL 6500K",
-        "Categoría":"ILUMINACIÓN",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":" PANEL SOBREPUESTO REDONDO",
+        "Categoría":"",
+        "Subcategoría":"",
+        "Tipo":"",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ UFO",
         "Stock":135.0,
@@ -2582,9 +2606,9 @@
     {
         "Referencia Interna":"UFOF-250W",
         "Nombre":"VICTORIA LED REFLECTOR UFO INDUSTRIAL 6500K",
-        "Categoría":"ILUMINACIÓN",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":" PANEL SOBREPUESTO REDONDO",
+        "Categoría":"",
+        "Subcategoría":"",
+        "Tipo":"",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ UFO",
         "Stock":69.0,
@@ -5407,7 +5431,7 @@
         "Tipo":" MANGUERA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ MANGUERA LED",
-        "Stock":4911.0,
+        "Stock":4912.0,
         "Precio":5.69,
         "Imagen":"\/images\/CMG-5050CR RGB 10MM.webp"
     },
@@ -5731,7 +5755,7 @@
         "Tipo":" FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":45107.0,
+        "Stock":44627.0,
         "Precio":3.56,
         "Imagen":"\/images\/EF-50W.webp"
     },
@@ -6823,7 +6847,7 @@
         "Tipo":" LUZ DE JARDÍN",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ LUZ DE JARDIN",
-        "Stock":48.0,
+        "Stock":49.0,
         "Precio":125.99,
         "Imagen":"\/images\/LJOC-150W.webp"
     },
@@ -9871,7 +9895,7 @@
         "Tipo":"DOMÓTICA",
         "Marca":"N\/A",
         "Categoria de producto":"TECNOLOGIA \/ DOMOTICA \/ DOMOTICA",
-        "Stock":405.0,
+        "Stock":406.0,
         "Precio":9.2,
         "Imagen":"\/images\/VL-TS01.webp"
     },
@@ -10639,7 +10663,7 @@
         "Tipo":" SOLAR FOCO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR FOCO",
-        "Stock":7691.0,
+        "Stock":7692.0,
         "Precio":8.41,
         "Imagen":"\/images\/FSL-50W.webp"
     },
@@ -11743,7 +11767,7 @@
         "Tipo":" FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":23869.0,
+        "Stock":27569.0,
         "Precio":2.43,
         "Imagen":"\/images\/LV-130 30W.webp"
     },
