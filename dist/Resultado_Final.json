@@ -1615,7 +1615,7 @@
         "Tipo":"No Clasificado",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES LED 0% \/ SISTEMA SOLAR",
-        "Stock":36.0,
+        "Stock":72.0,
         "Precio":161.11,
         "Imagen":"\/images\/SSP-585W BFC JINKO.webp"
     },
@@ -1627,7 +1627,7 @@
         "Tipo":" SISTEMA SOLAR",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES LED 0% \/ SISTEMA SOLAR",
-        "Stock":682.0,
+        "Stock":646.0,
         "Precio":140.1,
         "Imagen":"\/images\/SSP-585W JA BI.webp"
     },
@@ -2167,7 +2167,7 @@
         "Tipo":" CINTA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CINTA LED",
-        "Stock":34816.0,
+        "Stock":34813.0,
         "Precio":8.84,
         "Imagen":"\/images\/E-CL110V-6K.webp"
     },
@@ -2179,7 +2179,7 @@
         "Tipo":" CINTA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CINTA LED",
-        "Stock":623.0,
+        "Stock":620.0,
         "Precio":11.9,
         "Imagen":"\/images\/E-CL110V FUSCIA.webp"
     },
@@ -2191,7 +2191,7 @@
         "Tipo":" CINTA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CINTA LED",
-        "Stock":124.0,
+        "Stock":121.0,
         "Precio":11.9,
         "Imagen":"\/images\/E-CL110V AZUL.webp"
     },
@@ -2887,7 +2887,7 @@
         "Tipo":" EXTRACTOR DE AIRE",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ EXTRACTOR DE AIRE",
-        "Stock":861.0,
+        "Stock":858.0,
         "Precio":13.03,
         "Imagen":"\/images\/EA-4.webp"
     },
@@ -2899,7 +2899,7 @@
         "Tipo":" EXTRACTOR DE AIRE",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ EXTRACTOR DE AIRE",
-        "Stock":55.0,
+        "Stock":53.0,
         "Precio":15.47,
         "Imagen":"\/images\/EA-6.webp"
     },
@@ -5071,7 +5071,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE REDONDO",
-        "Stock":23806.0,
+        "Stock":23796.0,
         "Precio":1.72,
         "Imagen":"\/images\/VP-ER 6W.webp"
     },
@@ -5119,7 +5119,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE REDONDO",
-        "Stock":25169.0,
+        "Stock":25146.0,
         "Precio":3.02,
         "Imagen":"\/images\/VP-ER 18W.webp"
     },
@@ -5887,7 +5887,7 @@
         "Tipo":" TIMER",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ TIMER",
-        "Stock":2158.0,
+        "Stock":2152.0,
         "Precio":14.16,
         "Imagen":"\/images\/KG-316T.webp"
     },
@@ -6079,7 +6079,7 @@
         "Tipo":" KIT SOLARES",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ KIT SOLARES",
-        "Stock":120.0,
+        "Stock":118.0,
         "Precio":52.73,
         "Imagen":"\/images\/AT-9016B.webp"
     },
@@ -6108,6 +6108,18 @@
         "Imagen":"\/images\/VLE-6K3W.webp"
     },
     {
+        "Referencia Interna":"LJOV-100W",
+        "Nombre":"LAMPARA DE JARDIN 4000K IP65 FP0.9 85-265V",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" LUZ DE JARDÍN",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ LUZ DE JARDIN",
+        "Stock":6.0,
+        "Precio":108.0,
+        "Imagen":"\/images\/LJOV-100W.webp"
+    },
+    {
         "Referencia Interna":"LJOC-100W",
         "Nombre":"LAMPARA DE JARDIN 4000K IP65 FP0.9 85-265V",
         "Categoría":"ILUMINACIÓN",
@@ -6115,7 +6127,7 @@
         "Tipo":" LUZ DE JARDÍN",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ LUZ DE JARDIN",
-        "Stock":8.0,
+        "Stock":14.0,
         "Precio":120.0,
         "Imagen":"\/images\/LJOC-100W.webp"
     },
@@ -6739,7 +6751,7 @@
         "Tipo":" PLACAS ELÉCTRICAS LYRA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PLACAS ELECTRICAS LYRA",
-        "Stock":308.0,
+        "Stock":338.0,
         "Precio":1.35,
         "Imagen":"\/images\/VL-TMB1B.webp"
     },
@@ -8479,7 +8491,7 @@
         "Tipo":" REFLECTORES LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ REFLECTORES LED",
-        "Stock":555.0,
+        "Stock":552.0,
         "Precio":13.31,
         "Imagen":"\/images\/ERE-150W.webp"
     },
@@ -10152,6 +10164,18 @@
         "Imagen":"\/images\/C2 VL-P25.webp"
     },
     {
+        "Referencia Interna":"JH-L908",
+        "Nombre":"LAMPARA DECORATIVA  3CCT - 40W",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":"LÁMPARAS DECORATIVAS",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ LAMPARAS DECORATIVAS NEW",
+        "Stock":4.0,
+        "Precio":95.14,
+        "Imagen":"\/images\/JH-L908.webp"
+    },
+    {
         "Referencia Interna":"B-2.5X10",
         "Nombre":"AMARRAS PLASTICAS BLANCA 2.5MMX100MM 100PZAS",
         "Categoría":"MATERIAL ELÉCTRICO",
@@ -11791,7 +11815,7 @@
         "Tipo":" TIMBRE",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ TIMBRE",
-        "Stock":1305.0,
+        "Stock":1303.0,
         "Precio":14.35,
         "Imagen":"\/images\/VLRN01.webp"
     },
@@ -12007,7 +12031,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE REDONDO",
-        "Stock":2373.0,
+        "Stock":2363.0,
         "Precio":2.42,
         "Imagen":"\/images\/VP-ER 12W.webp"
     },
@@ -12487,7 +12511,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":27534.0,
+        "Stock":27484.0,
         "Precio":0.29,
         "Imagen":"\/images\/VLISB-1S.webp"
     },
@@ -12547,7 +12571,7 @@
         "Tipo":" BORNERA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ BORNERA",
-        "Stock":390.0,
+        "Stock":370.0,
         "Precio":4.25,
         "Imagen":"\/images\/X3-8012B.webp"
     },
@@ -13591,7 +13615,7 @@
         "Tipo":" CAJA DE BREAKER",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ CAJA DE BREAKER",
-        "Stock":1900.0,
+        "Stock":1898.0,
         "Precio":7.58,
         "Imagen":"\/images\/CBD-50A.webp"
     },
@@ -13747,7 +13771,7 @@
         "Tipo":"CÁMARAS",
         "Marca":"N\/A",
         "Categoria de producto":"TECNOLOGIA \/ CAMARA",
-        "Stock":140.0,
+        "Stock":166.0,
         "Precio":28.6,
         "Imagen":"\/images\/BT030.webp"
     },
@@ -14119,7 +14143,7 @@
         "Tipo":" SISTEMA SOLAR",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES LED 0% \/ SISTEMA SOLAR",
-        "Stock":32.0,
+        "Stock":31.0,
         "Precio":217.01,
         "Imagen":"\/images\/SSB-12V100AH.webp"
     },
@@ -14146,18 +14170,6 @@
         "Stock":2120.0,
         "Precio":2.25,
         "Imagen":"\/images\/CDP100.webp"
-    },
-    {
-        "Referencia Interna":"SSB-12V50AH",
-        "Nombre":"SOLAR BATERIA GEL 12V50AH",
-        "Categoría":"ILUMINACIÓN SOLAR",
-        "Subcategoría":"LUCES LED 0%",
-        "Tipo":" SISTEMA SOLAR",
-        "Marca":"N\/A",
-        "Categoria de producto":"LUCES LED 0% \/ SISTEMA SOLAR",
-        "Stock":2.0,
-        "Precio":106.09,
-        "Imagen":"\/images\/SSB-12V50AH.webp"
     },
     {
         "Referencia Interna":"GU10-6K",
@@ -14227,7 +14239,7 @@
         "Tipo":"",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ UFO",
-        "Stock":132.0,
+        "Stock":130.0,
         "Precio":75.16,
         "Imagen":"\/images\/UFOF-200W.webp"
     },
@@ -14695,7 +14707,7 @@
         "Tipo":"CÁMARAS",
         "Marca":"N\/A",
         "Categoria de producto":"TECNOLOGIA \/ CAMARA",
-        "Stock":191.0,
+        "Stock":190.0,
         "Precio":60.1,
         "Imagen":"\/images\/BT160.webp"
     },
