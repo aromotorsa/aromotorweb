@@ -535,7 +535,7 @@
         "Tipo":" FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":873.0,
+        "Stock":874.0,
         "Precio":6.36,
         "Imagen":"\/images\/VL-AO 24W.webp"
     },
@@ -1387,7 +1387,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE REDONDO",
-        "Stock":181381.0,
+        "Stock":181380.0,
         "Precio":0.75,
         "Imagen":"\/images\/EV-PER 3W.webp"
     },
@@ -1855,7 +1855,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":1699.0,
+        "Stock":1700.0,
         "Precio":11.63,
         "Imagen":"\/images\/VLAM-3P USB C.webp"
     },
@@ -1939,7 +1939,7 @@
         "Tipo":"No Clasificado",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ OJO DE BUEY",
-        "Stock":25881.0,
+        "Stock":25880.0,
         "Precio":0.97,
         "Imagen":"\/images\/VL-PLD 5W.webp"
     },
@@ -2275,7 +2275,7 @@
         "Tipo":"FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":84.0,
+        "Stock":85.0,
         "Precio":19.88,
         "Imagen":"\/images\/VL-VTL 45W.webp"
     },
@@ -2287,7 +2287,7 @@
         "Tipo":"FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":139.0,
+        "Stock":140.0,
         "Precio":29.82,
         "Imagen":"\/images\/VL-VTL 70W.webp"
     },
@@ -2311,7 +2311,7 @@
         "Tipo":"No Clasificado",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":409.0,
+        "Stock":410.0,
         "Precio":6.31,
         "Imagen":"\/images\/VL-LSTBN 18W.webp"
     },
@@ -2431,7 +2431,7 @@
         "Tipo":"FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":900.0,
+        "Stock":901.0,
         "Precio":7.65,
         "Imagen":"\/images\/VL-LSTB 24W.webp"
     },
@@ -2539,7 +2539,7 @@
         "Tipo":" APLIQUES DE PARED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ APLIQUES DE PARED",
-        "Stock":63.0,
+        "Stock":64.0,
         "Precio":3.86,
         "Imagen":"\/images\/APV73.webp"
     },
@@ -2551,7 +2551,7 @@
         "Tipo":" APLIQUES DE PARED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ APLIQUES DE PARED",
-        "Stock":1.0,
+        "Stock":2.0,
         "Precio":5.16,
         "Imagen":"\/images\/APV74.webp"
     },
@@ -4855,7 +4855,7 @@
         "Tipo":"CÁMARAS",
         "Marca":"N\/A",
         "Categoria de producto":"TECNOLOGIA \/ CAMARA",
-        "Stock":19.0,
+        "Stock":20.0,
         "Precio":24.41,
         "Imagen":"\/images\/BT025.webp"
     },
@@ -5638,6 +5638,18 @@
         "Stock":1012.0,
         "Precio":1.23,
         "Imagen":"\/images\/EV-AD001.webp"
+    },
+    {
+        "Referencia Interna":"ECAMS001",
+        "Nombre":"EVA CAMARA SOLAR 4.0MP IP66 WIFI",
+        "Categoría":"VARIOS Y REPUESTOS",
+        "Subcategoría":"TECNOLOGÍA",
+        "Tipo":" SOLAR CÁMARAS",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR CAMARAS",
+        "Stock":1.0,
+        "Precio":70.85,
+        "Imagen":"\/images\/ECAMS001.webp"
     },
     {
         "Referencia Interna":"E-CL110V-4K",
