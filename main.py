@@ -118,7 +118,8 @@ def main():
 
     # --- FILTRADO DE CATEGORÍAS ---
     logging.info("Filtrando productos por categorías maestras...")
-    NOMBRES_CATEGORIAS = ["LUCES GRAVADAS", "LUCES LED 0%", "TECNOLOGIA"]
+    
+    NOMBRES_CATEGORIAS = ["LUCES GRAVADAS", "LUCES LED 0%", "DOMOTICA"]
     
     cat_ids = models.execute_kw(db, uid, pwd, 'product.category', 'search', 
         [[('name', 'in', NOMBRES_CATEGORIAS)]])
