@@ -79,7 +79,7 @@
         "Tipo":" CINTA ELÉCTRICA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ CINTA ELECTRICA",
-        "Stock":223.0,
+        "Stock":222.0,
         "Precio":0.62,
         "Imagen":"\/images\/CEN-20.2M.webp"
     },
@@ -1111,7 +1111,7 @@
         "Tipo":" CONECTOR DENTADO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ CONECTOR DENTADO",
-        "Stock":1325.0,
+        "Stock":1324.0,
         "Precio":4.86,
         "Imagen":"\/images\/SM2-95 CU.webp"
     },
@@ -1267,7 +1267,7 @@
         "Tipo":" SOLAR FOCO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR FOCO",
-        "Stock":7692.0,
+        "Stock":7691.0,
         "Precio":8.41,
         "Imagen":"\/images\/FSL-50W.webp"
     },
@@ -1315,7 +1315,7 @@
         "Tipo":" MANGUERA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ MANGUERA LED",
-        "Stock":4819.0,
+        "Stock":8319.0,
         "Precio":5.69,
         "Imagen":"\/images\/CMG-5050CR RGB 10MM.webp"
     },
@@ -1399,7 +1399,7 @@
         "Tipo":" MANGUERA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ MANGUERA LED",
-        "Stock":2284.0,
+        "Stock":17284.0,
         "Precio":1.03,
         "Imagen":"\/images\/CMG-50501AC8.webp"
     },
@@ -1579,7 +1579,7 @@
         "Tipo":" REFLECTORES LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ REFLECTORES LED",
-        "Stock":7.0,
+        "Stock":5.0,
         "Precio":112.18,
         "Imagen":"\/images\/VRF300W.webp"
     },
@@ -1786,6 +1786,18 @@
         "Stock":149.0,
         "Precio":1.18,
         "Imagen":"\/images\/STC-25MM.webp"
+    },
+    {
+        "Referencia Interna":"VP-ER 24W 3K",
+        "Nombre":"VICTORIA LED PANEL 3000K 24W EMPOTRABLE REDONDO 20U\/C",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" PANEL EMPOTRABLE REDONDO",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE REDONDO",
+        "Stock":1500.0,
+        "Precio":4.83,
+        "Imagen":"\/images\/VP-ER 24W 3K.webp"
     },
     {
         "Referencia Interna":"MTL01D 10W 6K",
@@ -2059,7 +2071,7 @@
         "Tipo":" SPOT LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ SPOT LED",
-        "Stock":12.0,
+        "Stock":4.0,
         "Precio":10.37,
         "Imagen":"\/images\/MTL03F-600 3K.webp"
     },
@@ -3727,7 +3739,7 @@
         "Tipo":" FUENTES DE PODER",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FUENTES DE PODER",
-        "Stock":1818.0,
+        "Stock":1815.0,
         "Precio":7.42,
         "Imagen":"\/images\/VL-F10A.webp"
     },
@@ -4171,7 +4183,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":39350.0,
+        "Stock":39300.0,
         "Precio":0.24,
         "Imagen":"\/images\/VLEB-10A.webp"
     },
@@ -4195,7 +4207,7 @@
         "Tipo":" MANGUERA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ MANGUERA LED",
-        "Stock":246.0,
+        "Stock":1245.0,
         "Precio":112.0,
         "Imagen":"\/images\/MG-5050RGB 10MM.webp"
     },
@@ -4207,7 +4219,7 @@
         "Tipo":" MANGUERA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ MANGUERA LED",
-        "Stock":345.0,
+        "Stock":745.0,
         "Precio":89.9,
         "Imagen":"\/images\/MG-5050A 8MM.webp"
     },
@@ -4231,7 +4243,7 @@
         "Tipo":" MANGUERA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ MANGUERA LED",
-        "Stock":110.0,
+        "Stock":360.0,
         "Precio":89.9,
         "Imagen":"\/images\/MG-5050B 8MM.webp"
     },
@@ -4291,7 +4303,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":6550.0,
+        "Stock":6549.0,
         "Precio":0.81,
         "Imagen":"\/images\/VLPB-E27.webp"
     },
@@ -4375,7 +4387,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":54803.0,
+        "Stock":54802.0,
         "Precio":0.28,
         "Imagen":"\/images\/VLCL-12N.webp"
     },
@@ -4627,7 +4639,7 @@
         "Tipo":" PANEL DOBLE COLOR",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL DOBLE COLOR",
-        "Stock":2906.0,
+        "Stock":2886.0,
         "Precio":7.07,
         "Imagen":"\/images\/ER12+4RGB.webp"
     },
@@ -4759,7 +4771,7 @@
         "Tipo":" PANEL DOBLE COLOR",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL DOBLE COLOR",
-        "Stock":2593.0,
+        "Stock":2543.0,
         "Precio":4.48,
         "Imagen":"\/images\/ER3+3RGB.webp"
     },
@@ -5143,7 +5155,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO REDONDO",
-        "Stock":5338.0,
+        "Stock":5278.0,
         "Precio":4.15,
         "Imagen":"\/images\/VP-SR 18W.webp"
     },
@@ -5652,6 +5664,18 @@
         "Imagen":"\/images\/VP-ER 12W 3K.webp"
     },
     {
+        "Referencia Interna":"VP-ER 18W 3K",
+        "Nombre":"VICTORIA LED PANEL 6500K 18W EMPOTRABLE REDONDO 20U\/C",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" PANEL EMPOTRABLE REDONDO",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE REDONDO",
+        "Stock":9030.0,
+        "Precio":3.02,
+        "Imagen":"\/images\/VP-ER 18W 3K.webp"
+    },
+    {
         "Referencia Interna":"SL-400W",
         "Nombre":"VICTORIA LED REFLECTOR SOLAR PANAL 6500K",
         "Categoría":"ILUMINACIÓN SOLAR",
@@ -5791,7 +5815,7 @@
         "Tipo":" PANEL SOBREPUESTO CUADRADO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO CUADRADO",
-        "Stock":3440.0,
+        "Stock":7440.0,
         "Precio":6.62,
         "Imagen":"\/images\/VP-SC 24W.webp"
     },
@@ -5947,7 +5971,7 @@
         "Tipo":" KIT SOLARES",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ KIT SOLARES",
-        "Stock":228.0,
+        "Stock":227.0,
         "Precio":29.55,
         "Imagen":"\/images\/DT-9012.webp"
     },
@@ -6007,7 +6031,7 @@
         "Tipo":" KIT SOLARES",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ KIT SOLARES",
-        "Stock":33.0,
+        "Stock":32.0,
         "Precio":36.59,
         "Imagen":"\/images\/DT-9017B.webp"
     },
@@ -6715,7 +6739,7 @@
         "Tipo":" PLACAS ELÉCTRICAS LYRA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PLACAS ELECTRICAS LYRA",
-        "Stock":5264.0,
+        "Stock":5234.0,
         "Precio":1.45,
         "Imagen":"\/images\/VL-IN1B.webp"
     },
@@ -6787,7 +6811,7 @@
         "Tipo":" PLACAS ELÉCTRICAS LYRA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PLACAS ELECTRICAS LYRA",
-        "Stock":1073.0,
+        "Stock":1072.0,
         "Precio":5.82,
         "Imagen":"\/images\/VL-TM4B.webp"
     },
@@ -6895,7 +6919,7 @@
         "Tipo":" PLACAS ELÉCTRICAS LYRA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PLACAS ELECTRICAS LYRA",
-        "Stock":4426.0,
+        "Stock":4425.0,
         "Precio":1.98,
         "Imagen":"\/images\/VL-TM3N.webp"
     },
@@ -7195,7 +7219,7 @@
         "Tipo":" CINTA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CINTA LED",
-        "Stock":2007.0,
+        "Stock":1997.0,
         "Precio":4.51,
         "Imagen":"\/images\/VLA-5A.webp"
     },
@@ -7207,9 +7231,33 @@
         "Tipo":"MANGUERA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ MANGUERA LED",
-        "Stock":1.0,
+        "Stock":151.0,
         "Precio":164.99,
         "Imagen":"\/images\/VLMC-6K.webp"
+    },
+    {
+        "Referencia Interna":"VLMC-3K",
+        "Nombre":"MANGUERA LED COB 3000K 8MM AC110V 12W\/M IP68 100M\/ROLL",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" MANGUERA LED",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ MANGUERA LED",
+        "Stock":100.0,
+        "Precio":164.99,
+        "Imagen":"\/images\/VLMC-3K.webp"
+    },
+    {
+        "Referencia Interna":"VLCC-4A",
+        "Nombre":"CONTROLADOR MANGUERA COB 4A 110V 8MM",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" MANGUERA LED",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ MANGUERA LED",
+        "Stock":5000.0,
+        "Precio":1.64,
+        "Imagen":"\/images\/VLCC-4A.webp"
     },
     {
         "Referencia Interna":"VP-RSA 12+4",
@@ -8515,7 +8563,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO REDONDO",
-        "Stock":8603.0,
+        "Stock":8623.0,
         "Precio":6.01,
         "Imagen":"\/images\/VP-SR 24W.webp"
     },
@@ -8683,7 +8731,7 @@
         "Tipo":" PANEL DOBLE COLOR",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL DOBLE COLOR",
-        "Stock":1099.0,
+        "Stock":1079.0,
         "Precio":4.76,
         "Imagen":"\/images\/VP-REA 12+4.webp"
     },
@@ -9139,7 +9187,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":1603.0,
+        "Stock":1602.0,
         "Precio":0.97,
         "Imagen":"\/images\/VLTD-01.webp"
     },
@@ -9343,7 +9391,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE REDONDO",
-        "Stock":11728.0,
+        "Stock":11727.0,
         "Precio":2.36,
         "Imagen":"\/images\/EV-PER18W.webp"
     },
@@ -9355,7 +9403,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE REDONDO",
-        "Stock":19588.0,
+        "Stock":19587.0,
         "Precio":3.75,
         "Imagen":"\/images\/EV-PER24W.webp"
     },
@@ -9598,18 +9646,6 @@
         "Stock":52.0,
         "Precio":33.83,
         "Imagen":"\/images\/SCL01-WIFI.webp"
-    },
-    {
-        "Referencia Interna":"P21-AC1",
-        "Nombre":"PERFIL ALUMINIO 3M DAKAR ACC TAPA",
-        "Categoría":"ILUMINACIÓN",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":" PERFIL DE ALUMINIO",
-        "Marca":"N\/A",
-        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PERFIL DE ALUMINIO",
-        "Stock":539.0,
-        "Precio":0.23,
-        "Imagen":"\/images\/P21-AC1.webp"
     },
     {
         "Referencia Interna":"SCL06C-WIFI",
@@ -10195,7 +10231,7 @@
         "Tipo":"SOLAR FOCO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR FOCO",
-        "Stock":185.0,
+        "Stock":184.0,
         "Precio":20.32,
         "Imagen":"\/images\/E-LMM 3W.webp"
     },
@@ -10212,16 +10248,16 @@
         "Imagen":"\/images\/VL-P18.webp"
     },
     {
-        "Referencia Interna":"APVZ20",
-        "Nombre":"APLIQUE DE PARED IP54 12W 3000K NEGRO 270*100MM",
-        "Categoría":"ILUMINACIÓN",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":" APLIQUES DE PARED",
+        "Referencia Interna":"B-8.80X55",
+        "Nombre":"AMARRAS PLASTICAS BLANCA 8.8MMX550MM 100PZAS",
+        "Categoría":"MATERIAL ELÉCTRICO",
+        "Subcategoría":"FERRETERÍA",
+        "Tipo":" AMARRAS PLÁSTICAS",
         "Marca":"N\/A",
-        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ APLIQUES DE PARED",
-        "Stock":69.0,
-        "Precio":26.23,
-        "Imagen":"\/images\/APVZ20.webp"
+        "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ AMARRAS PLASTICAS",
+        "Stock":5.0,
+        "Precio":13.68,
+        "Imagen":"\/images\/B-8.80X55.webp"
     },
     {
         "Referencia Interna":"P18-AC1",
@@ -10272,16 +10308,16 @@
         "Imagen":"\/images\/APVZ79.webp"
     },
     {
-        "Referencia Interna":"B-8.80X55",
-        "Nombre":"AMARRAS PLASTICAS BLANCA 8.8MMX550MM 100PZAS",
+        "Referencia Interna":"B-8X30",
+        "Nombre":"AMARRAS PLASTICAS BLANCA 8MMX300MM 100PZAS",
         "Categoría":"MATERIAL ELÉCTRICO",
         "Subcategoría":"FERRETERÍA",
         "Tipo":" AMARRAS PLÁSTICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ AMARRAS PLASTICAS",
-        "Stock":5.0,
-        "Precio":13.68,
-        "Imagen":"\/images\/B-8.80X55.webp"
+        "Stock":1169.0,
+        "Precio":6.12,
+        "Imagen":"\/images\/B-8X30.webp"
     },
     {
         "Referencia Interna":"N-4.8X15",
@@ -10296,16 +10332,16 @@
         "Imagen":"\/images\/N-4.8X15.webp"
     },
     {
-        "Referencia Interna":"B-8X30",
-        "Nombre":"AMARRAS PLASTICAS BLANCA 8MMX300MM 100PZAS",
-        "Categoría":"MATERIAL ELÉCTRICO",
-        "Subcategoría":"FERRETERÍA",
-        "Tipo":" AMARRAS PLÁSTICAS",
+        "Referencia Interna":"P21-AC1",
+        "Nombre":"PERFIL ALUMINIO 3M DAKAR ACC TAPA",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" PERFIL DE ALUMINIO",
         "Marca":"N\/A",
-        "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ AMARRAS PLASTICAS",
-        "Stock":1169.0,
-        "Precio":6.12,
-        "Imagen":"\/images\/B-8X30.webp"
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PERFIL DE ALUMINIO",
+        "Stock":539.0,
+        "Precio":0.23,
+        "Imagen":"\/images\/P21-AC1.webp"
     },
     {
         "Referencia Interna":"VL-P502",
@@ -10536,16 +10572,16 @@
         "Imagen":"\/images\/P25-AC1.webp"
     },
     {
-        "Referencia Interna":"APV33",
-        "Nombre":"APLIQUE DE PARED IP20 2*3W 3000K NEGRO 100*100MM AC85-265V",
+        "Referencia Interna":"VL-P62",
+        "Nombre":"PERFIL ALUMINIO 3M KYOTO",
         "Categoría":"ILUMINACIÓN",
         "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":" APLIQUES DE PARED",
+        "Tipo":" PERFIL DE ALUMINIO",
         "Marca":"N\/A",
-        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ APLIQUES DE PARED",
-        "Stock":6.0,
-        "Precio":7.49,
-        "Imagen":"\/images\/APV33.webp"
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PERFIL DE ALUMINIO",
+        "Stock":161.0,
+        "Precio":6.77,
+        "Imagen":"\/images\/VL-P62.webp"
     },
     {
         "Referencia Interna":"APV13",
@@ -10572,18 +10608,6 @@
         "Imagen":"\/images\/APV43.webp"
     },
     {
-        "Referencia Interna":"VL-P62",
-        "Nombre":"PERFIL ALUMINIO 3M KYOTO",
-        "Categoría":"ILUMINACIÓN",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":" PERFIL DE ALUMINIO",
-        "Marca":"N\/A",
-        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PERFIL DE ALUMINIO",
-        "Stock":161.0,
-        "Precio":6.77,
-        "Imagen":"\/images\/VL-P62.webp"
-    },
-    {
         "Referencia Interna":"VL-P8",
         "Nombre":"PERFIL ALUMINIO 3M LISBOA",
         "Categoría":"ILUMINACIÓN",
@@ -10594,6 +10618,18 @@
         "Stock":187.0,
         "Precio":25.58,
         "Imagen":"\/images\/VL-P8.webp"
+    },
+    {
+        "Referencia Interna":"VL-P802",
+        "Nombre":"PERFIL ALUMINIO 3M LISBOA ACC CLIPS DE MONTAJE",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" PERFIL DE ALUMINIO",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PERFIL DE ALUMINIO",
+        "Stock":1650.0,
+        "Precio":0.7,
+        "Imagen":"\/images\/VL-P802.webp"
     },
     {
         "Referencia Interna":"P53-AC1",
@@ -10627,21 +10663,9 @@
         "Tipo":" APLIQUES DE PARED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ APLIQUES DE PARED",
-        "Stock":82.0,
+        "Stock":76.0,
         "Precio":10.26,
         "Imagen":"\/images\/APV21.webp"
-    },
-    {
-        "Referencia Interna":"VL-P802",
-        "Nombre":"PERFIL ALUMINIO 3M LISBOA ACC CLIPS DE MONTAJE",
-        "Categoría":"ILUMINACIÓN",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":" PERFIL DE ALUMINIO",
-        "Marca":"N\/A",
-        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PERFIL DE ALUMINIO",
-        "Stock":1650.0,
-        "Precio":0.7,
-        "Imagen":"\/images\/VL-P802.webp"
     },
     {
         "Referencia Interna":"VL-P801",
@@ -10656,18 +10680,6 @@
         "Imagen":"\/images\/VL-P801.webp"
     },
     {
-        "Referencia Interna":"VL-P50",
-        "Nombre":"PERFIL ALUMINIO 3M MEKLA GOLD ROSE",
-        "Categoría":"ILUMINACIÓN",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":" PERFIL DE ALUMINIO",
-        "Marca":"N\/A",
-        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PERFIL DE ALUMINIO",
-        "Stock":54.0,
-        "Precio":6.77,
-        "Imagen":"\/images\/VL-P50.webp"
-    },
-    {
         "Referencia Interna":"P49-AC1",
         "Nombre":"PERFIL ALUMINIO 3M MEKLA BLACK ACC TAPA",
         "Categoría":"ILUMINACIÓN",
@@ -10678,6 +10690,18 @@
         "Stock":256.0,
         "Precio":0.29,
         "Imagen":"\/images\/P49-AC1.webp"
+    },
+    {
+        "Referencia Interna":"VL-P50",
+        "Nombre":"PERFIL ALUMINIO 3M MEKLA GOLD ROSE",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" PERFIL DE ALUMINIO",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PERFIL DE ALUMINIO",
+        "Stock":54.0,
+        "Precio":6.77,
+        "Imagen":"\/images\/VL-P50.webp"
     },
     {
         "Referencia Interna":"P50-AC1",
@@ -10704,6 +10728,18 @@
         "Imagen":"\/images\/VL-P1301.webp"
     },
     {
+        "Referencia Interna":"APVZ15",
+        "Nombre":"APLIQUE DE PARED IP54 12W 3000K NEGRO 200*200MM",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" APLIQUES DE PARED",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ APLIQUES DE PARED",
+        "Stock":101.0,
+        "Precio":23.9,
+        "Imagen":"\/images\/APVZ15.webp"
+    },
+    {
         "Referencia Interna":"VL-P602",
         "Nombre":"PERFIL ALUMINIO 3M MOSCU ACC CLIPS DE MONTAJE",
         "Categoría":"ILUMINACIÓN",
@@ -10728,16 +10764,16 @@
         "Imagen":"\/images\/VL-P601.webp"
     },
     {
-        "Referencia Interna":"APVZ15",
+        "Referencia Interna":"APVZ16",
         "Nombre":"APLIQUE DE PARED IP54 12W 3000K NEGRO 200*200MM",
         "Categoría":"ILUMINACIÓN",
         "Subcategoría":"LUZ LED ELÉCTRICA",
         "Tipo":" APLIQUES DE PARED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ APLIQUES DE PARED",
-        "Stock":101.0,
+        "Stock":81.0,
         "Precio":23.9,
-        "Imagen":"\/images\/APVZ15.webp"
+        "Imagen":"\/images\/APVZ16.webp"
     },
     {
         "Referencia Interna":"P19-AC1",
@@ -10764,16 +10800,16 @@
         "Imagen":"\/images\/APV16.webp"
     },
     {
-        "Referencia Interna":"APVZ16",
-        "Nombre":"APLIQUE DE PARED IP54 12W 3000K NEGRO 200*200MM",
+        "Referencia Interna":"APVZ20",
+        "Nombre":"APLIQUE DE PARED IP54 12W 3000K NEGRO 270*100MM",
         "Categoría":"ILUMINACIÓN",
         "Subcategoría":"LUZ LED ELÉCTRICA",
         "Tipo":" APLIQUES DE PARED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ APLIQUES DE PARED",
-        "Stock":81.0,
-        "Precio":23.9,
-        "Imagen":"\/images\/APVZ16.webp"
+        "Stock":69.0,
+        "Precio":26.23,
+        "Imagen":"\/images\/APVZ20.webp"
     },
     {
         "Referencia Interna":"P2-AC3",
@@ -10860,18 +10896,6 @@
         "Imagen":"\/images\/VL-P46.webp"
     },
     {
-        "Referencia Interna":"P46-AC1",
-        "Nombre":"PERFIL ALUMINIO 3M ORAN ROSE ACC CLIPS DE MONTAJE",
-        "Categoría":"ILUMINACIÓN",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":" PERFIL DE ALUMINIO",
-        "Marca":"N\/A",
-        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PERFIL DE ALUMINIO",
-        "Stock":208.0,
-        "Precio":0.29,
-        "Imagen":"\/images\/P46-AC1.webp"
-    },
-    {
         "Referencia Interna":"APV61",
         "Nombre":"APLIQUE DE PARED IP65 18W 3000K NEGRO 293*100MM AC85-265V",
         "Categoría":"ILUMINACIÓN",
@@ -10882,6 +10906,18 @@
         "Stock":38.0,
         "Precio":28.35,
         "Imagen":"\/images\/APV61.webp"
+    },
+    {
+        "Referencia Interna":"P46-AC1",
+        "Nombre":"PERFIL ALUMINIO 3M ORAN ROSE ACC CLIPS DE MONTAJE",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" PERFIL DE ALUMINIO",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PERFIL DE ALUMINIO",
+        "Stock":208.0,
+        "Precio":0.29,
+        "Imagen":"\/images\/P46-AC1.webp"
     },
     {
         "Referencia Interna":"APVW08-N",
@@ -10903,7 +10939,7 @@
         "Tipo":" APLIQUES DE PARED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ APLIQUES DE PARED",
-        "Stock":398.0,
+        "Stock":388.0,
         "Precio":6.59,
         "Imagen":"\/images\/APV02 6K.webp"
     },
@@ -10939,7 +10975,7 @@
         "Tipo":" APLIQUES DE PARED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ APLIQUES DE PARED",
-        "Stock":37.0,
+        "Stock":27.0,
         "Precio":7.29,
         "Imagen":"\/images\/APVL01.webp"
     },
@@ -11011,7 +11047,7 @@
         "Tipo":" APLIQUES DE PARED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ APLIQUES DE PARED",
-        "Stock":109.0,
+        "Stock":103.0,
         "Precio":9.29,
         "Imagen":"\/images\/APV49.webp"
     },
@@ -11335,7 +11371,7 @@
         "Tipo":" PILAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PILAS",
-        "Stock":541.0,
+        "Stock":535.0,
         "Precio":4.0,
         "Imagen":"\/images\/LR03 10B.webp"
     },
@@ -11887,7 +11923,7 @@
         "Tipo":" PANEL EMPOTRABLE CUADRADO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE CUADRADO",
-        "Stock":11647.0,
+        "Stock":11627.0,
         "Precio":2.59,
         "Imagen":"\/images\/VP-EC 12W.webp"
     },
@@ -11911,7 +11947,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO REDONDO",
-        "Stock":5251.0,
+        "Stock":5191.0,
         "Precio":3.38,
         "Imagen":"\/images\/VP-SR 12W.webp"
     },
@@ -11923,7 +11959,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE REDONDO",
-        "Stock":1850.0,
+        "Stock":1790.0,
         "Precio":2.42,
         "Imagen":"\/images\/VP-ER 12W.webp"
     },
@@ -11935,7 +11971,7 @@
         "Tipo":" PANEL EMPOTRABLE CUADRADO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE CUADRADO",
-        "Stock":15824.0,
+        "Stock":15804.0,
         "Precio":5.17,
         "Imagen":"\/images\/VP-EC24W.webp"
     },
@@ -11986,6 +12022,30 @@
         "Stock":3209.0,
         "Precio":5.3,
         "Imagen":"\/images\/EC3+3RGB.webp"
+    },
+    {
+        "Referencia Interna":"VP-EC18W",
+        "Nombre":"VICTORIA LED PANEL 6500K 18W EMPOTRABLE CUADRADO 20U\/C",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" PANEL EMPOTRABLE CUADRADO",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE CUADRADO",
+        "Stock":16620.0,
+        "Precio":2.94,
+        "Imagen":"\/images\/VP-EC18W.webp"
+    },
+    {
+        "Referencia Interna":"VP-SC 18W",
+        "Nombre":"VICTORIA LED PANEL SOBREPUESTO CUADRADO 18W 6500K 20U\/C",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" PANEL SOBREPUESTO CUADRADO",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO CUADRADO",
+        "Stock":15000.0,
+        "Precio":4.46,
+        "Imagen":"\/images\/VP-SC 18W.webp"
     },
     {
         "Referencia Interna":"VP-SC 6W",
@@ -12139,7 +12199,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":47140.0,
+        "Stock":47139.0,
         "Precio":0.71,
         "Imagen":"\/images\/VLTPB-15A.webp"
     },
@@ -12199,7 +12259,7 @@
         "Tipo":" APLIQUES DE PARED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ APLIQUES DE PARED",
-        "Stock":64.0,
+        "Stock":49.0,
         "Precio":3.86,
         "Imagen":"\/images\/APV73.webp"
     },
@@ -12283,7 +12343,7 @@
         "Tipo":" BORNERA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ BORNERA",
-        "Stock":600.0,
+        "Stock":590.0,
         "Precio":1.26,
         "Imagen":"\/images\/X3-1512B.webp"
     },
@@ -12307,7 +12367,7 @@
         "Tipo":" BORNERA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ BORNERA",
-        "Stock":433.0,
+        "Stock":423.0,
         "Precio":0.51,
         "Imagen":"\/images\/X3-0512B.webp"
     },
@@ -12439,7 +12499,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":14131.0,
+        "Stock":14130.0,
         "Precio":0.61,
         "Imagen":"\/images\/VL3H-IA.webp"
     },
@@ -12499,7 +12559,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":72809.0,
+        "Stock":72808.0,
         "Precio":0.49,
         "Imagen":"\/images\/VLIH-2B.webp"
     },
@@ -12535,7 +12595,7 @@
         "Tipo":" REFLECTORES LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ REFLECTORES LED",
-        "Stock":831.0,
+        "Stock":828.0,
         "Precio":75.12,
         "Imagen":"\/images\/RMV200W.webp"
     },
@@ -13471,7 +13531,7 @@
         "Tipo":"CINTA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CINTA LED",
-        "Stock":112.0,
+        "Stock":111.0,
         "Precio":19.62,
         "Imagen":"\/images\/VL-TLRGB 5V.webp"
     },
