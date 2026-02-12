@@ -2588,7 +2588,7 @@
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO CUADRADO",
         "Stock":2.0,
-        "Precio":17.2,
+        "Precio":16.3,
         "Imagen":"\/images\/SC60-45W 6K.webp"
     },
     {
@@ -5539,7 +5539,7 @@
         "Tipo":" REFLECTORES LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ REFLECTORES LED",
-        "Stock":785.0,
+        "Stock":13.0,
         "Precio":12.16,
         "Imagen":"\/images\/VL-RGB50W.webp"
     },
@@ -5563,21 +5563,9 @@
         "Tipo":" REFLECTORES LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ REFLECTORES LED",
-        "Stock":726.0,
+        "Stock":152.0,
         "Precio":6.3,
         "Imagen":"\/images\/VL-RGB10W.webp"
-    },
-    {
-        "Referencia Interna":"VL-RGB200W",
-        "Nombre":"VICTORIA LED REFLECTOR RGB 100-240V FP0.5",
-        "Categoría":"INDUSTRIAL",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":" REFLECTORES LED",
-        "Marca":"N\/A",
-        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ REFLECTORES LED",
-        "Stock":95.0,
-        "Precio":57.93,
-        "Imagen":"\/images\/VL-RGB200W.webp"
     },
     {
         "Referencia Interna":"VRL-RGB-50W",
@@ -8467,7 +8455,7 @@
         "Tipo":" REFLECTORES LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ REFLECTORES LED",
-        "Stock":1082.0,
+        "Stock":320.0,
         "Precio":7.06,
         "Imagen":"\/images\/VL-RGB20W.webp"
     },
@@ -8899,7 +8887,7 @@
         "Tipo":" REFLECTORES LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ REFLECTORES LED",
-        "Stock":943.0,
+        "Stock":1517.0,
         "Precio":8.46,
         "Imagen":"\/images\/VL-RGB10W 5050.webp"
     },
@@ -8923,7 +8911,7 @@
         "Tipo":" REFLECTORES LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ REFLECTORES LED",
-        "Stock":912.0,
+        "Stock":1674.0,
         "Precio":9.33,
         "Imagen":"\/images\/VL-RGB20W 5050.webp"
     },
@@ -8947,7 +8935,7 @@
         "Tipo":" REFLECTORES LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ REFLECTORES LED",
-        "Stock":720.0,
+        "Stock":1492.0,
         "Precio":15.57,
         "Imagen":"\/images\/VL-RGB50W 5050.webp"
     },
@@ -14203,7 +14191,7 @@
         "Tipo":" REFLECTORES LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ REFLECTORES LED",
-        "Stock":92.0,
+        "Stock":187.0,
         "Precio":48.94,
         "Imagen":"\/images\/VL-RGB200W 5050.webp"
     },
