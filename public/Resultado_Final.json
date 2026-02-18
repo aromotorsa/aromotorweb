@@ -2371,7 +2371,7 @@
         "Tipo":" FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":238.0,
+        "Stock":227.0,
         "Precio":1.54,
         "Imagen":"\/images\/EF-20W 3K.webp"
     },
@@ -2407,7 +2407,7 @@
         "Tipo":" FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":13671.0,
+        "Stock":13682.0,
         "Precio":2.21,
         "Imagen":"\/images\/EF-30W.webp"
     },
@@ -2659,7 +2659,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE REDONDO",
-        "Stock":368.0,
+        "Stock":393.0,
         "Precio":2.21,
         "Imagen":"\/images\/EP-ER12W.webp"
     },
@@ -3475,7 +3475,7 @@
         "Tipo":" FOCO LED RECARGABLE",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED RECARGABLE",
-        "Stock":4471.0,
+        "Stock":4482.0,
         "Precio":7.15,
         "Imagen":"\/images\/FE50W.webp"
     },
@@ -3571,7 +3571,7 @@
         "Tipo":" FOCO LED RECARGABLE",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED RECARGABLE",
-        "Stock":918.0,
+        "Stock":907.0,
         "Precio":9.05,
         "Imagen":"\/images\/VL-FE50W.webp"
     },
@@ -4291,7 +4291,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO REDONDO",
-        "Stock":69.0,
+        "Stock":1.0,
         "Precio":3.39,
         "Imagen":"\/images\/LV-210 12W 3000K.webp"
     },
@@ -4327,7 +4327,7 @@
         "Tipo":" PANEL SOBREPUESTO CUADRADO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO CUADRADO",
-        "Stock":299.0,
+        "Stock":275.0,
         "Precio":20.5,
         "Imagen":"\/images\/PSVC-45W 6K.webp"
     },
@@ -4543,7 +4543,7 @@
         "Tipo":" PANEL DOBLE COLOR",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL DOBLE COLOR",
-        "Stock":983.0,
+        "Stock":1051.0,
         "Precio":2.5,
         "Imagen":"\/images\/LV-206ECF 3+3.webp"
     },
@@ -4867,7 +4867,7 @@
         "Tipo":" PANEL EMPOTRABLE CUADRADO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE CUADRADO",
-        "Stock":46.0,
+        "Stock":70.0,
         "Precio":1.97,
         "Imagen":"\/images\/LV-113 18W 6500K.webp"
     },
@@ -4927,7 +4927,7 @@
         "Tipo":" PANEL SOBREPUESTO CUADRADO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO CUADRADO",
-        "Stock":2939.0,
+        "Stock":2947.0,
         "Precio":4.42,
         "Imagen":"\/images\/VP-SCF 24W.webp"
     },
@@ -4951,7 +4951,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO REDONDO",
-        "Stock":8598.0,
+        "Stock":8639.0,
         "Precio":5.63,
         "Imagen":"\/images\/VP-SRF 36W.webp"
     },
@@ -4975,7 +4975,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO REDONDO",
-        "Stock":2628.0,
+        "Stock":2679.0,
         "Precio":8.9,
         "Imagen":"\/images\/VP-SRF 48W.webp"
     },
@@ -5064,18 +5064,6 @@
         "Imagen":"\/images\/LV-113 36W 3000K.webp"
     },
     {
-        "Referencia Interna":"LV-213 24W 3000K",
-        "Nombre":"VICTORIA LED PANEL SIN BORDE 24W SOBREPUESTO CUADRADO 20U\/C",
-        "Categoría":"ILUMINACIÓN",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":" PANEL SOBREPUESTO CUADRADO",
-        "Marca":"N\/A",
-        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO CUADRADO",
-        "Stock":19.0,
-        "Precio":3.1,
-        "Imagen":"\/images\/LV-213 24W 3000K.webp"
-    },
-    {
         "Referencia Interna":"VP-ER 18W",
         "Nombre":"VICTORIA LED PANEL 6500K 18W EMPOTRABLE REDONDO 20U\/C",
         "Categoría":"ILUMINACIÓN",
@@ -5086,6 +5074,18 @@
         "Stock":58741.0,
         "Precio":3.02,
         "Imagen":"\/images\/VP-ER 18W.webp"
+    },
+    {
+        "Referencia Interna":"VP-SR 18W",
+        "Nombre":"VICTORIA LED PANEL 6500K 18W SOBREPUESTO REDONDO 20U\/C",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" PANEL SOBREPUESTO REDONDO",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO REDONDO",
+        "Stock":5169.0,
+        "Precio":4.15,
+        "Imagen":"\/images\/VP-SR 18W.webp"
     },
     {
         "Referencia Interna":"LV-112 36W 3000K",
@@ -5110,18 +5110,6 @@
         "Stock":6.0,
         "Precio":6.28,
         "Imagen":"\/images\/LV-213 36W 6500K.webp"
-    },
-    {
-        "Referencia Interna":"VP-SR 18W",
-        "Nombre":"VICTORIA LED PANEL 6500K 18W SOBREPUESTO REDONDO 20U\/C",
-        "Categoría":"ILUMINACIÓN",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":" PANEL SOBREPUESTO REDONDO",
-        "Marca":"N\/A",
-        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO REDONDO",
-        "Stock":5169.0,
-        "Precio":4.15,
-        "Imagen":"\/images\/VP-SR 18W.webp"
     },
     {
         "Referencia Interna":"LV-113 36W 6500K",
@@ -5179,7 +5167,7 @@
         "Tipo":" PANEL SOBREPUESTO CUADRADO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO CUADRADO",
-        "Stock":1117.0,
+        "Stock":1147.0,
         "Precio":10.01,
         "Imagen":"\/images\/LV-213 48W 6500K.webp"
     },
@@ -5731,7 +5719,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO REDONDO",
-        "Stock":366.0,
+        "Stock":341.0,
         "Precio":4.15,
         "Imagen":"\/images\/VP-SR 18W 3K.webp"
     },
@@ -6655,7 +6643,7 @@
         "Tipo":" PLACAS ELÉCTRICAS LYRA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PLACAS ELECTRICAS LYRA",
-        "Stock":5177.0,
+        "Stock":5184.0,
         "Precio":0.83,
         "Imagen":"\/images\/VL-T1B.webp"
     },
@@ -6751,7 +6739,7 @@
         "Tipo":" PLACAS ELÉCTRICAS LYRA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PLACAS ELECTRICAS LYRA",
-        "Stock":1067.0,
+        "Stock":1062.0,
         "Precio":5.82,
         "Imagen":"\/images\/VL-TM4B.webp"
     },
@@ -6787,7 +6775,7 @@
         "Tipo":" PLACAS ELÉCTRICAS LYRA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PLACAS ELECTRICAS LYRA",
-        "Stock":2671.0,
+        "Stock":2664.0,
         "Precio":1.08,
         "Imagen":"\/images\/VL-T1N.webp"
     },
@@ -7243,7 +7231,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO REDONDO",
-        "Stock":3404.0,
+        "Stock":3420.0,
         "Precio":2.67,
         "Imagen":"\/images\/VP-SRF 18W.webp"
     },
@@ -8467,7 +8455,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO REDONDO",
-        "Stock":8513.0,
+        "Stock":8494.0,
         "Precio":6.01,
         "Imagen":"\/images\/VP-SR 24W.webp"
     },
@@ -8491,7 +8479,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO REDONDO",
-        "Stock":382.0,
+        "Stock":353.0,
         "Precio":2.67,
         "Imagen":"\/images\/VP-SRF 18W 3K.webp"
     },
@@ -8551,7 +8539,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO REDONDO",
-        "Stock":97.0,
+        "Stock":46.0,
         "Precio":8.9,
         "Imagen":"\/images\/VP-SRF 48W 3K.webp"
     },
@@ -8590,6 +8578,18 @@
         "Stock":2.0,
         "Precio":580.21,
         "Imagen":"\/images\/LP15-24100.webp"
+    },
+    {
+        "Referencia Interna":"LP15-24200",
+        "Nombre":"SOLAR BATERIA LITIO 25.6V200AH MUST",
+        "Categoría":"ILUMINACIÓN SOLAR",
+        "Subcategoría":"LUCES LED 0%",
+        "Tipo":" SISTEMA SOLAR",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES LED 0% \/ SISTEMA SOLAR",
+        "Stock":1.0,
+        "Precio":1094.73,
+        "Imagen":"\/images\/LP15-24200.webp"
     },
     {
         "Referencia Interna":"LP18-48100",
@@ -9115,7 +9115,7 @@
         "Tipo":" REGLETA ELÉCTRICA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ REGLETA ELECTRICA",
-        "Stock":2847.0,
+        "Stock":2857.0,
         "Precio":6.64,
         "Imagen":"\/images\/VLRE-6P USBC 1M.webp"
     },
@@ -11443,7 +11443,7 @@
         "Tipo":" SISTEMA SOLAR",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES LED 0% \/ SISTEMA SOLAR",
-        "Stock":2.0,
+        "Stock":4.0,
         "Precio":164.0,
         "Imagen":"\/images\/SSP-610W.webp"
     },
@@ -11887,7 +11887,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO REDONDO",
-        "Stock":4299.0,
+        "Stock":4283.0,
         "Precio":2.15,
         "Imagen":"\/images\/VP-SR 6W.webp"
     },
@@ -11935,7 +11935,7 @@
         "Tipo":" PANEL SOBREPUESTO CUADRADO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO CUADRADO",
-        "Stock":4529.0,
+        "Stock":4554.0,
         "Precio":2.25,
         "Imagen":"\/images\/VP-SC 6W.webp"
     },
@@ -11971,7 +11971,7 @@
         "Tipo":" REGLETA ELÉCTRICA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ REGLETA ELECTRICA",
-        "Stock":251.0,
+        "Stock":241.0,
         "Precio":4.39,
         "Imagen":"\/images\/VLRE-6P 1M.webp"
     },
@@ -12055,7 +12055,7 @@
         "Tipo":"No Clasificado",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":14749.0,
+        "Stock":14754.0,
         "Precio":0.64,
         "Imagen":"\/images\/VLTDI-15A.webp"
     },
@@ -12343,7 +12343,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":27284.0,
+        "Stock":27263.0,
         "Precio":0.29,
         "Imagen":"\/images\/VLISB-1S.webp"
     },
@@ -12439,7 +12439,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":72728.0,
+        "Stock":72749.0,
         "Precio":0.49,
         "Imagen":"\/images\/VLIH-2B.webp"
     },
