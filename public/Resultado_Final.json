@@ -2244,18 +2244,6 @@
         "Imagen":"\/images\/KT-SUP60.webp"
     },
     {
-        "Referencia Interna":"JH-L922",
-        "Nombre":"LAMPARA DECORATIVA  3CCT - 80W",
-        "Categoría":"ILUMINACIÓN",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":"LÁMPARAS DECORATIVAS",
-        "Marca":"N\/A",
-        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ LAMPARAS DECORATIVAS NEW",
-        "Stock":20.0,
-        "Precio":150.98,
-        "Imagen":"\/images\/JH-L922.webp"
-    },
-    {
         "Referencia Interna":"APV74",
         "Nombre":"APLIQUE DE PARED IP20 8W 3000K NEGRO 80*60*142MM AC85-265V",
         "Categoría":"ILUMINACIÓN",
@@ -2266,6 +2254,18 @@
         "Stock":2.0,
         "Precio":5.16,
         "Imagen":"\/images\/APV74.webp"
+    },
+    {
+        "Referencia Interna":"VL-VTL 45W",
+        "Nombre":"FOCO LED 45W VENTILADOR E27 2CCT 110-265V",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":"FOCO LED",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
+        "Stock":85.0,
+        "Precio":19.88,
+        "Imagen":"\/images\/VL-VTL 45W.webp"
     },
     {
         "Referencia Interna":"CE-2835 12MM",
@@ -8844,18 +8844,6 @@
         "Imagen":"\/images\/VL-RGB50W 5050.webp"
     },
     {
-        "Referencia Interna":"VL-VTL 45W",
-        "Nombre":"FOCO LED 45W VENTILADOR E27 2CCT 110-265V",
-        "Categoría":"ILUMINACIÓN",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":"FOCO LED",
-        "Marca":"N\/A",
-        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":85.0,
-        "Precio":19.88,
-        "Imagen":"\/images\/VL-VTL 45W.webp"
-    },
-    {
         "Referencia Interna":"TPC-3012W 50W",
         "Nombre":"SPOT LED 50W 3000K BLANCO AC85V-265V",
         "Categoría":"ILUMINACIÓN",
@@ -9960,6 +9948,18 @@
         "Imagen":"\/images\/VL-P25.webp"
     },
     {
+        "Referencia Interna":"APVY44",
+        "Nombre":"APLIQUE DE PARED IP54 1*E27 110*88MM NEGRO",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" APLIQUES DE PARED",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ APLIQUES DE PARED",
+        "Stock":6.0,
+        "Precio":22.15,
+        "Imagen":"\/images\/APVY44.webp"
+    },
+    {
         "Referencia Interna":"C2 VL-P25",
         "Nombre":"PERFIL ALUMINIO 3M C2 KINGSTON",
         "Categoría":"ILUMINACIÓN",
@@ -10128,16 +10128,16 @@
         "Imagen":"\/images\/VL-P18.webp"
     },
     {
-        "Referencia Interna":"B-8.80X55",
-        "Nombre":"AMARRAS PLASTICAS BLANCA 8.8MMX550MM 100PZAS",
-        "Categoría":"MATERIAL ELÉCTRICO",
-        "Subcategoría":"FERRETERÍA",
-        "Tipo":" AMARRAS PLÁSTICAS",
+        "Referencia Interna":"JH-L922",
+        "Nombre":"LAMPARA DECORATIVA  3CCT - 80W",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":"LÁMPARAS DECORATIVAS",
         "Marca":"N\/A",
-        "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ AMARRAS PLASTICAS",
-        "Stock":5.0,
-        "Precio":13.68,
-        "Imagen":"\/images\/B-8.80X55.webp"
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ LAMPARAS DECORATIVAS NEW",
+        "Stock":20.0,
+        "Precio":150.98,
+        "Imagen":"\/images\/JH-L922.webp"
     },
     {
         "Referencia Interna":"P18-AC1",
@@ -14203,7 +14203,7 @@
         "Tipo":"No Clasificado",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SISTEMA SOLAR",
-        "Stock":635.0,
+        "Stock":631.0,
         "Precio":2.17,
         "Imagen":"\/images\/RN-EC1.webp"
     },
@@ -14215,7 +14215,7 @@
         "Tipo":"No Clasificado",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SISTEMA SOLAR",
-        "Stock":1025.0,
+        "Stock":1021.0,
         "Precio":2.17,
         "Imagen":"\/images\/RN-IC1.webp"
     },
@@ -14239,7 +14239,7 @@
         "Tipo":"No Clasificado",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SISTEMA SOLAR",
-        "Stock":324.0,
+        "Stock":322.0,
         "Precio":64.87,
         "Imagen":"\/images\/RN-SR-RB2.webp"
     },
@@ -14263,7 +14263,7 @@
         "Tipo":" SISTEMA SOLAR",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SISTEMA SOLAR",
-        "Stock":607.0,
+        "Stock":603.0,
         "Precio":3.71,
         "Imagen":"\/images\/RN7-SW-3-A001.webp"
     },
