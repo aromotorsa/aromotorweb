@@ -1495,7 +1495,7 @@
         "Tipo":" SOLAR LUZ DE CALLE",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR LUZ DE CALLE",
-        "Stock":338.0,
+        "Stock":336.0,
         "Precio":79.25,
         "Imagen":"\/images\/LPSF-400W.webp"
     },
@@ -2167,7 +2167,7 @@
         "Tipo":" CINTA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CINTA LED",
-        "Stock":26857.0,
+        "Stock":26683.0,
         "Precio":8.84,
         "Imagen":"\/images\/E-CL110V-3K.webp"
     },
@@ -2179,7 +2179,7 @@
         "Tipo":" CINTA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CINTA LED",
-        "Stock":33868.0,
+        "Stock":33684.0,
         "Precio":8.84,
         "Imagen":"\/images\/E-CL110V-6K.webp"
     },
@@ -2407,7 +2407,7 @@
         "Tipo":" FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":13657.0,
+        "Stock":13607.0,
         "Precio":2.21,
         "Imagen":"\/images\/EF-30W.webp"
     },
@@ -2431,7 +2431,7 @@
         "Tipo":" FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":11764.0,
+        "Stock":11734.0,
         "Precio":2.98,
         "Imagen":"\/images\/EF-40W.webp"
     },
@@ -2455,7 +2455,7 @@
         "Tipo":" FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":43753.0,
+        "Stock":43747.0,
         "Precio":3.56,
         "Imagen":"\/images\/EF-50W.webp"
     },
@@ -2551,7 +2551,7 @@
         "Tipo":" PANEL EMPOTRABLE CUADRADO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE CUADRADO",
-        "Stock":1518.0,
+        "Stock":1517.0,
         "Precio":35.34,
         "Imagen":"\/images\/PER60-120W 6K.webp"
     },
@@ -2575,7 +2575,7 @@
         "Tipo":" PANEL EMPOTRABLE CUADRADO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE CUADRADO",
-        "Stock":4680.0,
+        "Stock":4675.0,
         "Precio":10.29,
         "Imagen":"\/images\/PEC60-45W 6K.webp"
     },
@@ -2587,7 +2587,7 @@
         "Tipo":" PANEL SOBREPUESTO CUADRADO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO CUADRADO",
-        "Stock":1492.0,
+        "Stock":1428.0,
         "Precio":16.3,
         "Imagen":"\/images\/SC60-45W 6K.webp"
     },
@@ -2803,7 +2803,7 @@
         "Tipo":" REFLECTORES LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ REFLECTORES LED",
-        "Stock":1023.0,
+        "Stock":1013.0,
         "Precio":26.36,
         "Imagen":"\/images\/ERE-300W.webp"
     },
@@ -2863,7 +2863,7 @@
         "Tipo":" REGLETA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ REGLETA LED",
-        "Stock":3454.0,
+        "Stock":3424.0,
         "Precio":3.56,
         "Imagen":"\/images\/E-RL36WB.webp"
     },
@@ -3091,7 +3091,7 @@
         "Tipo":" FOCO LED DECORATIVO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED DECORATIVO",
-        "Stock":6281.0,
+        "Stock":6261.0,
         "Precio":1.36,
         "Imagen":"\/images\/ZM-9.webp"
     },
@@ -3103,7 +3103,7 @@
         "Tipo":" FOCO LED DECORATIVO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED DECORATIVO",
-        "Stock":5846.0,
+        "Stock":5816.0,
         "Precio":1.02,
         "Imagen":"\/images\/ZM-2.webp"
     },
@@ -3151,7 +3151,7 @@
         "Tipo":" FOCO LED DECORATIVO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED DECORATIVO",
-        "Stock":3462.0,
+        "Stock":3450.0,
         "Precio":2.55,
         "Imagen":"\/images\/ZM-11.webp"
     },
@@ -3175,7 +3175,7 @@
         "Tipo":" CAJA DE PASO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ CAJA DE PASO",
-        "Stock":1527.0,
+        "Stock":1523.0,
         "Precio":3.52,
         "Imagen":"\/images\/CDP150-2.webp"
     },
@@ -3199,7 +3199,7 @@
         "Tipo":" CAJA DE PASO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ CAJA DE PASO",
-        "Stock":253.0,
+        "Stock":249.0,
         "Precio":3.52,
         "Imagen":"\/images\/CDP200.webp"
     },
@@ -3415,7 +3415,7 @@
         "Tipo":" FOCO LED RECARGABLE",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED RECARGABLE",
-        "Stock":591.0,
+        "Stock":589.0,
         "Precio":8.66,
         "Imagen":"\/images\/FE100W.webp"
     },
@@ -3511,7 +3511,7 @@
         "Tipo":" FOCO LED RECARGABLE",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED RECARGABLE",
-        "Stock":779.0,
+        "Stock":777.0,
         "Precio":8.22,
         "Imagen":"\/images\/FE80W.webp"
     },
@@ -3523,7 +3523,7 @@
         "Tipo":" FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":1212.0,
+        "Stock":1182.0,
         "Precio":2.55,
         "Imagen":"\/images\/FMT18W.webp"
     },
@@ -3571,7 +3571,7 @@
         "Tipo":" FOCO LED RECARGABLE",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED RECARGABLE",
-        "Stock":907.0,
+        "Stock":905.0,
         "Precio":9.05,
         "Imagen":"\/images\/VL-FE50W.webp"
     },
@@ -3679,7 +3679,7 @@
         "Tipo":" FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":11893.0,
+        "Stock":11885.0,
         "Precio":3.21,
         "Imagen":"\/images\/LV-130 40W.webp"
     },
@@ -3703,7 +3703,7 @@
         "Tipo":" FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":20713.0,
+        "Stock":20658.0,
         "Precio":3.68,
         "Imagen":"\/images\/LV-130 50W.webp"
     },
@@ -3763,7 +3763,7 @@
         "Tipo":" FUENTES DE PODER",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FUENTES DE PODER",
-        "Stock":101.0,
+        "Stock":99.0,
         "Precio":24.9,
         "Imagen":"\/images\/VL-F41A.webp"
     },
@@ -3787,7 +3787,7 @@
         "Tipo":" FUENTES DE PODER",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FUENTES DE PODER",
-        "Stock":105.0,
+        "Stock":102.0,
         "Precio":4.53,
         "Imagen":"\/images\/VL-F5A 24V.webp"
     },
@@ -3835,7 +3835,7 @@
         "Tipo":" PERFIL DE ALUMINIO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PERFIL DE ALUMINIO",
-        "Stock":3692.0,
+        "Stock":3667.0,
         "Precio":4.75,
         "Imagen":"\/images\/VL-P53.webp"
     },
@@ -4087,7 +4087,7 @@
         "Tipo":" SISTEMA SOLAR",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES LED 0% \/ SISTEMA SOLAR",
-        "Stock":17.0,
+        "Stock":16.0,
         "Precio":420.0,
         "Imagen":"\/images\/SSB-12V200AH.webp"
     },
@@ -4183,7 +4183,7 @@
         "Tipo":" MANGUERA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ MANGUERA LED",
-        "Stock":1237.0,
+        "Stock":1233.0,
         "Precio":112.0,
         "Imagen":"\/images\/MG-5050RGB 10MM.webp"
     },
@@ -4195,7 +4195,7 @@
         "Tipo":" MANGUERA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ MANGUERA LED",
-        "Stock":730.0,
+        "Stock":729.0,
         "Precio":89.9,
         "Imagen":"\/images\/MG-5050A 8MM.webp"
     },
@@ -4219,7 +4219,7 @@
         "Tipo":" MANGUERA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ MANGUERA LED",
-        "Stock":348.0,
+        "Stock":347.0,
         "Precio":89.9,
         "Imagen":"\/images\/MG-5050B 8MM.webp"
     },
@@ -4231,7 +4231,7 @@
         "Tipo":" PANEL DOBLE COLOR",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL DOBLE COLOR",
-        "Stock":5382.0,
+        "Stock":5292.0,
         "Precio":2.53,
         "Imagen":"\/images\/VP-REA 3+3.webp"
     },
@@ -4363,7 +4363,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":54142.0,
+        "Stock":54042.0,
         "Precio":0.28,
         "Imagen":"\/images\/VLCL-12N.webp"
     },
@@ -4399,7 +4399,7 @@
         "Tipo":" GUIRNALDA DE EXTERIOR",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ GUIRNALDA DE EXTERIOR",
-        "Stock":73.0,
+        "Stock":72.0,
         "Precio":14.16,
         "Imagen":"\/images\/G8M.webp"
     },
@@ -4639,7 +4639,7 @@
         "Tipo":" PANEL DOBLE COLOR",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL DOBLE COLOR",
-        "Stock":11698.0,
+        "Stock":11678.0,
         "Precio":6.26,
         "Imagen":"\/images\/LV-206ERA 18+6.webp"
     },
@@ -4771,7 +4771,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE REDONDO",
-        "Stock":40826.0,
+        "Stock":40796.0,
         "Precio":4.83,
         "Imagen":"\/images\/VP-ER 24W.webp"
     },
@@ -4951,7 +4951,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO REDONDO",
-        "Stock":8639.0,
+        "Stock":8612.0,
         "Precio":5.63,
         "Imagen":"\/images\/VP-SRF 36W.webp"
     },
@@ -4975,7 +4975,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO REDONDO",
-        "Stock":2679.0,
+        "Stock":2650.0,
         "Precio":8.9,
         "Imagen":"\/images\/VP-SRF 48W.webp"
     },
@@ -5023,7 +5023,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE REDONDO",
-        "Stock":25933.0,
+        "Stock":25853.0,
         "Precio":1.72,
         "Imagen":"\/images\/VP-ER 6W.webp"
     },
@@ -5071,7 +5071,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE REDONDO",
-        "Stock":58661.0,
+        "Stock":58521.0,
         "Precio":3.02,
         "Imagen":"\/images\/VP-ER 18W.webp"
     },
@@ -5083,7 +5083,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO REDONDO",
-        "Stock":5119.0,
+        "Stock":5059.0,
         "Precio":4.15,
         "Imagen":"\/images\/VP-SR 18W.webp"
     },
@@ -5251,7 +5251,7 @@
         "Tipo":" PANEL DOBLE COLOR",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL DOBLE COLOR",
-        "Stock":470.0,
+        "Stock":450.0,
         "Precio":6.38,
         "Imagen":"\/images\/LV-206SRA 18+6.webp"
     },
@@ -5695,7 +5695,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE REDONDO",
-        "Stock":3489.0,
+        "Stock":3463.0,
         "Precio":7.37,
         "Imagen":"\/images\/VP-ERS 48W.webp"
     },
@@ -5707,7 +5707,7 @@
         "Tipo":" PANEL EMPOTRABLE CUADRADO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE CUADRADO",
-        "Stock":2669.0,
+        "Stock":2609.0,
         "Precio":4.75,
         "Imagen":"\/images\/VP-ECF 36W.webp"
     },
@@ -5719,7 +5719,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO REDONDO",
-        "Stock":341.0,
+        "Stock":338.0,
         "Precio":4.15,
         "Imagen":"\/images\/VP-SR 18W 3K.webp"
     },
@@ -5755,7 +5755,7 @@
         "Tipo":" PANEL SOBREPUESTO CUADRADO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO CUADRADO",
-        "Stock":7359.0,
+        "Stock":7324.0,
         "Precio":6.62,
         "Imagen":"\/images\/VP-SC 24W.webp"
     },
@@ -5803,7 +5803,7 @@
         "Tipo":" TIMER",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ TIMER",
-        "Stock":1923.0,
+        "Stock":1893.0,
         "Precio":14.16,
         "Imagen":"\/images\/KG-316T.webp"
     },
@@ -5854,18 +5854,6 @@
         "Stock":648.0,
         "Precio":63.56,
         "Imagen":"\/images\/UFOE-250W.webp"
-    },
-    {
-        "Referencia Interna":"UFOP-150W",
-        "Nombre":"EVA UFO 6500K FP09 IP66 AC100-240V",
-        "Categoría":"INDUSTRIAL",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":" UFO",
-        "Marca":"N\/A",
-        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ UFO",
-        "Stock":1.0,
-        "Precio":29.79,
-        "Imagen":"\/images\/UFOP-150W.webp"
     },
     {
         "Referencia Interna":"AT-1212C",
@@ -6463,7 +6451,7 @@
         "Tipo":" PANEL DOBLE COLOR",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL DOBLE COLOR",
-        "Stock":1306.0,
+        "Stock":1286.0,
         "Precio":3.21,
         "Imagen":"\/images\/VP-REA 6+3.webp"
     },
@@ -7231,7 +7219,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO REDONDO",
-        "Stock":3420.0,
+        "Stock":3418.0,
         "Precio":2.67,
         "Imagen":"\/images\/VP-SRF 18W.webp"
     },
@@ -7243,7 +7231,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO REDONDO",
-        "Stock":4864.0,
+        "Stock":4842.0,
         "Precio":3.98,
         "Imagen":"\/images\/VP-SRF 24W.webp"
     },
@@ -7267,7 +7255,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO CUADRADO",
-        "Stock":7767.0,
+        "Stock":7751.0,
         "Precio":3.29,
         "Imagen":"\/images\/VP-SC 12W.webp"
     },
@@ -7291,7 +7279,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO CUADRADO",
-        "Stock":2234.0,
+        "Stock":2204.0,
         "Precio":6.28,
         "Imagen":"\/images\/VP-SCF 36W.webp"
     },
@@ -7315,7 +7303,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE REDONDO",
-        "Stock":7222.0,
+        "Stock":7192.0,
         "Precio":1.6,
         "Imagen":"\/images\/EV-PER6W.webp"
     },
@@ -8371,7 +8359,7 @@
         "Tipo":" REFLECTORES LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ REFLECTORES LED",
-        "Stock":353.0,
+        "Stock":352.0,
         "Precio":4.6,
         "Imagen":"\/images\/ERE-50W 3K.webp"
     },
@@ -8395,7 +8383,7 @@
         "Tipo":" REFLECTORES LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ REFLECTORES LED",
-        "Stock":506.0,
+        "Stock":504.0,
         "Precio":13.31,
         "Imagen":"\/images\/ERE-150W.webp"
     },
@@ -8431,7 +8419,7 @@
         "Tipo":" REFLECTORES LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ REFLECTORES LED",
-        "Stock":617.0,
+        "Stock":613.0,
         "Precio":3.6,
         "Imagen":"\/images\/ERE-30W 3K.webp"
     },
@@ -8455,7 +8443,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO REDONDO",
-        "Stock":8488.0,
+        "Stock":8468.0,
         "Precio":6.01,
         "Imagen":"\/images\/VP-SR 24W.webp"
     },
@@ -8623,7 +8611,7 @@
         "Tipo":" PANEL DOBLE COLOR",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL DOBLE COLOR",
-        "Stock":1063.0,
+        "Stock":1053.0,
         "Precio":4.76,
         "Imagen":"\/images\/VP-REA 12+4.webp"
     },
@@ -8647,7 +8635,7 @@
         "Tipo":" PANEL DOBLE COLOR",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL DOBLE COLOR",
-        "Stock":3190.0,
+        "Stock":3184.0,
         "Precio":6.26,
         "Imagen":"\/images\/VP-REA 18+6.webp"
     },
@@ -8911,7 +8899,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE CUADRADO",
-        "Stock":973.0,
+        "Stock":971.0,
         "Precio":37.01,
         "Imagen":"\/images\/PER60-60W 6K.webp"
     },
@@ -8935,7 +8923,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL DOBLE COLOR",
-        "Stock":3575.0,
+        "Stock":3545.0,
         "Precio":2.53,
         "Imagen":"\/images\/VP-REF 3+3.webp"
     },
@@ -9067,7 +9055,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":1601.0,
+        "Stock":1589.0,
         "Precio":0.97,
         "Imagen":"\/images\/VLTD-01.webp"
     },
@@ -9223,7 +9211,7 @@
         "Tipo":" AMARRAS PLÁSTICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ AMARRAS PLASTICAS",
-        "Stock":388.0,
+        "Stock":383.0,
         "Precio":5.03,
         "Imagen":"\/images\/N-4.8X50.webp"
     },
@@ -9271,7 +9259,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE REDONDO",
-        "Stock":11726.0,
+        "Stock":11666.0,
         "Precio":2.36,
         "Imagen":"\/images\/EV-PER18W.webp"
     },
@@ -9300,16 +9288,16 @@
         "Imagen":"\/images\/ERE-200W.webp"
     },
     {
-        "Referencia Interna":"ML110-10000K",
-        "Nombre":"MODULO LED 1.6W 110V 10000K BLANCO 200U\/C",
+        "Referencia Interna":"ML110-3000K",
+        "Nombre":"MODULO LED 1.6W 110V 3000K BLANCO 200U\/C",
         "Categoría":"ILUMINACIÓN",
         "Subcategoría":"LUZ LED ELÉCTRICA",
         "Tipo":" MÓDULO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ MODULO LED",
-        "Stock":580.0,
+        "Stock":6720.0,
         "Precio":0.41,
-        "Imagen":"\/images\/ML110-10000K.webp"
+        "Imagen":"\/images\/ML110-3000K.webp"
     },
     {
         "Referencia Interna":"ML110-6500K",
@@ -9319,7 +9307,7 @@
         "Tipo":" MÓDULO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ MODULO LED",
-        "Stock":21060.0,
+        "Stock":19860.0,
         "Precio":0.41,
         "Imagen":"\/images\/ML110-6500K.webp"
     },
@@ -9360,18 +9348,6 @@
         "Imagen":"\/images\/ML110-V.webp"
     },
     {
-        "Referencia Interna":"ML110-3000K",
-        "Nombre":"MODULO LED 1.6W 110V 3000K BLANCO 200U\/C",
-        "Categoría":"ILUMINACIÓN",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":" MÓDULO LED",
-        "Marca":"N\/A",
-        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ MODULO LED",
-        "Stock":6720.0,
-        "Precio":0.41,
-        "Imagen":"\/images\/ML110-3000K.webp"
-    },
-    {
         "Referencia Interna":"ZM-3",
         "Nombre":"FOCO LED E27 4W 2700K 110V AMBAR",
         "Categoría":"ILUMINACIÓN",
@@ -9379,7 +9355,7 @@
         "Tipo":" FOCO LED DECORATIVO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED DECORATIVO",
-        "Stock":19856.0,
+        "Stock":19756.0,
         "Precio":1.1,
         "Imagen":"\/images\/ZM-3.webp"
     },
@@ -9396,6 +9372,18 @@
         "Imagen":"\/images\/CBD-40A.webp"
     },
     {
+        "Referencia Interna":"UFOP-150W",
+        "Nombre":"EVA UFO 6500K FP09 IP66 AC100-240V",
+        "Categoría":"INDUSTRIAL",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" UFO",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ UFO",
+        "Stock":1.0,
+        "Precio":29.79,
+        "Imagen":"\/images\/UFOP-150W.webp"
+    },
+    {
         "Referencia Interna":"SL3WC 3K",
         "Nombre":"OJO DE BUEY 3W 3500K CUADRADO BLANCO",
         "Categoría":"ILUMINACIÓN",
@@ -9403,7 +9391,7 @@
         "Tipo":" OJO DE BUEY",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ OJO DE BUEY",
-        "Stock":1313.0,
+        "Stock":1312.0,
         "Precio":2.15,
         "Imagen":"\/images\/SL3WC 3K.webp"
     },
@@ -9415,7 +9403,7 @@
         "Tipo":" OJO DE BUEY",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ OJO DE BUEY",
-        "Stock":5142.0,
+        "Stock":5141.0,
         "Precio":2.15,
         "Imagen":"\/images\/SL3WR 3K.webp"
     },
@@ -9427,7 +9415,7 @@
         "Tipo":" OJO DE BUEY",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ OJO DE BUEY",
-        "Stock":3547.0,
+        "Stock":3546.0,
         "Precio":2.45,
         "Imagen":"\/images\/SL3WRN 3K.webp"
     },
@@ -9487,7 +9475,7 @@
         "Tipo":" FOCO LED DECORATIVO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED DECORATIVO",
-        "Stock":477.0,
+        "Stock":473.0,
         "Precio":1.31,
         "Imagen":"\/images\/ZM-10 AMBAR.webp"
     },
@@ -9571,7 +9559,7 @@
         "Tipo":"No Clasificado",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ OJO DE BUEY",
-        "Stock":25800.0,
+        "Stock":25785.0,
         "Precio":0.97,
         "Imagen":"\/images\/VL-PLD 5W.webp"
     },
@@ -9907,7 +9895,7 @@
         "Tipo":" PERFIL DE ALUMINIO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PERFIL DE ALUMINIO",
-        "Stock":63837.0,
+        "Stock":63437.0,
         "Precio":4.82,
         "Imagen":"\/images\/VL-P43.webp"
     },
@@ -9943,7 +9931,7 @@
         "Tipo":" PERFIL DE ALUMINIO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PERFIL DE ALUMINIO",
-        "Stock":1201.0,
+        "Stock":1176.0,
         "Precio":5.45,
         "Imagen":"\/images\/VL-P25.webp"
     },
@@ -10087,7 +10075,7 @@
         "Tipo":" AMARRAS PLÁSTICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ AMARRAS PLASTICAS",
-        "Stock":3334.0,
+        "Stock":3314.0,
         "Precio":3.45,
         "Imagen":"\/images\/B-4.8X35.webp"
     },
@@ -10111,7 +10099,7 @@
         "Tipo":"SOLAR FOCO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR FOCO",
-        "Stock":184.0,
+        "Stock":182.0,
         "Precio":20.32,
         "Imagen":"\/images\/E-LMM 3W.webp"
     },
@@ -10339,7 +10327,7 @@
         "Tipo":" AMARRAS PLÁSTICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ AMARRAS PLASTICAS",
-        "Stock":991.0,
+        "Stock":988.0,
         "Precio":6.12,
         "Imagen":"\/images\/N-8X30.webp"
     },
@@ -10819,7 +10807,7 @@
         "Tipo":" APLIQUES DE PARED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ APLIQUES DE PARED",
-        "Stock":382.0,
+        "Stock":372.0,
         "Precio":6.59,
         "Imagen":"\/images\/APV02 6K.webp"
     },
@@ -10843,7 +10831,7 @@
         "Tipo":" PERFIL DE ALUMINIO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PERFIL DE ALUMINIO",
-        "Stock":806.0,
+        "Stock":710.0,
         "Precio":0.71,
         "Imagen":"\/images\/VL-P902.webp"
     },
@@ -10879,7 +10867,7 @@
         "Tipo":" PERFIL DE ALUMINIO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PERFIL DE ALUMINIO",
-        "Stock":871.0,
+        "Stock":859.0,
         "Precio":1.09,
         "Imagen":"\/images\/VL-P901.webp"
     },
@@ -11539,7 +11527,7 @@
         "Tipo":" PERFIL DE ALUMINIO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PERFIL DE ALUMINIO",
-        "Stock":1629.0,
+        "Stock":1619.0,
         "Precio":6.21,
         "Imagen":"\/images\/VL-P5 NEGRO.webp"
     },
@@ -11575,7 +11563,7 @@
         "Tipo":" PROTECTOR DE VOLTAJE",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PROTECTOR DE VOLTAJE",
-        "Stock":1307.0,
+        "Stock":1303.0,
         "Precio":12.83,
         "Imagen":"\/images\/VPV-2N.webp"
     },
@@ -11839,7 +11827,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE REDONDO",
-        "Stock":16697.0,
+        "Stock":16657.0,
         "Precio":2.42,
         "Imagen":"\/images\/VP-ER 12W.webp"
     },
@@ -11851,7 +11839,7 @@
         "Tipo":" PANEL EMPOTRABLE CUADRADO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE CUADRADO",
-        "Stock":15366.0,
+        "Stock":15230.0,
         "Precio":5.17,
         "Imagen":"\/images\/VP-EC24W.webp"
     },
@@ -11875,7 +11863,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE REDONDO",
-        "Stock":72856.0,
+        "Stock":72256.0,
         "Precio":0.97,
         "Imagen":"\/images\/VP-ER 3W.webp"
     },
@@ -11911,7 +11899,7 @@
         "Tipo":" PANEL EMPOTRABLE CUADRADO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE CUADRADO",
-        "Stock":16214.0,
+        "Stock":16174.0,
         "Precio":2.94,
         "Imagen":"\/images\/VP-EC18W.webp"
     },
@@ -11923,7 +11911,7 @@
         "Tipo":" PANEL SOBREPUESTO CUADRADO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO CUADRADO",
-        "Stock":14500.0,
+        "Stock":14453.0,
         "Precio":4.46,
         "Imagen":"\/images\/VP-SC 18W.webp"
     },
@@ -12067,7 +12055,7 @@
         "Tipo":"No Clasificado",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":15680.0,
+        "Stock":15620.0,
         "Precio":0.71,
         "Imagen":"\/images\/VLTPI-15A.webp"
     },
@@ -12091,7 +12079,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":22560.0,
+        "Stock":22490.0,
         "Precio":0.74,
         "Imagen":"\/images\/VLTBB-15A.webp"
     },
@@ -12127,7 +12115,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":1572.0,
+        "Stock":1566.0,
         "Precio":9.29,
         "Imagen":"\/images\/VLTPS-15A.webp"
     },
@@ -12619,7 +12607,7 @@
         "Tipo":" BREAKER",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ BREAKER",
-        "Stock":727.0,
+        "Stock":721.0,
         "Precio":11.12,
         "Imagen":"\/images\/AC10K-2P 100A.webp"
     },
@@ -12715,7 +12703,7 @@
         "Tipo":" PANEL EMPOTRABLE CUADRADO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE CUADRADO",
-        "Stock":1475.0,
+        "Stock":1465.0,
         "Precio":8.45,
         "Imagen":"\/images\/VP-ECS 48W.webp"
     },
@@ -12739,7 +12727,7 @@
         "Tipo":" BREAKER",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ BREAKER",
-        "Stock":661.0,
+        "Stock":655.0,
         "Precio":11.12,
         "Imagen":"\/images\/AC10K-2P 80A.webp"
     },
@@ -12751,7 +12739,7 @@
         "Tipo":" BREAKER",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ BREAKER",
-        "Stock":186.0,
+        "Stock":182.0,
         "Precio":16.81,
         "Imagen":"\/images\/AC10K-3P 100A.webp"
     },
@@ -12775,7 +12763,7 @@
         "Tipo":" BREAKER",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ BREAKER",
-        "Stock":124.0,
+        "Stock":120.0,
         "Precio":16.81,
         "Imagen":"\/images\/AC10K-3P 125A.webp"
     },
@@ -12871,7 +12859,7 @@
         "Tipo":" BREAKER",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ BREAKER",
-        "Stock":74.0,
+        "Stock":70.0,
         "Precio":16.81,
         "Imagen":"\/images\/AC10K-3P 80A.webp"
     },
@@ -12895,7 +12883,7 @@
         "Tipo":" BREAKER",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ BREAKER",
-        "Stock":589.0,
+        "Stock":577.0,
         "Precio":2.39,
         "Imagen":"\/images\/AC6K-1P 16A.webp"
     },
@@ -12931,7 +12919,7 @@
         "Tipo":" BREAKER",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ BREAKER",
-        "Stock":1388.0,
+        "Stock":1352.0,
         "Precio":2.39,
         "Imagen":"\/images\/AC6K-1P 32A.webp"
     },
@@ -13459,7 +13447,7 @@
         "Tipo":" CAJA DE DISTRIBUCIÓN",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ CAJA DE DISTRIBUCION",
-        "Stock":437.0,
+        "Stock":431.0,
         "Precio":10.89,
         "Imagen":"\/images\/V-DB12P.webp"
     },
@@ -13471,7 +13459,7 @@
         "Tipo":" CAJA DE DISTRIBUCIÓN",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ CAJA DE DISTRIBUCION",
-        "Stock":343.0,
+        "Stock":339.0,
         "Precio":13.32,
         "Imagen":"\/images\/V-DB15P.webp"
     },
@@ -13483,7 +13471,7 @@
         "Tipo":" CAJA DE DISTRIBUCIÓN",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ CAJA DE DISTRIBUCION",
-        "Stock":163.0,
+        "Stock":160.0,
         "Precio":16.09,
         "Imagen":"\/images\/V-DB18P.webp"
     },
@@ -13507,7 +13495,7 @@
         "Tipo":" CAJA DE DISTRIBUCIÓN",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ CAJA DE DISTRIBUCION",
-        "Stock":2769.0,
+        "Stock":2761.0,
         "Precio":6.38,
         "Imagen":"\/images\/V-DB4P.webp"
     },
@@ -13519,7 +13507,7 @@
         "Tipo":" CAJA DE DISTRIBUCIÓN",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ CAJA DE DISTRIBUCION",
-        "Stock":1362.0,
+        "Stock":1358.0,
         "Precio":6.98,
         "Imagen":"\/images\/V-DB6P.webp"
     },
@@ -13531,7 +13519,7 @@
         "Tipo":" CAJA DE DISTRIBUCIÓN",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ CAJA DE DISTRIBUCION",
-        "Stock":2286.0,
+        "Stock":2282.0,
         "Precio":8.29,
         "Imagen":"\/images\/V-DB8P.webp"
     },
@@ -13927,7 +13915,7 @@
         "Tipo":" SISTEMA SOLAR",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES LED 0% \/ SISTEMA SOLAR",
-        "Stock":7.0,
+        "Stock":6.0,
         "Precio":217.01,
         "Imagen":"\/images\/SSB-12V100AH.webp"
     },
@@ -13939,7 +13927,7 @@
         "Tipo":" FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":1171.0,
+        "Stock":1121.0,
         "Precio":0.79,
         "Imagen":"\/images\/GU10-3K.webp"
     },
@@ -14047,7 +14035,7 @@
         "Tipo":" CAJA DE PASO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ CAJA DE PASO",
-        "Stock":692.0,
+        "Stock":687.0,
         "Precio":5.0,
         "Imagen":"\/images\/CDP200-2.webp"
     },
@@ -14119,7 +14107,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":1462.0,
+        "Stock":1458.0,
         "Precio":11.36,
         "Imagen":"\/images\/LV-130 80W.webp"
     },
@@ -14131,7 +14119,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":1223.0,
+        "Stock":1215.0,
         "Precio":13.89,
         "Imagen":"\/images\/LV-130 100W.webp"
     },
@@ -14167,7 +14155,7 @@
         "Tipo":"DOMÓTICA",
         "Marca":"N\/A",
         "Categoria de producto":"TECNOLOGIA \/ DOMOTICA \/ DOMOTICA",
-        "Stock":2764.0,
+        "Stock":2754.0,
         "Precio":1.15,
         "Imagen":"\/images\/VL-SC.webp"
     },
@@ -14335,7 +14323,7 @@
         "Tipo":"DOMÓTICA",
         "Marca":"N\/A",
         "Categoria de producto":"TECNOLOGIA \/ DOMOTICA \/ DOMOTICA",
-        "Stock":644.0,
+        "Stock":624.0,
         "Precio":16.43,
         "Imagen":"\/images\/VL-T1USN.webp"
     },
@@ -14347,7 +14335,7 @@
         "Tipo":"DOMÓTICA",
         "Marca":"N\/A",
         "Categoria de producto":"TECNOLOGIA \/ DOMOTICA \/ DOMOTICA",
-        "Stock":211.0,
+        "Stock":205.0,
         "Precio":16.59,
         "Imagen":"\/images\/VL-T2USN.webp"
     },
@@ -14383,7 +14371,7 @@
         "Tipo":"DOMÓTICA",
         "Marca":"N\/A",
         "Categoria de producto":"TECNOLOGIA \/ DOMOTICA \/ DOMOTICA",
-        "Stock":18.0,
+        "Stock":8.0,
         "Precio":18.4,
         "Imagen":"\/images\/VL-T3USN.webp"
     },
@@ -14479,7 +14467,7 @@
         "Tipo":"DOMÓTICA",
         "Marca":"N\/A",
         "Categoria de producto":"TECNOLOGIA \/ DOMOTICA \/ DOMOTICA",
-        "Stock":396.0,
+        "Stock":384.0,
         "Precio":9.2,
         "Imagen":"\/images\/VL-TS01.webp"
     },
