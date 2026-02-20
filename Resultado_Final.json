@@ -1404,6 +1404,18 @@
         "Imagen":"\/images\/CMG-50501AC8.webp"
     },
     {
+        "Referencia Interna":"LC-1539-NE",
+        "Nombre":"LAMPARA DECORATIVA DE TECHO 1*E27 METAL NEGRO",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" LÁMPARAS DECORATIVAS",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ LAMPARAS DECORATIVAS",
+        "Stock":4.0,
+        "Precio":5.9,
+        "Imagen":"\/images\/LC-1539-NE.webp"
+    },
+    {
         "Referencia Interna":"PV33-6048 TLV",
         "Nombre":"SOLAR INVERSOR 6KW 110\/220V AC 48DC MPPT80A OFF GRID HIBRIDO",
         "Categoría":"ILUMINACIÓN SOLAR",
@@ -2940,18 +2952,6 @@
         "Imagen":"\/images\/APVG01-400.webp"
     },
     {
-        "Referencia Interna":"APVG01-800",
-        "Nombre":"BOLARDO LED IP54 5W 3000K NEGRO 162*57MM",
-        "Categoría":"ILUMINACIÓN",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":" BOLARDOS LED",
-        "Marca":"N\/A",
-        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ BOLARDOS LED",
-        "Stock":1.0,
-        "Precio":33.3,
-        "Imagen":"\/images\/APVG01-800.webp"
-    },
-    {
         "Referencia Interna":"VL-TA1S",
         "Nombre":"TOMACORRIENTE DOBLE 110V BLANCO",
         "Categoría":"No Clasificado",
@@ -3931,7 +3931,7 @@
         "Tipo":" LUZ DE POSTE",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ LUZ DE POSTE",
-        "Stock":126.0,
+        "Stock":102.0,
         "Precio":156.49,
         "Imagen":"\/images\/VL-LPC200W.webp"
     },
@@ -4128,18 +4128,6 @@
         "Imagen":"\/images\/LC-4G1073-BL.webp"
     },
     {
-        "Referencia Interna":"LC-1122-NE",
-        "Nombre":"VICTORIA LED LAMPARA DECORATIVA",
-        "Categoría":"ILUMINACIÓN",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":" LÁMPARAS DECORATIVAS",
-        "Marca":"N\/A",
-        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ LAMPARAS DECORATIVAS",
-        "Stock":1.0,
-        "Precio":65.86,
-        "Imagen":"\/images\/LC-1122-NE.webp"
-    },
-    {
         "Referencia Interna":"LC-1073-BR",
         "Nombre":"VICTORIA LED LAMPARA DECORATIVA",
         "Categoría":"ILUMINACIÓN",
@@ -4162,18 +4150,6 @@
         "Stock":37800.0,
         "Precio":0.24,
         "Imagen":"\/images\/VLEB-10A.webp"
-    },
-    {
-        "Referencia Interna":"LC-1118DO+BL",
-        "Nombre":"VICTORIA LED LAMPARA DECORATIVA",
-        "Categoría":"ILUMINACIÓN",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":" LÁMPARAS DECORATIVAS",
-        "Marca":"N\/A",
-        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ LAMPARAS DECORATIVAS",
-        "Stock":1.0,
-        "Precio":39.35,
-        "Imagen":"\/images\/LC-1118DO+BL.webp"
     },
     {
         "Referencia Interna":"MG-5050RGB 10MM",
@@ -6276,18 +6252,6 @@
         "Imagen":"\/images\/LC-1508-CH.webp"
     },
     {
-        "Referencia Interna":"T30999",
-        "Nombre":"LAMPARA DECORATIVA DE MESA 1*E26 USB",
-        "Categoría":"ILUMINACIÓN",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":" LÁMPARAS DECORATIVAS",
-        "Marca":"N\/A",
-        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ LAMPARAS DECORATIVAS",
-        "Stock":1.0,
-        "Precio":30.96,
-        "Imagen":"\/images\/T30999.webp"
-    },
-    {
         "Referencia Interna":"LC-1559-NE",
         "Nombre":"LAMPARA DECORATIVA DE MESA 1*E27 METAL NEGRO",
         "Categoría":"ILUMINACIÓN",
@@ -6322,18 +6286,6 @@
         "Stock":206.0,
         "Precio":12.14,
         "Imagen":"\/images\/LC-1278-NE.webp"
-    },
-    {
-        "Referencia Interna":"LC-2306-18",
-        "Nombre":"LAMPARA DECORATIVA DE PARED LED 25W 3000K METAL GOLDEN",
-        "Categoría":"ILUMINACIÓN",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":" LÁMPARAS DECORATIVAS",
-        "Marca":"N\/A",
-        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ LAMPARAS DECORATIVAS",
-        "Stock":1.0,
-        "Precio":29.07,
-        "Imagen":"\/images\/LC-2306-18.webp"
     },
     {
         "Referencia Interna":"LC-2306-13",
@@ -6526,18 +6478,6 @@
         "Stock":61.0,
         "Precio":12.14,
         "Imagen":"\/images\/LC-1541-NE.webp"
-    },
-    {
-        "Referencia Interna":"LC-1539-NE",
-        "Nombre":"LAMPARA DECORATIVA DE TECHO 1*E27 METAL NEGRO",
-        "Categoría":"ILUMINACIÓN",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":" LÁMPARAS DECORATIVAS",
-        "Marca":"N\/A",
-        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ LAMPARAS DECORATIVAS",
-        "Stock":7.0,
-        "Precio":5.9,
-        "Imagen":"\/images\/LC-1539-NE.webp"
     },
     {
         "Referencia Interna":"VL-FTC",
@@ -6888,18 +6828,6 @@
         "Imagen":"\/images\/VL-INA1N.webp"
     },
     {
-        "Referencia Interna":"LC-1355-25SM",
-        "Nombre":"LAMPARA DECORATIVA DE TECHO 1*E27 METAL\/VIDRIO SMOKE",
-        "Categoría":"ILUMINACIÓN",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":" LÁMPARAS DECORATIVAS",
-        "Marca":"N\/A",
-        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ LAMPARAS DECORATIVAS",
-        "Stock":1.0,
-        "Precio":38.46,
-        "Imagen":"\/images\/LC-1355-25SM.webp"
-    },
-    {
         "Referencia Interna":"LC-2306-9",
         "Nombre":"LAMPARA DECORATIVA DE TECHO LED 10W 3000K ALUM\/ACRILICO",
         "Categoría":"ILUMINACIÓN",
@@ -6931,7 +6859,7 @@
         "Tipo":" LÁMPARAS DECORATIVAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ LAMPARAS DECORATIVAS NEW",
-        "Stock":11.0,
+        "Stock":10.0,
         "Precio":115.93,
         "Imagen":"\/images\/L50-49W COBRE.webp"
     },
@@ -7159,7 +7087,7 @@
         "Tipo":" MANGUERA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ MANGUERA LED",
-        "Stock":4549.0,
+        "Stock":4547.0,
         "Precio":1.64,
         "Imagen":"\/images\/VLCC-4A.webp"
     },
@@ -7426,18 +7354,6 @@
         "Stock":4.0,
         "Precio":23.86,
         "Imagen":"\/images\/SD001-4 WHITE.webp"
-    },
-    {
-        "Referencia Interna":"2053-8 3T GOLD",
-        "Nombre":"LAMPARA DECORATIVA DE TECHO LED METAL\/VIDRIO DORADO",
-        "Categoría":"ILUMINACIÓN",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":" LÁMPARAS DECORATIVAS",
-        "Marca":"N\/A",
-        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ LAMPARAS DECORATIVAS",
-        "Stock":1.0,
-        "Precio":58.43,
-        "Imagen":"\/images\/2053-8 3T GOLD.webp"
     },
     {
         "Referencia Interna":"KT-296 BLACK",
@@ -7855,7 +7771,7 @@
         "Tipo":" LÁMPARAS DECORATIVAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ LAMPARAS DECORATIVAS",
-        "Stock":24.0,
+        "Stock":20.0,
         "Precio":46.4,
         "Imagen":"\/images\/P130 GRAY.webp"
     },
@@ -7963,7 +7879,7 @@
         "Tipo":" LÁMPARAS DECORATIVAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ LAMPARAS DECORATIVAS",
-        "Stock":18.0,
+        "Stock":16.0,
         "Precio":46.4,
         "Imagen":"\/images\/P130 MATTE.webp"
     },
@@ -8191,7 +8107,7 @@
         "Tipo":" LÁMPARAS DECORATIVAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ LAMPARAS DECORATIVAS",
-        "Stock":10.0,
+        "Stock":9.0,
         "Precio":29.06,
         "Imagen":"\/images\/KT-266 6K WHITE.webp"
     },
@@ -12859,7 +12775,7 @@
         "Tipo":" BREAKER",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ BREAKER",
-        "Stock":1512.0,
+        "Stock":1500.0,
         "Precio":2.39,
         "Imagen":"\/images\/AC6K-1P 20A.webp"
     },
@@ -14131,7 +14047,7 @@
         "Tipo":" LÁMPARAS DECORATIVAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ LAMPARAS DECORATIVAS",
-        "Stock":3.0,
+        "Stock":1.0,
         "Precio":0.0,
         "Imagen":"\/images\/LDO02.webp"
     },
