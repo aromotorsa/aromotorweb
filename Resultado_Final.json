@@ -2076,6 +2076,18 @@
         "Imagen":"\/images\/MTL03FO 6W 6K.webp"
     },
     {
+        "Referencia Interna":"VL-CIHR 08",
+        "Nombre":"CERRADURA INTELIGENTE TUYA SMART HUELLA DACTILAR\/LLAVE\/TARJETA\/CONTRASEÑA\/APP",
+        "Categoría":"No Clasificado",
+        "Subcategoría":"No Clasificado",
+        "Tipo":"No Clasificado",
+        "Marca":"N\/A",
+        "Categoria de producto":"TECNOLOGIA \/ DOMOTICA \/ DOMOTICA",
+        "Stock":30.0,
+        "Precio":0.0,
+        "Imagen":"\/images\/VL-CIHR 08.webp"
+    },
+    {
         "Referencia Interna":"EV-AD001",
         "Nombre":"EVA ADAPTADOR PORTA LAMPARA",
         "Categoría":"VARIOS Y REPUESTOS",
@@ -2119,7 +2131,7 @@
         "Tipo":" CINTA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CINTA LED",
-        "Stock":25640.0,
+        "Stock":28640.0,
         "Precio":8.84,
         "Imagen":"\/images\/E-CL110V-3K.webp"
     },
@@ -2131,7 +2143,7 @@
         "Tipo":" CINTA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CINTA LED",
-        "Stock":32927.0,
+        "Stock":35927.0,
         "Precio":8.84,
         "Imagen":"\/images\/E-CL110V-6K.webp"
     },
@@ -2266,6 +2278,42 @@
         "Stock":59.0,
         "Precio":0.83,
         "Imagen":"\/images\/ED-12W.webp"
+    },
+    {
+        "Referencia Interna":"FS-228",
+        "Nombre":"VENTILADOR SOLAR 16\" 25W 1 UND\/CTN",
+        "Categoría":"No Clasificado",
+        "Subcategoría":"No Clasificado",
+        "Tipo":"No Clasificado",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ KIT SOLARES",
+        "Stock":50.0,
+        "Precio":0.0,
+        "Imagen":"\/images\/FS-228.webp"
+    },
+    {
+        "Referencia Interna":"VL-EYHR08",
+        "Nombre":"SMART CHAPA ALUMINIO 375*70*20mm TOUCH\/LLAVE\/TARJETA\/CONTRASEÑA\/APP",
+        "Categoría":"No Clasificado",
+        "Subcategoría":"No Clasificado",
+        "Tipo":"No Clasificado",
+        "Marca":"N\/A",
+        "Categoria de producto":"TECNOLOGIA \/ DOMOTICA \/ DOMOTICA",
+        "Stock":319.0,
+        "Precio":0.0,
+        "Imagen":"\/images\/VL-EYHR08.webp"
+    },
+    {
+        "Referencia Interna":"FS-258",
+        "Nombre":"VENTILADOR SOLAR 16\" 15W 1 UND\/CTN",
+        "Categoría":"No Clasificado",
+        "Subcategoría":"No Clasificado",
+        "Tipo":"No Clasificado",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ KIT SOLARES",
+        "Stock":50.0,
+        "Precio":0.0,
+        "Imagen":"\/images\/FS-258.webp"
     },
     {
         "Referencia Interna":"ED-6W",
@@ -2491,7 +2539,7 @@
         "Tipo":" PANEL EMPOTRABLE CUADRADO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE CUADRADO",
-        "Stock":1462.0,
+        "Stock":1652.0,
         "Precio":35.34,
         "Imagen":"\/images\/PER60-120W 6K.webp"
     },
@@ -4068,6 +4116,30 @@
         "Imagen":"\/images\/VLEB-10A.webp"
     },
     {
+        "Referencia Interna":"N-8.80X55",
+        "Nombre":"AMARRAS PLASTICAS NEGRA 8.8MMX550MM 100PZAS",
+        "Categoría":"MATERIAL ELÉCTRICO",
+        "Subcategoría":"FERRETERÍA",
+        "Tipo":" AMARRAS PLÁSTICAS",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ AMARRAS PLASTICAS",
+        "Stock":1500.0,
+        "Precio":13.68,
+        "Imagen":"\/images\/N-8.80X55.webp"
+    },
+    {
+        "Referencia Interna":"E-CL100M 3K",
+        "Nombre":"EVA CINTA LED ROLLO 100M AC110V 2835 IP20 120L 3000K",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" CINTA LED",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CINTA LED",
+        "Stock":700.0,
+        "Precio":87.0,
+        "Imagen":"\/images\/E-CL100M 3K.webp"
+    },
+    {
         "Referencia Interna":"MG-5050RGB 10MM",
         "Nombre":"VICTORIA LED MANGUERA LED MG-5050 10MM RGB",
         "Categoría":"ILUMINACIÓN",
@@ -4176,6 +4248,30 @@
         "Imagen":"\/images\/VLPB-E27.webp"
     },
     {
+        "Referencia Interna":"E-CL100M 4K",
+        "Nombre":"EVA CINTA LED ROLLO 100M AC110V 2835 IP20 120L 4000K",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" CINTA LED",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CINTA LED",
+        "Stock":200.0,
+        "Precio":94.3,
+        "Imagen":"\/images\/E-CL100M 4K.webp"
+    },
+    {
+        "Referencia Interna":"N-8.80X60",
+        "Nombre":"AMARRAS PLASTICAS NEGRA 8.8MMX600MM 100PZAS",
+        "Categoría":"MATERIAL ELÉCTRICO",
+        "Subcategoría":"FERRETERÍA",
+        "Tipo":" AMARRAS PLÁSTICAS",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ AMARRAS PLASTICAS",
+        "Stock":500.0,
+        "Precio":14.87,
+        "Imagen":"\/images\/N-8.80X60.webp"
+    },
+    {
         "Referencia Interna":"LV-210 24W 3000K",
         "Nombre":"VICTORIA LED PANEL 3000K 24W SOBREPUESTO REDONDO 15U\/C",
         "Categoría":"ILUMINACIÓN",
@@ -4234,6 +4330,30 @@
         "Stock":18.0,
         "Precio":1.82,
         "Imagen":"\/images\/ECD12W.webp"
+    },
+    {
+        "Referencia Interna":"E-CL100M 6K",
+        "Nombre":"EVA CINTA LED ROLLO 100M AC110V 2835 IP20 120L 6500K",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" CINTA LED",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CINTA LED",
+        "Stock":700.0,
+        "Precio":87.0,
+        "Imagen":"\/images\/E-CL100M 6K.webp"
+    },
+    {
+        "Referencia Interna":"VLMC-4K",
+        "Nombre":"MANGUERA LED COB 4000K 8MM AC110V 12W\/M IP68 100M\/ROLL",
+        "Categoría":"No Clasificado",
+        "Subcategoría":"No Clasificado",
+        "Tipo":"No Clasificado",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ MANGUERA LED",
+        "Stock":50.0,
+        "Precio":0.0,
+        "Imagen":"\/images\/VLMC-4K.webp"
     },
     {
         "Referencia Interna":"VLCL-12N",
@@ -6684,6 +6804,18 @@
         "Imagen":"\/images\/VL-INA1N.webp"
     },
     {
+        "Referencia Interna":"C5M-RGB5050",
+        "Nombre":"CINTA LED 5M RGB IP44 CON CONTROL",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" CINTA LED",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CINTA LED",
+        "Stock":950.0,
+        "Precio":8.94,
+        "Imagen":"\/images\/C5M-RGB5050.webp"
+    },
+    {
         "Referencia Interna":"LC-2306-9",
         "Nombre":"LAMPARA DECORATIVA DE TECHO LED 10W 3000K ALUM\/ACRILICO",
         "Categoría":"ILUMINACIÓN",
@@ -6919,7 +7051,7 @@
         "Tipo":"MANGUERA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ MANGUERA LED",
-        "Stock":147.0,
+        "Stock":397.0,
         "Precio":164.99,
         "Imagen":"\/images\/VLMC-6K.webp"
     },
@@ -6931,7 +7063,7 @@
         "Tipo":" MANGUERA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ MANGUERA LED",
-        "Stock":78.0,
+        "Stock":228.0,
         "Precio":164.99,
         "Imagen":"\/images\/VLMC-3K.webp"
     },
@@ -6943,7 +7075,7 @@
         "Tipo":" MANGUERA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ MANGUERA LED",
-        "Stock":4344.0,
+        "Stock":23744.0,
         "Precio":1.64,
         "Imagen":"\/images\/VLCC-4A.webp"
     },
@@ -7860,6 +7992,18 @@
         "Imagen":"\/images\/VL-DPL 24W.webp"
     },
     {
+        "Referencia Interna":"VL-CN110V AZUL",
+        "Nombre":"CINTA NEON 5M AZUL IP66 AC110V",
+        "Categoría":"No Clasificado",
+        "Subcategoría":"No Clasificado",
+        "Tipo":"No Clasificado",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CINTA LED",
+        "Stock":700.0,
+        "Precio":0.0,
+        "Imagen":"\/images\/VL-CN110V AZUL.webp"
+    },
+    {
         "Referencia Interna":"KT-265 3K WHITE",
         "Nombre":"LAMPARA DECORATIVA LED 21W 3000K METAL\/SILICON WHITE",
         "Categoría":"ILUMINACIÓN",
@@ -8278,6 +8422,18 @@
         "Stock":43.0,
         "Precio":21.33,
         "Imagen":"\/images\/VL-P48.webp"
+    },
+    {
+        "Referencia Interna":"VL-CN110V ROSADO",
+        "Nombre":"CINTA NEON 5M ROSADO IP66 AC110V",
+        "Categoría":"No Clasificado",
+        "Subcategoría":"No Clasificado",
+        "Tipo":"No Clasificado",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CINTA LED",
+        "Stock":699.0,
+        "Precio":0.0,
+        "Imagen":"\/images\/VL-CN110V ROSADO.webp"
     },
     {
         "Referencia Interna":"LP15-12100",
@@ -8743,9 +8899,21 @@
         "Tipo":" AMARRAS PLÁSTICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ AMARRAS PLASTICAS",
-        "Stock":2235.0,
+        "Stock":5235.0,
         "Precio":0.81,
         "Imagen":"\/images\/N-2.5X20.webp"
+    },
+    {
+        "Referencia Interna":"VL-CN110V ROJO",
+        "Nombre":"CINTA NEON 5M ROJO IP66 AC110V",
+        "Categoría":"No Clasificado",
+        "Subcategoría":"No Clasificado",
+        "Tipo":"No Clasificado",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CINTA LED",
+        "Stock":500.0,
+        "Precio":0.0,
+        "Imagen":"\/images\/VL-CN110V ROJO.webp"
     },
     {
         "Referencia Interna":"N-3.6X15",
@@ -8755,7 +8923,7 @@
         "Tipo":" AMARRAS PLÁSTICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ AMARRAS PLASTICAS",
-        "Stock":88.0,
+        "Stock":6088.0,
         "Precio":1.12,
         "Imagen":"\/images\/N-3.6X15.webp"
     },
@@ -8791,7 +8959,7 @@
         "Tipo":" AMARRAS PLÁSTICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ AMARRAS PLASTICAS",
-        "Stock":97.0,
+        "Stock":3597.0,
         "Precio":1.86,
         "Imagen":"\/images\/N-3.6X30.webp"
     },
@@ -8844,6 +9012,18 @@
         "Imagen":"\/images\/VL-SRN7W 3K.webp"
     },
     {
+        "Referencia Interna":"N-4.8X20",
+        "Nombre":"AMARRAS PLASTICAS NEGRA 4.8MMX200MM 100PZAS",
+        "Categoría":"MATERIAL ELÉCTRICO",
+        "Subcategoría":"FERRETERÍA",
+        "Tipo":" AMARRAS PLÁSTICAS",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ AMARRAS PLASTICAS",
+        "Stock":4000.0,
+        "Precio":1.97,
+        "Imagen":"\/images\/N-4.8X20.webp"
+    },
+    {
         "Referencia Interna":"VL-P60",
         "Nombre":"PERFIL ALUMINIO 3M MARRAKECH",
         "Categoría":"ILUMINACIÓN",
@@ -8875,7 +9055,7 @@
         "Tipo":" AMARRAS PLÁSTICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ AMARRAS PLASTICAS",
-        "Stock":162.0,
+        "Stock":5412.0,
         "Precio":2.3,
         "Imagen":"\/images\/N-4.8X25.webp"
     },
@@ -8892,6 +9072,42 @@
         "Imagen":"\/images\/APVW08-G.webp"
     },
     {
+        "Referencia Interna":"N-4.8X30",
+        "Nombre":"AMARRAS PLASTICAS NEGRA 4.8MMX300MM 100PZAS",
+        "Categoría":"MATERIAL ELÉCTRICO",
+        "Subcategoría":"FERRETERÍA",
+        "Tipo":" AMARRAS PLÁSTICAS",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ AMARRAS PLASTICAS",
+        "Stock":3750.0,
+        "Precio":2.62,
+        "Imagen":"\/images\/N-4.8X30.webp"
+    },
+    {
+        "Referencia Interna":"VL-CTB 120L 100PZAS",
+        "Nombre":"CONECTOR CINTA LED 110V 8MM 120L 100 U\/C",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" CINTA LED",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CINTA LED",
+        "Stock":500.0,
+        "Precio":14.0,
+        "Imagen":"\/images\/VL-CTB 120L 100PZAS.webp"
+    },
+    {
+        "Referencia Interna":"N-4.8X35",
+        "Nombre":"AMARRAS PLASTICAS NEGRA 4.8MMX350MM 100PZAS",
+        "Categoría":"MATERIAL ELÉCTRICO",
+        "Subcategoría":"FERRETERÍA",
+        "Tipo":" AMARRAS PLÁSTICAS",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ AMARRAS PLASTICAS",
+        "Stock":1500.0,
+        "Precio":3.45,
+        "Imagen":"\/images\/N-4.8X35.webp"
+    },
+    {
         "Referencia Interna":"N-4.8X40",
         "Nombre":"AMARRAS PLASTICAS NEGRA 4.8MMX400MM 100PZAS",
         "Categoría":"MATERIAL ELÉCTRICO",
@@ -8899,7 +9115,7 @@
         "Tipo":" AMARRAS PLÁSTICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ AMARRAS PLASTICAS",
-        "Stock":467.0,
+        "Stock":3967.0,
         "Precio":3.85,
         "Imagen":"\/images\/N-4.8X40.webp"
     },
@@ -8935,7 +9151,7 @@
         "Tipo":" AMARRAS PLÁSTICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ AMARRAS PLASTICAS",
-        "Stock":363.0,
+        "Stock":2113.0,
         "Precio":5.03,
         "Imagen":"\/images\/N-4.8X50.webp"
     },
@@ -9264,6 +9480,30 @@
         "Imagen":"\/images\/VL-P5.webp"
     },
     {
+        "Referencia Interna":"VL-ECC 8MM",
+        "Nombre":"ACCESORIO TAPA MANGUERA COB COB 110V 8MM",
+        "Categoría":"No Clasificado",
+        "Subcategoría":"No Clasificado",
+        "Tipo":"No Clasificado",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ MANGUERA LED",
+        "Stock":20000.0,
+        "Precio":0.0,
+        "Imagen":"\/images\/VL-ECC 8MM.webp"
+    },
+    {
+        "Referencia Interna":"VL-CN110V 3K",
+        "Nombre":"CINTA NEON 5M 3000K IP66 AC110V",
+        "Categoría":"No Clasificado",
+        "Subcategoría":"No Clasificado",
+        "Tipo":"No Clasificado",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CINTA LED",
+        "Stock":1499.0,
+        "Precio":0.0,
+        "Imagen":"\/images\/VL-CN110V 3K.webp"
+    },
+    {
         "Referencia Interna":"VL-SRN7W 6K",
         "Nombre":"OJO DE BUEY 7W 6000K REDONDO NEGRO 100U\/C",
         "Categoría":"ILUMINACIÓN",
@@ -9286,6 +9526,18 @@
         "Stock":25720.0,
         "Precio":0.97,
         "Imagen":"\/images\/VL-PLD 5W.webp"
+    },
+    {
+        "Referencia Interna":"VL-CN110V VERDE",
+        "Nombre":"CINTA NEON 5M VERDE IP66 AC110V",
+        "Categoría":"No Clasificado",
+        "Subcategoría":"No Clasificado",
+        "Tipo":"No Clasificado",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CINTA LED",
+        "Stock":499.0,
+        "Precio":0.0,
+        "Imagen":"\/images\/VL-CN110V VERDE.webp"
     },
     {
         "Referencia Interna":"VL-P17",
@@ -9370,6 +9622,18 @@
         "Stock":1000.0,
         "Precio":1.24,
         "Imagen":"\/images\/VL-DPL 18W.webp"
+    },
+    {
+        "Referencia Interna":"VL-CN110V 6K",
+        "Nombre":"CINTA NEON 5M 6500K IP66 AC110V",
+        "Categoría":"No Clasificado",
+        "Subcategoría":"No Clasificado",
+        "Tipo":"No Clasificado",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CINTA LED",
+        "Stock":1496.0,
+        "Precio":0.0,
+        "Imagen":"\/images\/VL-CN110V 6K.webp"
     },
     {
         "Referencia Interna":"AR-T",
@@ -9895,7 +10159,7 @@
         "Tipo":" AMARRAS PLÁSTICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ AMARRAS PLASTICAS",
-        "Stock":291.0,
+        "Stock":1291.0,
         "Precio":1.75,
         "Imagen":"\/images\/N-4.8X15.webp"
     },
@@ -10894,6 +11158,18 @@
         "Stock":4.0,
         "Precio":83.52,
         "Imagen":"\/images\/JH-L938.webp"
+    },
+    {
+        "Referencia Interna":"FS-T9",
+        "Nombre":"VENTILADOR SOLAR 12\" 15W 1 UND\/CTN",
+        "Categoría":"No Clasificado",
+        "Subcategoría":"No Clasificado",
+        "Tipo":"No Clasificado",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ KIT SOLARES",
+        "Stock":100.0,
+        "Precio":0.0,
+        "Imagen":"\/images\/FS-T9.webp"
     },
     {
         "Referencia Interna":"LR6 10B",
@@ -12142,6 +12418,18 @@
         "Stock":860.0,
         "Precio":21.0,
         "Imagen":"\/images\/VL-DPS.webp"
+    },
+    {
+        "Referencia Interna":"VL-CIFL 3D",
+        "Nombre":"SDS",
+        "Categoría":"No Clasificado",
+        "Subcategoría":"No Clasificado",
+        "Tipo":"No Clasificado",
+        "Marca":"N\/A",
+        "Categoria de producto":"TECNOLOGIA \/ DOMOTICA \/ DOMOTICA",
+        "Stock":50.0,
+        "Precio":0.0,
+        "Imagen":"\/images\/VL-CIFL 3D.webp"
     },
     {
         "Referencia Interna":"RMV200W",
