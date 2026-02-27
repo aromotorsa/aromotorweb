@@ -1123,7 +1123,7 @@
         "Tipo":" SISTEMA SOLAR",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES LED 0% \/ SISTEMA SOLAR",
-        "Stock":87.0,
+        "Stock":85.0,
         "Precio":164.0,
         "Imagen":"\/images\/VLPSN-610W.webp"
     },
@@ -1534,18 +1534,6 @@
         "Stock":1.0,
         "Precio":0.0,
         "Imagen":"\/images\/SLT2.webp"
-    },
-    {
-        "Referencia Interna":"MSL-RGB",
-        "Nombre":"SOLAR MANGUERA RGB 10 METROS SM-5050RGB",
-        "Categoría":"ILUMINACIÓN SOLAR",
-        "Subcategoría":"LUZ LED SOLAR",
-        "Tipo":" SOLAR CINTA LED",
-        "Marca":"N\/A",
-        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR CINTA LED",
-        "Stock":8.0,
-        "Precio":76.44,
-        "Imagen":"\/images\/MSL-RGB.webp"
     },
     {
         "Referencia Interna":"SL-2098",
@@ -2095,7 +2083,7 @@
         "Tipo":"No Clasificado",
         "Marca":"N\/A",
         "Categoria de producto":"TECNOLOGIA \/ DOMOTICA \/ DOMOTICA",
-        "Stock":30.0,
+        "Stock":29.0,
         "Precio":155.0,
         "Imagen":"\/images\/VL-CIHR 08.webp"
     },
@@ -2311,7 +2299,7 @@
         "Tipo":"No Clasificado",
         "Marca":"N\/A",
         "Categoria de producto":"TECNOLOGIA \/ DOMOTICA \/ DOMOTICA",
-        "Stock":319.0,
+        "Stock":317.0,
         "Precio":108.0,
         "Imagen":"\/images\/VL-EYHR08.webp"
     },
@@ -4747,7 +4735,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE REDONDO",
-        "Stock":39965.0,
+        "Stock":39964.0,
         "Precio":4.83,
         "Imagen":"\/images\/VP-ER 24W.webp"
     },
@@ -5047,7 +5035,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE REDONDO",
-        "Stock":56140.0,
+        "Stock":56139.0,
         "Precio":3.02,
         "Imagen":"\/images\/VP-ER 18W.webp"
     },
@@ -6055,7 +6043,7 @@
         "Tipo":" SISTEMA SOLAR",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES LED 0% \/ SISTEMA SOLAR",
-        "Stock":80.0,
+        "Stock":79.0,
         "Precio":401.54,
         "Imagen":"\/images\/PV 18-1012 LV.webp"
     },
@@ -8419,7 +8407,7 @@
         "Tipo":" SISTEMA SOLAR",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES LED 0% \/ SISTEMA SOLAR",
-        "Stock":26.0,
+        "Stock":22.0,
         "Precio":333.89,
         "Imagen":"\/images\/LP15-12100.webp"
     },
@@ -12403,7 +12391,7 @@
         "Tipo":"No Clasificado",
         "Marca":"N\/A",
         "Categoria de producto":"TECNOLOGIA \/ DOMOTICA \/ DOMOTICA",
-        "Stock":50.0,
+        "Stock":49.0,
         "Precio":229.0,
         "Imagen":"\/images\/VL-CIFL 3D.webp"
     },
