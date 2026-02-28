@@ -1536,6 +1536,18 @@
         "Imagen":"\/images\/SLT2.webp"
     },
     {
+        "Referencia Interna":"MSL-RGB",
+        "Nombre":"SOLAR MANGUERA RGB 10 METROS SM-5050RGB",
+        "Categoría":"ILUMINACIÓN SOLAR",
+        "Subcategoría":"LUZ LED SOLAR",
+        "Tipo":" SOLAR CINTA LED",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR CINTA LED",
+        "Stock":1.0,
+        "Precio":76.44,
+        "Imagen":"\/images\/MSL-RGB.webp"
+    },
+    {
         "Referencia Interna":"SL-2098",
         "Nombre":"SOLAR MINI LAMPARA DE POSTE 6500K",
         "Categoría":"ILUMINACIÓN SOLAR",
@@ -5035,7 +5047,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE REDONDO",
-        "Stock":56069.0,
+        "Stock":56099.0,
         "Precio":3.02,
         "Imagen":"\/images\/VP-ER 18W.webp"
     },
@@ -8743,7 +8755,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE CUADRADO",
-        "Stock":971.0,
+        "Stock":985.0,
         "Precio":37.01,
         "Imagen":"\/images\/PER60-60W 6K.webp"
     },
@@ -12103,7 +12115,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":16873.0,
+        "Stock":16913.0,
         "Precio":0.56,
         "Imagen":"\/images\/VLML-E27.webp"
     },
@@ -12211,7 +12223,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":22453.0,
+        "Stock":22553.0,
         "Precio":0.26,
         "Imagen":"\/images\/VLCLC-1N.webp"
     },
@@ -12319,7 +12331,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":35440.0,
+        "Stock":35450.0,
         "Precio":0.37,
         "Imagen":"\/images\/VLIH-1B.webp"
     },
@@ -14239,7 +14251,7 @@
         "Tipo":"DOMÓTICA",
         "Marca":"N\/A",
         "Categoria de producto":"TECNOLOGIA \/ DOMOTICA \/ DOMOTICA",
-        "Stock":382.0,
+        "Stock":385.0,
         "Precio":18.4,
         "Imagen":"\/images\/VL-T3USB.webp"
     },
