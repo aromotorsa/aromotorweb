@@ -2155,7 +2155,7 @@
         "Tipo":" CINTA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CINTA LED",
-        "Stock":35051.0,
+        "Stock":35054.0,
         "Precio":8.84,
         "Imagen":"\/images\/E-CL110V-6K.webp"
     },
@@ -2580,18 +2580,6 @@
         "Imagen":"\/images\/PEC60-45W 6K.webp"
     },
     {
-        "Referencia Interna":"SC60-45W 6K",
-        "Nombre":"EVA LED PANEL 60X60 45W 6500K FP 0.9 SOBREPUESTO CUADRADO",
-        "Categoría":"ILUMINACIÓN",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":" PANEL SOBREPUESTO CUADRADO",
-        "Marca":"N\/A",
-        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO CUADRADO",
-        "Stock":1299.0,
-        "Precio":16.3,
-        "Imagen":"\/images\/SC60-45W 6K.webp"
-    },
-    {
         "Referencia Interna":"BC2085",
         "Nombre":"PORTALAMPARA PORCELANA GU10",
         "Categoría":"VARIOS Y REPUESTOS",
@@ -2626,6 +2614,18 @@
         "Stock":370.0,
         "Precio":40.48,
         "Imagen":"\/images\/EL-U200W.webp"
+    },
+    {
+        "Referencia Interna":"SC60-45W 6K",
+        "Nombre":"EVA LED PANEL 60X60 45W 6500K FP 0.9 SOBREPUESTO CUADRADO",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" PANEL SOBREPUESTO CUADRADO",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO CUADRADO",
+        "Stock":1199.0,
+        "Precio":16.3,
+        "Imagen":"\/images\/SC60-45W 6K.webp"
     },
     {
         "Referencia Interna":"EL-2835 6500K",
@@ -2779,7 +2779,7 @@
         "Tipo":" REFLECTORES LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ REFLECTORES LED",
-        "Stock":704.0,
+        "Stock":708.0,
         "Precio":4.6,
         "Imagen":"\/images\/ERE-50W.webp"
     },
@@ -3643,7 +3643,7 @@
         "Tipo":" FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":26089.0,
+        "Stock":26139.0,
         "Precio":2.43,
         "Imagen":"\/images\/LV-130 30W.webp"
     },
@@ -4687,7 +4687,7 @@
         "Tipo":"No Clasificado",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PERFIL DE ALUMINIO",
-        "Stock":352.0,
+        "Stock":377.0,
         "Precio":5.89,
         "Imagen":"\/images\/VL-P71 NEGRO.webp"
     },
@@ -8287,7 +8287,7 @@
         "Tipo":" REFLECTORES LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ REFLECTORES LED",
-        "Stock":568.0,
+        "Stock":570.0,
         "Precio":21.19,
         "Imagen":"\/images\/ERE-200W 3K.webp"
     },
@@ -11779,7 +11779,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE REDONDO",
-        "Stock":63168.0,
+        "Stock":63268.0,
         "Precio":0.97,
         "Imagen":"\/images\/VP-ER 3W.webp"
     },
