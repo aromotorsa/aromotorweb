@@ -763,7 +763,7 @@
         "Tipo":" SISTEMA SOLAR",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SISTEMA SOLAR",
-        "Stock":99.0,
+        "Stock":114.0,
         "Precio":4.15,
         "Imagen":"\/images\/MC4 3-1.webp"
     },
@@ -1543,7 +1543,7 @@
         "Tipo":" SOLAR CINTA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR CINTA LED",
-        "Stock":1.0,
+        "Stock":8.0,
         "Precio":76.44,
         "Imagen":"\/images\/MSL-RGB.webp"
     },
@@ -3144,18 +3144,6 @@
         "Imagen":"\/images\/CDP150-2.webp"
     },
     {
-        "Referencia Interna":"EFE-12W",
-        "Nombre":"FOCO LED EMERGENCIA 12W 6500K 100U\/C",
-        "Categoría":"ILUMINACIÓN",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":" FOCO LED RECARGABLE",
-        "Marca":"N\/A",
-        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED RECARGABLE",
-        "Stock":4793.0,
-        "Precio":3.46,
-        "Imagen":"\/images\/EFE-12W.webp"
-    },
-    {
         "Referencia Interna":"CDP200",
         "Nombre":"VICTORIA LED CAJA DE PASO 200X100X70MM 60U\/C",
         "Categoría":"MATERIAL ELÉCTRICO",
@@ -3166,6 +3154,18 @@
         "Stock":249.0,
         "Precio":3.52,
         "Imagen":"\/images\/CDP200.webp"
+    },
+    {
+        "Referencia Interna":"EFE-12W",
+        "Nombre":"FOCO LED EMERGENCIA 12W 6500K 100U\/C",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" FOCO LED RECARGABLE",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED RECARGABLE",
+        "Stock":4793.0,
+        "Precio":3.46,
+        "Imagen":"\/images\/EFE-12W.webp"
     },
     {
         "Referencia Interna":"EFE-20W",
@@ -6276,18 +6276,6 @@
         "Imagen":"\/images\/MY202247.webp"
     },
     {
-        "Referencia Interna":"3072 6K WHITE",
-        "Nombre":"LAMPARA DECORATIVA DE PARED LED METAL\/SILICON 6K WHITE",
-        "Categoría":"ILUMINACIÓN",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":" LÁMPARAS DECORATIVAS",
-        "Marca":"N\/A",
-        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ LAMPARAS DECORATIVAS",
-        "Stock":8.0,
-        "Precio":11.58,
-        "Imagen":"\/images\/3072 6K WHITE.webp"
-    },
-    {
         "Referencia Interna":"VP-RER 3+3",
         "Nombre":"VICTORIA LED PANEL EMP RED 3W+3W ROJO 100U\/C",
         "Categoría":"ILUMINACIÓN",
@@ -6370,6 +6358,18 @@
         "Stock":380.0,
         "Precio":6.26,
         "Imagen":"\/images\/VP-RER 18+6.webp"
+    },
+    {
+        "Referencia Interna":"3072 6K WHITE",
+        "Nombre":"LAMPARA DECORATIVA DE PARED LED METAL\/SILICON 6K WHITE",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" LÁMPARAS DECORATIVAS",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ LAMPARAS DECORATIVAS",
+        "Stock":8.0,
+        "Precio":11.58,
+        "Imagen":"\/images\/3072 6K WHITE.webp"
     },
     {
         "Referencia Interna":"VP-REV 18+6",
@@ -6463,7 +6463,7 @@
         "Tipo":" SISTEMA SOLAR",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SISTEMA SOLAR",
-        "Stock":950.0,
+        "Stock":965.0,
         "Precio":12.4,
         "Imagen":"\/images\/VL-MC4D.webp"
     },
@@ -9823,7 +9823,7 @@
         "Tipo":" KIT SOLARES",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ KIT SOLARES",
-        "Stock":90.0,
+        "Stock":93.0,
         "Precio":31.48,
         "Imagen":"\/images\/DT-9028.webp"
     },
@@ -12247,7 +12247,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":9783.0,
+        "Stock":9883.0,
         "Precio":0.38,
         "Imagen":"\/images\/VLIH-3B.webp"
     },
@@ -14203,7 +14203,7 @@
         "Tipo":"DOMÓTICA",
         "Marca":"N\/A",
         "Categoria de producto":"TECNOLOGIA \/ DOMOTICA \/ DOMOTICA",
-        "Stock":525.0,
+        "Stock":526.0,
         "Precio":16.43,
         "Imagen":"\/images\/VL-T1USN.webp"
     },
