@@ -2347,7 +2347,7 @@
         "Tipo":" FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":14585.0,
+        "Stock":14583.0,
         "Precio":1.02,
         "Imagen":"\/images\/EF-15W.webp"
     },
@@ -2395,7 +2395,7 @@
         "Tipo":" FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":12687.0,
+        "Stock":12685.0,
         "Precio":2.21,
         "Imagen":"\/images\/EF-30W.webp"
     },
@@ -2479,7 +2479,7 @@
         "Tipo":" FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":84021.0,
+        "Stock":84011.0,
         "Precio":0.52,
         "Imagen":"\/images\/EF-9W.webp"
     },
@@ -2515,7 +2515,7 @@
         "Tipo":" APLIQUES DE PARED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ APLIQUES DE PARED",
-        "Stock":143.0,
+        "Stock":163.0,
         "Precio":3.86,
         "Imagen":"\/images\/APV75.webp"
     },
@@ -4147,7 +4147,7 @@
         "Tipo":" MANGUERA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ MANGUERA LED",
-        "Stock":167.0,
+        "Stock":166.0,
         "Precio":89.9,
         "Imagen":"\/images\/MG-5050AZ 8MM.webp"
     },
@@ -5251,7 +5251,7 @@
         "Tipo":" PANEL DOBLE COLOR",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL DOBLE COLOR",
-        "Stock":649.0,
+        "Stock":689.0,
         "Precio":2.48,
         "Imagen":"\/images\/LV-206SRY 3+3.webp"
     },
@@ -6439,7 +6439,7 @@
         "Tipo":" SISTEMA SOLAR",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SISTEMA SOLAR",
-        "Stock":5367.0,
+        "Stock":5366.0,
         "Precio":1.05,
         "Imagen":"\/images\/MC4 1-1 1K.webp"
     },
@@ -6511,7 +6511,7 @@
         "Tipo":" PLACAS ELÉCTRICAS LYRA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PLACAS ELECTRICAS LYRA",
-        "Stock":4759.0,
+        "Stock":4747.0,
         "Precio":1.45,
         "Imagen":"\/images\/VL-IN1B.webp"
     },
@@ -6931,7 +6931,7 @@
         "Tipo":" CINTA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CINTA LED",
-        "Stock":213.0,
+        "Stock":201.0,
         "Precio":6.2,
         "Imagen":"\/images\/VL-CN 6500K.webp"
     },
@@ -7939,7 +7939,7 @@
         "Tipo":"No Clasificado",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CINTA LED",
-        "Stock":681.0,
+        "Stock":669.0,
         "Precio":10.01,
         "Imagen":"\/images\/VL-CN110V AZUL.webp"
     },
@@ -8947,7 +8947,7 @@
         "Tipo":" AMARRAS PLÁSTICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ AMARRAS PLASTICAS",
-        "Stock":3926.0,
+        "Stock":3826.0,
         "Precio":1.97,
         "Imagen":"\/images\/N-4.8X20.webp"
     },
@@ -9547,7 +9547,7 @@
         "Tipo":"No Clasificado",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CINTA LED",
-        "Stock":1469.0,
+        "Stock":1457.0,
         "Precio":10.01,
         "Imagen":"\/images\/VL-CN110V 6K.webp"
     },
@@ -10231,7 +10231,7 @@
         "Tipo":" OJO DE BUEY",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ OJO DE BUEY",
-        "Stock":3588.0,
+        "Stock":3558.0,
         "Precio":1.93,
         "Imagen":"\/images\/VL-SRB7W 3K.webp"
     },
@@ -10291,7 +10291,7 @@
         "Tipo":" OJO DE BUEY",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ OJO DE BUEY",
-        "Stock":4855.0,
+        "Stock":4825.0,
         "Precio":1.93,
         "Imagen":"\/images\/VL-SRB7W 6K.webp"
     },
@@ -11587,7 +11587,7 @@
         "Tipo":" REFLECTORES LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ REFLECTORES LED",
-        "Stock":33.0,
+        "Stock":45.0,
         "Precio":50.14,
         "Imagen":"\/images\/VRM-R100W.webp"
     },
@@ -12334,6 +12334,18 @@
         "Stock":859.0,
         "Precio":21.0,
         "Imagen":"\/images\/VL-DPS.webp"
+    },
+    {
+        "Referencia Interna":"APVL15",
+        "Nombre":"APLIQUE DE PARED IP65 3W 3000K NEGRO 220*80MM",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" APLIQUES DE PARED",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ APLIQUES DE PARED",
+        "Stock":49.0,
+        "Precio":8.45,
+        "Imagen":"\/images\/APVL15.webp"
     },
     {
         "Referencia Interna":"RMV200W",
@@ -14179,7 +14191,7 @@
         "Tipo":"DOMÓTICA",
         "Marca":"N\/A",
         "Categoria de producto":"TECNOLOGIA \/ DOMOTICA \/ DOMOTICA",
-        "Stock":524.0,
+        "Stock":536.0,
         "Precio":16.43,
         "Imagen":"\/images\/VL-T1USN.webp"
     },
