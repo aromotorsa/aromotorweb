@@ -19,7 +19,7 @@
         "Tipo":" CINTA ELÉCTRICA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ CINTA ELECTRICA",
-        "Stock":3381.0,
+        "Stock":3361.0,
         "Precio":0.36,
         "Imagen":"\/images\/CEAZ-11.1M.webp"
     },
@@ -43,7 +43,7 @@
         "Tipo":" CINTA ELÉCTRICA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ CINTA ELECTRICA",
-        "Stock":4807.0,
+        "Stock":4787.0,
         "Precio":0.36,
         "Imagen":"\/images\/CEB-11.1M.webp"
     },
@@ -67,7 +67,7 @@
         "Tipo":" CINTA ELÉCTRICA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ CINTA ELECTRICA",
-        "Stock":3053.0,
+        "Stock":3033.0,
         "Precio":0.36,
         "Imagen":"\/images\/CEN-11.1M.webp"
     },
@@ -91,7 +91,7 @@
         "Tipo":" CINTA ELÉCTRICA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ CINTA ELECTRICA",
-        "Stock":3190.0,
+        "Stock":3170.0,
         "Precio":0.36,
         "Imagen":"\/images\/CER-11.1M.webp"
     },
@@ -379,7 +379,7 @@
         "Tipo":" ACCESORIOS Y REPUESTOS LUCES",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ ACCESORIOS Y REPUESTOS LUCES",
-        "Stock":4655.0,
+        "Stock":4630.0,
         "Precio":1.29,
         "Imagen":"\/images\/DRIVER 18W.webp"
     },
@@ -595,7 +595,7 @@
         "Tipo":" SISTEMA SOLAR",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES LED 0% \/ SISTEMA SOLAR",
-        "Stock":14.0,
+        "Stock":12.0,
         "Precio":420.0,
         "Imagen":"\/images\/SSB-12V200AH.webp"
     },
@@ -811,7 +811,7 @@
         "Tipo":" SISTEMA SOLAR",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SISTEMA SOLAR",
-        "Stock":51.0,
+        "Stock":50.0,
         "Precio":294.69,
         "Imagen":"\/images\/MPK2-100.webp"
     },
@@ -1123,7 +1123,7 @@
         "Tipo":" SISTEMA SOLAR",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES LED 0% \/ SISTEMA SOLAR",
-        "Stock":85.0,
+        "Stock":83.0,
         "Precio":164.0,
         "Imagen":"\/images\/VLPSN-610W.webp"
     },
@@ -1560,6 +1560,18 @@
         "Imagen":"\/images\/SL-2098.webp"
     },
     {
+        "Referencia Interna":"SSP-585W BFC JINKO",
+        "Nombre":"SOLAR PANEL 585W JINKO BIFACIAL TOPCON",
+        "Categoría":"No Clasificado",
+        "Subcategoría":"No Clasificado",
+        "Tipo":"No Clasificado",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES LED 0% \/ SISTEMA SOLAR",
+        "Stock":529.0,
+        "Precio":161.11,
+        "Imagen":"\/images\/SSP-585W BFC JINKO.webp"
+    },
+    {
         "Referencia Interna":"SSP-400W",
         "Nombre":"SOLAR PANEL 400W",
         "Categoría":"ILUMINACIÓN SOLAR",
@@ -1582,18 +1594,6 @@
         "Stock":1.0,
         "Precio":161.3,
         "Imagen":"\/images\/SSP-450W.webp"
-    },
-    {
-        "Referencia Interna":"SSP-585W JA BI",
-        "Nombre":"SOLAR PANEL 585W JA SOLAR BIFACIAL TOPCON",
-        "Categoría":"ILUMINACIÓN SOLAR",
-        "Subcategoría":"LUCES LED 0%",
-        "Tipo":" SISTEMA SOLAR",
-        "Marca":"N\/A",
-        "Categoria de producto":"LUCES LED 0% \/ SISTEMA SOLAR",
-        "Stock":529.0,
-        "Precio":140.1,
-        "Imagen":"\/images\/SSP-585W JA BI.webp"
     },
     {
         "Referencia Interna":"SSP-585W JINKO",
@@ -1711,7 +1711,7 @@
         "Tipo":" SISTEMA SOLAR",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SISTEMA SOLAR",
-        "Stock":476.0,
+        "Stock":451.0,
         "Precio":0.74,
         "Imagen":"\/images\/ST-N2.webp"
     },
@@ -1723,7 +1723,7 @@
         "Tipo":" SISTEMA SOLAR",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SISTEMA SOLAR",
-        "Stock":150.0,
+        "Stock":125.0,
         "Precio":0.6,
         "Imagen":"\/images\/ST-N4.webp"
     },
@@ -3043,7 +3043,7 @@
         "Tipo":" FOCO LED DECORATIVO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED DECORATIVO",
-        "Stock":5891.0,
+        "Stock":5866.0,
         "Precio":1.36,
         "Imagen":"\/images\/ZM-9.webp"
     },
@@ -4867,7 +4867,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO REDONDO",
-        "Stock":2368.0,
+        "Stock":2358.0,
         "Precio":8.9,
         "Imagen":"\/images\/VP-SRF 48W.webp"
     },
@@ -5599,7 +5599,7 @@
         "Tipo":" PANEL EMPOTRABLE CUADRADO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE CUADRADO",
-        "Stock":2589.0,
+        "Stock":2574.0,
         "Precio":4.75,
         "Imagen":"\/images\/VP-ECF 36W.webp"
     },
@@ -5652,6 +5652,42 @@
         "Imagen":"\/images\/VP-SC 24W.webp"
     },
     {
+        "Referencia Interna":"SMD-H200W",
+        "Nombre":"VICTORIA LED REFLECTORES 6500K",
+        "Categoría":"INDUSTRIAL",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" REFLECTORES LED",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ REFLECTORES LED",
+        "Stock":300.0,
+        "Precio":64.11,
+        "Imagen":"\/images\/SMD-H200W.webp"
+    },
+    {
+        "Referencia Interna":"SMD-H300W",
+        "Nombre":"VICTORIA LED REFLECTORES 6500K",
+        "Categoría":"INDUSTRIAL",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" REFLECTORES LED",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ REFLECTORES LED",
+        "Stock":200.0,
+        "Precio":103.21,
+        "Imagen":"\/images\/SMD-H300W.webp"
+    },
+    {
+        "Referencia Interna":"SMD-H400W",
+        "Nombre":"VICTORIA LED REFLECTORES 6500K",
+        "Categoría":"INDUSTRIAL",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" REFLECTORES LED",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ REFLECTORES LED",
+        "Stock":50.0,
+        "Precio":145.03,
+        "Imagen":"\/images\/SMD-H400W.webp"
+    },
+    {
         "Referencia Interna":"VL-RL150W",
         "Nombre":"VICTORIA LED REFLECTORES LINEAL 6500K",
         "Categoría":"INDUSTRIAL",
@@ -5662,6 +5698,18 @@
         "Stock":2.0,
         "Precio":32.03,
         "Imagen":"\/images\/VL-RL150W.webp"
+    },
+    {
+        "Referencia Interna":"SMD-H600W",
+        "Nombre":"VICTORIA LED REFLECTORES 6500K",
+        "Categoría":"INDUSTRIAL",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" REFLECTORES LED",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ REFLECTORES LED",
+        "Stock":12.0,
+        "Precio":236.2,
+        "Imagen":"\/images\/SMD-H600W.webp"
     },
     {
         "Referencia Interna":"ST84",
@@ -6031,7 +6079,7 @@
         "Tipo":" SISTEMA SOLAR",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES LED 0% \/ SISTEMA SOLAR",
-        "Stock":94.0,
+        "Stock":93.0,
         "Precio":279.47,
         "Imagen":"\/images\/PI15-2024 LV.webp"
     },
@@ -6367,7 +6415,7 @@
         "Tipo":" LÁMPARAS DECORATIVAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ LAMPARAS DECORATIVAS",
-        "Stock":76.0,
+        "Stock":65.0,
         "Precio":12.14,
         "Imagen":"\/images\/LC-1543-NE.webp"
     },
@@ -6739,7 +6787,7 @@
         "Tipo":" CINTA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CINTA LED",
-        "Stock":777.0,
+        "Stock":767.0,
         "Precio":8.94,
         "Imagen":"\/images\/C5M-RGB5050.webp"
     },
@@ -6847,7 +6895,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE REDONDO",
-        "Stock":104.0,
+        "Stock":101.0,
         "Precio":6.62,
         "Imagen":"\/images\/VPES-24W.webp"
     },
@@ -6859,7 +6907,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE REDONDO",
-        "Stock":289.0,
+        "Stock":286.0,
         "Precio":10.07,
         "Imagen":"\/images\/VPES-36W.webp"
     },
@@ -8124,18 +8172,6 @@
         "Imagen":"\/images\/MTC01-AZ-CL.webp"
     },
     {
-        "Referencia Interna":"TPC-010",
-        "Nombre":"LUZ DE JARDIN 12W 3000K AC85-265V BLACK",
-        "Categoría":"ILUMINACIÓN",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":" LUZ DE JARDÍN",
-        "Marca":"N\/A",
-        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ LUZ DE JARDIN",
-        "Stock":3.0,
-        "Precio":15.67,
-        "Imagen":"\/images\/TPC-010.webp"
-    },
-    {
         "Referencia Interna":"VL-RGB20W",
         "Nombre":"VICTORIA LED REFLECTOR RGB 100-240V FP0.5",
         "Categoría":"INDUSTRIAL",
@@ -8203,7 +8239,7 @@
         "Tipo":" REFLECTORES LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ REFLECTORES LED",
-        "Stock":696.0,
+        "Stock":690.0,
         "Precio":3.02,
         "Imagen":"\/images\/ERE-20W 3K.webp"
     },
@@ -8803,7 +8839,7 @@
         "Tipo":" AMARRAS PLÁSTICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ AMARRAS PLASTICAS",
-        "Stock":723.0,
+        "Stock":698.0,
         "Precio":0.38,
         "Imagen":"\/images\/N-2.5X10.webp"
     },
@@ -8923,7 +8959,7 @@
         "Tipo":" AMARRAS PLÁSTICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ AMARRAS PLASTICAS",
-        "Stock":3820.0,
+        "Stock":3795.0,
         "Precio":1.97,
         "Imagen":"\/images\/N-4.8X20.webp"
     },
@@ -9427,7 +9463,7 @@
         "Tipo":"No Clasificado",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CINTA LED",
-        "Stock":491.0,
+        "Stock":486.0,
         "Precio":10.01,
         "Imagen":"\/images\/VL-CN110V VERDE.webp"
     },
@@ -10051,7 +10087,7 @@
         "Tipo":" AMARRAS PLÁSTICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ AMARRAS PLASTICAS",
-        "Stock":1241.0,
+        "Stock":1216.0,
         "Precio":1.75,
         "Imagen":"\/images\/N-4.8X15.webp"
     },
@@ -11059,7 +11095,7 @@
         "Tipo":"No Clasificado",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ KIT SOLARES",
-        "Stock":99.0,
+        "Stock":97.0,
         "Precio":42.94,
         "Imagen":"\/images\/FS-T9.webp"
     },
@@ -11455,7 +11491,7 @@
         "Tipo":" TIMBRE",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ TIMBRE",
-        "Stock":839.0,
+        "Stock":835.0,
         "Precio":14.35,
         "Imagen":"\/images\/VLRB01.webp"
     },
@@ -11467,7 +11503,7 @@
         "Tipo":" TIMBRE",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ TIMBRE",
-        "Stock":1246.0,
+        "Stock":1242.0,
         "Precio":14.35,
         "Imagen":"\/images\/VLRN01.webp"
     },
@@ -12451,7 +12487,7 @@
         "Tipo":" BREAKER",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ BREAKER",
-        "Stock":782.0,
+        "Stock":758.0,
         "Precio":4.37,
         "Imagen":"\/images\/AC10K-1P 50A.webp"
     },
@@ -12919,7 +12955,7 @@
         "Tipo":" BREAKER",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ BREAKER",
-        "Stock":327.0,
+        "Stock":321.0,
         "Precio":4.84,
         "Imagen":"\/images\/AC6K-2P 50A.webp"
     },
@@ -13831,7 +13867,7 @@
         "Tipo":" FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":2521.0,
+        "Stock":2509.0,
         "Precio":0.79,
         "Imagen":"\/images\/MR16-3K.webp"
     },
@@ -13843,7 +13879,7 @@
         "Tipo":" FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":4879.0,
+        "Stock":4867.0,
         "Precio":0.79,
         "Imagen":"\/images\/MR16-6K.webp"
     },
