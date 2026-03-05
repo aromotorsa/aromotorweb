@@ -55,7 +55,7 @@
         "Tipo":"No Clasificado",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":7616.0,
+        "Stock":7646.0,
         "Precio":0.23,
         "Imagen":"\/images\/VL-TPN.webp"
     },
@@ -2119,7 +2119,7 @@
         "Tipo":" CINTA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CINTA LED",
-        "Stock":24847.0,
+        "Stock":24844.0,
         "Precio":8.84,
         "Imagen":"\/images\/E-CL110V-3K.webp"
     },
@@ -2131,7 +2131,7 @@
         "Tipo":" CINTA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CINTA LED",
-        "Stock":32368.0,
+        "Stock":32365.0,
         "Precio":8.84,
         "Imagen":"\/images\/E-CL110V-6K.webp"
     },
@@ -2203,7 +2203,7 @@
         "Tipo":" APLIQUES DE PARED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ APLIQUES DE PARED",
-        "Stock":2.0,
+        "Stock":3.0,
         "Precio":5.16,
         "Imagen":"\/images\/APV74.webp"
     },
@@ -2215,7 +2215,7 @@
         "Tipo":"FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":53.0,
+        "Stock":54.0,
         "Precio":19.88,
         "Imagen":"\/images\/VL-VTL 45W.webp"
     },
@@ -2335,7 +2335,7 @@
         "Tipo":" FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":14353.0,
+        "Stock":14354.0,
         "Precio":1.02,
         "Imagen":"\/images\/EF-15W.webp"
     },
@@ -2383,7 +2383,7 @@
         "Tipo":" FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":12221.0,
+        "Stock":12222.0,
         "Precio":2.21,
         "Imagen":"\/images\/EF-30W.webp"
     },
@@ -2431,7 +2431,7 @@
         "Tipo":" FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":42623.0,
+        "Stock":42624.0,
         "Precio":3.56,
         "Imagen":"\/images\/EF-50W.webp"
     },
@@ -2479,7 +2479,7 @@
         "Tipo":" SOLAR LUZ DE CALLE",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR LUZ DE CALLE",
-        "Stock":107.0,
+        "Stock":108.0,
         "Precio":93.58,
         "Imagen":"\/images\/EVSL-1400W.webp"
     },
@@ -2491,7 +2491,7 @@
         "Tipo":" SOLAR LUZ DE CALLE",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR LUZ DE CALLE",
-        "Stock":262.0,
+        "Stock":263.0,
         "Precio":70.9,
         "Imagen":"\/images\/EVSL-1000W.webp"
     },
@@ -2503,7 +2503,7 @@
         "Tipo":" APLIQUES DE PARED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ APLIQUES DE PARED",
-        "Stock":163.0,
+        "Stock":164.0,
         "Precio":3.86,
         "Imagen":"\/images\/APV75.webp"
     },
@@ -2707,7 +2707,7 @@
         "Tipo":" APLIQUES DE PARED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ APLIQUES DE PARED",
-        "Stock":199.0,
+        "Stock":200.0,
         "Precio":3.86,
         "Imagen":"\/images\/APV76.webp"
     },
@@ -2767,7 +2767,7 @@
         "Tipo":" REFLECTORES LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ REFLECTORES LED",
-        "Stock":969.0,
+        "Stock":967.0,
         "Precio":40.59,
         "Imagen":"\/images\/ERE-400W.webp"
     },
@@ -2779,7 +2779,7 @@
         "Tipo":" REFLECTORES LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ REFLECTORES LED",
-        "Stock":979.0,
+        "Stock":977.0,
         "Precio":26.36,
         "Imagen":"\/images\/ERE-300W.webp"
     },
@@ -2806,6 +2806,18 @@
         "Stock":1.0,
         "Precio":108.44,
         "Imagen":"\/images\/SPKB.webp"
+    },
+    {
+        "Referencia Interna":"VL-FD3 18W",
+        "Nombre":"FOCO LED DECORATIVO 15W E27",
+        "Categoría":"No Clasificado",
+        "Subcategoría":"No Clasificado",
+        "Tipo":"No Clasificado",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED DECORATIVO",
+        "Stock":1.0,
+        "Precio":12.56,
+        "Imagen":"\/images\/VL-FD3 18W.webp"
     },
     {
         "Referencia Interna":"APVG10-600",
@@ -2887,7 +2899,7 @@
         "Tipo":"No Clasificado",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":7521.0,
+        "Stock":7522.0,
         "Precio":2.1,
         "Imagen":"\/images\/VL-TN20.webp"
     },
@@ -3619,7 +3631,7 @@
         "Tipo":" FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":25967.0,
+        "Stock":25968.0,
         "Precio":2.43,
         "Imagen":"\/images\/LV-130 30W.webp"
     },
@@ -3631,7 +3643,7 @@
         "Tipo":" FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":11315.0,
+        "Stock":11304.0,
         "Precio":3.21,
         "Imagen":"\/images\/LV-130 40W.webp"
     },
@@ -3655,7 +3667,7 @@
         "Tipo":" FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":19067.0,
+        "Stock":19055.0,
         "Precio":3.68,
         "Imagen":"\/images\/LV-130 50W.webp"
     },
@@ -3691,7 +3703,7 @@
         "Tipo":" FUENTES DE PODER",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FUENTES DE PODER",
-        "Stock":1699.0,
+        "Stock":1694.0,
         "Precio":7.42,
         "Imagen":"\/images\/VL-F10A.webp"
     },
@@ -3703,7 +3715,7 @@
         "Tipo":" FUENTES DE PODER",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FUENTES DE PODER",
-        "Stock":2372.0,
+        "Stock":2369.0,
         "Precio":11.95,
         "Imagen":"\/images\/VL-F20A.webp"
     },
@@ -3847,7 +3859,7 @@
         "Tipo":" FUENTES DE PODER",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FUENTES DE PODER",
-        "Stock":755.0,
+        "Stock":750.0,
         "Precio":6.74,
         "Imagen":"\/images\/VL-SL10A.webp"
     },
@@ -4051,7 +4063,7 @@
         "Tipo":" CINTA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CINTA LED",
-        "Stock":603.0,
+        "Stock":599.0,
         "Precio":87.0,
         "Imagen":"\/images\/E-CL100M 3K.webp"
     },
@@ -4063,7 +4075,7 @@
         "Tipo":" MANGUERA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ MANGUERA LED",
-        "Stock":1193.0,
+        "Stock":1192.0,
         "Precio":112.0,
         "Imagen":"\/images\/MG-5050RGB 10MM.webp"
     },
@@ -4171,7 +4183,7 @@
         "Tipo":" CINTA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CINTA LED",
-        "Stock":184.0,
+        "Stock":182.0,
         "Precio":87.0,
         "Imagen":"\/images\/E-CL100M 4K.webp"
     },
@@ -5347,7 +5359,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ REFLECTORES LED",
-        "Stock":3169.0,
+        "Stock":3159.0,
         "Precio":30.7,
         "Imagen":"\/images\/VLY-200W 6500K.webp"
     },
@@ -5683,7 +5695,7 @@
         "Tipo":" SENSOR DE HUMO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ SENSOR DE HUMO",
-        "Stock":1291.0,
+        "Stock":1276.0,
         "Precio":7.69,
         "Imagen":"\/images\/ST84.webp"
     },
@@ -5695,7 +5707,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ TIMER",
-        "Stock":1191.0,
+        "Stock":1181.0,
         "Precio":10.57,
         "Imagen":"\/images\/DHC20A.webp"
     },
@@ -5719,7 +5731,7 @@
         "Tipo":" UFO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ UFO",
-        "Stock":439.0,
+        "Stock":440.0,
         "Precio":27.48,
         "Imagen":"\/images\/UFOE-100W.webp"
     },
@@ -5755,7 +5767,7 @@
         "Tipo":" UFO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ UFO",
-        "Stock":625.0,
+        "Stock":626.0,
         "Precio":63.56,
         "Imagen":"\/images\/UFOE-250W.webp"
     },
@@ -6787,7 +6799,7 @@
         "Tipo":" LÁMPARAS DECORATIVAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ LAMPARAS DECORATIVAS NEW",
-        "Stock":3.0,
+        "Stock":1.0,
         "Precio":115.93,
         "Imagen":"\/images\/L50-49W COBRE.webp"
     },
@@ -6823,7 +6835,7 @@
         "Tipo":" OJO DE BUEY",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ OJO DE BUEY",
-        "Stock":4398.0,
+        "Stock":4358.0,
         "Precio":2.15,
         "Imagen":"\/images\/SL3WC 6K.webp"
     },
@@ -8623,7 +8635,7 @@
         "Tipo":"FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":134.0,
+        "Stock":135.0,
         "Precio":29.82,
         "Imagen":"\/images\/VL-VTL 70W.webp"
     },
@@ -8875,7 +8887,7 @@
         "Tipo":"No Clasificado",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":325.0,
+        "Stock":326.0,
         "Precio":7.65,
         "Imagen":"\/images\/VL-LSTBN 24W.webp"
     },
@@ -11887,7 +11899,7 @@
         "Tipo":"FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":658.0,
+        "Stock":659.0,
         "Precio":1.21,
         "Imagen":"\/images\/FLB9W.webp"
     },
@@ -11947,7 +11959,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":2938.0,
+        "Stock":2926.0,
         "Precio":1.89,
         "Imagen":"\/images\/VLTM6-15A.webp"
     },
@@ -11959,7 +11971,7 @@
         "Tipo":"No Clasificado",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ APLIQUES DE PARED",
-        "Stock":143.0,
+        "Stock":144.0,
         "Precio":4.3,
         "Imagen":"\/images\/APV72.webp"
     },
@@ -11983,7 +11995,7 @@
         "Tipo":" APLIQUES DE PARED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ APLIQUES DE PARED",
-        "Stock":43.0,
+        "Stock":44.0,
         "Precio":3.86,
         "Imagen":"\/images\/APV73.webp"
     },
@@ -12007,7 +12019,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":42619.0,
+        "Stock":42594.0,
         "Precio":0.49,
         "Imagen":"\/images\/VLCIA3-15A.webp"
     },
@@ -12019,7 +12031,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":8789.0,
+        "Stock":8764.0,
         "Precio":0.44,
         "Imagen":"\/images\/VLAE-10A.webp"
     },
@@ -12031,7 +12043,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":16618.0,
+        "Stock":16593.0,
         "Precio":0.46,
         "Imagen":"\/images\/VLCIA2-15A.webp"
     },
@@ -12043,7 +12055,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":11667.0,
+        "Stock":11627.0,
         "Precio":0.69,
         "Imagen":"\/images\/VLPLB-E27.webp"
     },
@@ -12067,7 +12079,7 @@
         "Tipo":" BORNERA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ BORNERA",
-        "Stock":480.0,
+        "Stock":460.0,
         "Precio":1.26,
         "Imagen":"\/images\/X3-1512B.webp"
     },
@@ -12199,7 +12211,7 @@
         "Tipo":" BORNERA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ BORNERA",
-        "Stock":100.0,
+        "Stock":90.0,
         "Precio":2.0,
         "Imagen":"\/images\/X3-6012B.webp"
     },
@@ -12259,7 +12271,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":14101.0,
+        "Stock":14051.0,
         "Precio":0.32,
         "Imagen":"\/images\/VLISB-2S.webp"
     },
@@ -12295,7 +12307,7 @@
         "Tipo":" APLIQUES DE PARED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ APLIQUES DE PARED",
-        "Stock":199.0,
+        "Stock":200.0,
         "Precio":4.73,
         "Imagen":"\/images\/APV77.webp"
     },
@@ -12355,7 +12367,7 @@
         "Tipo":" BREAKER",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ BREAKER",
-        "Stock":176.0,
+        "Stock":164.0,
         "Precio":3.94,
         "Imagen":"\/images\/AC10K-1P 10A.webp"
     },
@@ -12379,7 +12391,7 @@
         "Tipo":" BREAKER",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ BREAKER",
-        "Stock":932.0,
+        "Stock":920.0,
         "Precio":3.94,
         "Imagen":"\/images\/AC10K-1P 16A.webp"
     },
@@ -12547,7 +12559,7 @@
         "Tipo":" BREAKER",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ BREAKER",
-        "Stock":601.0,
+        "Stock":595.0,
         "Precio":7.76,
         "Imagen":"\/images\/AC10K-2P 32A.webp"
     },
@@ -12583,7 +12595,7 @@
         "Tipo":" BREAKER",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ BREAKER",
-        "Stock":598.0,
+        "Stock":592.0,
         "Precio":8.41,
         "Imagen":"\/images\/AC10K-2P 63A.webp"
     },
@@ -13231,7 +13243,7 @@
         "Tipo":"No Clasificado",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":400.0,
+        "Stock":401.0,
         "Precio":6.31,
         "Imagen":"\/images\/VL-LSTBN 18W.webp"
     },
@@ -13243,7 +13255,7 @@
         "Tipo":"No Clasificado",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":1462.0,
+        "Stock":1463.0,
         "Precio":6.12,
         "Imagen":"\/images\/VL-TLS 18W.webp"
     },
@@ -13255,7 +13267,7 @@
         "Tipo":"FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":851.0,
+        "Stock":852.0,
         "Precio":5.66,
         "Imagen":"\/images\/VL-TLS 14W.webp"
     },
@@ -13267,7 +13279,7 @@
         "Tipo":"CINTA LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CINTA LED",
-        "Stock":67.0,
+        "Stock":68.0,
         "Precio":19.62,
         "Imagen":"\/images\/VL-TLRGB 5V.webp"
     },
@@ -13303,7 +13315,7 @@
         "Tipo":" CAJA DE BREAKER",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ CAJA DE BREAKER",
-        "Stock":1549.0,
+        "Stock":1539.0,
         "Precio":7.58,
         "Imagen":"\/images\/CBD-50A.webp"
     },
@@ -13351,7 +13363,7 @@
         "Tipo":"FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":901.0,
+        "Stock":902.0,
         "Precio":7.65,
         "Imagen":"\/images\/VL-LSTB 24W.webp"
     },
@@ -13447,7 +13459,7 @@
         "Tipo":" APLIQUES DE PARED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ APLIQUES DE PARED",
-        "Stock":131.0,
+        "Stock":132.0,
         "Precio":5.59,
         "Imagen":"\/images\/APV65.webp"
     },
@@ -13459,7 +13471,7 @@
         "Tipo":" APLIQUES DE PARED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ APLIQUES DE PARED",
-        "Stock":170.0,
+        "Stock":171.0,
         "Precio":5.76,
         "Imagen":"\/images\/APV66.webp"
     },
@@ -13471,7 +13483,7 @@
         "Tipo":" APLIQUES DE PARED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ APLIQUES DE PARED",
-        "Stock":137.0,
+        "Stock":138.0,
         "Precio":4.3,
         "Imagen":"\/images\/APV67.webp"
     },
@@ -13488,6 +13500,18 @@
         "Imagen":"\/images\/APV68.webp"
     },
     {
+        "Referencia Interna":"APV69",
+        "Nombre":"APLIQUE DE PARED IP20 12W 3000K NEGRO 105*95*135MM AC85-265V",
+        "Categoría":"ILUMINACIÓN",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" APLIQUES DE PARED",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ APLIQUES DE PARED",
+        "Stock":1.0,
+        "Precio":6.03,
+        "Imagen":"\/images\/APV69.webp"
+    },
+    {
         "Referencia Interna":"APV70",
         "Nombre":"APLIQUE DE PARED IP20 12W 3000K NEGRO 105*95*135MM AC85-265V",
         "Categoría":"ILUMINACIÓN",
@@ -13495,7 +13519,7 @@
         "Tipo":" APLIQUES DE PARED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ APLIQUES DE PARED",
-        "Stock":79.0,
+        "Stock":80.0,
         "Precio":6.01,
         "Imagen":"\/images\/APV70.webp"
     },
@@ -13507,7 +13531,7 @@
         "Tipo":" APLIQUES DE PARED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ APLIQUES DE PARED",
-        "Stock":118.0,
+        "Stock":119.0,
         "Precio":4.82,
         "Imagen":"\/images\/APV71.webp"
     },
@@ -13615,7 +13639,7 @@
         "Tipo":" CARCASA PARA DICROICO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ CARCASA PARA DICROICO",
-        "Stock":670.0,
+        "Stock":671.0,
         "Precio":0.87,
         "Imagen":"\/images\/VCDM-1B.webp"
     },
@@ -13723,7 +13747,7 @@
         "Tipo":"No Clasificado",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ APLIQUES DE PARED",
-        "Stock":189.0,
+        "Stock":190.0,
         "Precio":6.88,
         "Imagen":"\/images\/APV78-12W.webp"
     },
@@ -13807,7 +13831,7 @@
         "Tipo":" FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":664.0,
+        "Stock":665.0,
         "Precio":0.79,
         "Imagen":"\/images\/GU10-6K.webp"
     },
@@ -13831,7 +13855,7 @@
         "Tipo":" FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":4867.0,
+        "Stock":4868.0,
         "Precio":0.79,
         "Imagen":"\/images\/MR16-6K.webp"
     },
@@ -13843,7 +13867,7 @@
         "Tipo":"",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ UFO",
-        "Stock":77.0,
+        "Stock":78.0,
         "Precio":47.9,
         "Imagen":"\/images\/UFOF-100W.webp"
     },
@@ -13879,7 +13903,7 @@
         "Tipo":"",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ UFO",
-        "Stock":67.0,
+        "Stock":68.0,
         "Precio":82.44,
         "Imagen":"\/images\/UFOF-250W.webp"
     },
@@ -13963,7 +13987,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":1297.0,
+        "Stock":1292.0,
         "Precio":11.36,
         "Imagen":"\/images\/LV-130 80W.webp"
     },
@@ -13975,7 +13999,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":935.0,
+        "Stock":933.0,
         "Precio":13.89,
         "Imagen":"\/images\/LV-130 100W.webp"
     },
@@ -14011,7 +14035,7 @@
         "Tipo":"DOMÓTICA",
         "Marca":"N\/A",
         "Categoria de producto":"TECNOLOGIA \/ DOMOTICA \/ DOMOTICA",
-        "Stock":2634.0,
+        "Stock":2614.0,
         "Precio":1.15,
         "Imagen":"\/images\/VL-SC.webp"
     },
@@ -14047,7 +14071,7 @@
         "Tipo":"No Clasificado",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SISTEMA SOLAR",
-        "Stock":531.0,
+        "Stock":532.0,
         "Precio":2.17,
         "Imagen":"\/images\/RN-EC1.webp"
     },
@@ -14059,7 +14083,7 @@
         "Tipo":"No Clasificado",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SISTEMA SOLAR",
-        "Stock":921.0,
+        "Stock":922.0,
         "Precio":2.17,
         "Imagen":"\/images\/RN-IC1.webp"
     },
@@ -14095,7 +14119,7 @@
         "Tipo":"No Clasificado",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SISTEMA SOLAR",
-        "Stock":344.0,
+        "Stock":345.0,
         "Precio":3.15,
         "Imagen":"\/images\/RN-SR-SPC.webp"
     },
@@ -14107,7 +14131,7 @@
         "Tipo":" SISTEMA SOLAR",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SISTEMA SOLAR",
-        "Stock":603.0,
+        "Stock":604.0,
         "Precio":3.71,
         "Imagen":"\/images\/RN7-SW-3-A001.webp"
     },
@@ -14119,7 +14143,7 @@
         "Tipo":"No Clasificado",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SISTEMA SOLAR",
-        "Stock":723.0,
+        "Stock":724.0,
         "Precio":2.17,
         "Imagen":"\/images\/RN-TF-A.webp"
     },
@@ -14143,7 +14167,7 @@
         "Tipo":"No Clasificado",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SISTEMA SOLAR",
-        "Stock":739.0,
+        "Stock":740.0,
         "Precio":3.27,
         "Imagen":"\/images\/RN-EP.webp"
     },
@@ -14314,6 +14338,30 @@
         "Stock":168.0,
         "Precio":24.15,
         "Imagen":"\/images\/VL-SWS2.webp"
+    },
+    {
+        "Referencia Interna":"VL-FD2 18W",
+        "Nombre":"FOCO LED DECORATIVO 15W E27",
+        "Categoría":"No Clasificado",
+        "Subcategoría":"No Clasificado",
+        "Tipo":"No Clasificado",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED DECORATIVO",
+        "Stock":1.0,
+        "Precio":11.97,
+        "Imagen":"\/images\/VL-FD2 18W.webp"
+    },
+    {
+        "Referencia Interna":"VL-FD1 18W",
+        "Nombre":"FOCO LED DECORATIVO 15W E27",
+        "Categoría":"No Clasificado",
+        "Subcategoría":"No Clasificado",
+        "Tipo":"No Clasificado",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED DECORATIVO",
+        "Stock":1.0,
+        "Precio":11.1,
+        "Imagen":"\/images\/VL-FD1 18W.webp"
     },
     {
         "Referencia Interna":"CEAM-11.1M",
