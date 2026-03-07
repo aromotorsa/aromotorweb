@@ -7,7 +7,7 @@
         "Tipo":" CINTA ELÉCTRICA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ CINTA ELECTRICA",
-        "Stock":1627.0,
+        "Stock":1637.0,
         "Precio":0.62,
         "Imagen":"\/images\/CEAM-20.2M.webp"
     },
@@ -31,7 +31,7 @@
         "Tipo":" CINTA ELÉCTRICA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ CINTA ELECTRICA",
-        "Stock":448.0,
+        "Stock":458.0,
         "Precio":0.62,
         "Imagen":"\/images\/CEAZ-20.2M.webp"
     },
@@ -103,7 +103,7 @@
         "Tipo":" CINTA ELÉCTRICA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ CINTA ELECTRICA",
-        "Stock":344.0,
+        "Stock":354.0,
         "Precio":0.62,
         "Imagen":"\/images\/CER-20.2M.webp"
     },
@@ -127,7 +127,7 @@
         "Tipo":" CINTA ELÉCTRICA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ CINTA ELECTRICA",
-        "Stock":2375.0,
+        "Stock":2385.0,
         "Precio":0.61,
         "Imagen":"\/images\/CEV-20.2M.webp"
     },
@@ -2527,7 +2527,7 @@
         "Tipo":" PANEL EMPOTRABLE CUADRADO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE CUADRADO",
-        "Stock":1137.0,
+        "Stock":1149.0,
         "Precio":35.34,
         "Imagen":"\/images\/PER60-120W 6K.webp"
     },
@@ -3571,7 +3571,7 @@
         "Tipo":" FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":20985.0,
+        "Stock":21015.0,
         "Precio":1.66,
         "Imagen":"\/images\/LV-130 20W.webp"
     },
@@ -3583,7 +3583,7 @@
         "Tipo":" FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":25797.0,
+        "Stock":25817.0,
         "Precio":2.43,
         "Imagen":"\/images\/LV-130 30W.webp"
     },
@@ -3643,7 +3643,7 @@
         "Tipo":" FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":3888.0,
+        "Stock":3895.0,
         "Precio":6.01,
         "Imagen":"\/images\/VL-IFR250W.webp"
     },
@@ -11335,7 +11335,7 @@
         "Tipo":" PROTECTOR DE VOLTAJE",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PROTECTOR DE VOLTAJE",
-        "Stock":4015.0,
+        "Stock":4025.0,
         "Precio":9.26,
         "Imagen":"\/images\/VPV-1N.webp"
     },
@@ -11347,7 +11347,7 @@
         "Tipo":" PROTECTOR DE VOLTAJE",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PROTECTOR DE VOLTAJE",
-        "Stock":1273.0,
+        "Stock":1278.0,
         "Precio":12.83,
         "Imagen":"\/images\/VPV-2N.webp"
     },
@@ -11515,7 +11515,7 @@
         "Tipo":" FOCO LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":5074.0,
+        "Stock":5080.0,
         "Precio":6.01,
         "Imagen":"\/images\/VL-PL250W.webp"
     },
@@ -11623,7 +11623,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE REDONDO",
-        "Stock":14865.0,
+        "Stock":14889.0,
         "Precio":2.42,
         "Imagen":"\/images\/VP-ER 12W.webp"
     },
@@ -11695,7 +11695,7 @@
         "Tipo":" PANEL EMPOTRABLE CUADRADO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE CUADRADO",
-        "Stock":14324.0,
+        "Stock":14348.0,
         "Precio":2.94,
         "Imagen":"\/images\/VP-EC18W.webp"
     },
@@ -11707,7 +11707,7 @@
         "Tipo":" PANEL SOBREPUESTO CUADRADO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL SOBREPUESTO CUADRADO",
-        "Stock":13423.0,
+        "Stock":13447.0,
         "Precio":4.46,
         "Imagen":"\/images\/VP-SC 18W.webp"
     },
@@ -11767,7 +11767,7 @@
         "Tipo":" REGLETA ELÉCTRICA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ REGLETA ELECTRICA",
-        "Stock":50.0,
+        "Stock":62.0,
         "Precio":6.7,
         "Imagen":"\/images\/VLRE-6P USB.webp"
     },
@@ -13891,7 +13891,7 @@
         "Tipo":" CAJA DE PASO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ CAJA DE PASO",
-        "Stock":493.0,
+        "Stock":499.0,
         "Precio":7.53,
         "Imagen":"\/images\/CDP255.webp"
     },
