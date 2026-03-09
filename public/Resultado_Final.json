@@ -1171,7 +1171,7 @@
         "Tipo":" SOLAR FOCO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR FOCO",
-        "Stock":7271.0,
+        "Stock":7270.0,
         "Precio":11.2,
         "Imagen":"\/images\/FSL-100W.webp"
     },
@@ -1183,7 +1183,7 @@
         "Tipo":" SOLAR FOCO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR FOCO",
-        "Stock":9742.0,
+        "Stock":9741.0,
         "Precio":9.14,
         "Imagen":"\/images\/SF-100W.webp"
     },
@@ -1219,7 +1219,7 @@
         "Tipo":" SOLAR FOCO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR FOCO",
-        "Stock":1446.0,
+        "Stock":1445.0,
         "Precio":5.32,
         "Imagen":"\/images\/YL-EM02.webp"
     },
@@ -1243,7 +1243,7 @@
         "Tipo":" SOLAR FOCO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR FOCO",
-        "Stock":9789.0,
+        "Stock":9788.0,
         "Precio":7.1,
         "Imagen":"\/images\/SF-50W.webp"
     },
@@ -1255,7 +1255,7 @@
         "Tipo":" SOLAR FOCO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR FOCO",
-        "Stock":7664.0,
+        "Stock":7663.0,
         "Precio":8.41,
         "Imagen":"\/images\/FSL-50W.webp"
     },
@@ -1483,7 +1483,7 @@
         "Tipo":" SOLAR LUZ DE CALLE",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR LUZ DE CALLE",
-        "Stock":318.0,
+        "Stock":317.0,
         "Precio":79.25,
         "Imagen":"\/images\/LPSF-400W.webp"
     },
@@ -1639,7 +1639,7 @@
         "Tipo":" SOLAR REFLECTORES",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR REFLECTORES",
-        "Stock":1491.0,
+        "Stock":1490.0,
         "Precio":74.49,
         "Imagen":"\/images\/RMS-150W.webp"
     },
@@ -1675,7 +1675,7 @@
         "Tipo":" SOLAR REFLECTORES",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR REFLECTORES",
-        "Stock":1248.0,
+        "Stock":1247.0,
         "Precio":42.66,
         "Imagen":"\/images\/RMS-50W.webp"
     },
@@ -2911,7 +2911,7 @@
         "Tipo":"No Clasificado",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":13412.0,
+        "Stock":13411.0,
         "Precio":0.68,
         "Imagen":"\/images\/VL-CSM.webp"
     },
@@ -3444,18 +3444,6 @@
         "Imagen":"\/images\/FMT18W.webp"
     },
     {
-        "Referencia Interna":"FP12W",
-        "Nombre":"FOCO PARLANTE RGB 12W BLUETOOTH\/APP",
-        "Categoría":"ILUMINACIÓN",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":" FOCO LED",
-        "Marca":"N\/A",
-        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ FOCO LED",
-        "Stock":1.0,
-        "Precio":5.39,
-        "Imagen":"\/images\/FP12W.webp"
-    },
-    {
         "Referencia Interna":"DSB18W",
         "Nombre":"VICTORIA LED DRIVER PANEL SIN BORDE 18W",
         "Categoría":"VARIOS Y REPUESTOS",
@@ -3504,18 +3492,6 @@
         "Imagen":"\/images\/DSB24W.webp"
     },
     {
-        "Referencia Interna":"DPRGB12+4W",
-        "Nombre":"VICTORIA LED DRIVER RGB 12+4W",
-        "Categoría":"VARIOS Y REPUESTOS",
-        "Subcategoría":"LUZ LED ELÉCTRICA",
-        "Tipo":" ACCESORIOS Y REPUESTOS LUCES",
-        "Marca":"N\/A",
-        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ ACCESORIOS Y REPUESTOS LUCES",
-        "Stock":1089.0,
-        "Precio":2.59,
-        "Imagen":"\/images\/DPRGB12+4W.webp"
-    },
-    {
         "Referencia Interna":"DSB36W",
         "Nombre":"VICTORIA LED DRIVER PANEL SIN BORDE 36W",
         "Categoría":"VARIOS Y REPUESTOS",
@@ -3528,16 +3504,16 @@
         "Imagen":"\/images\/DSB36W.webp"
     },
     {
-        "Referencia Interna":"DPRGB6+3W",
-        "Nombre":"VICTORIA LED DRIVER RGB 6+3W",
+        "Referencia Interna":"DPRGB12+4W",
+        "Nombre":"VICTORIA LED DRIVER RGB 12+4W",
         "Categoría":"VARIOS Y REPUESTOS",
         "Subcategoría":"LUZ LED ELÉCTRICA",
         "Tipo":" ACCESORIOS Y REPUESTOS LUCES",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ ACCESORIOS Y REPUESTOS LUCES",
-        "Stock":635.0,
-        "Precio":2.52,
-        "Imagen":"\/images\/DPRGB6+3W.webp"
+        "Stock":1089.0,
+        "Precio":2.59,
+        "Imagen":"\/images\/DPRGB12+4W.webp"
     },
     {
         "Referencia Interna":"DSB48W",
@@ -3550,6 +3526,18 @@
         "Stock":334.0,
         "Precio":3.37,
         "Imagen":"\/images\/DSB48W.webp"
+    },
+    {
+        "Referencia Interna":"DPRGB6+3W",
+        "Nombre":"VICTORIA LED DRIVER RGB 6+3W",
+        "Categoría":"VARIOS Y REPUESTOS",
+        "Subcategoría":"LUZ LED ELÉCTRICA",
+        "Tipo":" ACCESORIOS Y REPUESTOS LUCES",
+        "Marca":"N\/A",
+        "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ ACCESORIOS Y REPUESTOS LUCES",
+        "Stock":635.0,
+        "Precio":2.52,
+        "Imagen":"\/images\/DPRGB6+3W.webp"
     },
     {
         "Referencia Interna":"DPRGB3+3W",
@@ -3991,7 +3979,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":35900.0,
+        "Stock":35899.0,
         "Precio":0.24,
         "Imagen":"\/images\/VLEB-10A.webp"
     },
@@ -4123,7 +4111,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":4839.0,
+        "Stock":4838.0,
         "Precio":0.81,
         "Imagen":"\/images\/VLPB-E27.webp"
     },
@@ -4243,7 +4231,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":48802.0,
+        "Stock":48801.0,
         "Precio":0.28,
         "Imagen":"\/images\/VLCL-12N.webp"
     },
@@ -5107,7 +5095,7 @@
         "Tipo":" CONECTOR DENTADO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ CONECTOR DENTADO",
-        "Stock":2260.0,
+        "Stock":2259.0,
         "Precio":2.73,
         "Imagen":"\/images\/SM2-95 AL.webp"
     },
@@ -5455,7 +5443,7 @@
         "Tipo":" SOLAR REFLECTORES",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR REFLECTORES",
-        "Stock":1736.0,
+        "Stock":1735.0,
         "Precio":19.4,
         "Imagen":"\/images\/SL-200W.webp"
     },
@@ -5479,7 +5467,7 @@
         "Tipo":" SOLAR REFLECTORES",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION SOLAR \/ SOLAR REFLECTORES",
-        "Stock":2194.0,
+        "Stock":2193.0,
         "Precio":28.72,
         "Imagen":"\/images\/SL-500W.webp"
     },
@@ -5647,7 +5635,7 @@
         "Tipo":" PANEL SOBREPUESTO REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ TIMER",
-        "Stock":1114.0,
+        "Stock":1113.0,
         "Precio":10.57,
         "Imagen":"\/images\/DHC20A.webp"
     },
@@ -5659,7 +5647,7 @@
         "Tipo":" TIMER",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ TIMER",
-        "Stock":1799.0,
+        "Stock":1798.0,
         "Precio":14.16,
         "Imagen":"\/images\/KG-316T.webp"
     },
@@ -5863,7 +5851,7 @@
         "Tipo":"LÁMPARA DE EMERGENCIA",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ LAMPARA DE EMERGENCIA",
-        "Stock":2492.0,
+        "Stock":2491.0,
         "Precio":16.1,
         "Imagen":"\/images\/VLE-6K3W.webp"
     },
@@ -7075,7 +7063,7 @@
         "Tipo":" PANEL EMPOTRABLE REDONDO",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ PANEL EMPOTRABLE REDONDO",
-        "Stock":170789.0,
+        "Stock":170788.0,
         "Precio":0.75,
         "Imagen":"\/images\/EV-PER 3W.webp"
     },
@@ -9343,7 +9331,7 @@
         "Tipo":"No Clasificado",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ OJO DE BUEY",
-        "Stock":25690.0,
+        "Stock":25689.0,
         "Precio":0.97,
         "Imagen":"\/images\/VL-PLD 5W.webp"
     },
@@ -11335,7 +11323,7 @@
         "Tipo":" PROTECTOR DE VOLTAJE",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PROTECTOR DE VOLTAJE",
-        "Stock":4024.0,
+        "Stock":4023.0,
         "Precio":9.26,
         "Imagen":"\/images\/VPV-1N.webp"
     },
@@ -11347,7 +11335,7 @@
         "Tipo":" PROTECTOR DE VOLTAJE",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PROTECTOR DE VOLTAJE",
-        "Stock":1278.0,
+        "Stock":1277.0,
         "Precio":12.83,
         "Imagen":"\/images\/VPV-2N.webp"
     },
@@ -11359,7 +11347,7 @@
         "Tipo":" PROTECTOR DE VOLTAJE",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PROTECTOR DE VOLTAJE",
-        "Stock":2893.0,
+        "Stock":2892.0,
         "Precio":12.44,
         "Imagen":"\/images\/VPV-3N.webp"
     },
@@ -11395,7 +11383,7 @@
         "Tipo":" TIMBRE",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ TIMBRE",
-        "Stock":1239.0,
+        "Stock":1238.0,
         "Precio":14.35,
         "Imagen":"\/images\/VLRN01.webp"
     },
@@ -11407,7 +11395,7 @@
         "Tipo":" TIMBRE",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ TIMBRE",
-        "Stock":686.0,
+        "Stock":685.0,
         "Precio":14.35,
         "Imagen":"\/images\/VLRB02.webp"
     },
@@ -11731,7 +11719,7 @@
         "Tipo":" ACCESORIOS Y REPUESTOS LUCES",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ ACCESORIOS Y REPUESTOS LUCES",
-        "Stock":5945.0,
+        "Stock":5944.0,
         "Precio":0.57,
         "Imagen":"\/images\/DP10110 3K.webp"
     },
@@ -11743,7 +11731,7 @@
         "Tipo":" ACCESORIOS Y REPUESTOS LUCES",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ ACCESORIOS Y REPUESTOS LUCES",
-        "Stock":8260.0,
+        "Stock":8259.0,
         "Precio":0.57,
         "Imagen":"\/images\/DP10110 6K.webp"
     },
@@ -11839,7 +11827,7 @@
         "Tipo":"No Clasificado",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":14284.0,
+        "Stock":14283.0,
         "Precio":0.64,
         "Imagen":"\/images\/VLTDI-15A.webp"
     },
@@ -11863,7 +11851,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":46079.0,
+        "Stock":46078.0,
         "Precio":0.71,
         "Imagen":"\/images\/VLTPB-15A.webp"
     },
@@ -11875,7 +11863,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":21670.0,
+        "Stock":21669.0,
         "Precio":0.74,
         "Imagen":"\/images\/VLTBB-15A.webp"
     },
@@ -11911,7 +11899,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":1490.0,
+        "Stock":1489.0,
         "Precio":9.29,
         "Imagen":"\/images\/VLTPS-15A.webp"
     },
@@ -11947,7 +11935,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":42394.0,
+        "Stock":42393.0,
         "Precio":0.49,
         "Imagen":"\/images\/VLCIA3-15A.webp"
     },
@@ -11971,7 +11959,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":16368.0,
+        "Stock":16367.0,
         "Precio":0.46,
         "Imagen":"\/images\/VLCIA2-15A.webp"
     },
@@ -11995,7 +11983,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":16833.0,
+        "Stock":16832.0,
         "Precio":0.56,
         "Imagen":"\/images\/VLML-E27.webp"
     },
@@ -12103,7 +12091,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":22703.0,
+        "Stock":22702.0,
         "Precio":0.26,
         "Imagen":"\/images\/VLCLC-1N.webp"
     },
@@ -12115,7 +12103,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":13130.0,
+        "Stock":13129.0,
         "Precio":0.49,
         "Imagen":"\/images\/VLPB-4A.webp"
     },
@@ -12127,7 +12115,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":26913.0,
+        "Stock":26912.0,
         "Precio":0.29,
         "Imagen":"\/images\/VLISB-1S.webp"
     },
@@ -12151,7 +12139,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":9823.0,
+        "Stock":9822.0,
         "Precio":0.38,
         "Imagen":"\/images\/VLIH-3B.webp"
     },
@@ -12163,7 +12151,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":13855.0,
+        "Stock":13854.0,
         "Precio":0.61,
         "Imagen":"\/images\/VL3H-IA.webp"
     },
@@ -12175,7 +12163,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":8421.0,
+        "Stock":8420.0,
         "Precio":0.59,
         "Imagen":"\/images\/VL2H-IA.webp"
     },
@@ -12211,7 +12199,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":35120.0,
+        "Stock":35119.0,
         "Precio":0.37,
         "Imagen":"\/images\/VLIH-1B.webp"
     },
@@ -12223,7 +12211,7 @@
         "Tipo":" PIEZAS ELÉCTRICAS",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ PIEZAS ELECTRICAS",
-        "Stock":72439.0,
+        "Stock":72438.0,
         "Precio":0.49,
         "Imagen":"\/images\/VLIH-2B.webp"
     },
@@ -12271,7 +12259,7 @@
         "Tipo":" REFLECTORES LED",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ ILUMINACION ELECTRICA \/ REFLECTORES LED",
-        "Stock":765.0,
+        "Stock":764.0,
         "Precio":75.12,
         "Imagen":"\/images\/RMV200W.webp"
     },
@@ -13303,7 +13291,7 @@
         "Tipo":" CAJA DE DISTRIBUCIÓN",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ CAJA DE DISTRIBUCION",
-        "Stock":2695.0,
+        "Stock":2694.0,
         "Precio":6.38,
         "Imagen":"\/images\/V-DB4P.webp"
     },
@@ -13363,7 +13351,7 @@
         "Tipo":" CAJA DE DISTRIBUCIÓN",
         "Marca":"N\/A",
         "Categoria de producto":"LUCES GRAVADAS \/ MATERIAL ELECTRICO \/ CAJA DE DISTRIBUCION",
-        "Stock":2265.0,
+        "Stock":2264.0,
         "Precio":2.21,
         "Imagen":"\/images\/V-DB2P.webp"
     },
